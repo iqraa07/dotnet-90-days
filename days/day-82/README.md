@@ -1,9 +1,9 @@
 # Day 82: Attachments
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Upload file, validasi ukuran dan tipe file, penyimpanan lokal.
+file uploads, size/type validation, and local storage.
 
-[Materi lengkap](../../ROADMAP.md#day-82--attachments) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-82--attachments) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 56: Deploy to the Cloud
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Konsep deploy, environment variable, connection string di produksi, layanan gratis atau murah (misalnya Azure App Service free tier, atau hosting berbasis Docker).
+deployment, environment variables, production connection strings, and free or low-cost hosting options such as an Azure App Service free tier or Docker-based hosting.
 
-[Materi lengkap](../../ROADMAP.md#day-56--deploy-to-the-cloud) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-56--deploy-to-the-cloud) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 67: Checkpoint 6: Core Tests
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Coverage yang bermakna (bukan sekadar persentase).
+meaningful test coverage beyond a percentage.
 
-[Materi lengkap](../../ROADMAP.md#day-67--checkpoint-6-core-tests) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-67--checkpoint-6-core-tests) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

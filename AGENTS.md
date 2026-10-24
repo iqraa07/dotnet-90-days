@@ -1,62 +1,64 @@
-# Panduan kerja repo
+# Repository working agreement
 
-## Konteks
+## Context
 
-- Pemilik: Muhammad Iqra Nur Fajar, GitHub `iqraa07`.
-- Seluruh program memakai satu repo public: `iqraa07/dotnet-90-days`.
-- Target: 90 sesi belajar .NET 10 dan C# 14, dilanjutkan ASP.NET Core, EF Core, SQL Server, xUnit, dan Blazor.
-- Lingkungan: Windows dan PowerShell. Folder kerja: `Documents\dotnet-90-days`.
-- Jelaskan dalam Bahasa Indonesia yang singkat dan profesional. Gunakan English untuk identifier dan commit message.
+- Owner: Muhammad Iqra Nur Fajar, GitHub account `iqraa07`.
+- Use one public repository for the entire program: `iqraa07/dotnet-90-days`.
+- Stack: .NET 10, C# 14, ASP.NET Core, EF Core, SQL Server, xUnit, and Blazor.
+- Environment: Windows and PowerShell; repository at `Documents\dotnet-90-days`.
+- Use clear, concise English for documentation, explanations, identifiers, and commit messages.
 
-## Sumber acuan
+## Sources of truth
 
-Baca `HANDOFF.md`, lalu periksa `git status`, `git log --oneline -5`, dan `.\day status` sebelum bekerja. Pertahankan perubahan yang sudah ada.
+Read `HANDOFF.md`, then inspect `git status`, `git log --oneline -5`, and `.\day status`. Preserve existing changes.
 
-- `ROADMAP.md`: urutan materi. Format `### Day NN — Judul` dibaca helper; jangan diubah.
-- `README.md`: tabel progres utama. Pertahankan marker progres dan struktur 90 baris tabel.
-- `days/day-NN/`: pintu masuk materi dan hasil setiap hari. Folder yang belum dimulai harus jelas berstatus rencana.
-- `phase-1-csharp/`: project console harian. `phase-2-webapi/` dan `phase-3-capstone/`: project bersama yang berkembang setiap hari.
-- `journal/`: catatan belajar. `docs/03-PROMPTS.md`: checklist sesi.
-- `.agents/skills/dotnet-study/SKILL.md`: aturan pelaksanaan dan dokumentasi untuk program ini.
+- `ROADMAP.md`: the 90-session plan. Keep the exact `### Day NN — Title` heading format.
+- `README.md`: implementation progress. Keep the progress markers and 90-row table format.
+- `days/day-NN/`: each day's overview, source links, and evidence. Unstarted days remain planned.
+- `phase-1-csharp/`: daily console projects. Phase 2 and 3 use shared projects that grow over time.
+- `journal/`: factual work records and the owner's separate personal reflections.
+- `.agents/skills/dotnet-study/SKILL.md`: repository-specific workflow and presentation rules.
 
-## Cara bekerja
+## Working modes
 
-Mode default adalah PAIR: siapkan project dan mayoritas kerangka, lalu sisakan 1-3 `TODO(kamu)` sesuai ROADMAP. Setiap TODO memuat tugas, petunjuk API, dan contoh input/output; kode tetap bisa dibangun.
+PAIR is the default: prepare the project and most scaffolding, leaving 1-3 core tasks marked `TODO(you)`. Each task includes a useful API hint and example input/output; the project must still build.
 
-Jika pemilik meminta sebuah hari dikerjakan seluruhnya, selesaikan kode hari itu tanpa menyisakan TODO. Izin tersebut berlaku untuk lingkup yang diminta. Pada Day 01, pemilik sudah meminta pengerjaan penuh kode dan dokumentasi. Sesi berikutnya kembali PAIR kecuali diminta lain.
+An explicit request to complete a day authorizes the full implementation for that day, including commit and push to this repository. It does not authorize completing the rest of the program. Day 01 has been requested in full. Future sessions return to PAIR unless requested otherwise.
 
-Pada mode MENTOR, siapkan latihan dan review tanpa menulis logika utama. Pada mode AUTO, kerjakan kode penuh, jelaskan bagian penting secara singkat, dan tambahkan tiga pertanyaan pemahaman pada jurnal.
+MENTOR provides exercises and review without implementing the core logic. AUTO completes the implementation, explains the important lines briefly, and adds three understanding questions to the journal.
 
-Bagian `Yang saya pahami` hanya berisi catatan yang benar-benar ditulis atau disampaikan pemilik. Jangan mengarang refleksi, waktu belajar, pengalaman, atau klaim penguasaan materi. Jika belum ada catatan pribadi, selesaikan kode dan dokumentasi yang bisa dikerjakan lalu catat bahwa refleksi masih menunggu.
+Only include personal reflections actually written or supplied by the owner under `What I understood`. Do not invent learning time, experience, understanding, or authorship claims.
 
-## Alur harian
+## Progress and daily workflow
 
-1. Gunakan hari yang sedang berjalan; jika tidak ada, pilih hari pertama yang belum dimulai.
-2. Jalankan `.\day new N`, baca materi hari itu di ROADMAP, dan kerjakan sesuai permintaan sesi.
-3. Perbarui README latihan, halaman `days/day-NN/`, dan bagian jurnal yang mencatat pekerjaan nyata.
-4. Jalankan build dan run; jalankan test jika project test tersedia. Laporkan hasil yang benar-benar diperoleh.
-5. Jalankan `.\day done N` setelah kode, verifikasi, dan refleksi pribadi lengkap. Jangan memakai `-Force` untuk melewati refleksi kosong atau build gagal.
-6. Buat commit bermakna. Pada PAIR/MENTOR, konfirmasi push harian kecuali sudah ada izin untuk lingkup itu. Permintaan pengerjaan penuh mencakup commit dan push pekerjaan yang diminta ke repo yang sama.
-7. Perbarui `HANDOFF.md` terakhir, commit, dan push dalam lingkup yang diizinkan. Akhiri dengan working tree bersih. Jika hari belum tuntas, gunakan commit WIP dan catat sisa pekerjaannya.
+The main progress table records implementation and verification. Personal reflection is tracked separately in the journal; an implementation checkmark does not claim that the owner has written their reflection or mastered the material.
 
-## Kode dan Git
+1. Select the active day, or the first planned day when none is active. Run `.\day new N` only when starting that day.
+2. Follow the roadmap and requested working mode. Update the exercise README, daily overview, and factual journal entries.
+3. Run build and run checks; run tests when a test project exists. Report actual results.
+4. Use `.\day done N` after verification and personal reflection. When the owner requests implementation progress while reflection is still pending, use `.\day done N -CodeOnly`; this must still build a real project. Leave the reflection visibly pending.
+5. Never use `-Force` to hide an empty reflection, missing project, or failed build.
+6. Keep the daily page and catalog consistent with the main table. In PAIR/MENTOR, confirm a daily push unless the scope is already authorized.
+7. Update `HANDOFF.md` last, commit meaningful work, and push within the authorized scope. End with a clean working tree.
 
-- Target `net10.0`; Nullable dan ImplicitUsings aktif. Selesaikan warning tanpa menyembunyikannya.
-- Day 01 memakai `UseAppHost=false` karena executable apphost diblokir Windows Application Control. Jalankan melalui runtime .NET; jangan mengubah kebijakan keamanan Windows.
-- Jangan mengubah latihan hari sebelumnya kecuali memperbaiki bug; catat perbaikannya.
-- Jangan membuat repo baru per hari, salinan project fase 2/3, commit kosong, tanggal commit palsu, atau riwayat progres palsu.
-- Branch utama `main`. Commit: `day-NN: ...`, `fix(day-NN): ...`, `docs: ...`, atau `chore: ...`.
-- Jangan force push, menulis ulang riwayat yang sudah dipublikasikan, menghapus jurnal, atau commit secret dan build output.
-- Jika remote lebih baru, pull dengan rebase. Jelaskan konflik sebelum menyelesaikannya.
-- Login dan penambahan scope GitHub dilakukan pemilik sendiri. Jangan meminta atau menampilkan password/token. Instalasi software memerlukan izin lebih dulu.
-- Pilih library bawaan atau sumber terbuka; jelaskan fungsi package sebelum menambahkannya.
+## Code and Git
 
-## Dokumentasi dan hasil visual
+- Target `net10.0`, with Nullable and ImplicitUsings enabled. Fix warnings without suppressing them.
+- Day 01 uses `UseAppHost=false` because Windows Application Control blocks its generated apphost. Use the .NET runtime and retain Windows security settings.
+- Keep earlier exercises unchanged unless fixing a bug, and record any fix.
+- Do not create separate daily repositories, duplicate shared phase projects, empty commits, backdated commits, or fictional progress.
+- Use `main`. Commit prefixes: `day-NN:`, `fix(day-NN):`, `docs:`, or `chore:`.
+- Do not force push, rewrite published history, delete journals, or commit secrets and build output.
+- If the remote is ahead, pull with rebase. Explain conflicts before resolving them.
+- The owner handles GitHub authentication and scope changes. Never request or expose passwords/tokens. Software installation requires permission first.
+- Prefer built-in or open-source packages and explain each package's purpose before adding it.
 
-- Tulis langsung tentang tujuan latihan, cara menjalankan, hasil, dan kendala yang benar-benar ada. Hindari kalimat promosi, emoji dekoratif, penutup basa-basi, serta uraian berlebihan.
-- Dokumentasi publik berfokus pada materi dan hasil, tanpa menyebut nama layanan pendamping atau proses percakapan. Jangan menambahkan klaim kepengarangan yang tidak didukung pekerjaan sebenarnya.
-- Gunakan diagram Mermaid sederhana bila membantu menjelaskan alur. Peta materi dan petunjuk run harus sesuai struktur repo.
-- Gambar progres memakai output dari eksekusi program yang nyata. Simpan perintah dan output sumbernya; jangan mengarang hasil build, terminal, test, atau penyelesaian hari.
-- Simpan aset repo di `assets/progress/`. Siapkan salinan gambar siap dibagikan bila diminta; jangan mengunggah ke akun sosial tanpa permintaan khusus.
-- Setelah progres suatu hari terverifikasi, unggah bukti teknis yang relevan ke repo yang sama: gambar hasil, perintah/output sumber, dan tautan CI bila tersedia. Perbarui indeks `assets/progress/README.md` serta halaman harinya; label penyelesaian tetap mengikuti status jurnal dan tabel progres.
-- Gunakan skill `antislop` dan `antislop-copywriting` yang tersedia. Bandingkan VERSION lokal dengan rilis resmi [miqdadbadjuber/anti-slop](https://github.com/miqdadbadjuber/anti-slop/releases/latest) pada awal sesi. Pengecekan versi tidak mengizinkan pembaruan instalasi secara otomatis.
+## Documentation and evidence
+
+- Write about the exercise, commands, actual output, and observed issues. Avoid promotional claims, decorative emoji, filler, and excessive explanation.
+- Public documents focus on the work and results without naming companion services or reproducing chat history.
+- Use small Mermaid diagrams when useful. Keep navigation and run instructions aligned with the repository.
+- Generate progress images from actual program runs. Save the source commands and output; do not fabricate terminal output, build results, tests, or completion.
+- Store evidence in `assets/progress/`, link it from the evidence index and daily page, and upload it with the day's authorized progress commit.
+- Do not post to social accounts without a separate request.
+- Use the available antislop and antislop-copywriting skills. Compare the installed VERSION with the [latest official release](https://github.com/miqdadbadjuber/anti-slop/releases/latest) at session start. Checking a version does not authorize updating the installation.

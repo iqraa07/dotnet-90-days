@@ -1,9 +1,9 @@
 # Day 39: SQL Joins and Aggregates
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Primary key, foreign key, `JOIN`, `GROUP BY`, `HAVING`, `COUNT` / `SUM`, index, normalisasi dasar.
+primary keys, foreign keys, `JOIN`, `GROUP BY`, `HAVING`, `COUNT` / `SUM`, indexes, and basic normalization.
 
-[Materi lengkap](../../ROADMAP.md#day-39--sql-joins-and-aggregates) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-39--sql-joins-and-aggregates) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

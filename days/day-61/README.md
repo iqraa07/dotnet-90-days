@@ -1,9 +1,9 @@
 # Day 61: Requirements and Design
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-User story, ERD, alur status tiket, GitHub Issues dan Projects.
+user stories, ERDs, ticket status workflows, and GitHub Issues and Projects.
 
-[Materi lengkap](../../ROADMAP.md#day-61--requirements-and-design) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-61--requirements-and-design) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 72: Dashboard Statistics
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Agregasi LINQ ke SQL, projection ke DTO.
+LINQ-to-SQL aggregation and DTO projections.
 
-[Materi lengkap](../../ROADMAP.md#day-72--dashboard-statistics) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-72--dashboard-statistics) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

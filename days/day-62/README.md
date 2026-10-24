@@ -1,9 +1,9 @@
 # Day 62: Solution Scaffold
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Struktur solution multi-project, `Directory.Build.props`, referensi project.
+multi-project solution structure, `Directory.Build.props`, and project references.
 
-[Materi lengkap](../../ROADMAP.md#day-62--solution-scaffold) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-62--solution-scaffold) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

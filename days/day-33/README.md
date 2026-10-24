@@ -1,9 +1,9 @@
 # Day 33: CRUD In-Memory
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-POST, PUT, DELETE; status code 201 + `CreatedAtAction`, 204, 404; model binding.
+POST, PUT, DELETE, status codes 201 with `CreatedAtAction`, 204, and 404, and model binding.
 
-[Materi lengkap](../../ROADMAP.md#day-33--crud-in-memory) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-33--crud-in-memory) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

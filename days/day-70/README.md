@@ -1,9 +1,9 @@
 # Day 70: SLA and Background Service
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`BackgroundService`, `PeriodicTimer`, `TimeProvider` (agar mudah di-test).
+`BackgroundService`, `PeriodicTimer`, and `TimeProvider` for testable time handling.
 
-[Materi lengkap](../../ROADMAP.md#day-70--sla-and-background-service) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-70--sla-and-background-service) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

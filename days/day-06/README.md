@@ -1,9 +1,9 @@
 # Day 06: Arrays and List
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Array, `List<T>`, `Add`, `Remove`, `Count`, index, iterasi.
+arrays, `List<T>`, `Add`, `Remove`, `Count`, indexes, and iteration.
 
-[Materi lengkap](../../ROADMAP.md#day-06--arrays-and-list) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-06--arrays-and-list) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 54: Docker
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Image, container, Dockerfile multi-stage, `docker compose` (API + SQL Server).
+images, containers, multi-stage Dockerfiles, and `docker compose` for an API and SQL Server.
 
-[Materi lengkap](../../ROADMAP.md#day-54--docker) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-54--docker) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

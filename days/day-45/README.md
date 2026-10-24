@@ -1,9 +1,9 @@
 # Day 45: Layered Architecture
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Pemisahan Api, Application, Domain, Infrastructure; referensi antar project.
+separate Api, Application, Domain, and Infrastructure, and manage project references.
 
-[Materi lengkap](../../ROADMAP.md#day-45--layered-architecture) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-45--layered-architecture) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

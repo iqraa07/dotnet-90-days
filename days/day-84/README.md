@@ -1,9 +1,9 @@
 # Day 84: Docker Compose Full Stack
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Compose multi-service (api, web, db), network, volume.
+multi-service Compose for API, web, and database services, networking, and volumes.
 
-[Materi lengkap](../../ROADMAP.md#day-84--docker-compose-full-stack) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-84--docker-compose-full-stack) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

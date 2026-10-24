@@ -1,9 +1,9 @@
 # Day 76: Ticket List Page
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Memanggil API dari Blazor (`HttpClient` typed client), state loading dan error.
+calling an API from Blazor with a typed `HttpClient`, and handling loading and error states.
 
-[Materi lengkap](../../ROADMAP.md#day-76--ticket-list-page) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-76--ticket-list-page) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

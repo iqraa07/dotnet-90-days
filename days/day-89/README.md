@@ -1,9 +1,9 @@
 # Day 89: CV, LinkedIn and GitHub Profile
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Cara menampilkan proyek di CV dan profil GitHub.
+present projects on a CV and GitHub profile.
 
-[Materi lengkap](../../ROADMAP.md#day-89--cv-linkedin-and-github-profile) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-89--cv-linkedin-and-github-profile) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,519 +1,521 @@
-# Roadmap 90 Hari .NET (C# → ASP.NET Core → Proyek Akhir)
+# 90-Day .NET Roadmap (C# to ASP.NET Core to Capstone)
 
-Target: dalam 90 hari, setara **Junior .NET Developer** — bisa membuat Web API dengan ASP.NET Core + EF Core + SQL Server, ada login dan test, berjalan di Docker, lalu di-deploy. Ditambah satu proyek portofolio yang bisa ditunjukkan ke recruiter.
+Goal: prepare for junior .NET development by building an ASP.NET Core Web API with EF Core, SQL Server, authentication, tests, Docker, and deployment. The final phase produces a portfolio project.
 
-- Waktu: 1–2 jam per hari. Nomor hari mengikuti **sesi belajar**, bukan tanggal. Kalau ada hari yang bolong, lanjutkan ke nomor berikutnya.
-- Versi: **.NET 10 (LTS)** + C# 14.
-- Tools: VS Code + C# Dev Kit (atau Visual Studio 2026 Community), Git, GitHub CLI.
-- Bahasa: penjelasan pakai Bahasa Indonesia; kode, nama class, dan commit message pakai English.
+- Time: 1-2 hours per session. Day numbers follow learning sessions rather than calendar dates. After a break, continue with the next session.
+- Version: .NET 10 (LTS) and C# 14.
+- Tools: VS Code with C# Dev Kit, or Visual Studio 2026 Community; Git and GitHub CLI.
+- Language: English for documentation, identifiers, commit messages, and planned interface text. Keep locale-specific examples where they are part of the exercise.
+- Progress: the README tracks completed implementation and verification. Personal reflection is recorded separately in each journal.
 
-Format setiap hari:
+Each day includes:
 
-- **Belajar:** konsep yang dipelajari hari itu.
-- **Praktik:** latihan untuk menerapkan materi hari itu.
-- **TODO kamu:** bagian latihan yang menjadi fokus hari itu.
+- **Learn:** the concepts covered in the session.
+- **Practice:** an exercise that applies those concepts.
+- **Exercise:** the part to implement or investigate that day.
 
-> Judul tiap hari memakai format `### Day NN — Judul` dan dibaca oleh `scripts/day.ps1`. Pertahankan format tersebut; isi judul menggunakan huruf ASCII dan tidak memakai karakter `|`.
+> Daily headings use `### Day NN — Title`, which is read by `scripts/day.ps1`. Keep this format, use ASCII characters in titles, and do not include `|`.
 
 ---
 
-## Fase 1 — Dasar C# (Day 01–30)
+## Phase 1: C# Fundamentals (Day 01-30)
 
-Folder kode: `phase-1-csharp/day-NN-.../`, satu project console untuk setiap hari.
+Code folder: `phase-1-csharp/day-NN-.../`, with one console project per day.
 
-### Minggu 1 — Fondasi
+### Week 1: Foundations
 
 ### Day 01 — Setup .NET 10 and Hello World
-- **Belajar:** apa itu .NET, SDK vs runtime, perintah `dotnet new`, `dotnet run`, `dotnet build`; isi file `.csproj` dan `Program.cs`; top-level statements.
-- **Praktik:** jalankan `.\day new 1`, ubah Hello World menjadi sapaan dengan nama dan tanggal hari ini, lalu commit dan push pertama.
-- **TODO kamu:** tampilkan 3 baris: nama kamu, tanggal hari ini (`DateTime.Now`), dan versi .NET (`Environment.Version`).
+- **Learn:** .NET, SDK versus runtime, `dotnet new`, `dotnet run`, `dotnet build`, the contents of `.csproj` and `Program.cs`, and top-level statements.
+- **Practice:** run `.\day new 1`, replace Hello World with a greeting containing your name and the current date, then make the first commit and push.
+- **Exercise:** display three lines: your name, the current date (`DateTime.Now`), and the .NET runtime version (`Environment.Version`).
 
 ### Day 02 — Variables and Data Types
-- **Belajar:** `int`, `long`, `double`, `decimal`, `bool`, `char`, `string`, `var`, `const`; input dengan `Console.ReadLine()`; `int.Parse` vs `int.TryParse`.
-- **Praktik:** program konversi suhu (Celsius ke Fahrenheit dan Kelvin).
-- **TODO kamu:** tambahkan konversi satuan data (MB ke GB ke TB). Pakai `TryParse` supaya input huruf tidak bikin program crash.
+- **Learn:** `int`, `long`, `double`, `decimal`, `bool`, `char`, `string`, `var`, `const`, input with `Console.ReadLine()`, and `int.Parse` versus `int.TryParse`.
+- **Practice:** build a temperature converter from Celsius to Fahrenheit and Kelvin.
+- **Exercise:** add data-size conversions from MB to GB to TB. Use `TryParse` so nonnumeric input does not crash the program.
 
 ### Day 03 — Operators and Strings
-- **Belajar:** operator aritmatika dan perbandingan, string interpolation `$"..."`, format angka `ToString("N0")` dan `("C", new CultureInfo("id-ID"))`, method string (`Trim`, `ToUpper`, `Contains`, `Split`, `Replace`).
-- **Praktik:** struk belanja sederhana dalam format Rupiah.
-- **TODO kamu:** hitung diskon 10% kalau total di atas Rp100.000, lalu tampilkan rinciannya dengan rapi.
+- **Learn:** arithmetic and comparison operators, string interpolation `$"..."`, number formatting with `ToString("N0")` and `("C", new CultureInfo("id-ID"))`, and string methods (`Trim`, `ToUpper`, `Contains`, `Split`, `Replace`).
+- **Practice:** print a simple shopping receipt using Indonesian Rupiah formatting.
+- **Exercise:** calculate a 10% discount when the total exceeds Rp100,000, then display the breakdown clearly.
 
 ### Day 04 — Conditionals and Switch
-- **Belajar:** `if / else if / else`, operator logika `&& || !`, `switch` statement, switch expression (C# modern).
-- **Praktik:** penentu prioritas tiket helpdesk (P1–P4) berdasarkan dampak dan urgensi.
-- **TODO kamu:** tulis switch expression yang mengubah prioritas menjadi target waktu penyelesaian (SLA), misalnya P1 = 4 jam.
+- **Learn:** `if / else if / else`, logical operators `&& || !`, `switch` statements, and modern C# switch expressions.
+- **Practice:** determine helpdesk ticket priority (P1-P4) from impact and urgency.
+- **Exercise:** write a switch expression that maps priority to a resolution-time target (SLA), such as P1 = 4 hours.
 
 ### Day 05 — Loops
-- **Belajar:** `for`, `while`, `do-while`, `foreach`, `break`, `continue`, `Random.Shared`.
-- **Praktik:** game tebak angka 1–100.
-- **TODO kamu:** batasi maksimal 7 tebakan, tampilkan sisa kesempatan, lalu tawarkan main lagi di akhir (y/n).
+- **Learn:** `for`, `while`, `do-while`, `foreach`, `break`, `continue`, and `Random.Shared`.
+- **Practice:** build a number-guessing game from 1 to 100.
+- **Exercise:** allow at most seven guesses, display the remaining attempts, and offer to play again at the end (y/n).
 
 ### Day 06 — Arrays and List
-- **Belajar:** array, `List<T>`, `Add`, `Remove`, `Count`, index, iterasi.
-- **Praktik:** daftar perangkat jaringan yang disimpan di memori.
-- **TODO kamu:** buat menu: 1) tambah, 2) lihat semua, 3) hapus berdasarkan nomor, 0) keluar.
+- **Learn:** arrays, `List<T>`, `Add`, `Remove`, `Count`, indexes, and iteration.
+- **Practice:** keep a list of network devices in memory.
+- **Exercise:** build a menu: 1) add, 2) view all, 3) delete by number, 0) exit.
 
 ### Day 07 — Checkpoint 1: To-Do Console App
-- **Belajar:** menggabungkan semua materi minggu 1; membaca kode sendiri dari awal.
-- **Praktik:** aplikasi To-Do berbasis console (tambah, tandai selesai, hapus, tampilkan).
-- **TODO kamu:** tambahkan fitur "tampilkan hanya yang belum selesai", lalu tulis refleksi minggu 1 di jurnal.
+- **Learn:** combine the first week's concepts and read your own code from the beginning.
+- **Practice:** build a console To-Do app with add, complete, delete, and display operations.
+- **Exercise:** add a filter that shows only incomplete items, then write the Week 1 reflection in the journal.
 
-### Minggu 2 — Method dan OOP
+### Week 2: Methods and OOP
 
 ### Day 08 — Methods
-- **Belajar:** parameter, return value, overloading, optional parameter, expression-bodied method, `out` dan `ref` (dasar).
-- **Praktik:** refactor program Day 02 dan 03 menjadi method-method kecil.
-- **TODO kamu:** buat method `HitungSubnet(int prefix)` yang mengembalikan jumlah host yang bisa dipakai (contoh: /24 = 254).
+- **Learn:** parameters, return values, overloading, optional parameters, expression-bodied methods, and the basics of `out` and `ref`.
+- **Practice:** refactor the Day 02 and Day 03 programs into small methods.
+- **Exercise:** write `CalculateSubnet(int prefix)` to return the number of usable hosts, for example /24 = 254.
 
 ### Day 09 — Debugging and Exceptions
-- **Belajar:** breakpoint, step over/into, watch di VS Code; `try / catch / finally`; membaca stack trace.
-- **Praktik:** program latihan berisi 3 bug yang disengaja.
-- **TODO kamu:** temukan dan perbaiki ketiga bug memakai debugger, lalu catat cara menemukannya di jurnal.
+- **Learn:** breakpoints, step over/into, watches in VS Code, `try / catch / finally`, and reading stack traces.
+- **Practice:** work with a program containing three deliberate bugs.
+- **Exercise:** find and fix all three bugs using the debugger, then record how you found them in the journal.
 
 ### Day 10 — Classes and Objects
-- **Belajar:** class, object, field vs property, constructor, method di dalam class, `ToString()` override.
-- **Praktik:** class `Device` (Name, IpAddress, Location, PurchaseDate).
-- **TODO kamu:** tambahkan method `GetAgeInYears()` dan buat 3 object perangkat.
+- **Learn:** classes, objects, fields versus properties, constructors, instance methods, and overriding `ToString()`.
+- **Practice:** create a `Device` class with Name, IpAddress, Location, and PurchaseDate.
+- **Exercise:** add `GetAgeInYears()` and create three device objects.
 
 ### Day 11 — Encapsulation and Records
-- **Belajar:** access modifier (`public`, `private`, `protected`, `internal`), validasi di property setter, `record`, `init`, immutability. Bonus: keyword `field` di C# 14.
-- **Praktik:** class `Ticket` yang statusnya hanya bisa berubah lewat method.
-- **TODO kamu:** pastikan tiket yang sudah `Closed` tidak bisa dibuka lagi. Lempar exception dengan pesan yang jelas.
+- **Learn:** access modifiers (`public`, `private`, `protected`, `internal`), validation in property setters, `record`, `init`, and immutability. Optional: the C# 14 `field` keyword.
+- **Practice:** create a `Ticket` class whose status can change only through methods.
+- **Exercise:** prevent a `Closed` ticket from being reopened. Throw an exception with a clear message.
 
 ### Day 12 — Inheritance and Polymorphism
-- **Belajar:** base class, `virtual` / `override`, `abstract`, `base`, `sealed`.
-- **Praktik:** `Device` sebagai base class, lalu turunan `Laptop`, `Router`, `Printer`.
-- **TODO kamu:** override method `GetMaintenanceInfo()` di setiap turunan dengan aturan yang berbeda.
+- **Learn:** base classes, `virtual` / `override`, `abstract`, `base`, and `sealed`.
+- **Practice:** use `Device` as a base class for `Laptop`, `Router`, and `Printer`.
+- **Exercise:** override `GetMaintenanceInfo()` in each subclass using different rules.
 
 ### Day 13 — Interfaces
-- **Belajar:** `interface`, beda interface vs abstract class, dan alasan interface penting untuk dependency injection nanti.
-- **Praktik:** `INotifier` dengan dua implementasi: `ConsoleNotifier` dan `FileNotifier`.
-- **TODO kamu:** buat implementasi ketiga `TelegramNotifierFake` yang hanya mencetak format pesan, lalu pilih notifier lewat input user.
+- **Learn:** `interface`, interfaces versus abstract classes, and their role in dependency injection.
+- **Practice:** define `INotifier` with `ConsoleNotifier` and `FileNotifier` implementations.
+- **Exercise:** add `TelegramNotifierFake`, which only prints a formatted message, then select the notifier through user input.
 
 ### Day 14 — Checkpoint 2: IT Asset Inventory Console
-- **Belajar:** desain class kecil yang saling terhubung.
-- **Praktik:** aplikasi inventaris aset IT (tambah, lihat, cari berdasarkan nama/lokasi).
-- **TODO kamu:** tambah fitur "aset berumur lebih dari 4 tahun", lalu tulis refleksi minggu 2.
+- **Learn:** design a small set of related classes.
+- **Practice:** build an IT asset inventory app with add, view, and search by name/location.
+- **Exercise:** add a filter for assets older than four years, then write the Week 2 reflection.
 
-### Minggu 3 — Collection, LINQ, File
+### Week 3: Collections, LINQ, and Files
 
 ### Day 15 — Dictionary, HashSet, Queue, Stack
-- **Belajar:** kapan memakai setiap collection; kompleksitas sederhana (cepat vs lambat).
-- **Praktik:** antrian tiket helpdesk memakai `Queue<Ticket>`.
-- **TODO kamu:** pakai `Dictionary<string, int>` untuk menghitung jumlah tiket per kategori.
+- **Learn:** when to use each collection and basic performance differences.
+- **Practice:** create a helpdesk ticket queue with `Queue<Ticket>`.
+- **Exercise:** use `Dictionary<string, int>` to count tickets by category.
 
 ### Day 16 — Enums, Structs and Nullable
-- **Belajar:** `enum`, `struct` vs `class`, nullable reference types, operator `?`, `??`, `?.`, `!`; arti warning nullable.
-- **Praktik:** `enum TicketStatus` dan `enum Priority`, lalu bersihkan semua warning nullable.
-- **TODO kamu:** tulis method aman `FindTicket(int id)` yang mengembalikan `Ticket?`, lalu tangani kasus null di pemanggilnya.
+- **Learn:** `enum`, `struct` versus `class`, nullable reference types, the `?`, `??`, `?.`, and `!` operators, and nullable warnings.
+- **Practice:** create `enum TicketStatus` and `enum Priority`, then resolve every nullable warning.
+- **Exercise:** write a safe `FindTicket(int id)` method returning `Ticket?`, then handle null at the call site.
 
 ### Day 17 — LINQ Part 1
-- **Belajar:** `Where`, `Select`, `OrderBy`, `First` / `FirstOrDefault`, `Any`, `All`, `Count`, `Take`, `Skip`.
-- **Praktik:** query daftar 30 aset dummy.
-- **TODO kamu:** tulis 5 query sendiri, misalnya "laptop di Makassar yang dibeli sebelum 2022, diurutkan dari yang tertua".
+- **Learn:** `Where`, `Select`, `OrderBy`, `First` / `FirstOrDefault`, `Any`, `All`, `Count`, `Take`, and `Skip`.
+- **Practice:** query a list of 30 sample assets.
+- **Exercise:** write five queries, such as laptops in Makassar purchased before 2022, ordered from oldest to newest.
 
 ### Day 18 — LINQ Part 2
-- **Belajar:** `GroupBy`, `Sum`, `Average`, `Max`, `Join`, `ToDictionary`, query syntax vs method syntax.
-- **Praktik:** laporan tiket per kategori dan per status.
-- **TODO kamu:** hitung rata-rata waktu penyelesaian tiket per prioritas.
+- **Learn:** `GroupBy`, `Sum`, `Average`, `Max`, `Join`, `ToDictionary`, and query syntax versus method syntax.
+- **Practice:** report tickets by category and status.
+- **Exercise:** calculate the average resolution time for each priority.
 
 ### Day 19 — File I/O and CSV
-- **Belajar:** `File.ReadAllLines`, `File.WriteAllText`, `Path.Combine`, `Directory`; parsing CSV sederhana; `using` untuk resource.
-- **Praktik:** baca file `assets.csv` lalu tampilkan sebagai tabel.
-- **TODO kamu:** tangani baris CSV yang rusak (kolom kurang) tanpa membuat program crash, lalu laporkan baris mana yang dilewati.
+- **Learn:** `File.ReadAllLines`, `File.WriteAllText`, `Path.Combine`, `Directory`, simple CSV parsing, and `using` for resources.
+- **Practice:** read `assets.csv` and display its contents as a table.
+- **Exercise:** handle malformed CSV rows with missing columns without crashing, and report which rows were skipped.
 
 ### Day 20 — JSON with System.Text.Json
-- **Belajar:** `JsonSerializer.Serialize` / `Deserialize`, `JsonSerializerOptions`, atribut `[JsonPropertyName]`.
-- **Praktik:** simpan dan muat data inventaris ke `inventory.json`.
-- **TODO kamu:** tambah fitur backup otomatis (`inventory.backup.json`) setiap kali data disimpan.
+- **Learn:** `JsonSerializer.Serialize` / `Deserialize`, `JsonSerializerOptions`, and `[JsonPropertyName]`.
+- **Practice:** save and load inventory data in `inventory.json`.
+- **Exercise:** create `inventory.backup.json` automatically whenever data is saved.
 
 ### Day 21 — Checkpoint 3: Inventory with JSON and Reports
-- **Belajar:** menggabungkan file, LINQ, dan OOP.
-- **Praktik:** upgrade aplikasi Day 14 supaya data tersimpan permanen dan punya menu laporan.
-- **TODO kamu:** tambah laporan "aset per lokasi", lalu tulis refleksi minggu 3.
+- **Learn:** combine file handling, LINQ, and OOP.
+- **Practice:** extend the Day 14 app with persistent storage and a reports menu.
+- **Exercise:** add an assets-by-location report, then write the Week 3 reflection.
 
-### Minggu 4 — C# Lanjutan dan Testing
+### Week 4: Advanced C# and Testing
 
 ### Day 22 — Advanced Exceptions
-- **Belajar:** custom exception, `throw` vs `throw ex`, exception filter `when`, guard clause, `ArgumentNullException.ThrowIfNull`.
-- **Praktik:** tambahkan validasi yang rapi ke class `Ticket` dan `Device`.
-- **TODO kamu:** buat `InvalidTicketStateException` dan pakai di aturan status tiket.
+- **Learn:** custom exceptions, `throw` versus `throw ex`, `when` exception filters, guard clauses, and `ArgumentNullException.ThrowIfNull`.
+- **Practice:** add clear validation to the `Ticket` and `Device` classes.
+- **Exercise:** create `InvalidTicketStateException` and use it in ticket status rules.
 
 ### Day 23 — Generics
-- **Belajar:** generic method dan class, constraint `where T : ...`.
-- **Praktik:** `InMemoryRepository<T>` dengan operasi Add, GetById, GetAll, Remove.
-- **TODO kamu:** tambahkan method `Find(Func<T, bool> predicate)`.
+- **Learn:** generic methods and classes, and constraints such as `where T : ...`.
+- **Practice:** build `InMemoryRepository<T>` with Add, GetById, GetAll, and Remove operations.
+- **Exercise:** add `Find(Func<T, bool> predicate)`.
 
 ### Day 24 — Delegates, Lambdas and Events
-- **Belajar:** `Func`, `Action`, `Predicate`, lambda, `event` / `EventHandler`.
-- **Praktik:** event `TicketCreated` yang memicu notifier.
-- **TODO kamu:** tambahkan event `TicketClosed` lalu catat log-nya ke file.
+- **Learn:** `Func`, `Action`, `Predicate`, lambdas, and `event` / `EventHandler`.
+- **Practice:** raise a `TicketCreated` event that triggers a notifier.
+- **Exercise:** add `TicketClosed` and write its log entry to a file.
 
 ### Day 25 — Async, Await and HttpClient
-- **Belajar:** `Task`, `async` / `await`, `Task.WhenAll`, `HttpClient`, timeout, `CancellationToken`.
-- **Praktik:** cek status beberapa website (kode HTTP dan waktu respons).
-- **TODO kamu:** jalankan pengecekan secara paralel lalu bandingkan waktunya dengan versi berurutan.
+- **Learn:** `Task`, `async` / `await`, `Task.WhenAll`, `HttpClient`, timeouts, and `CancellationToken`.
+- **Practice:** check several websites' HTTP status codes and response times.
+- **Exercise:** run the checks in parallel and compare their duration with sequential execution.
 
 ### Day 26 — Mini Tool: Network Checker
-- **Belajar:** `System.Net.NetworkInformation.Ping`, `Stopwatch`, argumen command line (`args`).
-- **Praktik:** tool `netcheck` yang mem-ping daftar host dari file teks dan memeriksa URL.
-- **TODO kamu:** simpan hasilnya ke CSV dengan timestamp. Tool ini cocok dipakai di pekerjaan network support.
+- **Learn:** `System.Net.NetworkInformation.Ping`, `Stopwatch`, and command-line arguments (`args`).
+- **Practice:** build `netcheck` to ping hosts listed in a text file and check URLs.
+- **Exercise:** save timestamped results to CSV. This tool can be used for network support tasks.
 
 ### Day 27 — Unit Testing with xUnit
-- **Belajar:** `dotnet new xunit`, `[Fact]`, `[Theory]` + `[InlineData]`, pola Arrange-Act-Assert, file solution (`.slnx` di .NET 10), `dotnet test`.
-- **Praktik:** test untuk `HitungSubnet` dan aturan status `Ticket`.
-- **TODO kamu:** tulis minimal 5 test sendiri, termasuk test untuk kasus error.
+- **Learn:** `dotnet new xunit`, `[Fact]`, `[Theory]` with `[InlineData]`, Arrange-Act-Assert, solution files (`.slnx` in .NET 10), and `dotnet test`.
+- **Practice:** test `CalculateSubnet` and the `Ticket` status rules.
+- **Exercise:** write at least five tests, including error cases.
 
 ### Day 28 — Git and GitHub in Depth
-- **Belajar:** branch, merge, pull request ke repo sendiri, `git log --oneline --graph`, `git restore`, membaca hasil CI GitHub Actions.
-- **Praktik:** buat branch `feature/day-28`, buka PR lewat `gh pr create`, lalu merge.
-- **TODO kamu:** jelaskan di jurnal dengan kata-katamu sendiri: apa itu commit, branch, dan PR.
+- **Learn:** branches, merges, pull requests in your own repository, `git log --oneline --graph`, `git restore`, and GitHub Actions results.
+- **Practice:** create `feature/day-28`, open a pull request with `gh pr create`, then merge it.
+- **Exercise:** explain commits, branches, and pull requests in your journal using your own words.
 
 ### Day 29 — Phase 1 Project: Helpdesk Console (Part 1)
-- **Belajar:** merancang program sebelum ngoding (daftar fitur, class, alur).
-- **Praktik:** project `HelpdeskConsole` berisi Ticket, kategori, prioritas, status, dan penyimpanan JSON.
-- **TODO kamu:** tulis logika perubahan status beserta validasinya.
+- **Learn:** plan a program before implementation: features, classes, and workflows.
+- **Practice:** build `HelpdeskConsole` with tickets, categories, priorities, statuses, and JSON storage.
+- **Exercise:** implement and validate status changes.
 
 ### Day 30 — Phase 1 Project: Helpdesk Console (Part 2) and Review
-- **Belajar:** review seluruh fase 1.
-- **Praktik:** laporan LINQ, unit test, dan README project.
-- **TODO kamu:** jawab 15 soal kuis tanpa melihat kode. Opsional: ikuti sertifikasi gratis *Foundational C# with Microsoft* (freeCodeCamp).
+- **Learn:** review Phase 1.
+- **Practice:** add LINQ reports, unit tests, and the project README.
+- **Exercise:** answer 15 quiz questions without looking at the code. Optional: complete the free *Foundational C# with Microsoft* certification through freeCodeCamp.
 
 ---
 
-## Fase 2 — ASP.NET Core Web API + EF Core + SQL Server (Day 31–60)
+## Phase 2: ASP.NET Core Web API, EF Core, and SQL Server (Day 31-60)
 
-Proyek fase 2: **AssetTracker API**, mini sistem inventaris aset IT. Folder: `phase-2-webapi/`. Satu solution yang berkembang setiap hari.
+Project: AssetTracker API, a small IT asset inventory system in `phase-2-webapi/`. Use one solution that grows throughout the phase.
 
-### Minggu 5 — Dasar Web API
+### Week 5: Web API Fundamentals
 
 ### Day 31 — HTTP, REST and First Web API
-- **Belajar:** HTTP method, status code, JSON, REST; `dotnet new webapi --use-controllers`; isi `Program.cs`; OpenAPI.
-- **Praktik:** buat solution `AssetTracker` dan project `AssetTracker.Api`, lalu coba endpoint lewat file `.http` di VS Code.
-- **TODO kamu:** tambahkan endpoint `GET /api/ping` yang mengembalikan `{ "status": "ok", "time": ... }`.
+- **Learn:** HTTP methods, status codes, JSON, REST, `dotnet new webapi --use-controllers`, `Program.cs`, and OpenAPI.
+- **Practice:** create the `AssetTracker` solution and `AssetTracker.Api` project, then try the endpoints through a `.http` file in VS Code.
+- **Exercise:** add `GET /api/ping`, returning `{ "status": "ok", "time": ... }`.
 
 ### Day 32 — Controllers and Routing
-- **Belajar:** `[ApiController]`, `[Route]`, `[HttpGet("{id}")]`, `ActionResult<T>`, route parameter, query string.
-- **Praktik:** `AssetsController` dengan data list di memori.
-- **TODO kamu:** tambahkan `GET /api/assets?location=Makassar` (filter berdasarkan query string).
+- **Learn:** `[ApiController]`, `[Route]`, `[HttpGet("{id}")]`, `ActionResult<T>`, route parameters, and query strings.
+- **Practice:** build `AssetsController` using an in-memory list.
+- **Exercise:** add `GET /api/assets?location=Makassar` with query-string filtering.
 
 ### Day 33 — CRUD In-Memory
-- **Belajar:** POST, PUT, DELETE; status code 201 + `CreatedAtAction`, 204, 404; model binding.
-- **Praktik:** CRUD lengkap untuk aset.
-- **TODO kamu:** tulis endpoint PUT, termasuk respons 404 kalau aset tidak ditemukan.
+- **Learn:** POST, PUT, DELETE, status codes 201 with `CreatedAtAction`, 204, and 404, and model binding.
+- **Practice:** implement full asset CRUD.
+- **Exercise:** write the PUT endpoint, including a 404 response when the asset does not exist.
 
 ### Day 34 — DTOs and Validation
-- **Belajar:** alasan DTO dipisah dari entity, `record` sebagai DTO, DataAnnotations (`[Required]`, `[StringLength]`, `[Range]`), respons 400 otomatis.
-- **Praktik:** `CreateAssetRequest`, `UpdateAssetRequest`, `AssetResponse`.
-- **TODO kamu:** validasi format IP address dengan custom validation attribute.
+- **Learn:** separating DTOs from entities, `record` DTOs, DataAnnotations (`[Required]`, `[StringLength]`, `[Range]`), and automatic 400 responses.
+- **Practice:** create `CreateAssetRequest`, `UpdateAssetRequest`, and `AssetResponse`.
+- **Exercise:** validate IP address format with a custom validation attribute.
 
 ### Day 35 — Dependency Injection
-- **Belajar:** DI container, lifetime (Singleton, Scoped, Transient), constructor injection.
-- **Praktik:** pindahkan logika ke `IAssetService` / `AssetService`.
-- **TODO kamu:** jelaskan di jurnal apa yang terjadi kalau service yang menyimpan data didaftarkan sebagai Transient. Buktikan dengan percobaan.
+- **Learn:** DI containers, lifetimes (Singleton, Scoped, Transient), and constructor injection.
+- **Practice:** move application logic to `IAssetService` / `AssetService`.
+- **Exercise:** explain what happens when a service holding data is registered as Transient. Verify it with an experiment and record the result in the journal.
 
 ### Day 36 — Configuration, Logging and Options
-- **Belajar:** `appsettings.json`, environment (Development/Production), `ILogger<T>`, Options pattern (`IOptions<T>`).
-- **Praktik:** pengaturan `AssetSettings` (contoh: `MaxAgeYears`) dibaca dari konfigurasi.
-- **TODO kamu:** tambahkan log informasi setiap kali aset dibuat atau dihapus.
+- **Learn:** `appsettings.json`, Development/Production environments, `ILogger<T>`, and the Options pattern (`IOptions<T>`).
+- **Practice:** load `AssetSettings`, such as `MaxAgeYears`, from configuration.
+- **Exercise:** log an informational message whenever an asset is created or deleted.
 
 ### Day 37 — Checkpoint 4: Error Handling and API Testing
-- **Belajar:** `ProblemDetails`, global exception handler (`IExceptionHandler`), koleksi request di file `.http`.
-- **Praktik:** penanganan error global dan koleksi `.http` untuk semua endpoint.
-- **TODO kamu:** uji semua endpoint, termasuk 3 skenario error, lalu tulis refleksi minggu 5.
+- **Learn:** `ProblemDetails`, global exception handling with `IExceptionHandler`, and request collections in `.http` files.
+- **Practice:** add global error handling and a `.http` request collection for every endpoint.
+- **Exercise:** test all endpoints, including three error scenarios, then write the Week 5 reflection.
 
-### Minggu 6 — Database
+### Week 6: Database
 
 ### Day 38 — SQL Basics
-- **Belajar:** install SQL Server Express (atau LocalDB) + SSMS, atau ekstensi SQL Server di VS Code; `CREATE TABLE`, `INSERT`, `SELECT`, `WHERE`, `ORDER BY`.
-- **Praktik:** tabel `Assets` dan `Locations` dibuat manual lewat SQL.
-- **TODO kamu:** tulis 5 query SELECT sendiri dan simpan di `phase-2-webapi/sql/day-38.sql`.
+- **Learn:** install SQL Server Express or LocalDB with SSMS, or use the SQL Server extension in VS Code; practice `CREATE TABLE`, `INSERT`, `SELECT`, `WHERE`, and `ORDER BY`.
+- **Practice:** create `Assets` and `Locations` tables manually with SQL.
+- **Exercise:** write five SELECT queries and save them in `phase-2-webapi/sql/day-38.sql`.
 
 ### Day 39 — SQL Joins and Aggregates
-- **Belajar:** primary key, foreign key, `JOIN`, `GROUP BY`, `HAVING`, `COUNT` / `SUM`, index, normalisasi dasar.
-- **Praktik:** query laporan aset per lokasi.
-- **TODO kamu:** tulis query "lokasi dengan lebih dari 5 aset yang berumur di atas 3 tahun".
+- **Learn:** primary keys, foreign keys, `JOIN`, `GROUP BY`, `HAVING`, `COUNT` / `SUM`, indexes, and basic normalization.
+- **Practice:** query an asset report grouped by location.
+- **Exercise:** query locations with more than five assets older than three years.
 
 ### Day 40 — EF Core Introduction
-- **Belajar:** ORM, `DbContext`, `DbSet`, connection string, package `Microsoft.EntityFrameworkCore.SqlServer`, tool `dotnet-ef`, migration pertama.
-- **Praktik:** `AppDbContext`, entity `Asset`, `dotnet ef migrations add InitialCreate`, `dotnet ef database update`.
-- **TODO kamu:** simpan connection string memakai `dotnet user-secrets`, bukan di file yang ikut di-commit.
+- **Learn:** ORM, `DbContext`, `DbSet`, connection strings, `Microsoft.EntityFrameworkCore.SqlServer`, the `dotnet-ef` tool, and the first migration.
+- **Practice:** create `AppDbContext` and an `Asset` entity, then run `dotnet ef migrations add InitialCreate` and `dotnet ef database update`.
+- **Exercise:** store the connection string with `dotnet user-secrets`, outside committed files.
 
 ### Day 41 — EF Core CRUD
-- **Belajar:** query async (`ToListAsync`, `FindAsync`), `AsNoTracking`, `SaveChangesAsync`, change tracking.
-- **Praktik:** ganti list di memori dengan database.
-- **TODO kamu:** ubah method update dan delete di `AssetService` supaya memakai EF Core.
+- **Learn:** async queries (`ToListAsync`, `FindAsync`), `AsNoTracking`, `SaveChangesAsync`, and change tracking.
+- **Practice:** replace the in-memory list with database storage.
+- **Exercise:** update the `AssetService` update and delete methods to use EF Core.
 
 ### Day 42 — Relationships
-- **Belajar:** relasi one-to-many, navigation property, `Include`, foreign key.
-- **Praktik:** `Location` 1–N `Asset` dan `Category` 1–N `Asset`.
-- **TODO kamu:** buat endpoint `GET /api/locations/{id}/assets`.
+- **Learn:** one-to-many relationships, navigation properties, `Include`, and foreign keys.
+- **Practice:** model one-to-many relationships from `Location` to `Asset` and from `Category` to `Asset`.
+- **Exercise:** create `GET /api/locations/{id}/assets`.
 
 ### Day 43 — Migrations and Fluent API
-- **Belajar:** konfigurasi Fluent API (`IEntityTypeConfiguration<T>`), seed data, menambah kolom lewat migration, rollback.
-- **Praktik:** pindahkan konfigurasi entity ke class configuration terpisah dan tambahkan seed data.
-- **TODO kamu:** tambahkan kolom `SerialNumber` (unik) dengan migration baru.
+- **Learn:** Fluent API configuration with `IEntityTypeConfiguration<T>`, seed data, adding columns through migrations, and rollback.
+- **Practice:** move entity configuration into separate configuration classes and add seed data.
+- **Exercise:** add a unique `SerialNumber` column through a new migration.
 
 ### Day 44 — Checkpoint 5: Search, Filter, Paging, Sorting
-- **Belajar:** `IQueryable`, query dinamis, paging (`Skip` / `Take`), respons terpaginasi.
-- **Praktik:** `GET /api/assets?search=&location=&page=&pageSize=&sortBy=`.
-- **TODO kamu:** batasi `pageSize` maksimal 50, lalu tulis refleksi minggu 6.
+- **Learn:** `IQueryable`, dynamic queries, paging with `Skip` / `Take`, and paginated responses.
+- **Practice:** implement `GET /api/assets?search=&location=&page=&pageSize=&sortBy=`.
+- **Exercise:** cap `pageSize` at 50, then write the Week 6 reflection.
 
-### Minggu 7 — Arsitektur dan Keamanan
+### Week 7: Architecture and Security
 
 ### Day 45 — Layered Architecture
-- **Belajar:** pemisahan Api, Application, Domain, Infrastructure; referensi antar project.
-- **Praktik:** pecah solution menjadi beberapa project.
-- **TODO kamu:** gambar diagram sederhana di jurnal (boleh ASCII atau Mermaid) yang menunjukkan arah dependency.
+- **Learn:** separate Api, Application, Domain, and Infrastructure, and manage project references.
+- **Practice:** split the solution into multiple projects.
+- **Exercise:** draw a simple ASCII or Mermaid diagram in the journal showing dependency direction.
 
 ### Day 46 — Service Layer and Mapping
-- **Belajar:** mapping manual entity ↔ DTO (extension method), alasan menghindari library mapping berbayar.
-- **Praktik:** extension method `ToResponse()` dan `ToEntity()`.
-- **TODO kamu:** tulis mapping untuk `Location` dan `Category`.
+- **Learn:** manual entity/DTO mapping with extension methods and reasons to avoid paid mapping libraries.
+- **Practice:** write `ToResponse()` and `ToEntity()` extension methods.
+- **Exercise:** implement mappings for `Location` and `Category`.
 
 ### Day 47 — Logging with Serilog and Global Errors
-- **Belajar:** structured logging, Serilog (console + file), correlation/request logging.
-- **Praktik:** pasang Serilog dan log request.
-- **TODO kamu:** pastikan error 500 tercatat lengkap di file log, tapi detail error tidak bocor ke respons API.
+- **Learn:** structured logging, Serilog console/file sinks, correlation, and request logging.
+- **Practice:** install Serilog and log requests.
+- **Exercise:** record full 500-error details in the log file while keeping those details out of API responses.
 
 ### Day 48 — Authentication with JWT
-- **Belajar:** authentication vs authorization, JWT (header, payload, signature), `Microsoft.AspNetCore.Authentication.JwtBearer`, hashing password.
-- **Praktik:** endpoint register dan login yang menghasilkan JWT.
-- **TODO kamu:** atur masa berlaku token 60 menit dan uji dengan token yang sudah kedaluwarsa.
+- **Learn:** authentication versus authorization, JWT headers/payloads/signatures, `Microsoft.AspNetCore.Authentication.JwtBearer`, and password hashing.
+- **Practice:** build registration and login endpoints that issue JWTs.
+- **Exercise:** set token expiration to 60 minutes and test an expired token.
 
 ### Day 49 — Authorization with Roles and Policies
-- **Belajar:** `[Authorize]`, role (Admin, Technician, Viewer), policy-based authorization.
-- **Praktik:** lindungi endpoint aset: Viewer hanya bisa baca, Technician bisa mengubah, Admin bisa menghapus.
-- **TODO kamu:** buat policy `CanDeleteAsset` dan terapkan.
+- **Learn:** `[Authorize]`, roles (Admin, Technician, Viewer), and policy-based authorization.
+- **Practice:** protect asset endpoints: Viewer can read, Technician can modify, and Admin can delete.
+- **Exercise:** create and apply the `CanDeleteAsset` policy.
 
 ### Day 50 — Unit Testing Services
-- **Belajar:** test untuk service layer, fake vs mock (NSubstitute), pola test yang mudah dibaca.
-- **Praktik:** project `AssetTracker.Tests`.
-- **TODO kamu:** tulis 8 test untuk `AssetService`, termasuk kasus gagal.
+- **Learn:** service-layer tests, fakes versus mocks with NSubstitute, and readable test structure.
+- **Practice:** create `AssetTracker.Tests`.
+- **Exercise:** write eight `AssetService` tests, including failure cases.
 
 ### Day 51 — Integration Testing
-- **Belajar:** `WebApplicationFactory`, database untuk test (SQLite in-memory atau Testcontainers), menguji endpoint dari luar.
-- **Praktik:** test `GET /api/assets` dan `POST /api/assets` beserta autentikasinya.
-- **TODO kamu:** tulis test bahwa user Viewer mendapat 403 saat mencoba menghapus aset.
+- **Learn:** `WebApplicationFactory`, test databases using SQLite in-memory or Testcontainers, and testing endpoints externally.
+- **Practice:** test `GET /api/assets` and `POST /api/assets`, including authentication.
+- **Exercise:** verify that a Viewer receives 403 when attempting to delete an asset.
 
-### Minggu 8 — Siap Produksi
+### Week 8: Production Readiness
 
 ### Day 52 — Export CSV Report
-- **Belajar:** mengembalikan file dari API (`File()`), stream, header `Content-Disposition`.
-- **Praktik:** endpoint `GET /api/reports/assets.csv`.
-- **TODO kamu:** tambahkan filter lokasi dan tanggal di endpoint export.
+- **Learn:** returning files from an API with `File()`, streams, and `Content-Disposition`.
+- **Practice:** implement `GET /api/reports/assets.csv`.
+- **Exercise:** add location and date filters to the export endpoint.
 
 ### Day 53 — Caching and Performance
-- **Belajar:** `IMemoryCache`, output caching, query N+1, `AsNoTracking`, projection dengan `Select`.
-- **Praktik:** cache daftar lokasi selama 5 menit.
-- **TODO kamu:** ukur waktu respons sebelum dan sesudah memakai cache, lalu catat hasilnya.
+- **Learn:** `IMemoryCache`, output caching, N+1 queries, `AsNoTracking`, and projections with `Select`.
+- **Practice:** cache the locations list for five minutes.
+- **Exercise:** measure response times before and after caching, then record the results.
 
 ### Day 54 — Docker
-- **Belajar:** image, container, Dockerfile multi-stage, `docker compose` (API + SQL Server).
-- **Praktik:** Dockerfile untuk API dan `compose.yaml`.
-- **TODO kamu:** jalankan seluruh stack dengan `docker compose up` dan pastikan migration berjalan.
+- **Learn:** images, containers, multi-stage Dockerfiles, and `docker compose` for an API and SQL Server.
+- **Practice:** write the API Dockerfile and `compose.yaml`.
+- **Exercise:** run the full stack with `docker compose up` and verify that migrations run.
 
 ### Day 55 — CI with GitHub Actions
-- **Belajar:** workflow YAML, job, step, `dotnet test` di CI, badge status.
-- **Praktik:** workflow build + test khusus untuk AssetTracker.
-- **TODO kamu:** buat test gagal dengan sengaja, lihat CI berubah merah, lalu perbaiki.
+- **Learn:** workflow YAML, jobs, steps, `dotnet test` in CI, and status badges.
+- **Practice:** create a build/test workflow for AssetTracker.
+- **Exercise:** deliberately fail a test, observe the failed CI run, then fix the test.
 
 ### Day 56 — Deploy to the Cloud
-- **Belajar:** konsep deploy, environment variable, connection string di produksi, layanan gratis atau murah (misalnya Azure App Service free tier, atau hosting berbasis Docker).
-- **Praktik:** deploy API dan database.
-- **TODO kamu:** catat langkah deploy di `phase-2-webapi/DEPLOY.md` supaya bisa diulang.
+- **Learn:** deployment, environment variables, production connection strings, and free or low-cost hosting options such as an Azure App Service free tier or Docker-based hosting.
+- **Practice:** deploy the API and database.
+- **Exercise:** record repeatable deployment steps in `phase-2-webapi/DEPLOY.md`.
 
 ### Day 57 — Health Checks and Rate Limiting
-- **Belajar:** `AddHealthChecks` + `/health`, rate limiter bawaan ASP.NET Core, CORS.
-- **Praktik:** health check untuk database dan rate limit untuk endpoint login.
-- **TODO kamu:** uji rate limit dengan mengirim banyak request lewat file `.http` atau script.
+- **Learn:** `AddHealthChecks` and `/health`, built-in ASP.NET Core rate limiting, and CORS.
+- **Practice:** add a database health check and rate limiting for the login endpoint.
+- **Exercise:** test rate limiting by sending repeated requests through a `.http` file or script.
 
 ### Day 58 — API Documentation
-- **Belajar:** OpenAPI, Scalar UI, README API yang baik, contoh request dan response.
-- **Praktik:** README `phase-2-webapi/README.md` berisi cara menjalankan, endpoint, dan screenshot.
-- **TODO kamu:** tulis bagian "Apa yang saya pelajari dari proyek ini" dengan kata-katamu sendiri.
+- **Learn:** OpenAPI, Scalar UI, API README structure, and request/response examples.
+- **Practice:** document run instructions, endpoints, and screenshots in `phase-2-webapi/README.md`.
+- **Exercise:** write a section titled "What I learned from this project" in your own words.
 
 ### Day 59 — Code Review and Refactor
-- **Belajar:** code smell, penamaan, method yang terlalu panjang, prinsip SOLID secara ringan.
-- **Praktik:** code review menyeluruh dan daftar perbaikan.
-- **TODO kamu:** kerjakan minimal 3 perbaikan dari daftar review sendiri.
+- **Learn:** code smells, naming, overly long methods, and basic SOLID principles.
+- **Practice:** review the codebase and list improvements.
+- **Exercise:** implement at least three improvements from the review list.
 
 ### Day 60 — Phase 2 Review and Release v0.2
-- **Belajar:** review fase 2.
-- **Praktik:** buat tag `v0.2` dan GitHub Release lewat `gh release create`.
-- **TODO kamu:** jawab 20 soal kuis tentang API, EF Core, dan auth, lalu tulis refleksi fase 2.
+- **Learn:** review Phase 2.
+- **Practice:** create the `v0.2` tag and a GitHub Release with `gh release create`.
+- **Exercise:** answer 20 questions about APIs, EF Core, and authentication, then write the Phase 2 reflection.
 
 ---
 
-## Fase 3 — Proyek Akhir: HelpdeskLite (Day 61–90)
+## Phase 3: Capstone, HelpdeskLite (Day 61-90)
 
-Aplikasi ticketing helpdesk full-stack (mirip versi mini MySSC) dengan ASP.NET Core API + Blazor + SQL Server. Folder: `phase-3-capstone/HelpdeskLite/`. Ini proyek utama untuk CV.
+Build a full-stack helpdesk ticketing application with ASP.NET Core API, Blazor, and SQL Server. Use `phase-3-capstone/HelpdeskLite/` for the main portfolio project.
 
-### Minggu 9 — Perencanaan dan Inti
+### Week 9: Planning and Core Features
 
 ### Day 61 — Requirements and Design
-- **Belajar:** user story, ERD, alur status tiket, GitHub Issues dan Projects.
-- **Praktik:** dokumen `phase-3-capstone/DESIGN.md` (fitur, ERD dalam Mermaid, alur status) dan issue untuk setiap fitur.
-- **TODO kamu:** tulis 10 user story sendiri, misalnya "Sebagai teknisi, saya ingin ...".
+- **Learn:** user stories, ERDs, ticket status workflows, and GitHub Issues and Projects.
+- **Practice:** create `phase-3-capstone/DESIGN.md` with features, a Mermaid ERD, and the status workflow; create an issue for each feature.
+- **Exercise:** write 10 user stories, for example "As a technician, I want to ...".
 
 ### Day 62 — Solution Scaffold
-- **Belajar:** struktur solution multi-project, `Directory.Build.props`, referensi project.
-- **Praktik:** HelpdeskLite.Api, .Application, .Domain, .Infrastructure, .Tests.
-- **TODO kamu:** pastikan `dotnet build` dan `dotnet test` berhasil, lalu jelaskan fungsi setiap project di README.
+- **Learn:** multi-project solution structure, `Directory.Build.props`, and project references.
+- **Practice:** create HelpdeskLite.Api, .Application, .Domain, .Infrastructure, and .Tests.
+- **Exercise:** verify that `dotnet build` and `dotnet test` pass, then explain each project's role in the README.
 
 ### Day 63 — Domain Model and Ticket Workflow
-- **Belajar:** rich domain model, aturan bisnis di dalam entity.
-- **Praktik:** entity `Ticket` (Open → InProgress → Resolved → Closed), prioritas P1–P4, `Category`.
-- **TODO kamu:** tulis aturan transisi status beserta unit test-nya.
+- **Learn:** rich domain models and business rules within entities.
+- **Practice:** model `Ticket` with Open → InProgress → Resolved → Closed, priorities P1-P4, and `Category`.
+- **Exercise:** implement the status transition rules and their unit tests.
 
 ### Day 64 — Database and Migrations
-- **Belajar:** konfigurasi EF Core untuk domain, seed data kategori.
-- **Praktik:** `HelpdeskDbContext`, migration awal, seed.
-- **TODO kamu:** tambahkan index untuk kolom yang sering dicari (Status, Priority).
+- **Learn:** EF Core domain configuration and category seed data.
+- **Practice:** create `HelpdeskDbContext`, the initial migration, and seed data.
+- **Exercise:** add indexes for frequently queried columns, including Status and Priority.
 
 ### Day 65 — Ticket CRUD Endpoints
-- **Belajar:** endpoint yang memanggil domain, validasi request.
-- **Praktik:** create, get, list, update tiket.
-- **TODO kamu:** tulis endpoint `PATCH /api/tickets/{id}/status` yang memakai aturan domain.
+- **Learn:** endpoints that call domain logic and validate requests.
+- **Practice:** implement ticket creation, retrieval, listing, and updates.
+- **Exercise:** implement `PATCH /api/tickets/{id}/status` using domain rules.
 
 ### Day 66 — Comments and Activity Log
-- **Belajar:** relasi one-to-many, audit field (`CreatedAt`, `CreatedBy`), interceptor EF Core.
-- **Praktik:** komentar pada tiket dan log aktivitas otomatis.
-- **TODO kamu:** isi `CreatedAt` / `UpdatedAt` otomatis lewat `SaveChanges` interceptor.
+- **Learn:** one-to-many relationships, audit fields (`CreatedAt`, `CreatedBy`), and EF Core interceptors.
+- **Practice:** add ticket comments and automatic activity logs.
+- **Exercise:** populate `CreatedAt` / `UpdatedAt` automatically through a `SaveChanges` interceptor.
 
 ### Day 67 — Checkpoint 6: Core Tests
-- **Belajar:** coverage yang bermakna (bukan sekadar persentase).
-- **Praktik:** lengkapi unit test dan integration test inti.
-- **TODO kamu:** tambahkan 5 test untuk kasus tepi (edge case), lalu tulis refleksi minggu 9.
+- **Learn:** meaningful test coverage beyond a percentage.
+- **Practice:** complete the core unit and integration tests.
+- **Exercise:** add five edge-case tests, then write the Week 9 reflection.
 
-### Minggu 10 — Fitur
+### Week 10: Features
 
 ### Day 68 — Auth and Roles
-- **Belajar:** menerapkan ulang JWT dan role dari fase 2 (Requester, Technician, Admin).
-- **Praktik:** register, login, dan seed akun demo.
-- **TODO kamu:** pastikan Requester hanya bisa melihat tiketnya sendiri.
+- **Learn:** reuse Phase 2 JWT and role concepts for Requester, Technician, and Admin.
+- **Practice:** implement registration, login, and demo account seeding.
+- **Exercise:** ensure that Requesters can see only their own tickets.
 
 ### Day 69 — Ticket Assignment
-- **Belajar:** resource-based authorization.
-- **Praktik:** assign tiket ke teknisi dan endpoint `GET /api/tickets/mine`.
-- **TODO kamu:** pastikan hanya Admin yang bisa assign, dan teknisi hanya bisa mengubah tiket yang di-assign ke dia.
+- **Learn:** resource-based authorization.
+- **Practice:** assign tickets to technicians and implement `GET /api/tickets/mine`.
+- **Exercise:** allow only Admin to assign tickets, and allow technicians to modify only tickets assigned to them.
 
 ### Day 70 — SLA and Background Service
-- **Belajar:** `BackgroundService`, `PeriodicTimer`, `TimeProvider` (agar mudah di-test).
-- **Praktik:** tenggat SLA dihitung dari prioritas, lalu service berkala menandai tiket yang terlambat.
-- **TODO kamu:** tulis test untuk logika SLA memakai `FakeTimeProvider`.
+- **Learn:** `BackgroundService`, `PeriodicTimer`, and `TimeProvider` for testable time handling.
+- **Practice:** calculate SLA deadlines from priority, then use a periodic service to flag overdue tickets.
+- **Exercise:** test SLA logic with `FakeTimeProvider`.
 
 ### Day 71 — Search, Filter and Paging
-- **Belajar:** menerapkan ulang pola dari Day 44.
-- **Praktik:** filter berdasarkan status, prioritas, kategori, teknisi, dan kata kunci.
-- **TODO kamu:** tambahkan sorting berdasarkan tenggat SLA.
+- **Learn:** apply the Day 44 patterns again.
+- **Practice:** filter by status, priority, category, technician, and keyword.
+- **Exercise:** add sorting by SLA deadline.
 
 ### Day 72 — Dashboard Statistics
-- **Belajar:** agregasi LINQ ke SQL, projection ke DTO.
-- **Praktik:** `GET /api/dashboard` berisi jumlah per status, prioritas, dan kategori.
-- **TODO kamu:** hitung rata-rata waktu penyelesaian dan jumlah tiket yang melewati SLA.
+- **Learn:** LINQ-to-SQL aggregation and DTO projections.
+- **Practice:** implement `GET /api/dashboard` with counts by status, priority, and category.
+- **Exercise:** calculate average resolution time and the number of tickets that exceeded their SLA.
 
 ### Day 73 — Notifications
-- **Belajar:** abstraksi `INotificationService`, SMTP (MailKit) atau versi log-only.
-- **Praktik:** notifikasi saat tiket dibuat atau di-assign.
-- **TODO kamu:** buat template pesan notifikasi yang rapi.
+- **Learn:** `INotificationService`, SMTP with MailKit, or an implementation that writes notifications to logs.
+- **Practice:** send a notification when a ticket is created or assigned.
+- **Exercise:** create a clear notification message template.
 
 ### Day 74 — Checkpoint 7: Integration Tests
-- **Belajar:** menguji alur lengkap.
-- **Praktik:** integration test alur: buat tiket → assign → resolve → close.
-- **TODO kamu:** perbaiki semua test yang gagal, lalu tulis refleksi minggu 10.
+- **Learn:** test a complete workflow.
+- **Practice:** test the create → assign → resolve → close ticket workflow.
+- **Exercise:** fix every failing test, then write the Week 10 reflection.
 
-### Minggu 11 — Frontend Blazor
+### Week 11: Blazor Frontend
 
 ### Day 75 — Blazor Introduction
-- **Belajar:** Blazor Web App, component, parameter, routing, render mode.
-- **Praktik:** project `HelpdeskLite.Web` dan layout dasar.
-- **TODO kamu:** buat component `PriorityBadge` dengan warna berbeda untuk P1–P4.
+- **Learn:** Blazor Web App, components, parameters, routing, and render modes.
+- **Practice:** create `HelpdeskLite.Web` and its basic layout.
+- **Exercise:** create `PriorityBadge` with different colors for P1-P4.
 
 ### Day 76 — Ticket List Page
-- **Belajar:** memanggil API dari Blazor (`HttpClient` typed client), state loading dan error.
-- **Praktik:** halaman daftar tiket.
-- **TODO kamu:** tambahkan filter status di halaman tersebut.
+- **Learn:** calling an API from Blazor with a typed `HttpClient`, and handling loading and error states.
+- **Practice:** build the ticket list page.
+- **Exercise:** add a status filter to the page.
 
 ### Day 77 — Create and Edit Forms
-- **Belajar:** `EditForm`, `DataAnnotationsValidator`, binding.
-- **Praktik:** form buat tiket dan edit tiket.
-- **TODO kamu:** tampilkan pesan validasi yang ramah pengguna dalam Bahasa Indonesia.
+- **Learn:** `EditForm`, `DataAnnotationsValidator`, and binding.
+- **Practice:** build ticket creation and editing forms.
+- **Exercise:** display clear, user-friendly validation messages in English.
 
 ### Day 78 — Login and Auth State in Blazor
-- **Belajar:** `AuthenticationStateProvider`, menyimpan token, `AuthorizeView`.
-- **Praktik:** halaman login dan menu yang berbeda sesuai role.
-- **TODO kamu:** sembunyikan tombol yang tidak boleh diakses role tertentu.
+- **Learn:** `AuthenticationStateProvider`, token storage, and `AuthorizeView`.
+- **Practice:** build the login page and role-specific menus.
+- **Exercise:** hide buttons that the current role is not allowed to use.
 
 ### Day 79 — Dashboard Page
-- **Belajar:** menampilkan data statistik di UI.
-- **Praktik:** halaman dashboard berisi kartu angka dan tabel.
-- **TODO kamu:** tambahkan grafik sederhana (bar chart memakai CSS saja sudah cukup).
+- **Learn:** display statistics in the UI.
+- **Practice:** build a dashboard with metric cards and tables.
+- **Exercise:** add a simple chart; a CSS bar chart is sufficient.
 
 ### Day 80 — UI Polish
-- **Belajar:** konsistensi tampilan, responsif di layar HP, aksesibilitas dasar.
-- **Praktik:** rapikan layout, navigasi, dan halaman kosong atau error.
-- **TODO kamu:** uji tampilan di layar HP (DevTools) dan perbaiki 3 masalah.
+- **Learn:** visual consistency, responsive mobile layouts, and basic accessibility.
+- **Practice:** refine layout, navigation, empty states, and error pages.
+- **Exercise:** test a mobile viewport with DevTools and fix three issues.
 
 ### Day 81 — Checkpoint 8: End-to-End Manual Testing
-- **Belajar:** checklist pengujian manual, menulis bug report.
-- **Praktik:** jalankan seluruh skenario sebagai Requester, Technician, dan Admin.
-- **TODO kamu:** catat bug sebagai GitHub Issue lalu perbaiki minimal 2, kemudian tulis refleksi minggu 11.
+- **Learn:** manual test checklists and bug reports.
+- **Practice:** run every scenario as Requester, Technician, and Admin.
+- **Exercise:** record bugs as GitHub Issues, fix at least two, then write the Week 11 reflection.
 
-### Minggu 12 — Rilis
+### Week 12: Release
 
 ### Day 82 — Attachments
-- **Belajar:** upload file, validasi ukuran dan tipe file, penyimpanan lokal.
-- **Praktik:** lampiran screenshot pada tiket.
-- **TODO kamu:** tolak file di atas 5 MB dan tipe file yang tidak diizinkan.
+- **Learn:** file uploads, size/type validation, and local storage.
+- **Practice:** attach screenshots to tickets.
+- **Exercise:** reject files larger than 5 MB and disallowed file types.
 
 ### Day 83 — Logging and Health Checks
-- **Belajar:** menerapkan ulang Serilog dan health check dari fase 2.
-- **Praktik:** log terstruktur dan `/health`.
-- **TODO kamu:** pastikan setiap log menyertakan ID tiket kalau relevan.
+- **Learn:** reuse Phase 2 Serilog and health check patterns.
+- **Practice:** add structured logging and `/health`.
+- **Exercise:** include the ticket ID in each log entry where relevant.
 
 ### Day 84 — Docker Compose Full Stack
-- **Belajar:** compose multi-service (api, web, db), network, volume.
-- **Praktik:** `compose.yaml` untuk seluruh aplikasi.
-- **TODO kamu:** dokumentasikan cara menjalankan aplikasi dengan satu perintah.
+- **Learn:** multi-service Compose for API, web, and database services, networking, and volumes.
+- **Practice:** write `compose.yaml` for the full application.
+- **Exercise:** document how to start the application with one command.
 
 ### Day 85 — CI/CD Pipeline
-- **Belajar:** pipeline build, test, dan (opsional) deploy otomatis.
-- **Praktik:** workflow khusus HelpdeskLite.
-- **TODO kamu:** tambahkan badge CI di README HelpdeskLite.
+- **Learn:** automated build/test pipelines and optional deployment.
+- **Practice:** create a HelpdeskLite workflow.
+- **Exercise:** add the CI badge to the HelpdeskLite README.
 
 ### Day 86 — Deploy and Demo Data
-- **Belajar:** deploy aplikasi full-stack, data demo, akun demo.
-- **Praktik:** deploy dan seed data contoh yang realistis.
-- **TODO kamu:** uji aplikasi yang sudah online dari HP.
+- **Learn:** full-stack deployment, demo data, and demo accounts.
+- **Practice:** deploy the application and seed realistic sample data.
+- **Exercise:** test the live application from a phone.
 
 ### Day 87 — Security Review
-- **Belajar:** OWASP Top 10 dasar: SQL injection (aman dengan EF Core), XSS, secret di repo, CORS, HTTPS.
-- **Praktik:** checklist keamanan dan audit project.
-- **TODO kamu:** pastikan tidak ada secret di riwayat git (`git log -p` + cari kata "password").
+- **Learn:** OWASP Top 10 basics, including SQL injection and EF Core, XSS, repository secrets, CORS, and HTTPS.
+- **Practice:** review the project using a security checklist.
+- **Exercise:** check Git history for secrets with `git log -p`, including searches for "password".
 
 ### Day 88 — Documentation and Screenshots
-- **Belajar:** README portofolio yang menjual.
-- **Praktik:** README berisi screenshot, diagram arsitektur, fitur, tech stack, dan cara menjalankan.
-- **TODO kamu:** rekam GIF atau video demo 1–2 menit.
+- **Learn:** write a portfolio project README.
+- **Practice:** document screenshots, architecture diagrams, features, the tech stack, and run instructions.
+- **Exercise:** record a 1-2 minute demo GIF or video.
 
 ### Day 89 — CV, LinkedIn and GitHub Profile
-- **Belajar:** cara menampilkan proyek di CV dan profil GitHub.
-- **Praktik:** README profil GitHub (`username/username`), pin repo, dan poin CV untuk HelpdeskLite dan AssetTracker.
-- **TODO kamu:** tulis 3 poin pencapaian proyek dengan format "melakukan X memakai Y, hasilnya Z".
+- **Learn:** present projects on a CV and GitHub profile.
+- **Practice:** create a GitHub profile README (`username/username`), pin the repository, and draft CV points for HelpdeskLite and AssetTracker.
+- **Exercise:** write three project achievement statements using "Built X using Y, resulting in Z".
 
 ### Day 90 — Retrospective and Release v1.0
-- **Belajar:** refleksi 90 hari dan rencana belajar berikutnya.
-- **Praktik:** tag `v1.0`, GitHub Release, dan update README utama.
-- **TODO kamu:** tulis `RETROSPECTIVE.md`: apa yang berhasil, apa yang sulit, dan target 90 hari berikutnya.
+- **Learn:** reflect on the 90 sessions and plan further study.
+- **Practice:** create the `v1.0` tag and a GitHub Release, then update the main README.
+- **Exercise:** write `RETROSPECTIVE.md` covering what worked, what was difficult, and goals for the next 90 days.
 
 ---
 
-## Riwayat Perubahan Roadmap
+## Roadmap Change History
 
-Setiap perubahan roadmap dicatat di sini.
+Record each roadmap change here.
 
-| Tanggal | Diubah oleh | Perubahan |
+| Date | Author | Change |
 |---|---|---|
-| 2026-10-24 | - | Versi awal roadmap 90 hari |
-| 2026-10-25 | - | Merapikan bahasa dan panduan tanpa mengubah urutan materi 90 hari |
+| 2026-10-24 | - | Initial 90-day roadmap |
+| 2026-10-25 | - | Refined wording and instructions without changing the 90-day topic sequence |
+| 2026-10-25 | - | Translated documentation and planned interface text to English, including CalculateSubnet and Day 77 validation messages; preserved all daily headings and locale-specific currency examples |

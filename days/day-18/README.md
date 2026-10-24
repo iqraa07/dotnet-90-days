@@ -1,9 +1,9 @@
 # Day 18: LINQ Part 2
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`GroupBy`, `Sum`, `Average`, `Max`, `Join`, `ToDictionary`, query syntax vs method syntax.
+`GroupBy`, `Sum`, `Average`, `Max`, `Join`, `ToDictionary`, and query syntax versus method syntax.
 
-[Materi lengkap](../../ROADMAP.md#day-18--linq-part-2) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-18--linq-part-2) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

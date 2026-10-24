@@ -1,9 +1,9 @@
 # Day 31: HTTP, REST and First Web API
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-HTTP method, status code, JSON, REST; `dotnet new webapi --use-controllers`; isi `Program.cs`; OpenAPI.
+HTTP methods, status codes, JSON, REST, `dotnet new webapi --use-controllers`, `Program.cs`, and OpenAPI.
 
-[Materi lengkap](../../ROADMAP.md#day-31--http-rest-and-first-web-api) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-31--http-rest-and-first-web-api) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

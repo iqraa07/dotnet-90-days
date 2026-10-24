@@ -18,6 +18,7 @@
       -Message "text"      Custom commit summary for 'done'  ->  "day-NN: text"
       -NoProject           'new': do not create a console project.
       -NoCommit            'done': update README only, do not commit.
+      -CodeOnly            'done': complete verified implementation; reflection may remain pending.
       -Force               'done': skip build + journal checks.
       -Private             'publish': create a private repo instead of public.
 
@@ -37,6 +38,7 @@ param(
     [string] $Message = '',
     [switch] $NoProject,
     [switch] $NoCommit,
+    [switch] $CodeOnly,
     [switch] $Force,
     [switch] $Private
 )
@@ -258,7 +260,7 @@ function Update-ProgressBlock([string]$Text, [string]$Nl) {
     $pct = [math]::Floor($done * 100 / $total)
     $cur = '-'
     if ($doing.Count -gt 0) { $cur = $doing -join ', ' }
-    $line = "**Progress:** $done / $total days ($pct%) $Dot **Current:** $cur $Dot **Last update:** $Today"
+    $line = "**Implementation:** $done / $total exercises ($pct%) $Dot **Current:** $cur $Dot **Last update:** $Today"
 
     $startTag = '<!-- progress:start -->'
     $endTag = '<!-- progress:end -->'
@@ -338,17 +340,18 @@ function Get-RelativePath([string]$Path) {
 
 function Test-Understanding([string]$JournalPath) {
     $text = Read-Text $JournalPath
-    $m = [regex]::Match($text, '(?ms)^## Yang saya pahami[^\n]*\n(.*?)(?=^## |\z)')
-    if (-not $m.Success) { return $true }
+    $m = [regex]::Match($text, '(?ms)^## (?:What I understood|Yang saya pahami)[^\n]*\n(.*?)(?=^## |\z)')
+    if (-not $m.Success) { return $false }
     $body = [regex]::Replace($m.Groups[1].Value, '(?s)<!--.*?-->', '')
     $body = [regex]::Replace($body, '(?m)^\s*[-*]\s*$', '')
     return ($body.Trim().Length -gt 0)
 }
 
-function Invoke-Build([int]$N) {
+function Invoke-Build {
+    param([int]$N, [switch]$RequireTarget)
     if (-not (Test-Tool 'dotnet')) {
-        Write-Note 'dotnet not found - skipping build check.'
-        return $true
+        Write-Note 'dotnet not found - build verification cannot run.'
+        return $false
     }
     $phase = Get-Phase $N
     $target = $null
@@ -367,6 +370,10 @@ function Invoke-Build([int]$N) {
         }
     }
     if (-not $target) {
+        if ($RequireTarget) {
+            Write-Note 'No project/solution found - code-only completion requires a build target.'
+            return $false
+        }
         Write-Note 'No project/solution found for this day - skipping build check.'
         return $true
     }
@@ -478,17 +485,21 @@ function Invoke-Done {
 
     if (-not $Force) {
         if (-not (Test-Understanding $journal)) {
-            Stop-WithError "Section 'Yang saya pahami' in $(Get-RelativePath $journal) is still empty. Write 3-5 points in your own words first (or use -Force)."
+            if ($CodeOnly) {
+                Write-Note 'Personal reflection is pending. Verifying implementation only.'
+            } else {
+                Stop-WithError "Section 'What I understood' in $(Get-RelativePath $journal) is empty or missing. Add your reflection, or use -CodeOnly for verified implementation progress."
+            }
         }
-        if (-not (Invoke-Build $n)) {
-            Stop-WithError 'Build failed. Fix the errors first (or use -Force).'
+        if (-not (Invoke-Build -N $n -RequireTarget:$CodeOnly)) {
+            Stop-WithError 'Build verification failed. Fix the errors before completing this day.'
         }
     }
 
     $journalCell = '-'
     if ($journal) { $journalCell = "[journal]($(Get-RelativePath $journal))" }
     Set-DayRow -N $n -Status $IconDone -Date $Today -Journal $journalCell
-    Write-Ok "Day $key marked as done."
+    Write-Ok "Day $key implementation marked as complete."
 
     if (-not $NoCommit) {
         $summary = $info.Title
@@ -702,7 +713,7 @@ day - helper for the 90 Days of .NET repo
   .\day init                one-time: git init + first commit
   .\day publish [-Private]  one-time: create GitHub repo and push
 
-Options: -Message "text"  -NoProject  -NoCommit  -Force
+Options: -Message "text"  -NoProject  -NoCommit  -CodeOnly  -Force
 '@
 }
 

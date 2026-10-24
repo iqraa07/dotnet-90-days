@@ -1,9 +1,9 @@
 # Day 78: Login and Auth State in Blazor
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`AuthenticationStateProvider`, menyimpan token, `AuthorizeView`.
+`AuthenticationStateProvider`, token storage, and `AuthorizeView`.
 
-[Materi lengkap](../../ROADMAP.md#day-78--login-and-auth-state-in-blazor) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-78--login-and-auth-state-in-blazor) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

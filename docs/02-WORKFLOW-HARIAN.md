@@ -1,8 +1,8 @@
-# 02: Alur Kerja Harian
+# 02: Daily Workflow
 
-Semua hari belajar memakai repo `dotnet-90-days`. Jalankan perintah helper dari root repo dan simpan hasil setiap sesi pada folder kode serta jurnal yang sesuai.
+Use the `dotnet-90-days` repository for every study day. Run the helper from the repository root and keep each session's work in the appropriate source folder and journal.
 
-## Mulai sesi
+## Start a session
 
 ```powershell
 git status
@@ -10,36 +10,38 @@ git log --oneline -5
 .\day status
 ```
 
-Baca `HANDOFF.md` dan jurnal hari yang sedang dikerjakan. Periksa perubahan yang belum di-commit sebelum menambah pekerjaan baru.
+Read `HANDOFF.md` and the active day's journal. Check uncommitted changes before adding new work.
 
-Lanjutkan hari yang masih berjalan. Jika belum ada, pilih hari pertama yang belum dimulai, lalu jalankan helper dengan nomor hari tersebut. Contoh untuk Day 01:
+Continue the active day. If none is active, choose the first day that has not started and pass its number to the helper. For Day 01:
 
 ```powershell
 .\day new 1
 ```
 
-Helper membuat jurnal, memperbarui progres README, dan membuat project console untuk Fase 1.
+The helper creates a journal, updates README progress, and creates a console project for Phase 1.
 
-## Kerjakan latihan
+## Work through the exercise
 
-1. Baca target, materi, dan praktik hari tersebut di `ROADMAP.md`.
-2. Kerjakan latihan serta bagian `TODO(kamu)` yang tersedia.
-3. Ikuti perintah pada README latihan untuk build dan menjalankan program.
-4. Bandingkan hasil dengan contoh atau kriteria pemeriksaan. Jalankan test jika project memiliki test.
-5. Catat pekerjaan, kendala, dan hasil pemeriksaan di jurnal. Tulis bagian **Yang saya pahami** dengan kata-kata sendiri.
+1. Read the day's goals, topics, and practice task in `ROADMAP.md`.
+2. Implement the exercise and complete any remaining TODO items.
+3. Follow the exercise README to build and run the program.
+4. Compare the output with the examples or acceptance criteria. Run tests if the project includes them.
+5. Record work, issues, and verification results in the journal. The owner writes **What I understood** in their own words.
 
-Contoh build dan run Day 01 dari root repo:
+Build and run Day 01 from the repository root:
 
 ```powershell
 dotnet build .\phase-1-csharp\day-01-setup-net-10-and-hello-world
 dotnet run --project .\phase-1-csharp\day-01-setup-net-10-and-hello-world
 ```
 
-Jika ada error, catat pesan lengkap, langkah yang memicunya, hasil yang diharapkan, dan percobaan perbaikannya. Gunakan [checklist sesi](03-PROMPTS.md) untuk memeriksa pekerjaan secara bertahap.
+If an error occurs, record the full message, the steps that triggered it, the expected result, and attempted fixes. Use the [session checklists](03-PROMPTS.md) to review the work.
 
-## Tutup sesi
+## Record completion
 
-Hari selesai setelah latihan berfungsi, build dan test yang tersedia lulus, serta jurnal termasuk refleksi pribadi terisi. Periksa perubahan sebelum membuat commit:
+A checkmark in the progress table means the exercise is implemented and verified. Track personal reflection separately in the journal.
+
+The default `done` command checks the build and requires a genuine personal reflection:
 
 ```powershell
 git diff
@@ -47,9 +49,20 @@ git diff
 .\day push
 ```
 
-Ganti `1` dengan nomor hari yang dikerjakan. Perintah `done` memeriksa build dan isi refleksi jurnal, menandai hari selesai, lalu membuat commit `day-NN: <judul>`.
+Replace `1` with the day being completed. The helper marks the day complete and creates a `day-NN: <title>` commit.
 
-Perbarui `HANDOFF.md` dengan posisi terakhir, hasil verifikasi, dan langkah berikutnya. Simpan perubahan catatan tersebut:
+When the owner explicitly requests implementation progress while personal reflection is pending, use `-CodeOnly`:
+
+```powershell
+.\day done 1 -CodeOnly
+.\day push
+```
+
+This mode still performs build checks. Run the program and any applicable tests before using it, and leave the personal reflection pending for the owner.
+
+## Close the session
+
+Update `HANDOFF.md` with the current state, verification results, reflection status, and next steps. Save those notes:
 
 ```powershell
 git add HANDOFF.md
@@ -58,10 +71,10 @@ git commit -m "chore: update handoff"
 git status
 ```
 
-Jika latihan belum tuntas, pertahankan status sedang dikerjakan. Catat sisa pekerjaan di `HANDOFF.md` dan simpan progres dengan commit WIP yang jelas, misalnya `day-01: wip add console exercise`.
+If implementation is incomplete, keep the day in progress. Record the remaining work in `HANDOFF.md` and make a clear WIP commit, such as `day-01: wip add console exercise`.
 
-## Jeda dan evaluasi
+## Breaks and review
 
-Nomor hari mengikuti urutan sesi belajar. Setelah jeda, lanjutkan dari pekerjaan terakhir tanpa mengubah tanggal commit. Jika sengaja melewati topik, gunakan `.\day skip N` dan catat alasannya.
+Day numbers follow study sessions. After a break, continue from the last unfinished task without changing earlier commit dates. If a topic is deliberately skipped, use `.\day skip N` and record the reason.
 
-Pada checkpoint di roadmap, tinjau kode, ulangi materi yang masih sulit, dan tulis hasil evaluasi. Saat akhir fase, periksa kelengkapan README, perintah run, jurnal, serta hasil test sebelum membuat rilis.
+At roadmap checkpoints, review the code, revisit difficult topics, and record the results. At the end of a phase, check the README, run instructions, journals, and tests before creating a release.

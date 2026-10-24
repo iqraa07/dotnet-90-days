@@ -1,9 +1,9 @@
 # Day 34: DTOs and Validation
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Alasan DTO dipisah dari entity, `record` sebagai DTO, DataAnnotations (`[Required]`, `[StringLength]`, `[Range]`), respons 400 otomatis.
+separating DTOs from entities, `record` DTOs, DataAnnotations (`[Required]`, `[StringLength]`, `[Range]`), and automatic 400 responses.
 
-[Materi lengkap](../../ROADMAP.md#day-34--dtos-and-validation) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-34--dtos-and-validation) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

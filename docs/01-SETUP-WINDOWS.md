@@ -1,8 +1,8 @@
-# 01: Setup Windows
+# 01: Windows Setup
 
-Jalankan perintah dari PowerShell. Semua hari dan fase berada di repo `dotnet-90-days` yang sama.
+Run commands in PowerShell. Keep every day and phase in the same `dotnet-90-days` repository.
 
-## A. Periksa dan pasang perangkat
+## A. Check and install tools
 
 ```powershell
 git --version
@@ -10,7 +10,7 @@ dotnet --version
 gh --version
 ```
 
-`dotnet --version` harus menampilkan `10.0.x`, sesuai `global.json`. Pasang hanya paket yang belum tersedia. Instalasi memerlukan persetujuan pemilik komputer:
+`dotnet --version` must report `10.0.x`, as required by `global.json`. Install missing packages only. Get the computer owner's approval before installing software:
 
 ```powershell
 winget install --id Git.Git -e
@@ -18,88 +18,88 @@ winget install --id Microsoft.DotNet.SDK.10 -e
 winget install --id GitHub.cli -e
 ```
 
-VS Code bersifat opsional:
+VS Code is optional:
 
 ```powershell
 winget install --id Microsoft.VisualStudioCode -e
 code --install-extension ms-dotnettools.csdevkit
 ```
 
-Setelah instalasi, buka ulang PowerShell dan aplikasi yang menjalankannya agar PATH diperbarui. Jika perintah masih tidak dikenali, periksa apakah paket berhasil terpasang sebelum mengulang instalasi.
+After installation, reopen PowerShell and its host application to refresh PATH. If a command is still unavailable, check whether its package was installed successfully before repeating the installation.
 
-## B. Identitas Git
+## B. Git identity
 
-Cek konfigurasi yang sudah ada:
+Check the existing configuration:
 
 ```powershell
 git config --global user.name
 git config --global user.email
 ```
 
-Jika belum terisi, atur nama dan email sesuai persetujuan pemilik akun. Ganti placeholder email sebelum menjalankan:
+If either value is missing, confirm it with the account owner. Replace the email placeholder before running:
 
 ```powershell
 git config --global user.name "Muhammad Iqra Nur Fajar"
-git config --global user.email "EMAIL-TERVERIFIKASI-ATAU-NOREPLY-GITHUB"
+git config --global user.email "VERIFIED-EMAIL-OR-GITHUB-NOREPLY"
 git config --global init.defaultBranch main
 ```
 
-Gunakan email terverifikasi di akun GitHub atau alamat noreply agar commit terhubung ke akunmu. Alamat noreply tersedia di Settings → Emails. Salin alamat tepat milik akun, misalnya dalam format `ID+username@users.noreply.github.com`.
+Use an email verified on the GitHub account or the account's noreply address so commits are attributed correctly. Find the noreply address in Settings → Emails and copy the exact address shown, for example `ID+username@users.noreply.github.com`.
 
-Rujukan: [pengaturan email commit](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address) dan [format alamat noreply](https://docs.github.com/en/account-and-profile/reference/email-addresses-reference).
+References: [commit email settings](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address) and [noreply address formats](https://docs.github.com/en/account-and-profile/reference/email-addresses-reference).
 
-## C. Login GitHub
+## C. GitHub authentication
 
 ```powershell
 gh auth status
 ```
 
-Jika akun GitHub sudah aktif, lanjut ke bagian D. Jika belum, jalankan sendiri:
+If the GitHub account is already authenticated, continue to section D. Otherwise, run this yourself:
 
 ```powershell
 gh auth login
 ```
 
-Pilih GitHub.com, HTTPS, autentikasi Git, lalu login melalui browser. Selesaikan otorisasi sendiri dan periksa kembali dengan `gh auth status`. Jangan membagikan password atau token.
+Choose GitHub.com, HTTPS, Git authentication, and browser login. Complete authorization yourself, then check `gh auth status` again. Keep passwords and tokens private.
 
-### Push workflow ditolak
+### Workflow push rejected
 
-Jika push `.github/workflows/build.yml` ditolak dengan pesan `without workflow scope`, tambahkan izin dengan menjalankan sendiri:
+If pushing `.github/workflows/build.yml` fails with `without workflow scope`, add the permission by running this yourself:
 
 ```powershell
 gh auth refresh -h github.com -s workflow
 ```
 
-Selesaikan otorisasi melalui browser, lalu dari folder repo jalankan:
+Complete browser authorization, then run these commands from the repository folder:
 
 ```powershell
 gh auth status
 .\day push
 ```
 
-Gunakan repo dan remote `origin` yang sudah dibuat. Pertahankan file workflow. Rujukan: [menambah izin GitHub CLI](https://cli.github.com/manual/gh_auth_refresh).
+Keep using the existing repository and `origin` remote. Retain the workflow file. Reference: [refreshing GitHub CLI permissions](https://cli.github.com/manual/gh_auth_refresh).
 
-## D. Buka folder repo
+## D. Open the repository folder
 
 ```powershell
 cd "$HOME\Documents\dotnet-90-days"
 .\day status
 ```
 
-Sesuaikan lokasi jika folder disimpan di tempat lain. Helper `day.cmd` menjalankan skrip PowerShell dengan pengaturan eksekusi untuk proses tersebut, sehingga biasanya tidak perlu mengubah execution policy permanen.
+Adjust the path if the repository is stored elsewhere. The `day.cmd` helper sets the PowerShell execution policy for its process, so a permanent policy change is usually unnecessary.
 
-## E. Setup GitHub awal
+## E. Initial GitHub setup
 
-Bagian ini hanya untuk folder awal yang belum diinisialisasi dan belum dipublikasikan:
+Use this section only for an initial folder that has not been initialized or published:
 
 ```powershell
 .\day init
 .\day publish
 ```
 
-`init` membuat branch `main`, memasang workflow CI dan konfigurasi editor dari template, lalu membuat commit awal. `publish` membuat repo public `dotnet-90-days` dan melakukan push. Jika remote `origin` sudah tersedia, lanjutkan memakai repo yang sama.
+`init` creates the `main` branch, installs the CI workflow and editor configuration from templates, and creates the initial commit. `publish` creates the public `dotnet-90-days` repository and pushes it. If `origin` already exists, continue using that repository.
 
-Periksa hasil:
+Check the result:
 
 ```powershell
 gh repo view --json url -q .url
@@ -107,6 +107,6 @@ gh run list -L 1
 .\day status
 ```
 
-## F. Lanjut ke sesi belajar
+## F. Continue learning
 
-Ikuti [alur kerja harian](02-WORKFLOW-HARIAN.md) dan [checklist sesi](03-PROMPTS.md). Simpan commit bermakna untuk setiap hari belajar. Isi progres, jurnal, serta petunjuk menjalankan kode berdasarkan pekerjaan dan hasil pemeriksaan yang nyata. Refleksi pribadi ditulis sendiri.
+Follow the [daily workflow](02-WORKFLOW-HARIAN.md) and [session checklists](03-PROMPTS.md). Make meaningful commits for each study day. Record actual work and verification results in progress notes, journals, and run instructions. Personal reflection is written by the owner.

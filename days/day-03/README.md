@@ -1,9 +1,9 @@
 # Day 03: Operators and Strings
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Operator aritmatika dan perbandingan, string interpolation `$"..."`, format angka `ToString("N0")` dan `("C", new CultureInfo("id-ID"))`, method string (`Trim`, `ToUpper`, `Contains`, `Split`, `Replace`).
+arithmetic and comparison operators, string interpolation `$"..."`, number formatting with `ToString("N0")` and `("C", new CultureInfo("id-ID"))`, and string methods (`Trim`, `ToUpper`, `Contains`, `Split`, `Replace`).
 
-[Materi lengkap](../../ROADMAP.md#day-03--operators-and-strings) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-03--operators-and-strings) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 32: Controllers and Routing
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`[ApiController]`, `[Route]`, `[HttpGet("{id}")]`, `ActionResult<T>`, route parameter, query string.
+`[ApiController]`, `[Route]`, `[HttpGet("{id}")]`, `ActionResult<T>`, route parameters, and query strings.
 
-[Materi lengkap](../../ROADMAP.md#day-32--controllers-and-routing) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-32--controllers-and-routing) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

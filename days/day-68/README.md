@@ -1,9 +1,9 @@
 # Day 68: Auth and Roles
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Menerapkan ulang JWT dan role dari fase 2 (Requester, Technician, Admin).
+reuse Phase 2 JWT and role concepts for Requester, Technician, and Admin.
 
-[Materi lengkap](../../ROADMAP.md#day-68--auth-and-roles) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-68--auth-and-roles) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

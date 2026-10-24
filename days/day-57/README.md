@@ -1,9 +1,9 @@
 # Day 57: Health Checks and Rate Limiting
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`AddHealthChecks` + `/health`, rate limiter bawaan ASP.NET Core, CORS.
+`AddHealthChecks` and `/health`, built-in ASP.NET Core rate limiting, and CORS.
 
-[Materi lengkap](../../ROADMAP.md#day-57--health-checks-and-rate-limiting) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-57--health-checks-and-rate-limiting) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

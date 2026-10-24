@@ -1,9 +1,9 @@
 # Day 41: EF Core CRUD
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Query async (`ToListAsync`, `FindAsync`), `AsNoTracking`, `SaveChangesAsync`, change tracking.
+async queries (`ToListAsync`, `FindAsync`), `AsNoTracking`, `SaveChangesAsync`, and change tracking.
 
-[Materi lengkap](../../ROADMAP.md#day-41--ef-core-crud) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-41--ef-core-crud) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

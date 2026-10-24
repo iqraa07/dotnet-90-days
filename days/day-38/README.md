@@ -1,9 +1,9 @@
 # Day 38: SQL Basics
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Install SQL Server Express (atau LocalDB) + SSMS, atau ekstensi SQL Server di VS Code; `CREATE TABLE`, `INSERT`, `SELECT`, `WHERE`, `ORDER BY`.
+install SQL Server Express or LocalDB with SSMS, or use the SQL Server extension in VS Code; practice `CREATE TABLE`, `INSERT`, `SELECT`, `WHERE`, and `ORDER BY`.
 
-[Materi lengkap](../../ROADMAP.md#day-38--sql-basics) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-38--sql-basics) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

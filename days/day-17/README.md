@@ -1,9 +1,9 @@
 # Day 17: LINQ Part 1
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`Where`, `Select`, `OrderBy`, `First` / `FirstOrDefault`, `Any`, `All`, `Count`, `Take`, `Skip`.
+`Where`, `Select`, `OrderBy`, `First` / `FirstOrDefault`, `Any`, `All`, `Count`, `Take`, and `Skip`.
 
-[Materi lengkap](../../ROADMAP.md#day-17--linq-part-1) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-17--linq-part-1) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

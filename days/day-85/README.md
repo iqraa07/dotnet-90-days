@@ -1,9 +1,9 @@
 # Day 85: CI/CD Pipeline
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Pipeline build, test, dan (opsional) deploy otomatis.
+automated build/test pipelines and optional deployment.
 
-[Materi lengkap](../../ROADMAP.md#day-85--cicd-pipeline) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-85--cicd-pipeline) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

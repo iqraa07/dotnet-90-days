@@ -2,67 +2,67 @@
 
 [![build](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml/badge.svg)](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml)
 
-Catatan belajar .NET selama 90 hari: dasar C#, pengembangan Web API, dan aplikasi ticketing HelpdeskLite. Kode latihan, jurnal, serta proyek tiap fase berada dalam satu repo.
+A 90-day .NET study plan covering C# fundamentals, Web API development, and a HelpdeskLite ticketing application. Exercises, journals, and phase projects stay in one repository.
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Daftar Day 01-90](days/README.md) · [Peta belajar](#peta-belajar) · [Bukti progres](assets/progress/README.md) · [Day 01](days/day-01/README.md) · [Jurnal](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Day 01](days/day-01/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Progress:** 0 / 90 days (0%) · **Current:** Day 01 · **Last update:** 2026-10-24
+**Implementation:** 1 / 90 exercises (1%) · **Current:** - · **Last update:** 2026-10-25
 <!-- progress:end -->
 
-## Peta belajar
+## Learning map
 
-Mulai dari [katalog harian](days/README.md). Setiap folder `days/day-NN/` memuat fokus belajar dan tautan yang diperlukan untuk hari tersebut. Rincian praktik ada di [roadmap](ROADMAP.md); kode tetap dikelompokkan berdasarkan fase.
+Start with the [daily catalog](days/README.md). Each `days/day-NN/` folder links to its planned material, source, and available evidence. The [roadmap](ROADMAP.md) contains the full exercises; source remains grouped by phase.
 
 ```mermaid
 flowchart LR
-    A["Day 01-30<br/>Dasar C#"] --> B["Day 31-60<br/>Web API dan database"]
+    A["Day 01-30<br/>C# fundamentals"] --> B["Day 31-60<br/>Web API and databases"]
     B --> C["Day 61-90<br/>HelpdeskLite"]
 ```
 
-| Fase | Hari | Fokus | Folder |
+| Phase | Days | Focus | Source |
 |---|---|---|---|
-| 1 | 01-30 | Dasar C#, OOP, collections, LINQ, async, unit testing | [`phase-1-csharp`](phase-1-csharp) |
-| 2 | 31-60 | ASP.NET Core Web API, EF Core, SQL Server, autentikasi, Docker, CI | [`phase-2-webapi`](phase-2-webapi) |
-| 3 | 61-90 | HelpdeskLite: aplikasi ticketing dengan API dan Blazor | [`phase-3-capstone`](phase-3-capstone) |
+| 1 | 01-30 | C# fundamentals, OOP, collections, LINQ, async, unit testing | [`phase-1-csharp`](phase-1-csharp) |
+| 2 | 31-60 | ASP.NET Core Web API, EF Core, SQL Server, authentication, Docker, CI | [`phase-2-webapi`](phase-2-webapi) |
+| 3 | 61-90 | HelpdeskLite: a ticketing application with an API and Blazor | [`phase-3-capstone`](phase-3-capstone) |
 
-## Teknologi
+## Stack
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Jalankan Day 01
+## Run Day 01
 
-Gunakan .NET SDK 10.0.x. Dari root repo, jalankan:
+Install the .NET 10 SDK, then run these commands from the repository root:
 
 ```powershell
 dotnet --version
-dotnet build .\phase-1-csharp\day-01-setup-net-10-and-hello-world
-dotnet run --project .\phase-1-csharp\day-01-setup-net-10-and-hello-world
+dotnet build .\phase-1-csharp\day-01-setup-net-10-and-hello-world -c Release
+dotnet run --project .\phase-1-csharp\day-01-setup-net-10-and-hello-world -c Release --no-build
 .\day status
 ```
 
-Day 01 menampilkan nama, tanggal saat program dijalankan, dan versi runtime .NET. Buka [halaman Day 01](days/day-01/README.md) untuk materi dan petunjuk menjalankan. [Jurnal Day 01](journal/day-01-setup-net-10-and-hello-world.md) masih menunggu refleksi pribadi.
+Day 01 prints the owner's name, the computer's local date and time, and the .NET runtime version. Its implementation is complete and verified. Personal reflection remains pending in the [Day 01 journal](journal/day-01-setup-net-10-and-hello-world.md).
 
-## Bukti progres
+## Progress evidence
 
-Hasil build dan run Day 01 sudah terverifikasi. Gambar, output terminal, serta tautan CI tersedia pada [halaman bukti progres](assets/progress/README.md).
+The [evidence index](assets/progress/README.md) includes the exported images, terminal output, source capture, and passing CI run.
 
-![Kode dan hasil eksekusi Day 01](assets/progress/day-01-terminal.png)
+![Day 01 source and execution output](assets/progress/day-01-terminal.png)
 
-## Progres harian
+## Daily progress
 
-⬜ belum mulai · 🟡 sedang dikerjakan · ✅ selesai · ⏭️ dilewati
+⬜ planned · 🟡 in progress · ✅ implementation verified · ⏭️ skipped
 
-Nomor hari mengikuti sesi belajar. Sebuah hari dinyatakan selesai setelah kode lolos build, hasil run diperiksa, dan jurnal terisi. Commit harian memakai format `day-NN: ...` sesuai perubahan yang dikerjakan.
+A checkmark records completed implementation and verification. Personal reflection is tracked separately in each journal and may still be pending. Day numbers follow study sessions rather than calendar dates. Daily commits use `day-NN: ...` and describe actual work.
 
 <details>
-<summary>Lihat progres 90 hari</summary>
+<summary>View all 90 days</summary>
 
 | Day | Topic | Phase | Status | Date | Journal |
 |---|---|---|---|---|---|
-| 01 | Setup .NET 10 and Hello World | 1 | 🟡 | 2026-10-24 | [journal](journal/day-01-setup-net-10-and-hello-world.md) |
+| 01 | Setup .NET 10 and Hello World | 1 | ✅ | 2026-10-25 | [journal](journal/day-01-setup-net-10-and-hello-world.md) |
 | 02 | Variables and Data Types | 1 | ⬜ | - | - |
 | 03 | Operators and Strings | 1 | ⬜ | - | - |
 | 04 | Conditionals and Switch | 1 | ⬜ | - | - |
@@ -155,23 +155,18 @@ Nomor hari mengikuti sesi belajar. Sebuah hari dinyatakan selesai setelah kode l
 
 </details>
 
-## Struktur repo
+## Repository layout
 
 ```text
-days/               katalog dan halaman Day 01-90
-journal/            jurnal harian
-phase-1-csharp/     latihan console Day 01-30
-phase-2-webapi/     proyek Web API Day 31-60
-phase-3-capstone/   HelpdeskLite Day 61-90
-scripts/day.ps1     helper untuk progres dan commit
-templates/          template jurnal dan konfigurasi
-docs/               panduan setup, alur harian, dan referensi perintah
+days/              daily catalog and Day 01-90 overviews
+phase-1-csharp/    individual C# console exercises
+phase-2-webapi/    shared AssetTracker API project
+phase-3-capstone/  shared HelpdeskLite project
+journal/          work records and personal reflections
+assets/progress/  verified output, images, and evidence index
+scripts/          daily workflow and image export helpers
+templates/        journal, CI, and editor templates
+docs/             setup, workflow, session checklists, and command reference
 ```
 
-## Panduan
-
-- [Daftar Day 01-90](days/README.md)
-- [Mulai dari setup](START-HERE.md)
-- [Rencana 90 hari](ROADMAP.md)
-- [Alur kerja harian](docs/02-WORKFLOW-HARIAN.md)
-- [Referensi perintah](docs/04-CHEATSHEET.md)
+Read [START-HERE.md](START-HERE.md) for setup and [ROADMAP.md](ROADMAP.md) for the complete plan.

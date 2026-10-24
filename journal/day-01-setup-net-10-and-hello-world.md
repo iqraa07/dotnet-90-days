@@ -1,49 +1,50 @@
-# Day 01 — Setup .NET 10 and Hello World
+# Day 01: Setup .NET 10 and Hello World
 
-- **Tanggal mulai:** 2026-10-24
-- **Update:** 2026-10-25
-- **Fase:** 1, C# Fundamentals
-- **Kode:** [Project console](../phase-1-csharp/day-01-setup-net-10-and-hello-world)
-- **Status:** kode terverifikasi, refleksi pribadi menunggu
+- **Started:** 2026-10-24
+- **Updated:** 2026-10-25
+- **Phase:** 1, C# Fundamentals
+- **Source:** [Console project](../phase-1-csharp/day-01-setup-net-10-and-hello-world)
+- **Implementation:** complete and verified
+- **Personal reflection:** pending
 
-## Target hari ini
+## Today's goals
 
-Mengenal SDK, runtime, `Program.cs`, file `.csproj`, serta perintah `dotnet new`, `dotnet build`, dan `dotnet run`. Latihan menampilkan tiga baris: nama, waktu komputer, dan versi runtime.
+Learn the role of the SDK and runtime, `Program.cs`, the `.csproj` file, and the `dotnet new`, `dotnet build`, and `dotnet run` commands. Print three lines: a name, local time, and the runtime version.
 
-## Yang dikerjakan
+## Work completed
 
-- [x] Memasang .NET SDK 10.0.402, mengatur identitas Git, dan menghubungkan repo `iqraa07/dotnet-90-days`.
-- [x] Membuat project console `net10.0`, dengan Nullable dan ImplicitUsings aktif.
-- [x] Mengganti seluruh nilai sementara dengan nama, `DateTime.Now`, dan `Environment.Version`.
-- [x] Menjalankan build Release: 0 warning, 0 error.
-- [x] Menjalankan aplikasi: exit code 0, dengan tiga baris output sesuai target.
-- [x] Menyiapkan README latihan dan katalog Day 01-90; hari berikutnya tetap berstatus rencana.
-- [x] Mengekspor gambar kode dan output aktual dalam ukuran 1600 x 900 serta 1080 x 1350, disertai sumber teks hasil eksekusi.
-- [ ] Melengkapi refleksi pribadi setelah mencoba program.
+- [x] Installed .NET SDK 10.0.402, configured Git identity, and connected `iqraa07/dotnet-90-days`.
+- [x] Created a `net10.0` console project with Nullable and ImplicitUsings enabled.
+- [x] Replaced all placeholders with the owner's name, `DateTime.Now`, and `Environment.Version`.
+- [x] Built the Release configuration with 0 warnings and 0 errors.
+- [x] Ran the application with exit code 0 and the expected three output lines.
+- [x] Added the exercise README and Day 01-90 catalog; later days remain planned.
+- [x] Exported 1600 x 900 and 1080 x 1350 images from actual source and execution output.
+- [ ] Add a personal reflection after trying the program.
 
-## Yang saya pahami (WAJIB ditulis sendiri, 3–5 poin)
+## What I understood
 
-<!-- Tulis catatan pribadi dengan kata-kata sendiri setelah mencoba program. -->
-- 
+<!-- Write your own notes after running the program. -->
+-
 
-## Catatan materi
+## Study notes
 
-`Console.WriteLine` menulis satu baris ke terminal. `DateTime.Now` membaca waktu lokal komputer ketika program berjalan. `Environment.Version` menunjukkan runtime yang menjalankan aplikasi; versi ini berbeda dari SDK yang dipakai untuk membangun project.
+`Console.WriteLine` writes one line to the terminal. `DateTime.Now` reads the computer's local time when the program runs. `Environment.Version` identifies the runtime running the application; this differs from the SDK used to build the project.
 
-## Cek pemahaman
+## Understanding check
 
-1. Apa yang dilakukan `Console.WriteLine` pada program ini?
-2. Mengapa hasil baris tanggal bisa berubah ketika program dijalankan lagi?
-3. Mengapa `dotnet --version` dan `Environment.Version` menampilkan nomor berbeda?
+1. What does `Console.WriteLine` do in this program?
+2. Why can the date line change when the program runs again?
+3. Why do `dotnet --version` and `Environment.Version` show different versions?
 
-## Kendala & solusi
+## Issues and solutions
 
-| Masalah | Penyebab | Solusi |
+| Issue | Cause | Resolution |
 |---|---|---|
-| `dotnet` belum dikenali setelah instalasi | Terminal lama belum memuat PATH baru | Memuat lokasi SDK pada proses kerja; buka ulang terminal untuk sesi berikutnya |
-| Push file workflow ditolak | Scope `workflow` belum tersedia | Menyelesaikan otorisasi akun, lalu memeriksa scope dan mengulang push |
-| Executable apphost diblokir | Windows Application Control menolak `.exe` hasil build | Memakai `UseAppHost=false` dan menjalankan aplikasi melalui runtime .NET |
+| `dotnet` was unavailable after installation | The existing terminal had an older PATH | Loaded the SDK location for the working process; reopen the terminal for later sessions |
+| The first workflow upload was rejected | The GitHub session lacked the `workflow` scope | Completed account authorization, checked the scope, and retried the push |
+| The generated apphost was blocked | Windows Application Control rejected the executable | Set `UseAppHost=false` and ran the application through the .NET runtime |
 
-## Rencana berikutnya
+## Next steps
 
-Lengkapi refleksi pribadi, lalu selesaikan Day 01 melalui helper. Setelah itu lanjut Day 02: Variables and Data Types.
+Implementation progress is recorded separately from reflection. Add personal notes when ready. The next planned exercise is Day 02: Variables and Data Types.

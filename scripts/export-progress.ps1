@@ -4,7 +4,7 @@ param(
     [Parameter(Mandatory = $true)] [string] $Project,
     [Parameter(Mandatory = $true)] [string] $Title,
     [Parameter(Mandatory = $true)] [string] $WorkDirectory,
-    [string] $Summary = 'Nama, waktu komputer, dan versi runtime.'
+    [string] $Summary = 'Name, local time, and the .NET runtime version.'
 )
 
 Set-StrictMode -Version 2.0
@@ -76,7 +76,7 @@ $terminalText = @('> dotnet build -c Release') + $summaryLines +
 
 $html = @'
 <!doctype html>
-<html lang="id">
+<html lang="en">
 <meta charset="utf-8">
 <title>Day __DAY__ | .NET 10</title>
 <style>
@@ -104,9 +104,9 @@ section{padding:30px}.label{margin-bottom:20px}pre,.result pre{font-size:25px;li
 <p class="intro">__SUMMARY__<br>Muhammad Iqra Nur Fajar</p></header>
 <div class="panels">
 <section><p class="label">Program.cs</p><pre>__SOURCE__</pre><p class="status">SDK __SDK__ &middot; net10.0</p></section>
-<section class="result"><p class="label">Perintah dan hasil eksekusi</p><pre>__TERMINAL__</pre></section>
+<section class="result"><p class="label">Commands and output</p><pre>__TERMINAL__</pre></section>
 </div>
-<footer><span>github.com/iqraa07/dotnet-90-days</span><span>Output dari eksekusi program</span></footer>
+<footer><span>github.com/iqraa07/dotnet-90-days</span><span>Captured from a program run</span></footer>
 </main>
 </html>
 '@

@@ -1,9 +1,9 @@
 # Day 74: Checkpoint 7: Integration Tests
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Menguji alur lengkap.
+test a complete workflow.
 
-[Materi lengkap](../../ROADMAP.md#day-74--checkpoint-7-integration-tests) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-74--checkpoint-7-integration-tests) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 59: Code Review and Refactor
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Code smell, penamaan, method yang terlalu panjang, prinsip SOLID secara ringan.
+code smells, naming, overly long methods, and basic SOLID principles.
 
-[Materi lengkap](../../ROADMAP.md#day-59--code-review-and-refactor) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-59--code-review-and-refactor) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

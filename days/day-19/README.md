@@ -1,9 +1,9 @@
 # Day 19: File I/O and CSV
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`File.ReadAllLines`, `File.WriteAllText`, `Path.Combine`, `Directory`; parsing CSV sederhana; `using` untuk resource.
+`File.ReadAllLines`, `File.WriteAllText`, `Path.Combine`, `Directory`, simple CSV parsing, and `using` for resources.
 
-[Materi lengkap](../../ROADMAP.md#day-19--file-io-and-csv) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-19--file-io-and-csv) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

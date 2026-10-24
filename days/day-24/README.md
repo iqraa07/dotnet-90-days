@@ -1,9 +1,9 @@
 # Day 24: Delegates, Lambdas and Events
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`Func`, `Action`, `Predicate`, lambda, `event` / `EventHandler`.
+`Func`, `Action`, `Predicate`, lambdas, and `event` / `EventHandler`.
 
-[Materi lengkap](../../ROADMAP.md#day-24--delegates-lambdas-and-events) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-24--delegates-lambdas-and-events) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

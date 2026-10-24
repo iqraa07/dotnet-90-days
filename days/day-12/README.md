@@ -1,9 +1,9 @@
 # Day 12: Inheritance and Polymorphism
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Base class, `virtual` / `override`, `abstract`, `base`, `sealed`.
+base classes, `virtual` / `override`, `abstract`, `base`, and `sealed`.
 
-[Materi lengkap](../../ROADMAP.md#day-12--inheritance-and-polymorphism) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-12--inheritance-and-polymorphism) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

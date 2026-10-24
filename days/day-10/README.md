@@ -1,9 +1,9 @@
 # Day 10: Classes and Objects
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Class, object, field vs property, constructor, method di dalam class, `ToString()` override.
+classes, objects, fields versus properties, constructors, instance methods, and overriding `ToString()`.
 
-[Materi lengkap](../../ROADMAP.md#day-10--classes-and-objects) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-10--classes-and-objects) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

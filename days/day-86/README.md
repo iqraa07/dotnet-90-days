@@ -1,9 +1,9 @@
 # Day 86: Deploy and Demo Data
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Deploy aplikasi full-stack, data demo, akun demo.
+full-stack deployment, demo data, and demo accounts.
 
-[Materi lengkap](../../ROADMAP.md#day-86--deploy-and-demo-data) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-86--deploy-and-demo-data) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

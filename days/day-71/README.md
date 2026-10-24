@@ -1,9 +1,9 @@
 # Day 71: Search, Filter and Paging
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Menerapkan ulang pola dari Day 44.
+apply the Day 44 patterns again.
 
-[Materi lengkap](../../ROADMAP.md#day-71--search-filter-and-paging) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-71--search-filter-and-paging) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

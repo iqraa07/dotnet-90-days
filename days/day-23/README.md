@@ -1,9 +1,9 @@
 # Day 23: Generics
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Generic method dan class, constraint `where T : ...`.
+generic methods and classes, and constraints such as `where T : ...`.
 
-[Materi lengkap](../../ROADMAP.md#day-23--generics) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-23--generics) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

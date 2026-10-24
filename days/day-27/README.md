@@ -1,9 +1,9 @@
 # Day 27: Unit Testing with xUnit
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`dotnet new xunit`, `[Fact]`, `[Theory]` + `[InlineData]`, pola Arrange-Act-Assert, file solution (`.slnx` di .NET 10), `dotnet test`.
+`dotnet new xunit`, `[Fact]`, `[Theory]` with `[InlineData]`, Arrange-Act-Assert, solution files (`.slnx` in .NET 10), and `dotnet test`.
 
-[Materi lengkap](../../ROADMAP.md#day-27--unit-testing-with-xunit) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-27--unit-testing-with-xunit) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

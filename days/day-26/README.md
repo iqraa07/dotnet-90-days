@@ -1,9 +1,9 @@
 # Day 26: Mini Tool: Network Checker
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`System.Net.NetworkInformation.Ping`, `Stopwatch`, argumen command line (`args`).
+`System.Net.NetworkInformation.Ping`, `Stopwatch`, and command-line arguments (`args`).
 
-[Materi lengkap](../../ROADMAP.md#day-26--mini-tool-network-checker) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-26--mini-tool-network-checker) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

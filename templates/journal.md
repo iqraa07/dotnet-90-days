@@ -1,33 +1,33 @@
 # Day {{DAY}} — {{TITLE}}
 
-- **Tanggal mulai:** {{DATE}}
-- **Fase:** {{PHASE}}
-- **Kode:** {{CODE}}
-- **Durasi belajar:** _ jam
+- **Started:** {{DATE}}
+- **Phase:** {{PHASE}}
+- **Code:** {{CODE}}
+- **Study time:** _ hours
 
-## Target hari ini
+## Today's goals
 
 {{TARGET}}
 
-## Yang dikerjakan
+## Work completed
 
 - [ ] ...
 
-## Yang saya pahami (WAJIB ditulis sendiri, 3–5 poin)
+## What I understood
 
-<!-- Tulis refleksi bagian ini dengan kata-katamu sendiri. -->
+<!-- Write this reflection in your own words. -->
 - 
 
-## Kendala & solusi
+## Issues and solutions
 
-| Masalah | Penyebab | Solusi |
+| Issue | Cause | Solution |
 |---|---|---|
 | - | - | - |
 
-## Masih bingung / pertanyaan
+## Open questions
 
 - 
 
-## Rencana besok
+## Next session
 
 - 

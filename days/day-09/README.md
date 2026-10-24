@@ -1,9 +1,9 @@
 # Day 09: Debugging and Exceptions
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Breakpoint, step over/into, watch di VS Code; `try / catch / finally`; membaca stack trace.
+breakpoints, step over/into, watches in VS Code, `try / catch / finally`, and reading stack traces.
 
-[Materi lengkap](../../ROADMAP.md#day-09--debugging-and-exceptions) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-09--debugging-and-exceptions) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

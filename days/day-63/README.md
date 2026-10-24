@@ -1,9 +1,9 @@
 # Day 63: Domain Model and Ticket Workflow
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Rich domain model, aturan bisnis di dalam entity.
+rich domain models and business rules within entities.
 
-[Materi lengkap](../../ROADMAP.md#day-63--domain-model-and-ticket-workflow) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-63--domain-model-and-ticket-workflow) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

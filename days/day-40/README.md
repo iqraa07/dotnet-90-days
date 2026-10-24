@@ -1,9 +1,9 @@
 # Day 40: EF Core Introduction
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-ORM, `DbContext`, `DbSet`, connection string, package `Microsoft.EntityFrameworkCore.SqlServer`, tool `dotnet-ef`, migration pertama.
+ORM, `DbContext`, `DbSet`, connection strings, `Microsoft.EntityFrameworkCore.SqlServer`, the `dotnet-ef` tool, and the first migration.
 
-[Materi lengkap](../../ROADMAP.md#day-40--ef-core-introduction) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-40--ef-core-introduction) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

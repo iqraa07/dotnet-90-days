@@ -1,9 +1,9 @@
 # Day 25: Async, Await and HttpClient
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`Task`, `async` / `await`, `Task.WhenAll`, `HttpClient`, timeout, `CancellationToken`.
+`Task`, `async` / `await`, `Task.WhenAll`, `HttpClient`, timeouts, and `CancellationToken`.
 
-[Materi lengkap](../../ROADMAP.md#day-25--async-await-and-httpclient) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-25--async-await-and-httpclient) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

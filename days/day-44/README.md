@@ -1,9 +1,9 @@
 # Day 44: Checkpoint 5: Search, Filter, Paging, Sorting
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`IQueryable`, query dinamis, paging (`Skip` / `Take`), respons terpaginasi.
+`IQueryable`, dynamic queries, paging with `Skip` / `Take`, and paginated responses.
 
-[Materi lengkap](../../ROADMAP.md#day-44--checkpoint-5-search-filter-paging-sorting) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-44--checkpoint-5-search-filter-paging-sorting) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

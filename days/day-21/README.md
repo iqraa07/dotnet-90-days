@@ -1,9 +1,9 @@
 # Day 21: Checkpoint 3: Inventory with JSON and Reports
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Menggabungkan file, LINQ, dan OOP.
+combine file handling, LINQ, and OOP.
 
-[Materi lengkap](../../ROADMAP.md#day-21--checkpoint-3-inventory-with-json-and-reports) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-21--checkpoint-3-inventory-with-json-and-reports) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

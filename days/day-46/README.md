@@ -1,9 +1,9 @@
 # Day 46: Service Layer and Mapping
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Mapping manual entity ↔ DTO (extension method), alasan menghindari library mapping berbayar.
+manual entity/DTO mapping with extension methods and reasons to avoid paid mapping libraries.
 
-[Materi lengkap](../../ROADMAP.md#day-46--service-layer-and-mapping) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-46--service-layer-and-mapping) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

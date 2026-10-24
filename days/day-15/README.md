@@ -1,9 +1,9 @@
 # Day 15: Dictionary, HashSet, Queue, Stack
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Kapan memakai setiap collection; kompleksitas sederhana (cepat vs lambat).
+when to use each collection and basic performance differences.
 
-[Materi lengkap](../../ROADMAP.md#day-15--dictionary-hashset-queue-stack) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-15--dictionary-hashset-queue-stack) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

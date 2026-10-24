@@ -1,9 +1,9 @@
 # Day 50: Unit Testing Services
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Test untuk service layer, fake vs mock (NSubstitute), pola test yang mudah dibaca.
+service-layer tests, fakes versus mocks with NSubstitute, and readable test structure.
 
-[Materi lengkap](../../ROADMAP.md#day-50--unit-testing-services) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-50--unit-testing-services) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

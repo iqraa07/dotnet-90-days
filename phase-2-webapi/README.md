@@ -1,7 +1,7 @@
-# Phase 2 — AssetTracker API (Day 31–60)
+# Phase 2: AssetTracker API (Days 31-60)
 
-A REST API for managing IT assets (devices, locations, categories), built incrementally day by day.
+Planned project: a REST API for managing IT assets, including devices, locations, and categories. One shared project will grow throughout this phase.
 
-**Stack:** ASP.NET Core Web API (controllers) · EF Core · SQL Server · JWT auth · xUnit · Docker · GitHub Actions
+Stack: ASP.NET Core Web API with controllers, EF Core, SQL Server, JWT authentication, xUnit, Docker, and GitHub Actions.
 
-> This folder is created on Day 31. Progress is tracked in the main [README](../README.md) and the daily [journal](../journal).
+Implementation starts on Day 31. Follow the [day catalog](../days/README.md), [roadmap](../ROADMAP.md), and [daily progress table](../README.md#daily-progress).

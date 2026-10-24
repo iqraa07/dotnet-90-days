@@ -1,9 +1,9 @@
 # Day 13: Interfaces
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`interface`, beda interface vs abstract class, dan alasan interface penting untuk dependency injection nanti.
+`interface`, interfaces versus abstract classes, and their role in dependency injection.
 
-[Materi lengkap](../../ROADMAP.md#day-13--interfaces) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-13--interfaces) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

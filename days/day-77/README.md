@@ -1,9 +1,9 @@
 # Day 77: Create and Edit Forms
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`EditForm`, `DataAnnotationsValidator`, binding.
+`EditForm`, `DataAnnotationsValidator`, and binding.
 
-[Materi lengkap](../../ROADMAP.md#day-77--create-and-edit-forms) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-77--create-and-edit-forms) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

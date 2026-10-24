@@ -1,9 +1,9 @@
 # Day 37: Checkpoint 4: Error Handling and API Testing
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`ProblemDetails`, global exception handler (`IExceptionHandler`), koleksi request di file `.http`.
+`ProblemDetails`, global exception handling with `IExceptionHandler`, and request collections in `.http` files.
 
-[Materi lengkap](../../ROADMAP.md#day-37--checkpoint-4-error-handling-and-api-testing) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-37--checkpoint-4-error-handling-and-api-testing) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

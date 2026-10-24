@@ -1,40 +1,42 @@
-# Catatan sesi
+# Session handoff
 
-**Update:** 2026-10-25
-**Repo:** https://github.com/iqraa07/dotnet-90-days
-**Hari aktif:** Day 01, Setup .NET 10 and Hello World
+**Updated:** 2026-10-25
+**Repository:** https://github.com/iqraa07/dotnet-90-days
+**Implementation progress:** 1/90 exercises verified
+**Next planned exercise:** Day 02, Variables and Data Types
+**Day 01 personal reflection:** pending
 
-## Posisi terakhir
+## Current state
 
-Kode Day 01 sudah selesai dan terverifikasi. Program menampilkan nama, waktu lokal komputer, dan versi runtime .NET. Refleksi pribadi pada jurnal belum diisi, sehingga status hari tetap sedang dikerjakan dan progres selesai masih 0/90.
+Day 01 implementation is complete. The console program prints the owner's name, local time, and runtime version. Build and run passed, and the main progress table now records the verified implementation. Personal reflection remains empty and is tracked separately; no understanding or learning time has been invented.
 
-Pada sesi ini pemilik meminta kode Day 01 dikerjakan penuh, dokumentasi dirapikan, folder harian dibuat, dan gambar hasil disiapkan. Permintaan itu tidak mencakup pengerjaan kode Day 02-90. Sesi berikutnya kembali ke PAIR kecuali ada permintaan lain.
+The owner requested full English throughout the repository and an implementation progress update. Documentation, all 90 daily pages, roadmap text, workflow guidance, templates, rules, and exported images now use English. Preserve this language preference in future sessions.
 
-## Hasil sesi
+## Completed work
 
-- Program console terdiri dari tiga baris, tanpa TODO atau nilai sementara.
-- Build Release lulus dengan 0 warning dan 0 error. Run berhasil, exit code 0, dengan tiga baris output. SDK 10.0.402 dan runtime 10.0.13 tersedia.
-- README utama memiliki peta belajar, navigasi, contoh perintah, gambar hasil, dan tabel progres yang dapat dibuka saat diperlukan.
-- `days/` berisi katalog dan 90 folder harian. Day 02-90 berisi rencana materi; source tetap di folder fase agar helper tetap kompatibel.
-- Panduan, jurnal, template, dan aturan penulisan dirapikan. Nama layanan pendamping tidak dicantumkan pada dokumen publik. File konfigurasi pendamping lama yang tidak lagi dipakai sudah dihapus.
-- `.agents/skills/dotnet-study/SKILL.md` menyimpan konteks, lingkup kerja, gaya dokumentasi, struktur, serta aturan verifikasi dan hasil visual. Validasi skill lulus.
-- `scripts/export-progress.ps1` menjalankan build/run aktual, menyimpan source dan stdout, lalu mengekspor gambar. PNG 1600 x 900 dan 1080 x 1350 sudah diperiksa secara visual.
-- Aset dan sumber gambar ada di `assets/progress/`; salinan siap dibagikan disiapkan untuk pemilik. Belum ada publikasi ke media sosial.
-- Bukti Day 01 sudah tersedia di GitHub. Indeks `assets/progress/README.md` menghubungkan gambar, output, data ekspor, kode terverifikasi, dan CI yang lulus. README utama memiliki navigasi serta bagian bukti progres.
-- Pemilik meminta bukti ikut diunggah pada progres berikutnya. Aturan ini disimpan pada AGENTS dan skill repo; label hasil teknis tetap dibedakan dari status penyelesaian jurnal.
-- Antislop lokal 3.2.20; rilis resmi terbaru yang terdeteksi adalah [3.2.23](https://github.com/miqdadbadjuber/anti-slop/releases/tag/v3.2.23). Instalasi global tidak diubah.
+- Day 01 source contains three executable lines and no placeholders or remaining implementation tasks.
+- Release build passed with 0 warnings and 0 errors. Run exited with code 0 and produced the expected three lines.
+- The repository has one daily catalog and 90 day folders. Day 01 is implementation-complete; Days 02-90 remain planned.
+- The main README includes the learning map, run commands, evidence, and a collapsible progress table.
+- `scripts/day.ps1` supports English journal headings and keeps legacy headings readable. Normal `done` requires a real personal reflection. Explicit `done -CodeOnly` records implementation progress with reflection pending and still requires a real project and passing build.
+- Six isolated helper checks passed: empty English reflection rejection, code-only success without journal edits, filled English reflection success, legacy reflection compatibility, broken-build rejection, and missing-project rejection.
+- Day 01 was recorded with `.\day done 1 -CodeOnly -NoCommit` after these checks and a passing build. The user's request authorizes this implementation-only progress update.
+- `scripts/export-progress.ps1` regenerated English images from an actual program run. Both 1600 x 900 and 1080 x 1350 exports were visually checked. Source, stdout, timestamps, and exit codes are saved in `assets/progress/`.
+- The evidence index and Day 01 overview link to the images, output, capture data, verified source, and CI. Shareable image copies are available for the owner; nothing has been posted to social accounts.
+- `.agents/skills/dotnet-study/SKILL.md` records the English-only preference, working modes, progress semantics, evidence rules, and repository workflow.
 
-## Berikutnya
+## Next steps
 
-1. Pemilik mencoba program dan menulis catatan sendiri pada bagian `Yang saya pahami` di jurnal Day 01. Tiga pertanyaan pemahaman sudah tersedia di jurnal; jangan mengisi refleksi atas nama pemilik.
-2. Setelah refleksi diberikan, salin sesuai jawaban pemilik, lakukan review singkat, lalu jalankan `.\day done 1` jika semua syarat terpenuhi. Jangan memakai `-Force` untuk melewati refleksi kosong.
-3. Perbarui status halaman Day 01 dan katalog agar sesuai tabel progres, commit, dan push dalam lingkup yang diizinkan. Day 02 baru dimulai sesudah itu.
+1. Start Day 02 only when requested. Default to PAIR unless the owner asks for full implementation.
+2. Keep Day 01 personal reflection pending until the owner supplies their own notes. The journal includes three understanding questions for later review.
+3. Record future verified implementation separately from personal reflection. Keep the main table, catalog, daily overview, journal, and evidence consistent.
+4. Upload verified progress evidence to the same repository as part of the authorized day's work. Do not create another repository or publish to social accounts without a separate request.
 
-## Catatan operasional
+## Environment and conventions
 
-- Seluruh 90 hari memakai satu repo dan branch utama `main`; gunakan commit harian yang bermakna.
-- Identitas Git: Muhammad Iqra Nur Fajar, akun `iqraa07`, email noreply yang sudah disetujui.
-- GitHub sudah login dan scope `workflow` tersedia. Jangan mengulang login atau meminta password/token.
-- Terminal lama mungkin belum menerima PATH baru. Lokasi SDK pada mesin ini `C:\Program Files\dotnet`.
-- Project Day 01 memakai `UseAppHost=false` karena executable apphost diblokir Windows Application Control. Jalankan melalui runtime .NET dan pertahankan kebijakan keamanan Windows.
-- Pemilik meminta bahasa singkat, profesional, tanpa emoji dekoratif atau klaim berlebihan. Gambar hasil harus berasal dari eksekusi nyata, bukan status atau output yang dikarang.
+- Owner: Muhammad Iqra Nur Fajar, account `iqraa07`; approved noreply identity is configured in Git.
+- Use the existing `main` branch and meaningful commits. Authentication and the GitHub `workflow` scope are already configured.
+- Target .NET 10. The local SDK is at `C:\Program Files\dotnet`; SDK 10.0.402 and runtime 10.0.13 were used for verification.
+- Day 01 uses `UseAppHost=false` because Windows Application Control blocks generated apphost executables. Retain Windows security settings and run through the .NET runtime.
+- Use concise, professional English without decorative emoji, unsupported claims, or companion-service names in public documentation.
+- Installed antislop version: 3.2.20. The latest checked official release is [3.2.23](https://github.com/miqdadbadjuber/anti-slop/releases/tag/v3.2.23); the global installation was not changed.

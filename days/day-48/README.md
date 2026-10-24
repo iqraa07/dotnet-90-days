@@ -1,9 +1,9 @@
 # Day 48: Authentication with JWT
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Authentication vs authorization, JWT (header, payload, signature), `Microsoft.AspNetCore.Authentication.JwtBearer`, hashing password.
+authentication versus authorization, JWT headers/payloads/signatures, `Microsoft.AspNetCore.Authentication.JwtBearer`, and password hashing.
 
-[Materi lengkap](../../ROADMAP.md#day-48--authentication-with-jwt) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-48--authentication-with-jwt) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

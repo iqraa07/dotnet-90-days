@@ -1,9 +1,9 @@
 # Day 11: Encapsulation and Records
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Access modifier (`public`, `private`, `protected`, `internal`), validasi di property setter, `record`, `init`, immutability. Bonus: keyword `field` di C# 14.
+access modifiers (`public`, `private`, `protected`, `internal`), validation in property setters, `record`, `init`, and immutability. Optional: the C# 14 `field` keyword.
 
-[Materi lengkap](../../ROADMAP.md#day-11--encapsulation-and-records) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-11--encapsulation-and-records) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

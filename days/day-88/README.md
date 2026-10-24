@@ -1,9 +1,9 @@
 # Day 88: Documentation and Screenshots
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-README portofolio yang menjual.
+write a portfolio project README.
 
-[Materi lengkap](../../ROADMAP.md#day-88--documentation-and-screenshots) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-88--documentation-and-screenshots) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

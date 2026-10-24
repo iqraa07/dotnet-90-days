@@ -1,9 +1,9 @@
 # Day 02: Variables and Data Types
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`int`, `long`, `double`, `decimal`, `bool`, `char`, `string`, `var`, `const`; input dengan `Console.ReadLine()`; `int.Parse` vs `int.TryParse`.
+`int`, `long`, `double`, `decimal`, `bool`, `char`, `string`, `var`, `const`, input with `Console.ReadLine()`, and `int.Parse` versus `int.TryParse`.
 
-[Materi lengkap](../../ROADMAP.md#day-02--variables-and-data-types) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-02--variables-and-data-types) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

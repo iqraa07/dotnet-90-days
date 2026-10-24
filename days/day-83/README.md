@@ -1,9 +1,9 @@
 # Day 83: Logging and Health Checks
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Menerapkan ulang Serilog dan health check dari fase 2.
+reuse Phase 2 Serilog and health check patterns.
 
-[Materi lengkap](../../ROADMAP.md#day-83--logging-and-health-checks) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-83--logging-and-health-checks) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

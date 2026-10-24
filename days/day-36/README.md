@@ -1,9 +1,9 @@
 # Day 36: Configuration, Logging and Options
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`appsettings.json`, environment (Development/Production), `ILogger<T>`, Options pattern (`IOptions<T>`).
+`appsettings.json`, Development/Production environments, `ILogger<T>`, and the Options pattern (`IOptions<T>`).
 
-[Materi lengkap](../../ROADMAP.md#day-36--configuration-logging-and-options) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-36--configuration-logging-and-options) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

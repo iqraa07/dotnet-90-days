@@ -1,9 +1,9 @@
 # Day 51: Integration Testing
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`WebApplicationFactory`, database untuk test (SQLite in-memory atau Testcontainers), menguji endpoint dari luar.
+`WebApplicationFactory`, test databases using SQLite in-memory or Testcontainers, and testing endpoints externally.
 
-[Materi lengkap](../../ROADMAP.md#day-51--integration-testing) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-51--integration-testing) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

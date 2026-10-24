@@ -1,9 +1,9 @@
 # Day 20: JSON with System.Text.Json
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`JsonSerializer.Serialize` / `Deserialize`, `JsonSerializerOptions`, atribut `[JsonPropertyName]`.
+`JsonSerializer.Serialize` / `Deserialize`, `JsonSerializerOptions`, and `[JsonPropertyName]`.
 
-[Materi lengkap](../../ROADMAP.md#day-20--json-with-systemtextjson) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-20--json-with-systemtextjson) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

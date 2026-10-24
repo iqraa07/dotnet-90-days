@@ -1,9 +1,9 @@
 # Day 04: Conditionals and Switch
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`if / else if / else`, operator logika `&& || !`, `switch` statement, switch expression (C# modern).
+`if / else if / else`, logical operators `&& || !`, `switch` statements, and modern C# switch expressions.
 
-[Materi lengkap](../../ROADMAP.md#day-04--conditionals-and-switch) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-04--conditionals-and-switch) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

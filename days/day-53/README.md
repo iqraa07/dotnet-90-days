@@ -1,9 +1,9 @@
 # Day 53: Caching and Performance
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`IMemoryCache`, output caching, query N+1, `AsNoTracking`, projection dengan `Select`.
+`IMemoryCache`, output caching, N+1 queries, `AsNoTracking`, and projections with `Select`.
 
-[Materi lengkap](../../ROADMAP.md#day-53--caching-and-performance) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-53--caching-and-performance) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 73: Notifications
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Abstraksi `INotificationService`, SMTP (MailKit) atau versi log-only.
+`INotificationService`, SMTP with MailKit, or an implementation that writes notifications to logs.
 
-[Materi lengkap](../../ROADMAP.md#day-73--notifications) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-73--notifications) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 87: Security Review
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-OWASP Top 10 dasar: SQL injection (aman dengan EF Core), XSS, secret di repo, CORS, HTTPS.
+OWASP Top 10 basics, including SQL injection and EF Core, XSS, repository secrets, CORS, and HTTPS.
 
-[Materi lengkap](../../ROADMAP.md#day-87--security-review) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-87--security-review) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

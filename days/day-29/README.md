@@ -1,9 +1,9 @@
 # Day 29: Phase 1 Project: Helpdesk Console (Part 1)
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Merancang program sebelum ngoding (daftar fitur, class, alur).
+plan a program before implementation: features, classes, and workflows.
 
-[Materi lengkap](../../ROADMAP.md#day-29--phase-1-project-helpdesk-console-part-1) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-29--phase-1-project-helpdesk-console-part-1) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

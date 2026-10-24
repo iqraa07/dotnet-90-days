@@ -1,9 +1,9 @@
 # Day 55: CI with GitHub Actions
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Workflow YAML, job, step, `dotnet test` di CI, badge status.
+workflow YAML, jobs, steps, `dotnet test` in CI, and status badges.
 
-[Materi lengkap](../../ROADMAP.md#day-55--ci-with-github-actions) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-55--ci-with-github-actions) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

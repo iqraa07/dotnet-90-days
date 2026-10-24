@@ -1,9 +1,9 @@
 # Day 66: Comments and Activity Log
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Relasi one-to-many, audit field (`CreatedAt`, `CreatedBy`), interceptor EF Core.
+one-to-many relationships, audit fields (`CreatedAt`, `CreatedBy`), and EF Core interceptors.
 
-[Materi lengkap](../../ROADMAP.md#day-66--comments-and-activity-log) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-66--comments-and-activity-log) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

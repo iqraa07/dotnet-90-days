@@ -1,9 +1,9 @@
 # Day 80: UI Polish
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Konsistensi tampilan, responsif di layar HP, aksesibilitas dasar.
+visual consistency, responsive mobile layouts, and basic accessibility.
 
-[Materi lengkap](../../ROADMAP.md#day-80--ui-polish) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-80--ui-polish) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

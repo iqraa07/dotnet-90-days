@@ -1,9 +1,9 @@
 # Day 49: Authorization with Roles and Policies
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`[Authorize]`, role (Admin, Technician, Viewer), policy-based authorization.
+`[Authorize]`, roles (Admin, Technician, Viewer), and policy-based authorization.
 
-[Materi lengkap](../../ROADMAP.md#day-49--authorization-with-roles-and-policies) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-49--authorization-with-roles-and-policies) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

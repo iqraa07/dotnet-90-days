@@ -1,9 +1,9 @@
 # Day 75: Blazor Introduction
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Blazor Web App, component, parameter, routing, render mode.
+Blazor Web App, components, parameters, routing, and render modes.
 
-[Materi lengkap](../../ROADMAP.md#day-75--blazor-introduction) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-75--blazor-introduction) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

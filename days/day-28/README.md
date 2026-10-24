@@ -1,9 +1,9 @@
 # Day 28: Git and GitHub in Depth
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Branch, merge, pull request ke repo sendiri, `git log --oneline --graph`, `git restore`, membaca hasil CI GitHub Actions.
+branches, merges, pull requests in your own repository, `git log --oneline --graph`, `git restore`, and GitHub Actions results.
 
-[Materi lengkap](../../ROADMAP.md#day-28--git-and-github-in-depth) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-28--git-and-github-in-depth) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

@@ -1,9 +1,9 @@
 # Day 79: Dashboard Page
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Menampilkan data statistik di UI.
+display statistics in the UI.
 
-[Materi lengkap](../../ROADMAP.md#day-79--dashboard-page) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-79--dashboard-page) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

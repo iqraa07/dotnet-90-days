@@ -1,9 +1,9 @@
 # Day 30: Phase 1 Project: Helpdesk Console (Part 2) and Review
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Review seluruh fase 1.
+review Phase 1.
 
-[Materi lengkap](../../ROADMAP.md#day-30--phase-1-project-helpdesk-console-part-2-and-review) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-30--phase-1-project-helpdesk-console-part-2-and-review) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

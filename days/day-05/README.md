@@ -1,9 +1,9 @@
 # Day 05: Loops
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`for`, `while`, `do-while`, `foreach`, `break`, `continue`, `Random.Shared`.
+`for`, `while`, `do-while`, `foreach`, `break`, `continue`, and `Random.Shared`.
 
-[Materi lengkap](../../ROADMAP.md#day-05--loops) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-05--loops) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

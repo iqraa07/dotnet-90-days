@@ -1,9 +1,9 @@
 # Day 81: Checkpoint 8: End-to-End Manual Testing
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Checklist pengujian manual, menulis bug report.
+manual test checklists and bug reports.
 
-[Materi lengkap](../../ROADMAP.md#day-81--checkpoint-8-end-to-end-manual-testing) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-81--checkpoint-8-end-to-end-manual-testing) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

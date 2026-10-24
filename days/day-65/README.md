@@ -1,9 +1,9 @@
 # Day 65: Ticket CRUD Endpoints
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Endpoint yang memanggil domain, validasi request.
+endpoints that call domain logic and validate requests.
 
-[Materi lengkap](../../ROADMAP.md#day-65--ticket-crud-endpoints) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-65--ticket-crud-endpoints) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

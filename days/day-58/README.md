@@ -1,9 +1,9 @@
 # Day 58: API Documentation
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-OpenAPI, Scalar UI, README API yang baik, contoh request dan response.
+OpenAPI, Scalar UI, API README structure, and request/response examples.
 
-[Materi lengkap](../../ROADMAP.md#day-58--api-documentation) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-58--api-documentation) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

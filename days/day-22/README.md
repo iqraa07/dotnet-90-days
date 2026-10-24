@@ -1,9 +1,9 @@
 # Day 22: Advanced Exceptions
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Custom exception, `throw` vs `throw ex`, exception filter `when`, guard clause, `ArgumentNullException.ThrowIfNull`.
+custom exceptions, `throw` versus `throw ex`, `when` exception filters, guard clauses, and `ArgumentNullException.ThrowIfNull`.
 
-[Materi lengkap](../../ROADMAP.md#day-22--advanced-exceptions) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-22--advanced-exceptions) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

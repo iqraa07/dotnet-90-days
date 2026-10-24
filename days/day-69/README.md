@@ -1,9 +1,9 @@
 # Day 69: Ticket Assignment
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Resource-based authorization.
+resource-based authorization.
 
-[Materi lengkap](../../ROADMAP.md#day-69--ticket-assignment) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-69--ticket-assignment) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

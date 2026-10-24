@@ -1,9 +1,9 @@
 # Day 14: Checkpoint 2: IT Asset Inventory Console
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Desain class kecil yang saling terhubung.
+design a small set of related classes.
 
-[Materi lengkap](../../ROADMAP.md#day-14--checkpoint-2-it-asset-inventory-console) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-14--checkpoint-2-it-asset-inventory-console) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

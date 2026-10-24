@@ -1,9 +1,9 @@
 # Day 90: Retrospective and Release v1.0
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Refleksi 90 hari dan rencana belajar berikutnya.
+reflect on the 90 sessions and plan further study.
 
-[Materi lengkap](../../ROADMAP.md#day-90--retrospective-and-release-v10) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-90--retrospective-and-release-v10) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

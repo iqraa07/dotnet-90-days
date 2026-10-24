@@ -1,9 +1,9 @@
 # Day 16: Enums, Structs and Nullable
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-`enum`, `struct` vs `class`, nullable reference types, operator `?`, `??`, `?.`, `!`; arti warning nullable.
+`enum`, `struct` versus `class`, nullable reference types, the `?`, `??`, `?.`, and `!` operators, and nullable warnings.
 
-[Materi lengkap](../../ROADMAP.md#day-16--enums-structs-and-nullable) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-16--enums-structs-and-nullable) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

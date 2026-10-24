@@ -1,9 +1,9 @@
 # Day 35: Dependency Injection
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-DI container, lifetime (Singleton, Scoped, Transient), constructor injection.
+DI containers, lifetimes (Singleton, Scoped, Transient), and constructor injection.
 
-[Materi lengkap](../../ROADMAP.md#day-35--dependency-injection) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-35--dependency-injection) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

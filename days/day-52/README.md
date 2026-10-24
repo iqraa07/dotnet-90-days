@@ -1,9 +1,9 @@
 # Day 52: Export CSV Report
 
-Status: Direncanakan.
+**Implementation:** Planned.
 
-## Fokus
+## Focus
 
-Mengembalikan file dari API (`File()`), stream, header `Content-Disposition`.
+returning files from an API with `File()`, streams, and `Content-Disposition`.
 
-[Materi lengkap](../../ROADMAP.md#day-52--export-csv-report) · [Progres harian](../../README.md#progres-harian) · [Daftar hari](../README.md)
+[Full outline](../../ROADMAP.md#day-52--export-csv-report) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)
