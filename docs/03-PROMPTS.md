@@ -34,6 +34,7 @@ Kerjakan berurutan dan laporkan hasil setiap langkah secara singkat:
 2. Cek `git config --global user.name` dan `git config --global user.email`. Kalau kosong, tanyakan ke saya.
 3. Jalankan `.\day init` (git init branch main, ganti <GITHUB_USERNAME> di README, commit awal).
 4. Jalankan `.\day publish` untuk membuat repo PUBLIC `dotnet-90-days` di akun GitHub saya dan push.
+   Jika push workflow ditolak dengan pesan `without workflow scope`, berhenti dan minta saya menjalankan `gh auth refresh -h github.com -s workflow` sendiri. Setelah saya menyelesaikan otorisasi, cek `gh auth status` dan ulangi `.\day push` pada repo serta origin yang sudah dibuat. Pertahankan workflow dan jangan membuat repo baru.
 5. Tampilkan URL repo (`gh repo view --json url -q .url`) dan status workflow terakhir (`gh run list -L 1`).
 6. Perbarui HANDOFF.md (setup selesai, berikutnya Day 01), commit `chore: setup complete`, lalu `.\day push`.
 

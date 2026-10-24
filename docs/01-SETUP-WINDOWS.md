@@ -99,6 +99,23 @@ Kalau belum login, AI harus berhenti dan meminta kamu menjalankan `gh auth login
 
 > 🔒 **Keamanan:** setelah login lewat `gh`, Git, Codex, dan Claude bisa melakukan push memakai kredensial yang tersimpan di Windows Credential Manager. **Jangan pernah** menempelkan password atau token GitHub ke chat AI.
 
+### Push workflow ditolak
+
+Kalau push `.github/workflows/build.yml` ditolak dengan pesan `without workflow scope`, izin GitHub CLI perlu ditambah. Jalankan perintah ini sendiri, lalu selesaikan otorisasi di browser:
+
+```powershell
+gh auth refresh -h github.com -s workflow
+```
+
+Setelah selesai, kembali ke folder repo dan jalankan:
+
+```powershell
+gh auth status
+.\day push
+```
+
+Jika `.\day publish` sudah membuat repo, lanjutkan memakai repo dan remote `origin` yang sama. Pertahankan file workflow; tidak perlu membuat repo baru. AI menunggu kamu menyelesaikan otorisasi sendiri. Rujukan: [menambah izin GitHub CLI](https://cli.github.com/manual/gh_auth_refresh).
+
 ---
 
 ## D. Izinkan script PowerShell (sekali)
