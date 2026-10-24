@@ -58,4 +58,5 @@ Bagian `Yang saya pahami` hanya berisi catatan yang benar-benar ditulis atau dis
 - Gunakan diagram Mermaid sederhana bila membantu menjelaskan alur. Peta materi dan petunjuk run harus sesuai struktur repo.
 - Gambar progres memakai output dari eksekusi program yang nyata. Simpan perintah dan output sumbernya; jangan mengarang hasil build, terminal, test, atau penyelesaian hari.
 - Simpan aset repo di `assets/progress/`. Siapkan salinan gambar siap dibagikan bila diminta; jangan mengunggah ke akun sosial tanpa permintaan khusus.
+- Setelah progres suatu hari terverifikasi, unggah bukti teknis yang relevan ke repo yang sama: gambar hasil, perintah/output sumber, dan tautan CI bila tersedia. Perbarui indeks `assets/progress/README.md` serta halaman harinya; label penyelesaian tetap mengikuti status jurnal dan tabel progres.
 - Gunakan skill `antislop` dan `antislop-copywriting` yang tersedia. Bandingkan VERSION lokal dengan rilis resmi [miqdadbadjuber/anti-slop](https://github.com/miqdadbadjuber/anti-slop/releases/latest) pada awal sesi. Pengecekan versi tidak mengizinkan pembaruan instalasi secara otomatis.

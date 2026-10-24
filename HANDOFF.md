@@ -20,6 +20,8 @@ Pada sesi ini pemilik meminta kode Day 01 dikerjakan penuh, dokumentasi dirapika
 - `.agents/skills/dotnet-study/SKILL.md` menyimpan konteks, lingkup kerja, gaya dokumentasi, struktur, serta aturan verifikasi dan hasil visual. Validasi skill lulus.
 - `scripts/export-progress.ps1` menjalankan build/run aktual, menyimpan source dan stdout, lalu mengekspor gambar. PNG 1600 x 900 dan 1080 x 1350 sudah diperiksa secara visual.
 - Aset dan sumber gambar ada di `assets/progress/`; salinan siap dibagikan disiapkan untuk pemilik. Belum ada publikasi ke media sosial.
+- Bukti Day 01 sudah tersedia di GitHub. Indeks `assets/progress/README.md` menghubungkan gambar, output, data ekspor, kode terverifikasi, dan CI yang lulus. README utama memiliki navigasi serta bagian bukti progres.
+- Pemilik meminta bukti ikut diunggah pada progres berikutnya. Aturan ini disimpan pada AGENTS dan skill repo; label hasil teknis tetap dibedakan dari status penyelesaian jurnal.
 - Antislop lokal 3.2.20; rilis resmi terbaru yang terdeteksi adalah [3.2.23](https://github.com/miqdadbadjuber/anti-slop/releases/tag/v3.2.23). Instalasi global tidak diubah.
 
 ## Berikutnya

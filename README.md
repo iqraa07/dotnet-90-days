@@ -6,7 +6,7 @@ Catatan belajar .NET selama 90 hari: dasar C#, pengembangan Web API, dan aplikas
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Daftar Day 01-90](days/README.md) · [Peta belajar](#peta-belajar) · [Day 01](days/day-01/README.md) · [Jurnal](journal) · [Setup](START-HERE.md)
+[Daftar Day 01-90](days/README.md) · [Peta belajar](#peta-belajar) · [Bukti progres](assets/progress/README.md) · [Day 01](days/day-01/README.md) · [Jurnal](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
 **Progress:** 0 / 90 days (0%) · **Current:** Day 01 · **Last update:** 2026-10-24
@@ -44,6 +44,10 @@ dotnet run --project .\phase-1-csharp\day-01-setup-net-10-and-hello-world
 ```
 
 Day 01 menampilkan nama, tanggal saat program dijalankan, dan versi runtime .NET. Buka [halaman Day 01](days/day-01/README.md) untuk materi dan petunjuk menjalankan. [Jurnal Day 01](journal/day-01-setup-net-10-and-hello-world.md) masih menunggu refleksi pribadi.
+
+## Bukti progres
+
+Hasil build dan run Day 01 sudah terverifikasi. Gambar, output terminal, serta tautan CI tersedia pada [halaman bukti progres](assets/progress/README.md).
 
 ![Kode dan hasil eksekusi Day 01](assets/progress/day-01-terminal.png)
 

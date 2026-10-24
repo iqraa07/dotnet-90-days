@@ -25,6 +25,8 @@ Baca `AGENTS.md` dan `HANDOFF.md` pada root repo. Gunakan status Git, tabel READ
 
 Untuk gambar progres, jalankan project yang dimaksud dan simpan output aktual. Gambar boleh menata ulang output agar terbaca, tetapi angka, waktu, status, dan hasil harus berasal dari eksekusi tersebut. Sertakan sumber teks bila mengekspor visual. Simpan aset di `assets/progress/` dan tautkan dari halaman hari yang sesuai.
 
+Pemilik meminta bukti progres ikut diunggah ke repo. Setelah verifikasi, perbarui `assets/progress/README.md` dengan gambar, output sumber, dan tautan CI yang tersedia, lalu sertakan dalam push pekerjaan hari itu. Label hasil teknis harus sesuai bukti dan tidak boleh mendahului penyelesaian jurnal.
+
 Untuk project console sederhana, `scripts/export-progress.ps1` dapat menjalankan build/run dan mengekspor visual. Berikan nomor hari, path project, judul, serta folder kerja. Periksa hasil gambar sebelum membagikannya; tata letak saat ini dibuat untuk source dan output singkat seperti Day 01.
 
 Jangan memublikasikan hasil ke media sosial tanpa permintaan khusus. Commit/push hanya dalam lingkup yang diminta, ke repo yang sama; jangan membuat progres atau riwayat palsu.

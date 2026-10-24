@@ -15,6 +15,8 @@ Program console menampilkan nama, tanggal saat dijalankan, dan versi runtime .NE
 
 ## Hasil eksekusi
 
+[Bukti progres dan hasil CI](../../assets/progress/README.md#day-01-hello-world)
+
 ![Kode dan output Day 01](../../assets/progress/day-01-terminal.png)
 
 Build Release lulus dengan 0 warning dan 0 error. Program menghasilkan nama, waktu komputer, dan versi runtime, dengan exit code 0.
