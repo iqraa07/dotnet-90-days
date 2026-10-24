@@ -1,0 +1,41 @@
+# --- .NET build output ---
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Ll]og/
+[Ll]ogs/
+*.log
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# --- IDE ---
+.vs/
+*.user
+*.suo
+*.userprefs
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# --- Secrets and local config (never commit) ---
+.env
+.env.*
+*.pfx
+*.p12
+appsettings.*.local.json
+secrets.json
+
+# --- Local data ---
+*.db
+*.db-shm
+*.db-wal
+uploads/
+
+# --- OS ---
+Thumbs.db
+Desktop.ini
+.DS_Store

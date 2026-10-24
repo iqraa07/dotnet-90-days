@@ -1,0 +1,53 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DOTNET_NOLOGO: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build every project
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t projects < <(git ls-files '*.csproj' | sort)
+          if [ ${#projects[@]} -eq 0 ]; then
+            echo "No .NET projects yet - nothing to build."
+            exit 0
+          fi
+          for p in "${projects[@]}"; do
+            echo "::group::build $p"
+            dotnet build "$p" -c Release
+            echo "::endgroup::"
+          done
+
+      - name: Run tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t tests < <(git ls-files '*.csproj' | xargs -r grep -l -E 'Microsoft\.NET\.Test\.Sdk|xunit|MSTest|NUnit' || true)
+          if [ ${#tests[@]} -eq 0 ]; then
+            echo "No test projects yet."
+            exit 0
+          fi
+          for t in "${tests[@]}"; do
+            echo "::group::test $t"
+            dotnet test "$t" -c Release
+            echo "::endgroup::"
+          done
