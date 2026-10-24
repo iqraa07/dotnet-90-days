@@ -23,6 +23,7 @@
 - README latihan berisi tujuan, perintah run, petunjuk, dan kriteria pemeriksaan. `Program.cs` berisi tiga TODO, dengan bagian inti dibiarkan untuk user.
 - `dotnet build` lulus dengan 0 warning dan 0 error. `dotnet run` berhasil menampilkan tiga penanda belum diisi.
 - User meminta penjelasan singkat dan profesional, tanpa emoji dekoratif. Preferensi ini disimpan di AGENTS.md.
+- User memberi izin push kerangka Day 01. Commit WIP `e27a2b7` sudah di-push; GitHub Actions untuk kode latihan lulus: https://github.com/iqraa07/dotnet-90-days/actions/runs/40108251631.
 
 ## Belum selesai / TODO kamu
 - User mengganti nilai sementara pada `Program.cs` baris 4, 9, dan 14: nama, tanggal/waktu melalui `DateTime.Now`, dan versi runtime melalui `Environment.Version`.
