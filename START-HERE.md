@@ -39,7 +39,7 @@ gh auth status
 Kalau akun GitHub sudah aktif, lewati login. Kalau belum, jalankan `gh auth login` sendiri, lalu pilih: **GitHub.com → HTTPS → Yes (authenticate Git) → Login with a web browser**. Salin kode yang muncul, tempel di browser, lalu klik Authorize.
 
 > Gunakan email yang terverifikasi di akun GitHub **atau alamat noreply dari GitHub** agar commit terhubung ke akunmu. Ambil alamat noreply dari Settings → Emails. Lihat [petunjuk email commit GitHub](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address).
-> ⚠️ Jangan pernah memberikan password atau token GitHub ke AI. Login cukup sekali lewat `gh`.
+> Jangan memberikan password atau token GitHub ke AI. Login dilakukan sendiri lewat `gh`.
 
 ## Langkah 3 — Buka Codex di folder ini
 

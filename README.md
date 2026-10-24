@@ -9,7 +9,7 @@ This repository tracks my 90-day .NET learning plan: C# fundamentals, an ASP.NET
 All 90 days stay in this repository. Daily commits use `day-NN: ...`; work in progress stays marked until the exercise and journal are complete.
 
 <!-- progress:start -->
-**Progress:** 0 / 90 days (0%) · **Current:** - · **Last update:** -
+**Progress:** 0 / 90 days (0%) · **Current:** Day 01 · **Last update:** 2026-10-24
 <!-- progress:end -->
 
 ## Phases
@@ -30,7 +30,7 @@ Legend: ⬜ not started · 🟡 in progress · ✅ done · ⏭️ skipped
 
 | Day | Topic | Phase | Status | Date | Journal |
 |---|---|---|---|---|---|
-| 01 | Setup .NET 10 and Hello World | 1 | ⬜ | - | - |
+| 01 | Setup .NET 10 and Hello World | 1 | 🟡 | 2026-10-24 | [journal](journal/day-01-setup-net-10-and-hello-world.md) |
 | 02 | Variables and Data Types | 1 | ⬜ | - | - |
 | 03 | Operators and Strings | 1 | ⬜ | - | - |
 | 04 | Conditionals and Switch | 1 | ⬜ | - | - |

@@ -9,6 +9,7 @@ File ini adalah **aturan utama** untuk setiap AI yang bekerja di repo ini. Codex
 - OS: **Windows**, shell **PowerShell**. Repo berada di `Documents\dotnet-90-days`.
 - Stack: **.NET 10 (LTS)**, C# 14, ASP.NET Core, EF Core, SQL Server, xUnit, Blazor.
 - Bahasa: **jelaskan dalam Bahasa Indonesia** yang santai dan jelas. **Kode, nama class/variabel, dan commit message dalam English.**
+- Gaya penjelasan dan dokumentasi: singkat, profesional, langsung ke pekerjaan dan hasilnya. Hindari emoji dekoratif, kalimat promosi, dan penjelasan yang berlebihan. Simbol status pada tabel progres tetap dipakai karena dibaca helper.
 
 ## 2. File penting (sumber kebenaran)
 
