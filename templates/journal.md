@@ -2,7 +2,6 @@
 
 - **Tanggal mulai:** {{DATE}}
 - **Fase:** {{PHASE}}
-- **Mode:** PAIR
 - **Kode:** {{CODE}}
 - **Durasi belajar:** _ jam
 
@@ -16,7 +15,7 @@
 
 ## Yang saya pahami (WAJIB ditulis sendiri, 3–5 poin)
 
-<!-- Tulis dengan kata-katamu sendiri. AI tidak boleh mengisi bagian ini. -->
+<!-- Tulis refleksi bagian ini dengan kata-katamu sendiri. -->
 - 
 
 ## Kendala & solusi

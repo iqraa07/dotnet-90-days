@@ -1,61 +1,67 @@
-# 02 — Alur Kerja Harian
+# 02: Alur Kerja Harian
 
-## Rutinitas 60–120 menit
+Semua hari belajar memakai repo `dotnet-90-days`. Jalankan perintah helper dari root repo dan simpan hasil setiap sesi pada folder kode serta jurnal yang sesuai.
 
-| Waktu | Siapa | Apa | Prompt / perintah |
-|---|---|---|---|
-| 5 menit | AI | Cek posisi, mulai hari, buat jurnal dan project | **PROMPT 1** |
-| 10–15 menit | AI → kamu | Penjelasan konsep (maksimal 5 poin + contoh) | (bagian dari PROMPT 1) |
-| 30–60 menit | **Kamu** | Kerjakan `TODO(kamu)`, jalankan, dan coba-coba sendiri | `dotnet run` |
-| 10 menit | AI | Review kode kamu, lalu 3 pertanyaan cek pemahaman | **PROMPT 2** |
-| 5–10 menit | **Kamu** | Tulis "Yang saya pahami" di jurnal | edit `journal/day-NN-*.md` |
-| 2 menit | AI | Tandai selesai, commit, push, update HANDOFF | **PROMPT 4** |
+## Mulai sesi
 
-Kalau mentok, pakai **PROMPT 3**. AI akan memberi petunjuk bertahap, bukan langsung jawabannya.
+```powershell
+git status
+git log --oneline -5
+.\day status
+```
 
-## Pembagian peran Codex dan Claude
+Baca `HANDOFF.md` dan jurnal hari yang sedang dikerjakan. Periksa perubahan yang belum di-commit sebelum menambah pekerjaan baru.
 
-Keduanya membaca aturan yang sama (`AGENTS.md`), jadi bisa saling menggantikan. Supaya efisien, saran pembagiannya:
+Lanjutkan hari yang masih berjalan. Jika belum ada, pilih hari pertama yang belum dimulai, lalu jalankan helper dengan nomor hari tersebut. Contoh untuk Day 01:
 
-| Codex: eksekutor | Claude: mentor dan reviewer |
-|---|---|
-| `.\day new`, scaffold project, install package | Menjelaskan konsep yang belum paham |
-| Menjalankan `dotnet build`, `run`, `test` | Me-review kode dan memberi saran |
-| Commit dan push ke GitHub | Kuis mingguan dan rangkuman materi |
-| Memperbaiki error build | Mengubah atau menyesuaikan ROADMAP |
+```powershell
+.\day new 1
+```
 
-**Aturan emas:**
+Helper membuat jurnal, memperbarui progres README, dan membuat project console untuk Fase 1.
 
-1. **Jangan pakai Codex dan Claude bersamaan di file yang sama.** Selesaikan satu, commit, baru pindah.
-2. **Setiap pindah tool, kirim PROMPT 5 (handoff).** Tool baru akan membaca `HANDOFF.md` dan `git log`.
-3. **Akhir sesi = working tree bersih** (semua sudah di-commit). Pekerjaan setengah jadi di-commit sebagai `day-NN: wip ...`.
+## Kerjakan latihan
 
-> Catatan untuk Claude desktop (Cowork): Claude bekerja dari lingkungan Linux, jadi tidak bisa menjalankan `.\day` (PowerShell) dan sebaiknya tidak menjalankan `git commit` di sana. Biarkan Claude mengedit, menjelaskan, dan me-review, lalu commit lewat Codex atau `.\day done N`.
+1. Baca target, materi, dan praktik hari tersebut di `ROADMAP.md`.
+2. Kerjakan latihan serta bagian `TODO(kamu)` yang tersedia.
+3. Ikuti perintah pada README latihan untuk build dan menjalankan program.
+4. Bandingkan hasil dengan contoh atau kriteria pemeriksaan. Jalankan test jika project memiliki test.
+5. Catat pekerjaan, kendala, dan hasil pemeriksaan di jurnal. Tulis bagian **Yang saya pahami** dengan kata-kata sendiri.
 
-## Ganti mode sesuai kondisi
+Contoh build dan run Day 01 dari root repo:
 
-| Kondisi | Tulis di awal prompt |
-|---|---|
-| Normal (disarankan) | `mode: pair` |
-| Lagi semangat, ingin menulis sendiri | `mode: mentor` |
-| Sibuk sekali, tapi tetap ingin ada progres | `mode: auto` (AI tetap memberi 3 pertanyaan cek pemahaman di jurnal) |
+```powershell
+dotnet build .\phase-1-csharp\day-01-setup-net-10-and-hello-world
+dotnet run --project .\phase-1-csharp\day-01-setup-net-10-and-hello-world
+```
 
-## Kalau bolong beberapa hari
+Jika ada error, catat pesan lengkap, langkah yang memicunya, hasil yang diharapkan, dan percobaan perbaikannya. Gunakan [checklist sesi](03-PROMPTS.md) untuk memeriksa pekerjaan secara bertahap.
 
-- **Jangan** membuat commit palsu atau memalsukan tanggal. Recruiter yang jeli bisa melihatnya, dan yang penting adalah ilmunya.
-- Nomor hari = sesi belajar. Besok tinggal lanjut ke Day berikutnya.
-- Kalau ingin mengejar, pakai **PROMPT 8**. AI akan mengusulkan hari mana yang bisa digabung.
-- Kalau sengaja melewati satu topik: `.\day skip N` (ditandai ⏭️).
+## Tutup sesi
 
-## Ritme mingguan
+Hari selesai setelah latihan berfungsi, build dan test yang tersedia lulus, serta jurnal termasuk refleksi pribadi terisi. Periksa perubahan sebelum membuat commit:
 
-- **Hari ke-7 setiap minggu = Checkpoint:** mini project, refleksi, dan kuis (**PROMPT 6**, cocok di Claude).
-- **Setiap Checkpoint:** minta code review menyeluruh (**PROMPT 10**).
-- **Akhir fase (Day 30, 60, 90):** buat tag rilis (`v0.1`, `v0.2`, `v1.0`) dan perbarui CV.
+```powershell
+git diff
+.\day done 1
+.\day push
+```
 
-## Yang dilihat recruiter di GitHub kamu
+Ganti `1` dengan nomor hari yang dikerjakan. Perintah `done` memeriksa build dan isi refleksi jurnal, menandai hari selesai, lalu membuat commit `day-NN: <judul>`.
 
-1. README dengan tabel progres yang konsisten.
-2. Commit kecil-kecil dengan pesan yang jelas (`day-14: Checkpoint 2 ...`).
-3. Jurnal yang menunjukkan cara kamu berpikir dan memecahkan masalah.
-4. **Proyek HelpdeskLite** (pin di profil) dengan README, screenshot, dan demo.
+Perbarui `HANDOFF.md` dengan posisi terakhir, hasil verifikasi, dan langkah berikutnya. Simpan perubahan catatan tersebut:
+
+```powershell
+git add HANDOFF.md
+git commit -m "chore: update handoff"
+.\day push
+git status
+```
+
+Jika latihan belum tuntas, pertahankan status sedang dikerjakan. Catat sisa pekerjaan di `HANDOFF.md` dan simpan progres dengan commit WIP yang jelas, misalnya `day-01: wip add console exercise`.
+
+## Jeda dan evaluasi
+
+Nomor hari mengikuti urutan sesi belajar. Setelah jeda, lanjutkan dari pekerjaan terakhir tanpa mengubah tanggal commit. Jika sengaja melewati topik, gunakan `.\day skip N` dan catat alasannya.
+
+Pada checkpoint di roadmap, tinjau kode, ulangi materi yang masih sulit, dan tulis hasil evaluasi. Saat akhir fase, periksa kelengkapan README, perintah run, jurnal, serta hasil test sebelum membuat rilis.

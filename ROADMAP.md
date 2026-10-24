@@ -4,16 +4,16 @@ Target: dalam 90 hari, setara **Junior .NET Developer** — bisa membuat Web API
 
 - Waktu: 1–2 jam per hari. Nomor hari mengikuti **sesi belajar**, bukan tanggal. Kalau ada hari yang bolong, lanjutkan ke nomor berikutnya.
 - Versi: **.NET 10 (LTS)** + C# 14.
-- Tools: VS Code + C# Dev Kit (atau Visual Studio 2026 Community), Git, GitHub CLI, Codex, Claude.
+- Tools: VS Code + C# Dev Kit (atau Visual Studio 2026 Community), Git, GitHub CLI.
 - Bahasa: penjelasan pakai Bahasa Indonesia; kode, nama class, dan commit message pakai English.
 
 Format setiap hari:
 
 - **Belajar:** konsep yang dipelajari hari itu.
-- **Praktik:** yang dikerjakan bersama AI (AI menyiapkan kerangka dan menjelaskan).
-- **TODO kamu:** bagian yang **wajib kamu tulis sendiri**. AI hanya memberi petunjuk.
+- **Praktik:** latihan untuk menerapkan materi hari itu.
+- **TODO kamu:** bagian latihan yang menjadi fokus hari itu.
 
-> Untuk AI (Codex/Claude): judul tiap hari memakai format `### Day NN — Judul`. Format ini dibaca oleh `scripts/day.ps1`, jadi jangan diubah. Isi judul hanya boleh huruf ASCII dan tidak boleh memakai karakter `|`.
+> Judul tiap hari memakai format `### Day NN — Judul` dan dibaca oleh `scripts/day.ps1`. Pertahankan format tersebut; isi judul menggunakan huruf ASCII dan tidak memakai karakter `|`.
 
 ---
 
@@ -67,7 +67,7 @@ Folder kode: `phase-1-csharp/day-NN-.../`, satu project console untuk setiap har
 
 ### Day 09 — Debugging and Exceptions
 - **Belajar:** breakpoint, step over/into, watch di VS Code; `try / catch / finally`; membaca stack trace.
-- **Praktik:** AI menyiapkan program berisi 3 bug yang disengaja.
+- **Praktik:** program latihan berisi 3 bug yang disengaja.
 - **TODO kamu:** temukan dan perbaiki ketiga bug memakai debugger, lalu catat cara menemukannya di jurnal.
 
 ### Day 10 — Classes and Objects
@@ -177,7 +177,7 @@ Folder kode: `phase-1-csharp/day-NN-.../`, satu project console untuk setiap har
 ### Day 30 — Phase 1 Project: Helpdesk Console (Part 2) and Review
 - **Belajar:** review seluruh fase 1.
 - **Praktik:** laporan LINQ, unit test, dan README project.
-- **TODO kamu:** jawab 15 soal kuis dari AI tanpa melihat kode. Opsional: ikuti sertifikasi gratis *Foundational C# with Microsoft* (freeCodeCamp).
+- **TODO kamu:** jawab 15 soal kuis tanpa melihat kode. Opsional: ikuti sertifikasi gratis *Foundational C# with Microsoft* (freeCodeCamp).
 
 ---
 
@@ -335,7 +335,7 @@ Proyek fase 2: **AssetTracker API**, mini sistem inventaris aset IT. Folder: `ph
 
 ### Day 59 — Code Review and Refactor
 - **Belajar:** code smell, penamaan, method yang terlalu panjang, prinsip SOLID secara ringan.
-- **Praktik:** AI melakukan code review menyeluruh dan membuat daftar perbaikan.
+- **Praktik:** code review menyeluruh dan daftar perbaikan.
 - **TODO kamu:** kerjakan minimal 3 perbaikan dari daftar review sendiri.
 
 ### Day 60 — Phase 2 Review and Release v0.2
@@ -489,7 +489,7 @@ Aplikasi ticketing helpdesk full-stack (mirip versi mini MySSC) dengan ASP.NET C
 
 ### Day 87 — Security Review
 - **Belajar:** OWASP Top 10 dasar: SQL injection (aman dengan EF Core), XSS, secret di repo, CORS, HTTPS.
-- **Praktik:** AI membuat checklist keamanan dan mengaudit project.
+- **Praktik:** checklist keamanan dan audit project.
 - **TODO kamu:** pastikan tidak ada secret di riwayat git (`git log -p` + cari kata "password").
 
 ### Day 88 — Documentation and Screenshots
@@ -511,8 +511,9 @@ Aplikasi ticketing helpdesk full-stack (mirip versi mini MySSC) dengan ASP.NET C
 
 ## Riwayat Perubahan Roadmap
 
-Setiap perubahan roadmap dicatat di sini (oleh kamu, Codex, atau Claude).
+Setiap perubahan roadmap dicatat di sini.
 
 | Tanggal | Diubah oleh | Perubahan |
 |---|---|---|
-| 2026-10-24 | Claude | Versi awal roadmap 90 hari |
+| 2026-10-24 | - | Versi awal roadmap 90 hari |
+| 2026-10-25 | - | Merapikan bahasa dan panduan tanpa mengubah urutan materi 90 hari |

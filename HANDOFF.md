@@ -1,44 +1,38 @@
-# HANDOFF — Catatan Serah Terima
+# Catatan sesi
 
-> File ini **dibaca pertama** dan **diperbarui terakhir** di setiap sesi, oleh Codex, Claude, atau kamu sendiri.
-> Tujuannya supaya tool mana pun yang dibuka berikutnya langsung tahu posisi terakhir tanpa perlu menebak.
+**Update:** 2026-10-25
+**Repo:** https://github.com/iqraa07/dotnet-90-days
+**Hari aktif:** Day 01, Setup .NET 10 and Hello World
 
-**Update terakhir:** 2026-10-24 · **oleh:** Codex
-**Mode aktif:** PAIR
+## Posisi terakhir
 
-## Posisi sekarang
-- Hari aktif: **Day 01 — Setup .NET 10 and Hello World**, sedang dikerjakan.
-- Status: setup selesai lewat Codex dan sudah di-push ke repo public https://github.com/iqraa07/dotnet-90-days. Kerangka Day 01 siap, build dan run lulus; tiga TODO masih menunggu user. Progres 0/90 selesai.
+Kode Day 01 sudah selesai dan terverifikasi. Program menampilkan nama, waktu lokal komputer, dan versi runtime .NET. Refleksi pribadi pada jurnal belum diisi, sehingga status hari tetap sedang dikerjakan dan progres selesai masih 0/90.
 
-## Sudah selesai
-- Folder `dotnet-90-days` beserta ROADMAP, AGENTS.md, script `day.ps1`, dan workflow CI.
-- Git 2.55.0 dan GitHub CLI 2.102.0 tersedia; akun `iqraa07` aktif.
-- .NET SDK 10.0.402 dipasang melalui winget setelah izin user. `dotnet --version` berhasil setelah lokasi SDK ditambahkan ke PATH proses kerja.
-- Identitas Git global diset sesuai persetujuan: Muhammad Iqra Nur Fajar, `134745278+iqraa07@users.noreply.github.com`.
-- Nama lama pada panduan diganti, README dirapikan, dan aturan satu repo untuk seluruh 90 hari disimpan di AGENTS serta panduan.
-- Antislop lokal 3.2.20 dibandingkan dengan rilis resmi terbaru 3.2.21 pada 2026-10-24. Belum mengunduh atau memasang pembaruan skill.
-- User menyelesaikan otorisasi scope `workflow` sendiri melalui `gh auth refresh`. Push ulang berhasil tanpa membuat repo lain.
-- Commit `chore: setup complete` adalah `c9df787`; workflow-nya lulus: https://github.com/iqraa07/dotnet-90-days/actions/runs/40107910902.
-- `.\day new 1` membuat project `phase-1-csharp/day-01-setup-net-10-and-hello-world`, jurnal Day 01, dan status sedang dikerjakan pada README.
-- README latihan berisi tujuan, perintah run, petunjuk, dan kriteria pemeriksaan. `Program.cs` berisi tiga TODO, dengan bagian inti dibiarkan untuk user.
-- `dotnet build` lulus dengan 0 warning dan 0 error. `dotnet run` berhasil menampilkan tiga penanda belum diisi.
-- User meminta penjelasan singkat dan profesional, tanpa emoji dekoratif. Preferensi ini disimpan di AGENTS.md.
-- User memberi izin push kerangka Day 01. Commit WIP `e27a2b7` sudah di-push; GitHub Actions untuk kode latihan lulus: https://github.com/iqraa07/dotnet-90-days/actions/runs/40108251631.
+Pada sesi ini pemilik meminta kode Day 01 dikerjakan penuh, dokumentasi dirapikan, folder harian dibuat, dan gambar hasil disiapkan. Permintaan itu tidak mencakup pengerjaan kode Day 02-90. Sesi berikutnya kembali ke PAIR kecuali ada permintaan lain.
 
-## Belum selesai / TODO kamu
-- User mengganti nilai sementara pada `Program.cs` baris 4, 9, dan 14: nama, tanggal/waktu melalui `DateTime.Now`, dan versi runtime melalui `Environment.Version`.
-- User mengisi 3-5 poin pada bagian "Yang saya pahami" di `journal/day-01-setup-net-10-and-hello-world.md`. Bagian ini masih sama persis dengan template dan belum diisi AI.
-- Review jawaban user, jalankan build/run, lalu selesaikan Day 01 setelah semua syarat terpenuhi.
-- Codex yang masih terbuka belum memuat PATH baru dari instalasi .NET. Tutup dan buka ulang Codex agar `dotnet` tersedia di terminal berikutnya. Selama sesi ini, penambahan `C:\Program Files\dotnet` ke PATH hanya berlaku pada proses kerja.
+## Hasil sesi
 
-## Langkah berikutnya
-1. User mengerjakan tiga TODO dan refleksi jurnal, lalu meminta review melalui PROMPT 2.
-2. Jalankan build dan run; belum ada project test pada Day 01. Review tanpa langsung mengganti jawaban user, lalu ajukan tiga pertanyaan pemahaman.
-3. Setelah user siap menyelesaikan hari, ikuti PROMPT 4 untuk `.\day done 1`, push, dan pembaruan handoff. Sampai itu terjadi, pertahankan status sedang dikerjakan.
+- Program console terdiri dari tiga baris, tanpa TODO atau nilai sementara.
+- Build Release lulus dengan 0 warning dan 0 error. Run berhasil, exit code 0, dengan tiga baris output. SDK 10.0.402 dan runtime 10.0.13 tersedia.
+- README utama memiliki peta belajar, navigasi, contoh perintah, gambar hasil, dan tabel progres yang dapat dibuka saat diperlukan.
+- `days/` berisi katalog dan 90 folder harian. Day 02-90 berisi rencana materi; source tetap di folder fase agar helper tetap kompatibel.
+- Panduan, jurnal, template, dan aturan penulisan dirapikan. Nama layanan pendamping tidak dicantumkan pada dokumen publik. File konfigurasi pendamping lama yang tidak lagi dipakai sudah dihapus.
+- `.agents/skills/dotnet-study/SKILL.md` menyimpan konteks, lingkup kerja, gaya dokumentasi, struktur, serta aturan verifikasi dan hasil visual. Validasi skill lulus.
+- `scripts/export-progress.ps1` menjalankan build/run aktual, menyimpan source dan stdout, lalu mengekspor gambar. PNG 1600 x 900 dan 1080 x 1350 sudah diperiksa secara visual.
+- Aset dan sumber gambar ada di `assets/progress/`; salinan siap dibagikan disiapkan untuk pemilik. Belum ada publikasi ke media sosial.
+- Antislop lokal 3.2.20; rilis resmi terbaru yang terdeteksi adalah [3.2.23](https://github.com/miqdadbadjuber/anti-slop/releases/tag/v3.2.23). Instalasi global tidak diubah.
 
-## Catatan untuk AI berikutnya
-- Folder repo sebenarnya: `Documents\dotnet-90-days`; workspace chat awal berada di folder Codex yang berbeda.
-- `.\day init` sudah memasang workflow dan rekomendasi ekstensi, mengganti placeholder README, serta membuat commit awal `4c82872`.
-- Semua hari dan fase harus tetap di repo `iqraa07/dotnet-90-days`. Jangan menandai Day 01 selesai sebelum TODO dan refleksi user tuntas.
-- Windows Application Control memblokir executable apphost hasil build. Project Day 01 memakai opsi resmi `<UseAppHost>false</UseAppHost>` dan perintah `dotnet run` sudah diuji berhasil; jangan mengubah kebijakan keamanan Windows.
-- Izin push setup sudah diberikan user. Untuk push pekerjaan harian dalam mode PAIR, ikuti aturan konfirmasi pada AGENTS.md dan izin eksplisit dalam percakapan.
+## Berikutnya
+
+1. Pemilik mencoba program dan menulis catatan sendiri pada bagian `Yang saya pahami` di jurnal Day 01. Tiga pertanyaan pemahaman sudah tersedia di jurnal; jangan mengisi refleksi atas nama pemilik.
+2. Setelah refleksi diberikan, salin sesuai jawaban pemilik, lakukan review singkat, lalu jalankan `.\day done 1` jika semua syarat terpenuhi. Jangan memakai `-Force` untuk melewati refleksi kosong.
+3. Perbarui status halaman Day 01 dan katalog agar sesuai tabel progres, commit, dan push dalam lingkup yang diizinkan. Day 02 baru dimulai sesudah itu.
+
+## Catatan operasional
+
+- Seluruh 90 hari memakai satu repo dan branch utama `main`; gunakan commit harian yang bermakna.
+- Identitas Git: Muhammad Iqra Nur Fajar, akun `iqraa07`, email noreply yang sudah disetujui.
+- GitHub sudah login dan scope `workflow` tersedia. Jangan mengulang login atau meminta password/token.
+- Terminal lama mungkin belum menerima PATH baru. Lokasi SDK pada mesin ini `C:\Program Files\dotnet`.
+- Project Day 01 memakai `UseAppHost=false` karena executable apphost diblokir Windows Application Control. Jalankan melalui runtime .NET dan pertahankan kebijakan keamanan Windows.
+- Pemilik meminta bahasa singkat, profesional, tanpa emoji dekoratif atau klaim berlebihan. Gambar hasil harus berasal dari eksekusi nyata, bukan status atau output yang dikarang.

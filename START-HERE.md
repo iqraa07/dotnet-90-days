@@ -1,76 +1,77 @@
 # Mulai di Sini
 
-Selamat datang di program **90 hari belajar .NET**. Ikuti 4 langkah di bawah ini sekali saja (sekitar 20–30 menit). Setelah itu, rutinitas harian cukup dengan satu prompt.
+Panduan awal program belajar .NET milik Muhammad Iqra Nur Fajar. Seluruh 90 hari, kode, dan jurnal disimpan dalam satu repo: `iqraa07/dotnet-90-days`.
 
-Semua hari dan fase belajar berada di repo **`dotnet-90-days`** yang sama. Folder kode dan jurnal bertambah di dalamnya; tidak perlu membuat repo baru setiap hari.
+## 1. Periksa lingkungan
 
-## Langkah 1 — Install tools (±10 menit)
+Buka PowerShell di folder repo, lalu jalankan:
 
-Cek dulu versi tools dengan perintah verifikasi di bawah. Buka **PowerShell** dan pasang hanya tools yang belum tersedia. Jika AI yang menjalankan instalasi, ia harus meminta izin kamu terlebih dahulu.
+```powershell
+git --version
+dotnet --version
+gh --version
+```
+
+Repo ini memakai .NET SDK `10.0.x`. Pasang hanya perangkat yang belum tersedia, setelah mendapat persetujuan pemilik komputer:
 
 ```powershell
 winget install --id Git.Git -e
 winget install --id Microsoft.DotNet.SDK.10 -e
 winget install --id GitHub.cli -e
-winget install --id Microsoft.VisualStudioCode -e
 ```
 
-**Tutup PowerShell, lalu buka lagi**, kemudian cek:
+Setelah instalasi, tutup lalu buka kembali terminal dan aplikasi yang menjalankannya agar PATH diperbarui. Panduan lengkap ada di [setup Windows](docs/01-SETUP-WINDOWS.md).
+
+## 2. Periksa identitas dan login
 
 ```powershell
-git --version; dotnet --version; gh --version; codex --version
-```
-
-`dotnet --version` harus diawali `10.0`. Kalau `codex` belum terpasang: `winget install OpenAI.Codex` (atau `npm install -g @openai/codex`).
-
-Kalau perintah masih tidak dikenali setelah instalasi lewat Codex, tutup lalu buka ulang aplikasi Codex sebelum melanjutkan.
-
-Detail lengkap dan troubleshooting ada di [`docs/01-SETUP-WINDOWS.md`](docs/01-SETUP-WINDOWS.md).
-
-## Langkah 2 — Identitas Git dan login GitHub (±5 menit, kamu sendiri)
-
-```powershell
-git config --global user.name "Muhammad Iqra Nur Fajar"
-git config --global user.email "EMAIL-TERVERIFIKASI-ATAU-NOREPLY-GITHUB"
-git config --global init.defaultBranch main
+git config --global user.name
+git config --global user.email
 gh auth status
 ```
 
-Kalau akun GitHub sudah aktif, lewati login. Kalau belum, jalankan `gh auth login` sendiri, lalu pilih: **GitHub.com → HTTPS → Yes (authenticate Git) → Login with a web browser**. Salin kode yang muncul, tempel di browser, lalu klik Authorize.
+Nama pemilik repo adalah Muhammad Iqra Nur Fajar. Email commit menggunakan email terverifikasi di akun GitHub atau alamat noreply dari Settings → Emails. Lihat [petunjuk email commit GitHub](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address).
 
-> Gunakan email yang terverifikasi di akun GitHub **atau alamat noreply dari GitHub** agar commit terhubung ke akunmu. Ambil alamat noreply dari Settings → Emails. Lihat [petunjuk email commit GitHub](https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address).
-> Jangan memberikan password atau token GitHub ke AI. Login dilakukan sendiri lewat `gh`.
+Jika akun sudah aktif, lewati login. Jika belum, jalankan `gh auth login` sendiri dan selesaikan otorisasi melalui browser. Jangan membagikan password atau token.
 
-## Langkah 3 — Buka Codex di folder ini
+## 3. Setup repo sekali saja
+
+Periksa kondisi repo sebelum menjalankan setup:
 
 ```powershell
-cd "$HOME\Documents\dotnet-90-days"
-codex
+git status
+git remote -v
 ```
 
-- Kalau Codex bertanya apakah folder ini dipercaya (*trust*), pilih **Yes**. Tanpa ini, `AGENTS.md` tidak akan dibaca.
-- Salin dan kirim **PROMPT 0 — Setup awal** dari [`docs/03-PROMPTS.md`](docs/03-PROMPTS.md).
-- Saat Codex meminta izin menjalankan `git`, `gh`, atau `dotnet`, baca perintahnya lalu setujui (*approve*). Ini normal.
+Untuk folder awal yang belum diinisialisasi dan belum memiliki repo GitHub:
 
-## Langkah 4 — Hubungkan Claude (opsional, untuk mentor dan review)
+```powershell
+.\day init
+.\day publish
+```
 
-- **Claude desktop (Cowork):** klik **Add folder**, lalu pilih `Documents\dotnet-90-days`.
-- **Claude Code:** `cd` ke folder ini, lalu jalankan `claude`.
+Perintah publish membuat repo public `dotnet-90-days`. Jika repo dan remote `origin` sudah tersedia, gunakan `.\day push` untuk mengirim perubahan berikutnya. Semua fase tetap berada dalam repo yang sama.
 
-## Setiap hari
+## 4. Mulai belajar
 
-Kirim **PROMPT 1 — Mulai hari berikutnya** ke Codex atau Claude. Alur lengkapnya ada di [`docs/02-WORKFLOW-HARIAN.md`](docs/02-WORKFLOW-HARIAN.md).
+```powershell
+.\day status
+```
 
-Buat commit bermakna untuk pekerjaan belajar hari itu. Perbarui progres README dan jurnal sesuai yang benar-benar dikerjakan, lalu cantumkan perintah menjalankan kode yang sudah dicoba. Bagian "Yang saya pahami" kamu isi sendiri.
+Lanjutkan hari yang sedang dikerjakan, atau mulai hari pertama yang belum dimulai. Contoh untuk Day 01:
 
-Peta isi folder:
+```powershell
+.\day new 1
+```
 
-| File | Isi |
+Baca target di [roadmap](ROADMAP.md), jalankan kode sesuai README latihan, lalu isi jurnal dengan kata-kata sendiri. Hari baru ditandai selesai setelah latihan, pemeriksaan, dan refleksi tuntas.
+
+| Dokumen | Kegunaan |
 |---|---|
-| `ROADMAP.md` | Rencana Day 01–90 |
-| `README.md` | Tabel progres (yang dilihat recruiter) |
-| `AGENTS.md` / `CLAUDE.md` | Aturan untuk Codex dan Claude |
-| `HANDOFF.md` | Posisi terakhir, untuk serah terima antar tool |
-| `journal/` | Jurnal harian kamu |
-| `docs/` | Setup, alur harian, prompt, cheatsheet |
-| `day.cmd` + `scripts/day.ps1` | Helper: `.\day new 1`, `.\day done 1`, `.\day status`, `.\day push` |
+| [Roadmap](ROADMAP.md) | Target dan latihan Day 01 sampai Day 90 |
+| [Alur harian](docs/02-WORKFLOW-HARIAN.md) | Urutan belajar, verifikasi, commit, dan push |
+| [Checklist sesi](docs/03-PROMPTS.md) | Pemeriksaan setup, review, dan penutupan sesi |
+| [Cheatsheet](docs/04-CHEATSHEET.md) | Perintah singkat dan penanganan error |
+| [Jurnal](journal/) | Pekerjaan, kendala, dan refleksi setiap hari |
+
+Buat commit bermakna untuk pekerjaan belajar hari itu. Jaga progres README, jurnal, dan petunjuk menjalankan kode sesuai hasil yang sudah diperiksa.
