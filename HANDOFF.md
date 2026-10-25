@@ -38,7 +38,7 @@ The owner requested full English throughout the repository and an implementation
 2. Keep both personal reflections pending until the owner supplies their own notes. Each journal includes three understanding questions for later review.
 3. Record future verified implementation separately from personal reflection. Keep the main table, catalog, daily overview, journal, and evidence consistent.
 4. Upload verified progress evidence to the same repository as part of the authorized day's work. Do not create another repository or publish to social accounts without a separate request.
-5. Day 02 is a WIP in PAIR mode; confirm push scope before publishing unless the current conversation already authorizes it. Day 03 remains planned.
+5. The owner authorized publication of Day 02 starter commit `a2607a4`. It remains a WIP in PAIR mode; future pushes follow the normal authorization rule. Day 03 remains planned.
 
 ## Environment and conventions
 
