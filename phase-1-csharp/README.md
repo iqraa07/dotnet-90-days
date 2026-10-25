@@ -2,13 +2,22 @@
 
 Each day uses a small, self-contained console project in `day-NN-topic/`.
 
-Day 01 is implemented and verified. The remaining exercises are planned in the [day catalog](../days/README.md).
+| Exercise | Implementation | Personal reflection |
+|---|---|---|
+| [Day 01: Hello World](day-01-setup-net-10-and-hello-world) | Verified | Pending |
+| [Day 02: Variables and Data Types](day-02-variables-and-data-types) | In progress: two data-size tasks remain | Pending |
 
-Run Day 01 from the repository root:
+Days 03-30 remain planned in the [day catalog](../days/README.md).
+
+Run the current Day 02 exercise from the repository root:
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-01-setup-net-10-and-hello-world
+dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types
 ```
+
+The temperature converter is verified. Complete the MB-to-GB-to-TB exercise using the [Day 02 instructions](day-02-variables-and-data-types/README.md).
+
+Phase 1 projects inherit `UseAppHost=false` from [Directory.Build.props](Directory.Build.props) and run through the .NET runtime. See [directory-level build configuration](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=visualstudio) for how this shared configuration is applied.
 
 Topics include variables, control flow, methods, classes, inheritance, interfaces, collections, LINQ, file I/O, JSON, generics, async/await, and unit testing with xUnit.
 

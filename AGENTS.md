@@ -44,7 +44,7 @@ The main progress table records implementation and verification. Personal reflec
 ## Code and Git
 
 - Target `net10.0`, with Nullable and ImplicitUsings enabled. Fix warnings without suppressing them.
-- Day 01 uses `UseAppHost=false` because Windows Application Control blocks its generated apphost. Use the .NET runtime and retain Windows security settings.
+- Phase 1 projects inherit `UseAppHost=false` from `phase-1-csharp/Directory.Build.props` because Windows Application Control blocks generated apphosts. Use the .NET runtime and retain Windows security settings.
 - Keep earlier exercises unchanged unless fixing a bug, and record any fix.
 - Do not create separate daily repositories, duplicate shared phase projects, empty commits, backdated commits, or fictional progress.
 - Use `main`. Commit prefixes: `day-NN:`, `fix(day-NN):`, `docs:`, or `chore:`.

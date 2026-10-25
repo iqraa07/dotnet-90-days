@@ -5,6 +5,7 @@ Build and execution records for implemented exercises. The [daily progress table
 | Day | Verification | Images | Source record | CI |
 |---|---|---|---|---|
 | [Day 01](../../days/day-01/README.md) | Implementation complete; build and run passed | [Landscape](day-01-terminal.png), [portrait](day-01-social.png) | [Output](day-01-output.txt), [capture data](day-01-capture.json) | [Passed](https://github.com/iqraa07/dotnet-90-days/actions/runs/40132461869) |
+| [Day 02](../../days/day-02/README.md) | Temperature converter verified; data-size exercise pending | Not exported | [13 CLI checks](day-02-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
 
 ## Day 01: Hello World
 
@@ -17,6 +18,12 @@ Build and execution records for implemented exercises. The [daily progress table
 - [Verified source](https://github.com/iqraa07/dotnet-90-days/blob/18ea6664a858e88f0e9773f75939d1922f79105e/phase-1-csharp/day-01-setup-net-10-and-hello-world/Program.cs).
 
 [Download the portrait image](day-01-social.png). Implementation is complete. Personal reflection remains pending in the [Day 01 journal](../../journal/day-01-setup-net-10-and-hello-world.md).
+
+## Day 02: Temperature converter
+
+The implemented Celsius converter passed 13 separate CLI checks. Five numeric cases produced the expected Fahrenheit and Kelvin values; eight invalid or out-of-range cases produced clean messages without stack traces. Input errors currently exit with code 0 through a normal return.
+
+[Read the captured inputs and outputs](day-02-checks.txt). The MB-to-GB-to-TB exercise remains pending, so Day 02 is still in progress.
 
 ## Adding evidence for another day
 

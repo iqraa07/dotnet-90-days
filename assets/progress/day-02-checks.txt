@@ -1,0 +1,96 @@
+Day 02: Celsius converter validation
+Captured UTC: 2026-10-25T05:17:39.1312952Z
+Scope: Celsius conversion only. The data-size exercise remains pending.
+Working directory: phase-1-csharp/day-02-variables-and-data-types
+SDK: 10.0.402
+Build: dotnet build -c Release --no-restore -nologo -v minimal
+Build exit code: 0
+Build succeeded.
+0 Warning(s)
+0 Error(s)
+Program command: dotnet .\bin\Release\net10.0\Day02.VariablesAndDataTypes.dll
+Each case starts a separate process with piped stdin.
+
+Input: 0 | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Fahrenheit: 32.00
+Kelvin: 273.15
+
+Data-size conversion: exercise pending.
+stderr: <empty>
+
+Input: 100 | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Fahrenheit: 212.00
+Kelvin: 373.15
+
+Data-size conversion: exercise pending.
+stderr: <empty>
+
+Input: -40 | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Fahrenheit: -40.00
+Kelvin: 233.15
+
+Data-size conversion: exercise pending.
+stderr: <empty>
+
+Input: 25.5 | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Fahrenheit: 77.90
+Kelvin: 298.65
+
+Data-size conversion: exercise pending.
+stderr: <empty>
+
+Input: -273.15 | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Fahrenheit: -459.67
+Kelvin: 0.00
+
+Data-size conversion: exercise pending.
+stderr: <empty>
+
+Input: abc | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Invalid input. Enter a finite number using a decimal point.
+stderr: <empty>
+
+Input: 25,5 | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Invalid input. Enter a finite number using a decimal point.
+stderr: <empty>
+
+Input: NaN | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Invalid input. Enter a finite number using a decimal point.
+stderr: <empty>
+
+Input: Infinity | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Invalid input. Enter a finite number using a decimal point.
+stderr: <empty>
+
+Input: <blank line> | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Invalid input. Enter a finite number using a decimal point.
+stderr: <empty>
+
+Input: <EOF> | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Invalid input. Enter a finite number using a decimal point.
+stderr: <empty>
+
+Input: -274 | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+Celsius cannot be below -273.15.
+stderr: <empty>
+
+Input: 1e308 | exit code: 0 | PASS
+Enter Celsius (use . for decimals):
+That temperature is outside the supported range.
+stderr: <empty>
+
+Result: 13/13 checks passed.
+Validation errors currently print a message and return normally (exit code 0).
+Personal reflection and the data-size exercise remain separate from these checks.

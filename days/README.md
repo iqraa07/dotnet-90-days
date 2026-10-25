@@ -2,14 +2,14 @@
 
 Each day has a directory for its learning focus and navigation. Source code stays in the phase directories so the helper commands and shared projects remain consistent.
 
-Day 01 is implemented and verified; its personal reflection is pending. Days 02-90 are planned. A published outline does not mean an exercise has been implemented.
+Day 01 is implemented and verified; its personal reflection is pending. Day 02 is in progress, with the temperature converter ready and the data-size exercise pending. Days 03-90 are planned. A published outline does not mean an exercise has been implemented.
 
 [Learning map](../README.md#learning-map) · [Daily progress](../README.md#daily-progress) · [Roadmap](../ROADMAP.md)
 
 | Day | Topic | Phase | Implementation |
 |---|---|---|---|
 | [Day 01](day-01/README.md) | Setup .NET 10 and Hello World | 1 | Complete |
-| [Day 02](day-02/README.md) | Variables and Data Types | 1 | Planned |
+| [Day 02](day-02/README.md) | Variables and Data Types | 1 | In progress |
 | [Day 03](day-03/README.md) | Operators and Strings | 1 | Planned |
 | [Day 04](day-04/README.md) | Conditionals and Switch | 1 | Planned |
 | [Day 05](day-05/README.md) | Loops | 1 | Planned |

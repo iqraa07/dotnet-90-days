@@ -35,7 +35,7 @@ Do not publish to social accounts without a separate request.
 
 ## Known environment details
 
-- Target .NET 10. Day 01 uses `UseAppHost=false` to run through the installed runtime.
+- Target .NET 10. Phase 1 inherits `UseAppHost=false` from `phase-1-csharp/Directory.Build.props` to run through the installed runtime.
 - Older terminal processes may need a PATH refresh; the local SDK is at `C:\Program Files\dotnet`.
 - Uploading workflow files requires the GitHub `workflow` scope. The owner completes login and scope changes themselves.
 

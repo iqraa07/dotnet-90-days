@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Day 01](days/day-01/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Day 02](days/day-02/README.md) · [Day 01](days/day-01/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 1 / 90 exercises (1%) · **Current:** - · **Last update:** 2026-10-25
+**Implementation:** 1 / 90 exercises (1%) · **Current:** Day 02 · **Last update:** 2026-10-25
 <!-- progress:end -->
 
 ## Learning map
@@ -32,18 +32,20 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 01
+## Current exercise: Day 02
 
 Install the .NET 10 SDK, then run these commands from the repository root:
 
 ```powershell
 dotnet --version
-dotnet build .\phase-1-csharp\day-01-setup-net-10-and-hello-world -c Release
-dotnet run --project .\phase-1-csharp\day-01-setup-net-10-and-hello-world -c Release --no-build
+dotnet build .\phase-1-csharp\day-02-variables-and-data-types -c Release
+dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types -c Release --no-build
 .\day status
 ```
 
-Day 01 prints the owner's name, the computer's local date and time, and the .NET runtime version. Its implementation is complete and verified. Personal reflection remains pending in the [Day 01 journal](journal/day-01-setup-net-10-and-hello-world.md).
+Day 02 introduces variables, numeric types, and safe input parsing. The temperature converter is ready; the MB-to-GB-to-TB exercise remains for you to implement. See the [Day 02 overview](days/day-02/README.md) and [journal](journal/day-02-variables-and-data-types.md).
+
+Day 01 remains implemented and verified. Its source and run instructions are available in the [Day 01 overview](days/day-01/README.md).
 
 ## Progress evidence
 
@@ -63,7 +65,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | Day | Topic | Phase | Status | Date | Journal |
 |---|---|---|---|---|---|
 | 01 | Setup .NET 10 and Hello World | 1 | ✅ | 2026-10-25 | [journal](journal/day-01-setup-net-10-and-hello-world.md) |
-| 02 | Variables and Data Types | 1 | ⬜ | - | - |
+| 02 | Variables and Data Types | 1 | 🟡 | 2026-10-25 | [journal](journal/day-02-variables-and-data-types.md) |
 | 03 | Operators and Strings | 1 | ⬜ | - | - |
 | 04 | Conditionals and Switch | 1 | ⬜ | - | - |
 | 05 | Loops | 1 | ⬜ | - | - |
