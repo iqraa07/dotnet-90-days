@@ -1,0 +1,23 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day03.OperatorsAndStrings -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-03-operators-and-strings\bin\Release\net10.0\Day03.OperatorsAndStrings.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.71
+
+> @('Notebook', '3', '45000') | dotnet run -c Release --no-build
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Notebook
+Quantity: 3
+Unit price: Rp45.000,00
+Subtotal: Rp135.000,00
+Discount: Rp13.500,00
+Total: Rp121.500,00

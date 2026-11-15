@@ -1,0 +1,45 @@
+{
+  "day": 3,
+  "recordedAt": "2026-11-16T06:47:11.2036491+08:00",
+  "project": "phase-1-csharp/day-03-operators-and-strings",
+  "sdk": "10.0.402",
+  "source": "using System.Globalization;\n\nconst decimal DiscountThreshold = 100_000m;\nconst decimal DiscountRate = 0.10m;\nconst NumberStyles PriceStyle = NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint;\n\nConsole.WriteLine(\"Item name:\");\nstring? itemName = Console.ReadLine()?.Trim();\nif (string.IsNullOrEmpty(itemName))\n{\n    Console.Error.WriteLine(\"Enter an item name.\");\n    return 1;\n}\n\nConsole.WriteLine(\"Quantity:\");\nif (!int.TryParse(Console.ReadLine(), NumberStyles.Integer, CultureInfo.InvariantCulture, out int quantity)\n    || quantity <= 0)\n{\n    Console.Error.WriteLine(\"Enter a positive whole-number quantity.\");\n    return 1;\n}\n\nConsole.WriteLine(\"Unit price in rupiah (use . for decimals):\");\nstring priceInput = Console.ReadLine()?.Trim() ?? string.Empty;\nstring[] priceParts = priceInput.Split('.', 2);\nbool hasExtraPrecision = priceParts.Length == 2 && priceParts[1].TrimEnd('0').Length > 2;\n\nif (hasExtraPrecision\n    || !decimal.TryParse(priceInput, PriceStyle, CultureInfo.InvariantCulture, out decimal unitPrice)\n    || unitPrice < 0m)\n{\n    Console.Error.WriteLine(\"Enter a nonnegative unit price with at most two decimal places.\");\n    return 1;\n}\n\ndecimal subtotal;\ntry\n{\n    subtotal = quantity * unitPrice;\n}\ncatch (OverflowException)\n{\n    Console.Error.WriteLine(\"The subtotal is too large.\");\n    return 1;\n}\n\n// Keep the full subtotal exactly representable in hundredths.\nif (subtotal > decimal.MaxValue / 100m)\n{\n    Console.Error.WriteLine(\"The subtotal is too large.\");\n    return 1;\n}\n\ndecimal discount = 0m;\nif (subtotal > DiscountThreshold)\n{\n    discount = decimal.Round(subtotal * DiscountRate, 2, MidpointRounding.AwayFromZero);\n}\n\ndecimal total = subtotal - discount;\nCultureInfo rupiah = new(\"id-ID\", useUserOverride: false);\n\nConsole.WriteLine();\nConsole.WriteLine(\"Receipt\");\nConsole.WriteLine($\"Item: {itemName}\");\nConsole.WriteLine($\"Quantity: {quantity}\");\nConsole.WriteLine($\"Unit price: {unitPrice.ToString(\"C2\", rupiah)}\");\nConsole.WriteLine($\"Subtotal: {subtotal.ToString(\"C2\", rupiah)}\");\nConsole.WriteLine($\"Discount: {discount.ToString(\"C2\", rupiah)}\");\nConsole.WriteLine($\"Total: {total.ToString(\"C2\", rupiah)}\");\n\nreturn 0;\n",
+  "sourceExcerpt": "decimal discount = 0m;\r\nif (subtotal > DiscountThreshold)\r\n{\r\n    discount = decimal.Round(subtotal * DiscountRate, 2, MidpointRounding.AwayFromZero);\r\n}\r\n\r\ndecimal total = subtotal - discount;\r\nCultureInfo rupiah = new(\"id-ID\", useUserOverride: false);",
+  "sourceStartLine": 54,
+  "sourceEndLine": 61,
+  "inputLines": [
+    "Notebook",
+    "3",
+    "45000"
+  ],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  Day03.OperatorsAndStrings -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-03-operators-and-strings\\bin\\Release\\net10.0\\Day03.OperatorsAndStrings.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:00.71"
+  ],
+  "buildStandardError": "",
+  "runCommand": "@('Notebook', '3', '45000') | dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Item name:",
+    "Quantity:",
+    "Unit price in rupiah (use . for decimals):",
+    "",
+    "Receipt",
+    "Item: Notebook",
+    "Quantity: 3",
+    "Unit price: Rp45.000,00",
+    "Subtotal: Rp135.000,00",
+    "Discount: Rp13.500,00",
+    "Total: Rp121.500,00"
+  ],
+  "runStandardError": ""
+}

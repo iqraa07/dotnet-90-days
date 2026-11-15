@@ -1,0 +1,333 @@
+Day 03 shopping receipt checks
+Captured UTC: 2026-11-15T22:47:35.915185+00:00
+SDK: 10.0.402
+Project: phase-1-csharp/day-03-operators-and-strings/Day03.OperatorsAndStrings.csproj
+Target: Day03.OperatorsAndStrings.dll (Release, net10.0)
+Each case starts a separate process and uses the stdin shown below.
+Checked prompt order, receipt fields, currency formatting, exit codes, and error output.
+Result: 39/39 checks passed. Source, build inputs, and DLL were unchanged.
+
+below threshold (exit 0)
+stdin: "Coffee Beans\n3\n25000\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Coffee Beans
+Quantity: 3
+Unit price: Rp25.000,00
+Subtotal: Rp75.000,00
+Discount: Rp0,00
+Total: Rp75.000,00
+stderr: <empty>
+
+one cent below threshold (exit 0)
+stdin: "Pencil Case\n1\n99999.99\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Pencil Case
+Quantity: 1
+Unit price: Rp99.999,99
+Subtotal: Rp99.999,99
+Discount: Rp0,00
+Total: Rp99.999,99
+stderr: <empty>
+
+exactly at threshold (exit 0)
+stdin: "Notebook\n4\n25000\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Notebook
+Quantity: 4
+Unit price: Rp25.000,00
+Subtotal: Rp100.000,00
+Discount: Rp0,00
+Total: Rp100.000,00
+stderr: <empty>
+
+one cent above threshold (exit 0)
+stdin: "Desk Lamp\n1\n100000.01\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Desk Lamp
+Quantity: 1
+Unit price: Rp100.000,01
+Subtotal: Rp100.000,01
+Discount: Rp10.000,00
+Total: Rp90.000,01
+stderr: <empty>
+
+discounted purchase (exit 0)
+stdin: "Coffee Beans\n3\n40000\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Coffee Beans
+Quantity: 3
+Unit price: Rp40.000,00
+Subtotal: Rp120.000,00
+Discount: Rp12.000,00
+Total: Rp108.000,00
+stderr: <empty>
+
+fractional unit price (exit 0)
+stdin: "Sticker\n3\n1250.50\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Sticker
+Quantity: 3
+Unit price: Rp1.250,50
+Subtotal: Rp3.751,50
+Discount: Rp0,00
+Total: Rp3.751,50
+stderr: <empty>
+
+fractional above threshold (exit 0)
+stdin: "Notebook\n3\n40000.50\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Notebook
+Quantity: 3
+Unit price: Rp40.000,50
+Subtotal: Rp120.001,50
+Discount: Rp12.000,15
+Total: Rp108.001,35
+stderr: <empty>
+
+midpoint discount rounds away from zero (exit 0)
+stdin: "Desk Lamp\n1\n100000.05\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Desk Lamp
+Quantity: 1
+Unit price: Rp100.000,05
+Subtotal: Rp100.000,05
+Discount: Rp10.000,01
+Total: Rp90.000,04
+stderr: <empty>
+
+signed inputs and trailing price zeroes (exit 0)
+stdin: "Notebook\n +2 \n +1250.500 \n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Notebook
+Quantity: 2
+Unit price: Rp1.250,50
+Subtotal: Rp2.501,00
+Discount: Rp0,00
+Total: Rp2.501,00
+stderr: <empty>
+
+documented example (exit 0)
+stdin: "Notebook\n3\n45000\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Notebook
+Quantity: 3
+Unit price: Rp45.000,00
+Subtotal: Rp135.000,00
+Discount: Rp13.500,00
+Total: Rp121.500,00
+stderr: <empty>
+
+largest supported subtotal (exit 0)
+stdin: "Notebook\n1\n792281625142643375935439503.35\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Notebook
+Quantity: 1
+Unit price: Rp792.281.625.142.643.375.935.439.503,35
+Subtotal: Rp792.281.625.142.643.375.935.439.503,35
+Discount: Rp79.228.162.514.264.337.593.543.950,34
+Total: Rp713.053.462.628.379.038.341.895.553,01
+stderr: <empty>
+
+zero unit price (exit 0)
+stdin: "Sample\n1\n0\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: Sample
+Quantity: 1
+Unit price: Rp0,00
+Subtotal: Rp0,00
+Discount: Rp0,00
+Total: Rp0,00
+stderr: <empty>
+
+trimmed item name (exit 0)
+stdin: "  qR Notebook  \n1\n1000\n"
+Item name:
+Quantity:
+Unit price in rupiah (use . for decimals):
+
+Receipt
+Item: qR Notebook
+Quantity: 1
+Unit price: Rp1.000,00
+Subtotal: Rp1.000,00
+Discount: Rp0,00
+Total: Rp1.000,00
+stderr: <empty>
+
+blank item (exit 1)
+stdin: "\n1\n1000\n"
+stdout: "Item name:\n"
+stderr: Enter an item name.
+
+whitespace item (exit 1)
+stdin: "   \n1\n1000\n"
+stdout: "Item name:\n"
+stderr: Enter an item name.
+
+EOF at item (exit 1)
+stdin: ""
+stdout: "Item name:\n"
+stderr: Enter an item name.
+
+zero quantity (exit 1)
+stdin: "Notebook\n0\n1000\n"
+stdout: "Item name:\nQuantity:\n"
+stderr: Enter a positive whole-number quantity.
+
+negative quantity (exit 1)
+stdin: "Notebook\n-1\n1000\n"
+stdout: "Item name:\nQuantity:\n"
+stderr: Enter a positive whole-number quantity.
+
+text quantity (exit 1)
+stdin: "Notebook\nmany\n1000\n"
+stdout: "Item name:\nQuantity:\n"
+stderr: Enter a positive whole-number quantity.
+
+fractional quantity (exit 1)
+stdin: "Notebook\n1.5\n1000\n"
+stdout: "Item name:\nQuantity:\n"
+stderr: Enter a positive whole-number quantity.
+
+quantity overflow (exit 1)
+stdin: "Notebook\n2147483648\n1000\n"
+stdout: "Item name:\nQuantity:\n"
+stderr: Enter a positive whole-number quantity.
+
+blank quantity (exit 1)
+stdin: "Notebook\n\n1000\n"
+stdout: "Item name:\nQuantity:\n"
+stderr: Enter a positive whole-number quantity.
+
+EOF at quantity (exit 1)
+stdin: "Notebook\n"
+stdout: "Item name:\nQuantity:\n"
+stderr: Enter a positive whole-number quantity.
+
+negative unit price (exit 1)
+stdin: "Notebook\n1\n-0.01\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+text unit price (exit 1)
+stdin: "Notebook\n1\nprice\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+comma decimal input (exit 1)
+stdin: "Notebook\n1\n1250,50\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+grouped unit price (exit 1)
+stdin: "Notebook\n1\n1,250.00\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+exponent unit price (exit 1)
+stdin: "Notebook\n1\n1e3\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+excess price precision (exit 1)
+stdin: "Notebook\n1\n1.001\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+fraction smaller than decimal precision (exit 1)
+stdin: "Notebook\n1\n0.00000000000000000000000000001\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+fraction rounded to a whole amount by the decimal parser (exit 1)
+stdin: "Notebook\n1\n1.00000000000000000000000000001\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+NaN unit price (exit 1)
+stdin: "Notebook\n1\nNaN\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+infinite unit price (exit 1)
+stdin: "Notebook\n1\nInfinity\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+price exceeds decimal range (exit 1)
+stdin: "Notebook\n1\n79228162514264337593543950336\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+large fractional amount beyond subtotal limit (exit 1)
+stdin: "Notebook\n1\n79228162514264337593543950335.1\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: The subtotal is too large.
+
+one cent above subtotal limit (exit 1)
+stdin: "Notebook\n1\n792281625142643375935439503.36\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: The subtotal is too large.
+
+blank unit price (exit 1)
+stdin: "Notebook\n1\n\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+EOF at unit price (exit 1)
+stdin: "Notebook\n1\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: Enter a nonnegative unit price with at most two decimal places.
+
+subtotal overflow (exit 1)
+stdin: "Notebook\n2\n79228162514264337593543950335\n"
+stdout: "Item name:\nQuantity:\nUnit price in rupiah (use . for decimals):\n"
+stderr: The subtotal is too large.

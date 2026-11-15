@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Day 02](days/day-02/README.md) · [Day 01](days/day-01/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-03/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 2 / 90 exercises (2%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 3 / 90 exercises (3%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,26 +32,24 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 02
+## Run Day 03
 
 Install the .NET 10 SDK, then run these commands from the repository root:
 
 ```powershell
 dotnet --version
-dotnet build .\phase-1-csharp\day-02-variables-and-data-types -c Release
-dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types -c Release --no-build
+dotnet build .\phase-1-csharp\day-03-operators-and-strings -c Release
+dotnet run --project .\phase-1-csharp\day-03-operators-and-strings -c Release --no-build
 .\day status
 ```
 
-Day 02 is implemented and verified. Enter Celsius, then an MB value; the program displays Fahrenheit, Kelvin, GB, and TB. It passed 26 CLI checks. See the [Day 02 documentation and output images](days/day-02/README.md) and [journal](journal/day-02-variables-and-data-types.md).
-
-Day 01 remains implemented and verified. Its source and run instructions are available in the [Day 01 overview](days/day-01/README.md).
+Enter an item name, quantity, and unit price. The program prints a Rupiah receipt with a 10% discount when the subtotal exceeds Rp100,000. See the [Day 03 guide and output images](days/day-03/README.md).
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) includes the exported images, terminal output, source capture, and passing CI run.
 
-![Day 02 source excerpt and execution output](assets/progress/day-02-terminal.png)
+![Day 03 discount logic and receipt output](assets/progress/day-03-terminal.png)
 
 ## Daily progress
 
@@ -66,7 +64,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 |---|---|---|---|---|---|
 | 01 | Setup .NET 10 and Hello World | 1 | ✅ | 2026-10-25 | [journal](journal/day-01-setup-net-10-and-hello-world.md) |
 | 02 | Variables and Data Types | 1 | ✅ | 2026-11-16 | [journal](journal/day-02-variables-and-data-types.md) |
-| 03 | Operators and Strings | 1 | ⬜ | - | - |
+| 03 | Operators and Strings | 1 | ✅ | 2026-11-16 | [journal](journal/day-03-operators-and-strings.md) |
 | 04 | Conditionals and Switch | 1 | ⬜ | - | - |
 | 05 | Loops | 1 | ⬜ | - | - |
 | 06 | Arrays and List | 1 | ⬜ | - | - |

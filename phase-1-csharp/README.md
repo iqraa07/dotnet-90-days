@@ -6,16 +6,17 @@ Each day uses a small, self-contained console project in `day-NN-topic/`.
 |---|---|---|
 | [Day 01: Hello World](day-01-setup-net-10-and-hello-world) | Verified | Pending |
 | [Day 02: Variables and Data Types](day-02-variables-and-data-types) | Verified | Pending |
+| [Day 03: Operators and Strings](day-03-operators-and-strings) | Verified | Pending |
 
-Days 03-30 remain planned in the [day catalog](../days/README.md).
+Days 04–30 remain planned in the [day catalog](../days/README.md).
 
-Run the current Day 02 exercise from the repository root:
+Run the Day 03 receipt exercise from the repository root:
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types
+dotnet run --project .\phase-1-csharp\day-03-operators-and-strings
 ```
 
-The temperature and MB-to-GB-to-TB converters are verified. See the [Day 02 guide and output images](day-02-variables-and-data-types/README.md) for the program flow, examples, and validation rules.
+See the [Day 03 guide](day-03-operators-and-strings/README.md) for the discount calculation, sample receipt, and validation rules.
 
 Phase 1 projects inherit `UseAppHost=false` from [Directory.Build.props](Directory.Build.props) and run through the .NET runtime. See [directory-level build configuration](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=visualstudio) for how this shared configuration is applied.
 

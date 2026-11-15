@@ -2,11 +2,11 @@
 
 **Updated:** 2026-11-16
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 2/90 exercises verified
-**Next exercise:** Day 03, Operators and Strings
-**Personal reflections:** Days 01–02 pending
+**Implementation progress:** 3/90 exercises verified
+**Next exercise:** Day 04, Conditionals and Switch
+**Personal reflections:** Days 01–03 pending
 
-Day 01 builds and prints the name, local time, and runtime version. Day 02 builds without warnings or errors and passed 26 CLI checks across the temperature and decimal data-size converters. The [evidence index](assets/progress/README.md) links the two image formats, transcripts, and captures for both exercises.
+Day 01 builds and prints the name, local time, and runtime version. Day 02 builds without warnings or errors and passed 26 CLI checks across the temperature and decimal data-size converters. Day 03 builds without warnings or errors and passed 39 CLI checks. Its receipt applies a 10% discount only above Rp100,000 and prints amounts in Indonesian Rupiah. The [evidence index](assets/progress/README.md) links the images, transcripts, and captures for all three exercises.
 
 Complete each requested day in the same repository. Include the verified project, concise English documentation, output images in landscape and portrait, progress updates, and a daily commit. Use PAIR or MENTOR when requested. Leave the owner's personal reflections pending until they supply their notes.
 
