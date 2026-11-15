@@ -9,7 +9,7 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 [Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Day 02](days/day-02/README.md) · [Day 01](days/day-01/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 1 / 90 exercises (1%) · **Current:** Day 02 · **Last update:** 2026-10-25
+**Implementation:** 2 / 90 exercises (2%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,7 +32,7 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Current exercise: Day 02
+## Run Day 02
 
 Install the .NET 10 SDK, then run these commands from the repository root:
 
@@ -43,7 +43,7 @@ dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types -c Release
 .\day status
 ```
 
-Day 02 introduces variables, numeric types, and safe input parsing. The temperature converter is ready; the MB-to-GB-to-TB exercise remains for you to implement. See the [Day 02 overview](days/day-02/README.md) and [journal](journal/day-02-variables-and-data-types.md).
+Day 02 is implemented and verified. Enter Celsius, then an MB value; the program displays Fahrenheit, Kelvin, GB, and TB. It passed 26 CLI checks. See the [Day 02 documentation and output images](days/day-02/README.md) and [journal](journal/day-02-variables-and-data-types.md).
 
 Day 01 remains implemented and verified. Its source and run instructions are available in the [Day 01 overview](days/day-01/README.md).
 
@@ -51,7 +51,7 @@ Day 01 remains implemented and verified. Its source and run instructions are ava
 
 The [evidence index](assets/progress/README.md) includes the exported images, terminal output, source capture, and passing CI run.
 
-![Day 01 source and execution output](assets/progress/day-01-terminal.png)
+![Day 02 source excerpt and execution output](assets/progress/day-02-terminal.png)
 
 ## Daily progress
 
@@ -65,7 +65,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | Day | Topic | Phase | Status | Date | Journal |
 |---|---|---|---|---|---|
 | 01 | Setup .NET 10 and Hello World | 1 | ✅ | 2026-10-25 | [journal](journal/day-01-setup-net-10-and-hello-world.md) |
-| 02 | Variables and Data Types | 1 | 🟡 | 2026-10-25 | [journal](journal/day-02-variables-and-data-types.md) |
+| 02 | Variables and Data Types | 1 | ✅ | 2026-11-16 | [journal](journal/day-02-variables-and-data-types.md) |
 | 03 | Operators and Strings | 1 | ⬜ | - | - |
 | 04 | Conditionals and Switch | 1 | ⬜ | - | - |
 | 05 | Loops | 1 | ⬜ | - | - |

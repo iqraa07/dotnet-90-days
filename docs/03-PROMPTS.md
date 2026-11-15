@@ -63,12 +63,20 @@ Check [troubleshooting](04-CHEATSHEET.md#troubleshooting), test one change at a 
 
 ## 4. Complete a day and push
 
-1. Confirm the implementation is complete, build and run pass, and applicable tests pass.
+1. Confirm the implementation is complete, build and run pass, and applicable tests pass. For a planned documentation-only session, review the written deliverables instead.
 2. Complete the factual journal sections. Keep personal reflection separate and written only by the owner.
-3. Review `git diff` and choose the completion mode: `.\day done N` requires a genuine reflection; `.\day done N -CodeOnly` is used only when the owner explicitly requests implementation progress while reflection is pending. Both modes retain build checks.
+3. Review `git diff` and choose the completion mode below.
 4. Run `.\day push` and check GitHub Actions.
 5. Update `HANDOFF.md` with the current state, reflection status, and next steps. Commit those notes and push.
 6. Run `.\day status` and `git status` to check the final state.
+
+| Completion mode | Verification | Personal reflection |
+|---|---|---|
+| `.\day done N` | Real build target and passing build | Required from the owner |
+| `.\day done N -CodeOnly` | Real build target and passing build | May remain pending when explicitly requested by the owner |
+| `.\day done N -NoProject` | Planned documentation-only work reviewed; build explicitly skipped | Required from the owner |
+
+`-CodeOnly` cannot be combined with `-NoProject` or `-Force`.
 
 A progress checkmark records an implemented and verified exercise. The journal records whether personal reflection is pending. If implementation remains unfinished, keep the day in progress and save a `day-NN: wip <summary>` commit.
 

@@ -1,44 +1,76 @@
 # Day 02: Variables and Data Types
 
-Implementation is in progress. Temperature conversion is implemented and verified; two data-size conversion tasks remain. Personal reflection is pending.
+The temperature and data-size converters are implemented and verified. Personal reflection is tracked separately in the [journal](../../journal/day-02-variables-and-data-types.md).
+
+![Day 02 source excerpt and execution output](../../assets/progress/day-02-terminal.png)
+
+[Portrait image](../../assets/progress/day-02-social.png) · [Captured output](../../assets/progress/day-02-output.txt) · [Verification checks](../../assets/progress/day-02-checks.txt)
 
 ## Run
 
 Use .NET SDK 10.0.x. From the repository root:
 
 ```powershell
-dotnet build .\phase-1-csharp\day-02-variables-and-data-types
-dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types
+dotnet build .\phase-1-csharp\day-02-variables-and-data-types -c Release
+dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types -c Release --no-build
 ```
 
-Enter one Celsius value using `.` for decimals. The program prints Fahrenheit and Kelvin with two decimal places.
+Enter Celsius first, then the data size in MB. Use `.` for decimals. For a repeatable sample run in PowerShell:
 
-| Celsius input | Fahrenheit | Kelvin |
+```powershell
+@('25.5', '1000') | dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types -c Release --no-build
+```
+
+## Sample output
+
+For Celsius `25.5` and `1000` MB:
+
+```text
+Enter Celsius (use . for decimals):
+Fahrenheit: 77.90
+Kelvin: 298.65
+
+Enter megabytes (use . for decimals):
+GB: 1.000
+TB: 0.001000
+```
+
+## Program flow
+
+```mermaid
+flowchart LR
+    A["Read Celsius"] --> B["Validate and convert temperature"]
+    B --> C["Read MB"]
+    C --> D["Validate and convert data size"]
+    D --> E["Print GB and TB"]
+```
+
+Invalid input prints a clear message and stops before the next step. Input errors currently exit with code `0` through a normal return; they do not throw an exception or print a stack trace.
+
+## Conversion rules
+
+| Conversion | Rule | Example |
 |---|---|---|
-| `0` | `32.00` | `273.15` |
-| `100` | `212.00` | `373.15` |
-| `-40` | `-40.00` | `233.15` |
-| `25.5` | `77.90` | `298.65` |
+| Celsius to Fahrenheit | Celsius x 1.8 + 32 | `0` becomes `32.00` |
+| Celsius to Kelvin | Celsius + 273.15 | `0` becomes `273.15` |
+| MB to GB | Divide MB by 1000 | `1000` becomes `1.000` |
+| GB to TB | Divide GB by 1000 | `1` becomes `0.001000` |
 
-The program rejects text, comma decimals such as `25,5`, non-finite values, and temperatures below `-273.15`. It also rejects inputs whose converted results exceed the supported numeric range.
-
-Until the exercise below is implemented, valid temperature input ends with `Data-size conversion: exercise pending.`
-
-The temperature converter passed [13 recorded CLI checks](../../assets/progress/day-02-checks.txt). These checks cover the implemented temperature section; the data-size exercise remains pending.
+Data sizes use decimal SI units. This exercise uses MB, GB, and TB rather than the binary MiB, GiB, and TiB units. Zero MB is valid; negative or non-finite data sizes are rejected. Celsius values below `-273.15` and numeric overflow results are rejected as well.
 
 ## Concepts
 
-1. `Console.ReadLine()` reads text and can return `null` when input ends.
-2. `Parse` throws for invalid numeric text; `TryParse` reports failure without that exception. `InvariantCulture` keeps `.` as the decimal separator.
-3. `double.IsFinite` rejects `NaN` and infinity, including overflow results.
-4. `var` infers a local variable's type at compile time. `const` declares a compile-time constant.
-5. Arithmetic converts Celsius to Fahrenheit and Kelvin; `F2` formats each result with two decimal places.
+1. Variables keep values available for later calculations; `double` supports fractional measurements.
+2. `Console.ReadLine` returns text, while `TryParse` reports whether it can be converted to a number. `Parse` throws for invalid numeric text.
+3. `const` gives fixed conversion values clear names.
+4. Boolean checks reject non-finite or out-of-range input before results are displayed.
+5. Invariant culture makes dot-decimal input predictable; `F2`, `F3`, and `F6` control displayed precision.
 
 | Type or keyword | Use | Example |
 |---|---|---|
 | `int` | 32-bit whole number | `42` |
 | `long` | 64-bit whole number | `3_000_000_000L` |
-| `double` | Floating-point measurements | `25.5` |
+| `double` | Floating-point measurement | `25.5` |
 | `decimal` | Decimal arithmetic | `19.99m` |
 | `bool` | True/false value | `true` |
 | `char` | Character literal | `'C'` |
@@ -46,38 +78,13 @@ The temperature converter passed [13 recorded CLI checks](../../assets/progress/
 | `var` | Infer a local variable's type | `var attempts = 3;` |
 | `const` | Compile-time constant | `const int MaxAttempts = 3;` |
 
-A small variable example:
+## Verification
 
-```csharp
-int attempts = 3;
-Console.WriteLine(attempts);
-```
+Release build passed with **0 warnings and 0 errors**. All **26 CLI checks** passed, covering valid temperature conversions, invalid Celsius, zero and fractional data sizes, decimal-unit conversions, non-finite values, comma decimals, empty input, and EOF at either prompt.
 
-## Your exercise
+The [check transcript](../../assets/progress/day-02-checks.txt) records the actual inputs, stdout, stderr, and exit codes. The images arrange a source excerpt and output from a real sample run; the full captured source and supplied input are retained in the capture data.
 
-Complete the two `TODO(you)` blocks in [Program.cs](Program.cs):
-
-1. **Lines 34-36:** read an MB value with `Console.ReadLine`. Use `double.TryParse` and `double.IsFinite` to accept finite, nonnegative numbers and reject invalid input with a clear message.
-2. **Lines 38-40:** calculate and print GB and TB using decimal SI units: 1 GB = 1000 MB and 1 TB = 1000 GB. Store the converted values in variables. Replace the pending message currently on line 42.
-
-Expected results after completing the exercise:
-
-| MB input | GB output | TB output |
-|---|---|---|
-| `1000` | `1.000` | `0.001000` |
-| `1000000` | `1000.000` | `1.000000` |
-
-Zero is valid. Text, negative values, and non-finite numbers must produce a clear message and a clean exit. Use the temperature input handling as a pattern; the data-size implementation is left for you.
-
-## Check your work
-
-- Build succeeds without errors or warnings.
-- The four temperature examples still produce the expected results.
-- Invalid Celsius input is rejected without a crash.
-- The data-size examples pass, invalid MB input is rejected, and the pending message is gone.
-- Add your own notes under `What I understood` in the [Day 02 journal](../../journal/day-02-variables-and-data-types.md), then request a review.
-
-Day 02 remains in progress until the data-size exercise has been implemented and verified. Personal reflection is tracked separately in the journal.
+There are no remaining implementation TODOs. Add your own notes under `What I understood` in the journal when ready. Day 03 is the next planned exercise.
 
 ## References
 

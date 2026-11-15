@@ -21,11 +21,9 @@ Read `HANDOFF.md`, then inspect `git status`, `git log --oneline -5`, and `.\day
 
 ## Working modes
 
-PAIR is the default: prepare the project and most scaffolding, leaving 1-3 core tasks marked `TODO(you)`. Each task includes a useful API hint and example input/output; the project must still build.
+Complete each requested day by default. Implement and verify the exercise, update the documentation and progress, export output images, then commit and push to this repository. A request covers the day in scope.
 
-An explicit request to complete a day authorizes the full implementation for that day, including commit and push to this repository. It does not authorize completing the rest of the program. Day 01 has been requested in full. Future sessions return to PAIR unless requested otherwise.
-
-MENTOR provides exercises and review without implementing the core logic. AUTO completes the implementation, explains the important lines briefly, and adds three understanding questions to the journal.
+Use PAIR when the owner asks to work through the exercise together. Leave 1–3 buildable tasks marked `TODO(you)` with a hint and example. Use MENTOR when the owner requests guidance and review. For a fully implemented day, add three questions to the journal for later practice.
 
 Only include personal reflections actually written or supplied by the owner under `What I understood`. Do not invent learning time, experience, understanding, or authorship claims.
 
@@ -38,6 +36,7 @@ The main progress table records implementation and verification. Personal reflec
 3. Run build and run checks; run tests when a test project exists. Report actual results.
 4. Use `.\day done N` after verification and personal reflection. When the owner requests implementation progress while reflection is still pending, use `.\day done N -CodeOnly`; this must still build a real project. Leave the reflection visibly pending.
 5. Never use `-Force` to hide an empty reflection, missing project, or failed build.
+   For a genuine documentation-only session without a coding target, `done -NoProject` is an explicit path that still requires the owner's reflection. Do not combine it with `-CodeOnly`.
 6. Keep the daily page and catalog consistent with the main table. In PAIR/MENTOR, confirm a daily push unless the scope is already authorized.
 7. Update `HANDOFF.md` last, commit meaningful work, and push within the authorized scope. End with a clean working tree.
 

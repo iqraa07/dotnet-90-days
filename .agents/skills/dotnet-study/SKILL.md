@@ -12,7 +12,7 @@ Read `AGENTS.md` and `HANDOFF.md` at the repository root. Use Git, the main prog
 - Muhammad Iqra Nur Fajar, account `iqraa07`; one repository for all 90 days.
 - Use concise, professional English throughout documentation, explanations, code, and commit messages.
 - Public documentation covers exercises, commands, and results. Avoid companion-service names, decorative emoji, promotional language, and unsupported claims of authorship or understanding.
-- PAIR is the default. A request to complete a day authorizes its implementation, not all remaining days.
+- Complete each requested day by default, including code, documentation, output images, progress updates, and publication to the existing repository. Use PAIR or MENTOR when requested.
 
 ## Progress and structure
 
@@ -20,6 +20,7 @@ Read `AGENTS.md` and `HANDOFF.md` at the repository root. Use Git, the main prog
 - Keep daily navigation in `days/day-NN/`, with source in phase folders and shared projects for phases 2/3.
 - Implementation is complete when the relevant build/run checks and available tests pass. Personal reflection is separate and must come from the owner.
 - Use the normal `done` command after reflection is supplied. For explicitly requested implementation progress, `done -CodeOnly` accepts a pending reflection but still requires a real build target and a passing build. Never use `-Force` to bypass verification.
+- Coding completion always requires a real build target. A genuine documentation-only session can use `done -NoProject`, which explicitly skips building and requires owner reflection; it cannot be combined with `-CodeOnly`.
 - Keep pending reflection visible in the journal and daily overview. Do not invent the owner's answers.
 - When implementing a day in full, add three understanding questions for later review.
 
@@ -29,7 +30,7 @@ Run the actual project before exporting a progress image. The image may arrange 
 
 Update `assets/progress/README.md` with the image, output, and available CI link, then include it in the authorized progress push. Keep evidence labels consistent with implementation and reflection status.
 
-For small console exercises, use `scripts/export-progress.ps1` with a day number, project path, English title/summary, and working directory. Its current layout suits short source and output such as Day 01. Inspect exported images before sharing them.
+For small console exercises, use `scripts/export-progress.ps1` with a day number, project path, English title/summary, and working directory. Pass `-InputLines` for interactive programs and use `-SourceStartLine` and `-SourceLineCount` to show a readable excerpt. Inspect exported images before sharing them.
 
 Do not publish to social accounts without a separate request.
 

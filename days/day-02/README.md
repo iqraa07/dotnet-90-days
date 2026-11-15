@@ -1,32 +1,34 @@
 # Day 02: Variables and Data Types
 
-**Implementation:** In progress. Temperature conversion is verified; two data-size conversion tasks remain.
+**Implementation:** Complete and verified.
 
 **Personal reflection:** Pending.
 
-## Focus
+![Day 02 source excerpt and output](../../assets/progress/day-02-terminal.png)
 
-`int`, `long`, `double`, `decimal`, `bool`, `char`, `string`, `var`, `const`, input with `Console.ReadLine()`, and `int.Parse` versus `int.TryParse`.
+[Download portrait image](../../assets/progress/day-02-social.png) · [Run output](../../assets/progress/day-02-output.txt) · [26 verification checks](../../assets/progress/day-02-checks.txt)
+
+## What the program does
+
+Converts Celsius to Fahrenheit and Kelvin, then reads an MB value and displays GB and TB using decimal units. Both inputs use `TryParse`, reject invalid or non-finite values, and display clear results.
 
 ## Run
 
 From the repository root:
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types
+dotnet run --project .\phase-1-csharp\day-02-variables-and-data-types -c Release
 ```
 
-Enter a Celsius value using `.` for decimals. For example, `0` produces Fahrenheit `32.00` and Kelvin `273.15`. Text, non-finite values, comma decimals, and temperatures below `-273.15` are rejected.
+Enter `25.5`, then `1000`. The expected results are `77.90` Fahrenheit, `298.65` Kelvin, `1.000` GB, and `0.001000` TB.
 
-## Work to finish
+## Documentation
 
-1. Complete MB input and validation at [Program.cs, line 34](../../phase-1-csharp/day-02-variables-and-data-types/Program.cs#L34).
-2. Add decimal MB-to-GB-to-TB conversion at [Program.cs, line 38](../../phase-1-csharp/day-02-variables-and-data-types/Program.cs#L38), then replace the pending message.
+- [Concepts, conversion rules, and examples](../../phase-1-csharp/day-02-variables-and-data-types/README.md)
+- [Learning journal](../../journal/day-02-variables-and-data-types.md)
+- [Evidence index](../../assets/progress/README.md#day-02-variables-and-data-types)
+- [Captured source, input, and results](../../assets/progress/day-02-capture.json)
 
-[Exercise instructions and expected results](../../phase-1-csharp/day-02-variables-and-data-types/README.md) · [Day 02 journal](../../journal/day-02-variables-and-data-types.md)
-
-## Verification
-
-The temperature section passed [13 CLI checks](../../assets/progress/day-02-checks.txt). Release build completed with 0 warnings and 0 errors. The data-size section is still an exercise to complete.
+Release build passed with 0 warnings and 0 errors. All 26 CLI checks passed. Personal reflection remains separate from the completed implementation.
 
 [Full outline](../../ROADMAP.md#day-02--variables-and-data-types) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)

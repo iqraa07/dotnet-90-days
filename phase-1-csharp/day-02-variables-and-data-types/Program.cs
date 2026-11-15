@@ -1,6 +1,8 @@
 using System.Globalization;
 
 const double KelvinOffset = 273.15;
+const double MegabytesPerGigabyte = 1000;
+const double GigabytesPerTerabyte = 1000;
 
 Console.WriteLine("Enter Celsius (use . for decimals):");
 string? input = Console.ReadLine();
@@ -31,12 +33,19 @@ Console.WriteLine(FormattableString.Invariant($"Fahrenheit: {fahrenheit:F2}"));
 Console.WriteLine(FormattableString.Invariant($"Kelvin: {kelvin:F2}"));
 Console.WriteLine();
 
-// TODO(you) 1: Read an MB value and reject text, negative values, and non-finite numbers.
-// Hint: use Console.ReadLine, double.TryParse, and double.IsFinite, following the pattern above.
-// Input/output: "1000" -> accepted; "abc" or "-1" -> a clear message and a clean exit.
+Console.WriteLine("Enter megabytes (use . for decimals):");
+string? megabytesInput = Console.ReadLine();
 
-// TODO(you) 2: Print GB and TB from the accepted MB value using decimal units.
-// Hint: 1 GB = 1000 MB; 1 TB = 1000 GB. Store each converted value in a variable.
-// Input/output: "1000" -> GB: 1.000 and TB: 0.001000; "1000000" -> GB: 1000.000 and TB: 1.000000.
+if (!double.TryParse(megabytesInput, NumberStyles.Float, CultureInfo.InvariantCulture, out double megabytes)
+    || !double.IsFinite(megabytes)
+    || megabytes < 0)
+{
+    Console.WriteLine("Invalid data size. Enter a finite, nonnegative number using a decimal point.");
+    return;
+}
 
-Console.WriteLine("Data-size conversion: exercise pending.");
+double gigabytes = megabytes / MegabytesPerGigabyte;
+double terabytes = gigabytes / GigabytesPerTerabyte;
+
+Console.WriteLine(FormattableString.Invariant($"GB: {gigabytes:F3}"));
+Console.WriteLine(FormattableString.Invariant($"TB: {terabytes:F6}"));

@@ -5,7 +5,7 @@ Build and execution records for implemented exercises. The [daily progress table
 | Day | Verification | Images | Source record | CI |
 |---|---|---|---|---|
 | [Day 01](../../days/day-01/README.md) | Implementation complete; build and run passed | [Landscape](day-01-terminal.png), [portrait](day-01-social.png) | [Output](day-01-output.txt), [capture data](day-01-capture.json) | [Passed](https://github.com/iqraa07/dotnet-90-days/actions/runs/40132461869) |
-| [Day 02](../../days/day-02/README.md) | Temperature converter verified; data-size exercise pending | Not exported | [13 CLI checks](day-02-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
+| [Day 02](../../days/day-02/README.md) | Build passed; 26 CLI checks | [Landscape](day-02-terminal.png), [portrait](day-02-social.png) | [Output](day-02-output.txt), [capture data](day-02-capture.json), [checks](day-02-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
 
 ## Day 01: Hello World
 
@@ -19,11 +19,11 @@ Build and execution records for implemented exercises. The [daily progress table
 
 [Download the portrait image](day-01-social.png). Implementation is complete. Personal reflection remains pending in the [Day 01 journal](../../journal/day-01-setup-net-10-and-hello-world.md).
 
-## Day 02: Temperature converter
+## Day 02: Variables and Data Types
 
-The implemented Celsius converter passed 13 separate CLI checks. Five numeric cases produced the expected Fahrenheit and Kelvin values; eight invalid or out-of-range cases produced clean messages without stack traces. Input errors currently exit with code 0 through a normal return.
+![Day 02 source excerpt and execution output](day-02-terminal.png)
 
-[Read the captured inputs and outputs](day-02-checks.txt). The MB-to-GB-to-TB exercise remains pending, so Day 02 is still in progress.
+The Release build passed with 0 warnings and 0 errors. The example run converted 25.5 °C to 77.90 °F and 298.65 K, and 1000 MB to 1.000 GB and 0.001000 TB. [Read all 26 CLI checks](day-02-checks.txt).
 
 ## Adding evidence for another day
 

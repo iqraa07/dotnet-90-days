@@ -9,8 +9,9 @@ Run the helper from the `dotnet-90-days` repository root. Keep every phase and j
 | `.\day status` | Show progress, the active day, the next day, and recent commits |
 | `.\day new 5` | Start Day 05 and create a journal and a Phase 1 console project |
 | `.\day new 5 -NoProject` | Start a day without creating a project |
-| `.\day done 5` | Check the build and personal reflection, mark complete, and create a `day-05: ...` commit |
+| `.\day done 5` | Require a real build target, passing build, and personal reflection, then mark complete and create a `day-05: ...` commit |
 | `.\day done 5 -CodeOnly` | Check the build and mark implementation complete when explicitly requested by the owner; personal reflection may remain pending |
+| `.\day done 5 -NoProject` | Complete a planned documentation-only session; explicitly skip the build and require a personal reflection |
 | `.\day done 5 -Message "add LINQ reports"` | Use a custom commit summary |
 | `.\day done 5 -NoCommit` | Check and update progress without creating a commit |
 | `.\day skip 5` | Mark a deliberately skipped topic |
@@ -21,6 +22,8 @@ Run the helper from the `dotnet-90-days` repository root. Keep every phase and j
 | `.\day publish -Private` | Create a private GitHub repository |
 
 A progress checkmark records an implemented and verified exercise. Track personal reflection separately in the journal. The default `done` command requires that reflection; use `-CodeOnly` only for an explicit owner request. Save incomplete implementation as a WIP commit and keep the day in progress.
+
+Both coding completion modes require a real build target and a passing build. `-CodeOnly` cannot be combined with `-NoProject` or `-Force`. Reserve `done -NoProject` for planned documentation-only sessions after reviewing the written work; it always requires the owner's reflection.
 
 ## .NET CLI
 

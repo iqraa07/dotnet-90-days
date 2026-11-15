@@ -41,7 +41,7 @@ If an error occurs, record the full message, the steps that triggered it, the ex
 
 A checkmark in the progress table means the exercise is implemented and verified. Track personal reflection separately in the journal.
 
-The default `done` command checks the build and requires a genuine personal reflection:
+The default `done` command requires a real build target, a passing build, and a genuine personal reflection:
 
 ```powershell
 git diff
@@ -58,7 +58,9 @@ When the owner explicitly requests implementation progress while personal reflec
 .\day push
 ```
 
-This mode still performs build checks. Run the program and any applicable tests before using it, and leave the personal reflection pending for the owner.
+This mode still requires a real build target and a passing build. Run the program and any applicable tests before using it, and leave the personal reflection pending for the owner. It cannot be combined with `-NoProject` or `-Force`.
+
+For a planned documentation-only session, review the written work and use `.\day done N -NoProject`. This explicitly skips the build and always requires the owner's personal reflection. Use it only for a session that has no coding task; keep coding exercises subject to build verification.
 
 ## Close the session
 

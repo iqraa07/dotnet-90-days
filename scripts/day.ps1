@@ -17,6 +17,7 @@
     Options:
       -Message "text"      Custom commit summary for 'done'  ->  "day-NN: text"
       -NoProject           'new': do not create a console project.
+                           'done': documentation-only completion; requires a personal reflection.
       -NoCommit            'done': update README only, do not commit.
       -CodeOnly            'done': complete verified implementation; reflection may remain pending.
       -Force               'done': skip build + journal checks.
@@ -348,7 +349,7 @@ function Test-Understanding([string]$JournalPath) {
 }
 
 function Invoke-Build {
-    param([int]$N, [switch]$RequireTarget)
+    param([int]$N)
     if (-not (Test-Tool 'dotnet')) {
         Write-Note 'dotnet not found - build verification cannot run.'
         return $false
@@ -370,12 +371,8 @@ function Invoke-Build {
         }
     }
     if (-not $target) {
-        if ($RequireTarget) {
-            Write-Note 'No project/solution found - code-only completion requires a build target.'
-            return $false
-        }
-        Write-Note 'No project/solution found for this day - skipping build check.'
-        return $true
+        Write-Note 'No project/solution found - code completion requires a build target.'
+        return $false
     }
     Write-Info "Building $(Get-RelativePath $target) ..."
     $code = Invoke-Tool 'dotnet' @('build', $target, '-nologo', '-v', 'q')
@@ -475,15 +472,26 @@ function Invoke-New {
 }
 
 function Invoke-Done {
+    if ($CodeOnly -and $NoProject) {
+        Stop-WithError '-CodeOnly requires a real build target and cannot be combined with -NoProject.'
+    }
+    if ($CodeOnly -and $Force) {
+        Stop-WithError '-CodeOnly must verify the build and cannot be combined with -Force.'
+    }
     Assert-RepoFiles
     $n = Resolve-Day $Day 'done'
     $info = Get-RoadmapDay $n
     $key = Format-Day $n
 
     $journal = Find-Journal $n
-    if (-not $journal -and -not $Force) { Stop-WithError "Journal for Day $key not found. Run '.\day new $n' first." }
+    if (-not $journal -and (-not $Force -or $NoProject)) { Stop-WithError "Journal for Day $key not found. Run '.\day new $n' first." }
 
-    if (-not $Force) {
+    if ($NoProject) {
+        if (-not (Test-Understanding $journal)) {
+            Stop-WithError 'Documentation-only completion requires a personal reflection under What I understood.'
+        }
+        Write-Note 'Documentation-only completion (-NoProject): build skipped; personal reflection verified.'
+    } elseif (-not $Force) {
         if (-not (Test-Understanding $journal)) {
             if ($CodeOnly) {
                 Write-Note 'Personal reflection is pending. Verifying implementation only.'
@@ -491,7 +499,7 @@ function Invoke-Done {
                 Stop-WithError "Section 'What I understood' in $(Get-RelativePath $journal) is empty or missing. Add your reflection, or use -CodeOnly for verified implementation progress."
             }
         }
-        if (-not (Invoke-Build -N $n -RequireTarget:$CodeOnly)) {
+        if (-not (Invoke-Build -N $n)) {
             Stop-WithError 'Build verification failed. Fix the errors before completing this day.'
         }
     }
@@ -499,7 +507,8 @@ function Invoke-Done {
     $journalCell = '-'
     if ($journal) { $journalCell = "[journal]($(Get-RelativePath $journal))" }
     Set-DayRow -N $n -Status $IconDone -Date $Today -Journal $journalCell
-    Write-Ok "Day $key implementation marked as complete."
+    if ($NoProject) { Write-Ok "Day $key documentation session marked as complete." }
+    else { Write-Ok "Day $key implementation marked as complete." }
 
     if (-not $NoCommit) {
         $summary = $info.Title
@@ -707,6 +716,8 @@ day - helper for the 90 Days of .NET repo
   .\day status              progress, active day, next day, streak
   .\day new [N]             start day N (default: active/next day)
   .\day done [N]            finish day N: checks, mark done, commit
+  .\day done N -NoProject   complete a documentation-only session with a personal reflection
+  .\day done N -CodeOnly    verify implementation while the personal reflection is pending
   .\day skip N              mark day N as skipped
   .\day sync                sync README table titles with ROADMAP.md
   .\day push                git push
