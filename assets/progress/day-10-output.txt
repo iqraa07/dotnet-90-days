@@ -1,0 +1,16 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day10.ClassesAndObjects -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-10-classes-and-objects\bin\Release\net10.0\Day10.ClassesAndObjects.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.43
+
+> dotnet run -c Release --no-build
+Inventory as of 2026-11-16
+Lab Laptop (192.0.2.10) in Room A | 2 full year(s)
+Lab Router (192.0.2.1) in Rack 1 | 6 full year(s)
+Front Desk Printer (192.0.2.20) in Front Desk | 4 full year(s)

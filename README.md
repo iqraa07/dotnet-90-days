@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-09/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-10/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 9 / 90 exercises (10%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 10 / 90 exercises (11%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 09
+## Run Day 10
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-09-debugging-and-exceptions -c Release
+dotnet run --project .\phase-1-csharp\day-10-classes-and-objects -c Release
 .\day status
 ```
 
-See the [Day 09 guide](days/day-09/README.md) for sample inputs, CLI checks, and output images.
+See the [Day 10 guide](days/day-10/README.md) for sample inputs, CLI checks, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 09 source and output](assets/progress/day-09-terminal.png)
+![Day 10 source and output](assets/progress/day-10-terminal.png)
 
 ## Daily progress
 
@@ -69,7 +69,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 07 | Checkpoint 1: To-Do Console App | 1 | ✅ | 2026-11-16 | [journal](journal/day-07-checkpoint-1-to-do-console-app.md) |
 | 08 | Methods | 1 | ✅ | 2026-11-16 | [journal](journal/day-08-methods.md) |
 | 09 | Debugging and Exceptions | 1 | ✅ | 2026-11-16 | [journal](journal/day-09-debugging-and-exceptions.md) |
-| 10 | Classes and Objects | 1 | ⬜ | - | - |
+| 10 | Classes and Objects | 1 | ✅ | 2026-11-16 | [journal](journal/day-10-classes-and-objects.md) |
 | 11 | Encapsulation and Records | 1 | ⬜ | - | - |
 | 12 | Inheritance and Polymorphism | 1 | ⬜ | - | - |
 | 13 | Interfaces | 1 | ⬜ | - | - |

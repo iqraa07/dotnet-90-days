@@ -1,0 +1,70 @@
+Day 10 verification
+Sample captured: 2026-11-16T07:54:10.8988533+08:00
+SDK: 10.0.402
+Release build: 0 warnings, 0 errors.
+Project: phase-1-csharp/day-10-classes-and-objects
+
+Published sample (exit 0)
+Arguments: []
+Standard input: ""
+Standard output:
+Inventory as of 2026-11-16
+Lab Laptop (192.0.2.10) in Room A | 2 full year(s)
+Lab Router (192.0.2.1) in Rack 1 | 6 full year(s)
+Front Desk Printer (192.0.2.20) in Front Desk | 4 full year(s)
+Standard error:
+<empty>
+
+Before the laptop anniversary (exit 0)
+Arguments: ["2026-11-16"]
+Standard input: ""
+Standard output:
+Inventory as of 2026-11-16
+Lab Laptop (192.0.2.10) in Room A | 2 full year(s)
+Lab Router (192.0.2.1) in Rack 1 | 6 full year(s)
+Front Desk Printer (192.0.2.20) in Front Desk | 4 full year(s)
+Standard error:
+<empty>
+
+Laptop anniversary reached (exit 0)
+Arguments: ["2026-11-17"]
+Standard input: ""
+Standard output:
+Inventory as of 2026-11-17
+Lab Laptop (192.0.2.10) in Room A | 3 full year(s)
+Lab Router (192.0.2.1) in Rack 1 | 6 full year(s)
+Front Desk Printer (192.0.2.20) in Front Desk | 4 full year(s)
+Standard error:
+<empty>
+
+Before the leap-day anniversary (exit 0)
+Arguments: ["2021-02-27"]
+Standard input: ""
+Standard output:
+Inventory as of 2021-02-27
+Lab Laptop (192.0.2.10) in Room A | purchase after report date
+Lab Router (192.0.2.1) in Rack 1 | 0 full year(s)
+Front Desk Printer (192.0.2.20) in Front Desk | purchase after report date
+Standard error:
+<empty>
+
+Leap-day anniversary in a non-leap year (exit 0)
+Arguments: ["2021-02-28"]
+Standard input: ""
+Standard output:
+Inventory as of 2021-02-28
+Lab Laptop (192.0.2.10) in Room A | purchase after report date
+Lab Router (192.0.2.1) in Rack 1 | 1 full year(s)
+Front Desk Printer (192.0.2.20) in Front Desk | purchase after report date
+Standard error:
+<empty>
+
+Invalid date (exit 1)
+Arguments: ["16/11/2026"]
+Standard input: ""
+Standard output:
+<empty>
+Standard error:
+Provide one date in yyyy-MM-dd format.
+
+6 checks passed.
