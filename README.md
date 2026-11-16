@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-06/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-07/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 6 / 90 exercises (6%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 7 / 90 exercises (7%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 06
+## Run Day 07
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-06-arrays-and-list -c Release
+dotnet run --project .\phase-1-csharp\day-07-checkpoint-1-to-do-console-app -c Release
 .\day status
 ```
 
-See the [Day 06 guide](days/day-06/README.md) for sample inputs, CLI checks, and output images.
+See the [Day 07 guide](days/day-07/README.md) for sample inputs, CLI checks, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 06 source and output](assets/progress/day-06-terminal.png)
+![Day 07 source and output](assets/progress/day-07-terminal.png)
 
 ## Daily progress
 
@@ -66,7 +66,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 04 | Conditionals and Switch | 1 | ✅ | 2026-11-16 | [journal](journal/day-04-conditionals-and-switch.md) |
 | 05 | Loops | 1 | ✅ | 2026-11-16 | [journal](journal/day-05-loops.md) |
 | 06 | Arrays and List | 1 | ✅ | 2026-11-16 | [journal](journal/day-06-arrays-and-list.md) |
-| 07 | Checkpoint 1: To-Do Console App | 1 | ⬜ | - | - |
+| 07 | Checkpoint 1: To-Do Console App | 1 | ✅ | 2026-11-16 | [journal](journal/day-07-checkpoint-1-to-do-console-app.md) |
 | 08 | Methods | 1 | ⬜ | - | - |
 | 09 | Debugging and Exceptions | 1 | ⬜ | - | - |
 | 10 | Classes and Objects | 1 | ⬜ | - | - |

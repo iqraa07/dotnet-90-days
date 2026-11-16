@@ -1,0 +1,94 @@
+Day 07 | Checkpoint 1: To-Do Console App
+
+> dotnet build -c Release
+Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-07-checkpoint-1-to-do-console-app\Day07.Checkpoint1ToDoConsoleApp.csproj (in 60 ms).
+  Day07.Checkpoint1ToDoConsoleApp -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-07-checkpoint-1-to-do-console-app\bin\Release\net10.0\Day07.Checkpoint1ToDoConsoleApp.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.85
+
+
+PASS | Pending filter
+Arguments: []
+Input lines: ["1", "Read project docs", "1", "Run exercise", "2", "1", "5", "0"]
+Exit: 0
+stdout:
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task title:
+Added #1.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task title:
+Added #2.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task ID:
+Completed #1.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Pending tasks
+[ ] #2 Run exercise
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+stderr:
+
+
+PASS | Completed item still in full list
+Arguments: []
+Input lines: ["1", "Fix printer", "2", "1", "4", "0"]
+Exit: 0
+stdout:
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task title:
+Added #1.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task ID:
+Completed #1.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+All tasks
+[x] #1 Fix printer
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+stderr:
+
+
+PASS | Delete and empty state
+Arguments: []
+Input lines: ["1", "Clean lab", "3", "1", "4", "0"]
+Exit: 0
+stdout:
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task title:
+Added #1.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task ID:
+Removed #1.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+All tasks
+No matching tasks.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+stderr:
+
+
+PASS | Unknown ID
+Arguments: []
+Input lines: ["2", "2", "0"]
+Exit: 0
+stdout:
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task ID:
+Unknown task ID.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+stderr:
+
+
+PASS | EOF at title
+Arguments: []
+Input lines: ["1"]
+Exit: 0
+stdout:
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task title:
+stderr:
+
+
+5 / 5 checks passed.

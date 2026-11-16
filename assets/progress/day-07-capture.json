@@ -1,0 +1,52 @@
+{
+    "day":  7,
+    "recordedAt":  "2026-11-16T07:55:21.4610100+08:00",
+    "project":  "phase-1-csharp/day-07-checkpoint-1-to-do-console-app",
+    "sdk":  "10.0.402",
+    "source":  "var tasks = new List\u003cTodoItem\u003e();\r\nint nextId = 1;\r\n\r\nwhile (true)\r\n{\r\n    Console.WriteLine(\"1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit\");\r\n    string? choice = Console.ReadLine()?.Trim();\r\n    switch (choice)\r\n    {\r\n        case \"1\":\r\n            Console.WriteLine(\"Task title:\");\r\n            string? title = Console.ReadLine()?.Trim();\r\n            if (title is null)\r\n            {\r\n                return;\r\n            }\r\n            if (title.Length == 0)\r\n            {\r\n                Console.WriteLine(\"Enter a task title.\");\r\n                break;\r\n            }\r\n\r\n            tasks.Add(new TodoItem(nextId, title));\r\n            Console.WriteLine($\"Added #{nextId}.\");\r\n            nextId++;\r\n            break;\r\n        case \"2\":\r\n        case \"3\":\r\n            Console.WriteLine(\"Task ID:\");\r\n            string? input = Console.ReadLine();\r\n            if (input is null)\r\n            {\r\n                return;\r\n            }\r\n            TodoItem? task = int.TryParse(input, out int id) ? tasks.Find(item =\u003e item.Id == id) : null;\r\n            if (task is null)\r\n            {\r\n                Console.WriteLine(\"Unknown task ID.\");\r\n                break;\r\n            }\r\n            if (choice == \"2\")\r\n            {\r\n                task.Complete = true;\r\n                Console.WriteLine($\"Completed #{task.Id}.\");\r\n            }\r\n            else\r\n            {\r\n                tasks.Remove(task);\r\n                Console.WriteLine($\"Removed #{task.Id}.\");\r\n            }\r\n            break;\r\n        case \"4\":\r\n            ShowItems();\r\n            break;\r\n        case \"5\":\r\n            ShowItems(pendingOnly: true);\r\n            break;\r\n        case \"0\":\r\n        case null:\r\n            return;\r\n        default:\r\n            Console.WriteLine(\"Unknown menu choice.\");\r\n            break;\r\n    }\r\n}\r\n\r\nvoid ShowItems(bool pendingOnly = false)\r\n{\r\n    Console.WriteLine(pendingOnly ? \"Pending tasks\" : \"All tasks\");\r\n    bool found = false;\r\n    foreach (TodoItem task in tasks)\r\n    {\r\n        if (pendingOnly \u0026\u0026 task.Complete)\r\n        {\r\n            continue;\r\n        }\r\n        string status = task.Complete ? \"x\" : \" \";\r\n        Console.WriteLine($\"[{status}] #{task.Id} {task.Title}\");\r\n        found = true;\r\n    }\r\n    if (!found)\r\n    {\r\n        Console.WriteLine(\"No matching tasks.\");\r\n    }\r\n}\r\n\r\nsealed class TodoItem(int id, string title)\r\n{\r\n    public int Id { get; } = id;\r\n    public string Title { get; } = title;\r\n    public bool Complete { get; set; }\r\n}\r\n",
+    "sourceExcerpt":  "void ShowItems(bool pendingOnly = false)\r\n{\r\n    Console.WriteLine(pendingOnly ? \"Pending tasks\" : \"All tasks\");\r\n    bool found = false;\r\n    foreach (TodoItem task in tasks)\r\n    {\r\n        if (pendingOnly \u0026\u0026 task.Complete)\r\n        {\r\n            continue;\r\n        }\r\n        string status = task.Complete ? \"x\" : \" \";\r\n        Console.WriteLine($\"[{status}] #{task.Id} {task.Title}\");\r\n        found = true;\r\n    }\r\n    if (!found)",
+    "sourceStartLine":  67,
+    "sourceEndLine":  81,
+    "inputLines":  [
+                       "1",
+                       "Read project docs",
+                       "1",
+                       "Run exercise",
+                       "2",
+                       "1",
+                       "5",
+                       "0"
+                   ],
+    "buildCommand":  "dotnet build -c Release",
+    "buildExitCode":  0,
+    "buildOutput":  [
+                        "  Determining projects to restore...",
+                        "  All projects are up-to-date for restore.",
+                        "  Day07.Checkpoint1ToDoConsoleApp -\u003e C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-07-checkpoint-1-to-do-console-app\\bin\\Release\\net10.0\\Day07.Checkpoint1ToDoConsoleApp.dll",
+                        "",
+                        "Build succeeded.",
+                        "    0 Warning(s)",
+                        "    0 Error(s)",
+                        "",
+                        "Time Elapsed 00:00:00.64"
+                    ],
+    "buildStandardError":  "",
+    "runCommand":  "@(\u00271\u0027, \u0027Read project docs\u0027, \u00271\u0027, \u0027Run exercise\u0027, \u00272\u0027, \u00271\u0027, \u00275\u0027, \u00270\u0027) | dotnet run -c Release --no-build",
+    "runExitCode":  0,
+    "runOutput":  [
+                      "1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit",
+                      "Task title:",
+                      "Added #1.",
+                      "1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit",
+                      "Task title:",
+                      "Added #2.",
+                      "1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit",
+                      "Task ID:",
+                      "Completed #1.",
+                      "1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit",
+                      "Pending tasks",
+                      "[ ] #2 Run exercise",
+                      "1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit"
+                  ],
+    "runStandardError":  ""
+}

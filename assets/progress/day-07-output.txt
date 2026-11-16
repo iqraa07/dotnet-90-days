@@ -1,0 +1,25 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day07.Checkpoint1ToDoConsoleApp -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-07-checkpoint-1-to-do-console-app\bin\Release\net10.0\Day07.Checkpoint1ToDoConsoleApp.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.64
+
+> @('1', 'Read project docs', '1', 'Run exercise', '2', '1', '5', '0') | dotnet run -c Release --no-build
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task title:
+Added #1.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task title:
+Added #2.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Task ID:
+Completed #1.
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
+Pending tasks
+[ ] #2 Run exercise
+1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit
