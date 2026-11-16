@@ -1,0 +1,15 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day05.Loops -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-05-loops\bin\Release\net10.0\Day05.Loops.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.67
+
+> @('50') | dotnet run -c Release --no-build
+Guess (1-100):
+Higher. Attempts remaining: 6
+Guess (1-100):

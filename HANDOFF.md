@@ -2,11 +2,11 @@
 
 **Updated:** 2026-11-16
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 4/90 exercises verified
-**Next exercise:** Day 05, Loops
-**Personal reflections:** Days 01–04 pending
+**Implementation progress:** 5/90 exercises verified
+**Next exercise:** Day 06, Arrays and List
+**Personal reflections:** Days 01–05 pending
 
-Day 04 covers Conditionals and Switch. The [daily overview](days/day-04/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+Day 05 covers Loops. The [daily overview](days/day-05/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
 
 Complete each requested day in the same repository. Include the verified project, concise English documentation, output images in landscape and portrait, progress updates, and a daily commit. Use PAIR or MENTOR when requested. Leave the owner's personal reflections pending until they supply their notes.
 

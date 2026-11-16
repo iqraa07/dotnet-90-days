@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-04/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-05/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 4 / 90 exercises (4%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 5 / 90 exercises (5%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 04
+## Run Day 05
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-04-conditionals-and-switch -c Release
+dotnet run --project .\phase-1-csharp\day-05-loops -c Release
 .\day status
 ```
 
-See the [Day 04 guide](days/day-04/README.md) for sample inputs, CLI checks, and output images.
+See the [Day 05 guide](days/day-05/README.md) for sample inputs, CLI checks, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 04 source and output](assets/progress/day-04-terminal.png)
+![Day 05 source and output](assets/progress/day-05-terminal.png)
 
 ## Daily progress
 
@@ -64,7 +64,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 02 | Variables and Data Types | 1 | ✅ | 2026-11-16 | [journal](journal/day-02-variables-and-data-types.md) |
 | 03 | Operators and Strings | 1 | ✅ | 2026-11-16 | [journal](journal/day-03-operators-and-strings.md) |
 | 04 | Conditionals and Switch | 1 | ✅ | 2026-11-16 | [journal](journal/day-04-conditionals-and-switch.md) |
-| 05 | Loops | 1 | ⬜ | - | - |
+| 05 | Loops | 1 | ✅ | 2026-11-16 | [journal](journal/day-05-loops.md) |
 | 06 | Arrays and List | 1 | ⬜ | - | - |
 | 07 | Checkpoint 1: To-Do Console App | 1 | ⬜ | - | - |
 | 08 | Methods | 1 | ⬜ | - | - |
