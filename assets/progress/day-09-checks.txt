@@ -1,0 +1,130 @@
+Day 09 verification
+Sample captured: 2026-11-16T07:54:10.8750949+08:00
+SDK: 10.0.402
+Release build: 0 warnings, 0 errors.
+Project: phase-1-csharp/day-09-debugging-and-exceptions
+
+Published sample (exit 0)
+Arguments: []
+Standard input: "4,7,9\n"
+Standard output:
+Enter whole numbers separated by commas:
+Count: 3
+Sum: 20
+Average: 6.67
+Run finished.
+Standard error:
+<empty>
+
+Signed numbers and whitespace (exit 0)
+Arguments: []
+Standard input: " -5, 2 , 3\n"
+Standard output:
+Enter whole numbers separated by commas:
+Count: 3
+Sum: 0
+Average: 0.00
+Run finished.
+Standard error:
+<empty>
+
+Sum larger than Int32 (exit 0)
+Arguments: []
+Standard input: "2147483647,2147483647\n"
+Standard output:
+Enter whole numbers separated by commas:
+Count: 2
+Sum: 4294967294
+Average: 2147483647.00
+Run finished.
+Standard error:
+<empty>
+
+blank line (exit 1)
+Arguments: []
+Standard input: "\n"
+Standard output:
+Enter whole numbers separated by commas:
+Run finished.
+Standard error:
+Enter at least one whole number.
+
+end of input (exit 1)
+Arguments: []
+Standard input: ""
+Standard output:
+Enter whole numbers separated by commas:
+Run finished.
+Standard error:
+Enter at least one whole number.
+
+invalid number (exit 1)
+Arguments: []
+Standard input: "3,seven,9\n"
+Standard output:
+Enter whole numbers separated by commas:
+Run finished.
+Standard error:
+Entry 2 must be a 32-bit whole number.
+
+missing value (exit 1)
+Arguments: []
+Standard input: "3,,9\n"
+Standard output:
+Enter whole numbers separated by commas:
+Run finished.
+Standard error:
+Entry 2 must be a 32-bit whole number.
+
+number outside Int32 (exit 1)
+Arguments: []
+Standard input: "2147483648\n"
+Standard output:
+Enter whole numbers separated by commas:
+Run finished.
+Standard error:
+Entry 1 must be a 32-bit whole number.
+
+Isolated bug 1: off-by-one (exit 1)
+Arguments: []
+Standard input: "4,7,9\n"
+Standard output:
+Enter whole numbers separated by commas:
+Run finished.
+Standard error:
+Trace: index=0, length=3
+Trace: index=1, length=3
+Trace: index=2, length=3
+Trace: index=3, length=3
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Program.<<Main>$>g__SumNumbers|0_1(Int32[] values) in C:\Users\loq2i\Documents\Codex\2026-10-24\halo-codex-ini-repo-belajar-net\work\catch-up\day-09\off-by-one-w7xwofmr\Program.cs:line 56
+   at Program.<Main>$(String[] args) in C:\Users\loq2i\Documents\Codex\2026-10-24\halo-codex-ini-repo-belajar-net\work\catch-up\day-09\off-by-one-w7xwofmr\Program.cs:line 7
+The inclusive bound accessed index 3 in a three-element array. The verified project uses <.
+
+Isolated bug 2: integer division (exit 0)
+Arguments: []
+Standard input: "4,7,9\n"
+Standard output:
+Enter whole numbers separated by commas:
+Count: 3
+Sum: 20
+Average: 6.00
+Run finished.
+Standard error:
+Trace: sum=20, count=3
+The integral operands truncated 20 / 3 before assignment. Casting the numerator before division fixes it.
+
+Isolated bug 3: empty input (exit 1)
+Arguments: []
+Standard input: "\n"
+Standard output:
+Enter whole numbers separated by commas:
+Run finished.
+Standard error:
+System.DivideByZeroException: Attempted to divide by zero.
+   at System.Decimal.DecCalc.VarDecDiv(DecCalc& d1, DecCalc& d2)
+   at System.Decimal.op_Division(Decimal d1, Decimal d2)
+   at Program.<Main>$(String[] args) in C:\Users\loq2i\Documents\Codex\2026-10-24\halo-codex-ini-repo-belajar-net\work\catch-up\day-09\empty-input-ch0708de\Program.cs:line 8
+Returning an empty array let the calculation divide by zero. Validate input before calculating.
+
+11 checks passed.

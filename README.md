@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-08/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-09/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 8 / 90 exercises (8%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 9 / 90 exercises (10%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 08
+## Run Day 09
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-08-methods -c Release
+dotnet run --project .\phase-1-csharp\day-09-debugging-and-exceptions -c Release
 .\day status
 ```
 
-See the [Day 08 guide](days/day-08/README.md) for sample inputs, CLI checks, and output images.
+See the [Day 09 guide](days/day-09/README.md) for sample inputs, CLI checks, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 08 source and output](assets/progress/day-08-terminal.png)
+![Day 09 source and output](assets/progress/day-09-terminal.png)
 
 ## Daily progress
 
@@ -68,7 +68,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 06 | Arrays and List | 1 | ✅ | 2026-11-16 | [journal](journal/day-06-arrays-and-list.md) |
 | 07 | Checkpoint 1: To-Do Console App | 1 | ✅ | 2026-11-16 | [journal](journal/day-07-checkpoint-1-to-do-console-app.md) |
 | 08 | Methods | 1 | ✅ | 2026-11-16 | [journal](journal/day-08-methods.md) |
-| 09 | Debugging and Exceptions | 1 | ⬜ | - | - |
+| 09 | Debugging and Exceptions | 1 | ✅ | 2026-11-16 | [journal](journal/day-09-debugging-and-exceptions.md) |
 | 10 | Classes and Objects | 1 | ⬜ | - | - |
 | 11 | Encapsulation and Records | 1 | ⬜ | - | - |
 | 12 | Inheritance and Polymorphism | 1 | ⬜ | - | - |

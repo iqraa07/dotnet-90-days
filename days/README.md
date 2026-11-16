@@ -2,7 +2,7 @@
 
 Each day has a directory for its learning focus and navigation. Source code stays in the phase directories so the helper commands and shared projects remain consistent.
 
-Days 01–08 are implemented and verified. Personal reflections are pending. Days 09–90 are planned.
+Days 01–09 are implemented and verified. Personal reflections are pending. Days 10–90 are planned.
 
 [Learning map](../README.md#learning-map) · [Daily progress](../README.md#daily-progress) · [Roadmap](../ROADMAP.md)
 
@@ -16,7 +16,7 @@ Days 01–08 are implemented and verified. Personal reflections are pending. Day
 | [Day 06](day-06/README.md) | Arrays and List | 1 | Complete |
 | [Day 07](day-07/README.md) | Checkpoint 1: To-Do Console App | 1 | Complete |
 | [Day 08](day-08/README.md) | Methods | 1 | Complete |
-| [Day 09](day-09/README.md) | Debugging and Exceptions | 1 | Planned |
+| [Day 09](day-09/README.md) | Debugging and Exceptions | 1 | Complete |
 | [Day 10](day-10/README.md) | Classes and Objects | 1 | Planned |
 | [Day 11](day-11/README.md) | Encapsulation and Records | 1 | Planned |
 | [Day 12](day-12/README.md) | Inheritance and Polymorphism | 1 | Planned |

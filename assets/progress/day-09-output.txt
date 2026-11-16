@@ -1,0 +1,17 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-09-debugging-and-exceptions\Day09.DebuggingAndExceptions.csproj (in 74 ms).
+  Day09.DebuggingAndExceptions -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-09-debugging-and-exceptions\bin\Release\net10.0\Day09.DebuggingAndExceptions.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.09
+
+> @('4,7,9') | dotnet run -c Release --no-build
+Enter whole numbers separated by commas:
+Count: 3
+Sum: 20
+Average: 6.67
+Run finished.
