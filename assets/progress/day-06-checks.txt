@@ -1,0 +1,70 @@
+Day 06 | Arrays and List
+
+> dotnet build -c Release
+Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-06-arrays-and-list\Day06.ArraysAndList.csproj (in 62 ms).
+  Day06.ArraysAndList -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-06-arrays-and-list\bin\Release\net10.0\Day06.ArraysAndList.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.84
+
+
+PASS | Add, view, delete
+Arguments: []
+Input lines: ["1", "Edge router", "2", "3", "1", "2", "0"]
+Exit: 0
+stdout:
+1 add | 2 view | 3 delete | 0 exit
+Device name:
+Added: Edge router
+1 add | 2 view | 3 delete | 0 exit
+1. Edge router
+1 add | 2 view | 3 delete | 0 exit
+Device number:
+Removed: Edge router
+1 add | 2 view | 3 delete | 0 exit
+No devices.
+1 add | 2 view | 3 delete | 0 exit
+stderr:
+
+
+PASS | Out-of-range delete
+Arguments: []
+Input lines: ["3", "1", "0"]
+Exit: 0
+stdout:
+1 add | 2 view | 3 delete | 0 exit
+Device number:
+Unknown device number.
+1 add | 2 view | 3 delete | 0 exit
+stderr:
+
+
+PASS | Invalid selection and empty name
+Arguments: []
+Input lines: ["9", "1", "   ", "0"]
+Exit: 0
+stdout:
+1 add | 2 view | 3 delete | 0 exit
+Unknown menu choice.
+1 add | 2 view | 3 delete | 0 exit
+Device name:
+Enter a device name.
+1 add | 2 view | 3 delete | 0 exit
+stderr:
+
+
+PASS | EOF
+Arguments: []
+Input lines: ["1"]
+Exit: 0
+stdout:
+1 add | 2 view | 3 delete | 0 exit
+Device name:
+stderr:
+
+
+4 / 4 checks passed.

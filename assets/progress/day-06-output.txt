@@ -1,0 +1,23 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day06.ArraysAndList -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-06-arrays-and-list\bin\Release\net10.0\Day06.ArraysAndList.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.66
+
+> @('1', 'Edge router', '2', '3', '1', '2', '0') | dotnet run -c Release --no-build
+1 add | 2 view | 3 delete | 0 exit
+Device name:
+Added: Edge router
+1 add | 2 view | 3 delete | 0 exit
+1. Edge router
+1 add | 2 view | 3 delete | 0 exit
+Device number:
+Removed: Edge router
+1 add | 2 view | 3 delete | 0 exit
+No devices.
+1 add | 2 view | 3 delete | 0 exit

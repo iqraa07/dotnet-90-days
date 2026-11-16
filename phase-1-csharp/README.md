@@ -9,16 +9,17 @@ Each day uses a small, self-contained console project in `day-NN-topic/`.
 | [Day 03: Operators and Strings](day-03-operators-and-strings) | Verified | Pending |
 | [Day 04: Conditionals and Switch](day-04-conditionals-and-switch) | Verified | Pending |
 | [Day 05: Loops](day-05-loops) | Verified | Pending |
+| [Day 06: Arrays and List](day-06-arrays-and-list) | Verified | Pending |
 
-Days 06–30 remain planned in the [day catalog](../days/README.md).
+Days 07–30 remain planned in the [day catalog](../days/README.md).
 
 Run the latest exercise from the repository root.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-05-loops
+dotnet run --project .\phase-1-csharp\day-06-arrays-and-list
 ```
 
-See the [Day 05 guide](day-05-loops/README.md) for examples.
+See the [Day 06 guide](day-06-arrays-and-list/README.md) for examples.
 
 Phase 1 projects inherit `UseAppHost=false` from [Directory.Build.props](Directory.Build.props) and run through the .NET runtime. See [directory-level build configuration](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=visualstudio) for how this shared configuration is applied.
 
