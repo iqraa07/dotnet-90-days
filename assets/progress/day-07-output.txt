@@ -7,7 +7,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.64
+Time Elapsed 00:00:00.84
 
 > @('1', 'Read project docs', '1', 'Run exercise', '2', '1', '5', '0') | dotnet run -c Release --no-build
 1 add | 2 complete | 3 delete | 4 all | 5 pending | 0 exit

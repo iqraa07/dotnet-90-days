@@ -1,12 +1,12 @@
 {
     "day":  4,
-    "recordedAt":  "2026-11-16T07:55:06.6611006+08:00",
+    "recordedAt":  "2026-11-16T11:53:09.2957635+08:00",
     "project":  "phase-1-csharp/day-04-conditionals-and-switch",
     "sdk":  "10.0.402",
     "source":  "Console.WriteLine(\"Impact (low, medium, high):\");\r\nint impact = ReadLevel(Console.ReadLine());\r\nif (impact == 0)\r\n{\r\n    Console.Error.WriteLine(\"Unknown impact. Enter low, medium, or high.\");\r\n    return 1;\r\n}\r\n\r\nConsole.WriteLine(\"Urgency (low, medium, high):\");\r\nint urgency = ReadLevel(Console.ReadLine());\r\nif (urgency == 0)\r\n{\r\n    Console.Error.WriteLine(\"Unknown urgency. Enter low, medium, or high.\");\r\n    return 1;\r\n}\r\n\r\nint priority;\r\nif (impact == 3 \u0026\u0026 urgency == 3)\r\n{\r\n    priority = 1;\r\n}\r\nelse if (impact + urgency == 5)\r\n{\r\n    priority = 2;\r\n}\r\nelse if (impact == 1 \u0026\u0026 urgency == 1)\r\n{\r\n    priority = 4;\r\n}\r\nelse\r\n{\r\n    priority = 3;\r\n}\r\n\r\nint hours = priority switch\r\n{\r\n    1 =\u003e 4,\r\n    2 =\u003e 8,\r\n    3 =\u003e 24,\r\n    4 =\u003e 48,\r\n    _ =\u003e throw new InvalidOperationException(\"Unknown priority.\")\r\n};\r\n\r\nConsole.WriteLine($\"Priority: P{priority}\");\r\nConsole.WriteLine($\"Resolution target: {hours} hours\");\r\nreturn 0;\r\n\r\nstatic int ReadLevel(string? text) =\u003e text?.Trim().ToLowerInvariant() switch\r\n{\r\n    \"low\" =\u003e 1,\r\n    \"medium\" =\u003e 2,\r\n    \"high\" =\u003e 3,\r\n    _ =\u003e 0\r\n};\r\n",
-    "sourceExcerpt":  "int priority;\r\nif (impact == 3 \u0026\u0026 urgency == 3)\r\n{\r\n    priority = 1;\r\n}\r\nelse if (impact + urgency == 5)\r\n{\r\n    priority = 2;\r\n}\r\nelse if (impact == 1 \u0026\u0026 urgency == 1)\r\n{\r\n    priority = 4;\r\n}\r\nelse",
-    "sourceStartLine":  17,
-    "sourceEndLine":  30,
+    "sourceExcerpt":  "int hours = priority switch\r\n{\r\n    1 =\u003e 4,\r\n    2 =\u003e 8,\r\n    3 =\u003e 24,\r\n    4 =\u003e 48,\r\n    _ =\u003e throw new InvalidOperationException(\"Unknown priority.\")\r\n};\r\n\r\nConsole.WriteLine($\"Priority: P{priority}\");\r\nConsole.WriteLine($\"Resolution target: {hours} hours\");",
+    "sourceStartLine":  35,
+    "sourceEndLine":  45,
     "inputLines":  [
                        "high",
                        "high"
@@ -22,7 +22,7 @@
                         "    0 Warning(s)",
                         "    0 Error(s)",
                         "",
-                        "Time Elapsed 00:00:00.64"
+                        "Time Elapsed 00:00:00.86"
                     ],
     "buildStandardError":  "",
     "runCommand":  "@(\u0027high\u0027, \u0027high\u0027) | dotnet run -c Release --no-build",

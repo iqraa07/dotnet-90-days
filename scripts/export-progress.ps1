@@ -254,11 +254,34 @@ pre{font-size:25px}.result pre{font-size:24px}footer{font-size:18px;flex-directi
 <footer><span>github.com/iqraa07/dotnet-90-days</span><span>Captured from a program run</span></footer>
 </main>
 <script>
-for(const pre of document.querySelectorAll('pre')){
-  const minimum=innerHeight>innerWidth?18:16;
-  let size=parseFloat(getComputedStyle(pre).fontSize);
-  while((pre.scrollHeight>pre.clientHeight+1||pre.scrollWidth>pre.clientWidth+1)&&size>minimum){
-    size-=.5;pre.style.fontSize=size+'px';
+const panels = document.querySelector('.panels');
+const blocks = [...panels.querySelectorAll('pre')];
+const stacked = matchMedia('(max-aspect-ratio: 4/3)').matches;
+const minimum = stacked ? 18 : 16;
+
+if (stacked) {
+  const minimumHeights = blocks.map(pre => {
+    const panelChrome = pre.parentElement.getBoundingClientRect().height - pre.clientHeight;
+    pre.style.cssText = 'flex: none; height: 0; font-size: ' + minimum + 'px';
+    const height = Math.ceil(panelChrome + pre.scrollHeight) + 1;
+    pre.removeAttribute('style');
+    return height;
+  });
+  const available = panels.clientHeight - parseFloat(getComputedStyle(panels).rowGap);
+  const sourceHeight = Math.min(
+    Math.max(minimumHeights[0], Math.floor(available * .42)),
+    Math.floor(available - minimumHeights[1])
+  );
+  if (sourceHeight > 0) {
+    panels.style.gridTemplateRows = sourceHeight + 'px minmax(0, 1fr)';
+  }
+}
+
+for (const pre of blocks) {
+  let size = parseFloat(getComputedStyle(pre).fontSize);
+  while ((pre.scrollHeight > pre.clientHeight + 1 || pre.scrollWidth > pre.clientWidth + 1) && size > minimum) {
+    size -= .5;
+    pre.style.fontSize = size + 'px';
   }
 }
 </script>

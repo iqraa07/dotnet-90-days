@@ -1,37 +1,37 @@
 {
-  "day": 9,
-  "recordedAt": "2026-11-16T07:54:10.8750949+08:00",
-  "project": "phase-1-csharp\\day-09-debugging-and-exceptions",
-  "sdk": "10.0.402",
-  "source": "using System.Globalization;\n\nConsole.WriteLine(\"Enter whole numbers separated by commas:\");\ntry\n{\n    int[] values = ParseNumbers(Console.ReadLine());\n    long sum = SumNumbers(values);\n    decimal average = (decimal)sum / values.Length;\n    Console.WriteLine($\"Count: {values.Length}\");\n    Console.WriteLine($\"Sum: {sum}\");\n    Console.WriteLine($\"Average: {average.ToString(\"F2\", CultureInfo.InvariantCulture)}\");\n}\ncatch (FormatException exception)\n{\n    Console.Error.WriteLine(exception.Message);\n    return 1;\n}\nfinally\n{\n    Console.WriteLine(\"Run finished.\");\n}\n\nreturn 0;\n\nstatic int[] ParseNumbers(string? input)\n{\n    if (string.IsNullOrWhiteSpace(input))\n    {\n        throw new FormatException(\"Enter at least one whole number.\");\n    }\n\n    string[] fields = input.Split(',');\n    int[] values = new int[fields.Length];\n    for (int index = 0; index < fields.Length; index++)\n    {\n        if (!int.TryParse(fields[index], NumberStyles.Integer, CultureInfo.InvariantCulture, out values[index]))\n        {\n            throw new FormatException($\"Entry {index + 1} must be a 32-bit whole number.\");\n        }\n    }\n\n    return values;\n}\n\nstatic long SumNumbers(int[] values)\n{\n    long sum = 0;\n    for (int index = 0; index < values.Length; index++)\n    {\n        sum += values[index];\n    }\n\n    return sum;\n}\r\n",
-  "sourceExcerpt": "using System.Globalization;\r\n\r\nConsole.WriteLine(\"Enter whole numbers separated by commas:\");\r\ntry\r\n{\r\n    int[] values = ParseNumbers(Console.ReadLine());\r\n    long sum = SumNumbers(values);\r\n    decimal average = (decimal)sum / values.Length;\r\n    Console.WriteLine($\"Count: {values.Length}\");\r\n    Console.WriteLine($\"Sum: {sum}\");\r\n    Console.WriteLine($\"Average: {average.ToString(\"F2\", CultureInfo.InvariantCulture)}\");\r\n}\r\ncatch (FormatException exception)\r\n{",
-  "sourceStartLine": 1,
-  "sourceEndLine": 14,
-  "inputLines": [
-    "4,7,9"
-  ],
-  "buildCommand": "dotnet build -c Release",
-  "buildExitCode": 0,
-  "buildOutput": [
-    "  Determining projects to restore...",
-    "  Restored C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-09-debugging-and-exceptions\\Day09.DebuggingAndExceptions.csproj (in 74 ms).",
-    "  Day09.DebuggingAndExceptions -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-09-debugging-and-exceptions\\bin\\Release\\net10.0\\Day09.DebuggingAndExceptions.dll",
-    "",
-    "Build succeeded.",
-    "    0 Warning(s)",
-    "    0 Error(s)",
-    "",
-    "Time Elapsed 00:00:01.09"
-  ],
-  "buildStandardError": "",
-  "runCommand": "@('4,7,9') | dotnet run -c Release --no-build",
-  "runExitCode": 0,
-  "runOutput": [
-    "Enter whole numbers separated by commas:",
-    "Count: 3",
-    "Sum: 20",
-    "Average: 6.67",
-    "Run finished."
-  ],
-  "runStandardError": ""
+    "day":  9,
+    "recordedAt":  "2026-11-16T11:51:45.1043293+08:00",
+    "project":  "phase-1-csharp\\day-09-debugging-and-exceptions",
+    "sdk":  "10.0.402",
+    "source":  "using System.Globalization;\n\nConsole.WriteLine(\"Enter whole numbers separated by commas:\");\ntry\n{\n    int[] values = ParseNumbers(Console.ReadLine());\n    long sum = SumNumbers(values);\n    decimal average = (decimal)sum / values.Length;\n    Console.WriteLine($\"Count: {values.Length}\");\n    Console.WriteLine($\"Sum: {sum}\");\n    Console.WriteLine($\"Average: {average.ToString(\"F2\", CultureInfo.InvariantCulture)}\");\n}\ncatch (FormatException exception)\n{\n    Console.Error.WriteLine(exception.Message);\n    return 1;\n}\nfinally\n{\n    Console.WriteLine(\"Run finished.\");\n}\n\nreturn 0;\n\nstatic int[] ParseNumbers(string? input)\n{\n    if (string.IsNullOrWhiteSpace(input))\n    {\n        throw new FormatException(\"Enter at least one whole number.\");\n    }\n\n    string[] fields = input.Split(\u0027,\u0027);\n    int[] values = new int[fields.Length];\n    for (int index = 0; index \u003c fields.Length; index++)\n    {\n        if (!int.TryParse(fields[index], NumberStyles.Integer, CultureInfo.InvariantCulture, out values[index]))\n        {\n            throw new FormatException($\"Entry {index + 1} must be a 32-bit whole number.\");\n        }\n    }\n\n    return values;\n}\n\nstatic long SumNumbers(int[] values)\n{\n    long sum = 0;\n    for (int index = 0; index \u003c values.Length; index++)\n    {\n        sum += values[index];\n    }\n\n    return sum;\n}\r\n",
+    "sourceExcerpt":  "using System.Globalization;\r\n\r\nConsole.WriteLine(\"Enter whole numbers separated by commas:\");\r\ntry\r\n{\r\n    int[] values = ParseNumbers(Console.ReadLine());\r\n    long sum = SumNumbers(values);\r\n    decimal average = (decimal)sum / values.Length;\r\n    Console.WriteLine($\"Count: {values.Length}\");\r\n    Console.WriteLine($\"Sum: {sum}\");\r\n    Console.WriteLine($\"Average: {average.ToString(\"F2\", CultureInfo.InvariantCulture)}\");\r\n}\r\ncatch (FormatException exception)\r\n{",
+    "sourceStartLine":  1,
+    "sourceEndLine":  14,
+    "inputLines":  [
+                       "4,7,9"
+                   ],
+    "buildCommand":  "dotnet build -c Release",
+    "buildExitCode":  0,
+    "buildOutput":  [
+                        "  Determining projects to restore...",
+                        "  All projects are up-to-date for restore.",
+                        "  Day09.DebuggingAndExceptions -\u003e C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-09-debugging-and-exceptions\\bin\\Release\\net10.0\\Day09.DebuggingAndExceptions.dll",
+                        "",
+                        "Build succeeded.",
+                        "    0 Warning(s)",
+                        "    0 Error(s)",
+                        "",
+                        "Time Elapsed 00:00:00.97"
+                    ],
+    "buildStandardError":  "",
+    "runCommand":  "@(\u00274,7,9\u0027) | dotnet run -c Release --no-build",
+    "runExitCode":  0,
+    "runOutput":  [
+                      "Enter whole numbers separated by commas:",
+                      "Count: 3",
+                      "Sum: 20",
+                      "Average: 6.67",
+                      "Run finished."
+                  ],
+    "runStandardError":  ""
 }

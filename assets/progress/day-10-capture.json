@@ -1,34 +1,36 @@
 {
-  "day": 10,
-  "recordedAt": "2026-11-16T11:47:30.7363571+08:00",
-  "project": "phase-1-csharp\\day-10-classes-and-objects",
-  "sdk": "10.0.402",
-  "source": "using System.Globalization;\n\nDateOnly asOf = DateOnly.FromDateTime(DateTime.Today);\nif (args.Length > 1 ||\n    (args.Length == 1 && !DateOnly.TryParseExact(args[0], \"yyyy-MM-dd\", CultureInfo.InvariantCulture,\n        DateTimeStyles.None, out asOf)))\n{\n    Console.Error.WriteLine(\"Provide one date in yyyy-MM-dd format.\");\n    return 1;\n}\n\nDevice[] inventory =\n[\n    new(\"Lab Laptop\", \"192.0.2.10\", \"Room A\", new DateOnly(2023, 11, 17)),\n    new(\"Lab Router\", \"192.0.2.1\", \"Rack 1\", new DateOnly(2020, 2, 29)),\n    new(\"Front Desk Printer\", \"192.0.2.20\", \"Front Desk\", new DateOnly(2022, 11, 16))\n];\n\nConsole.WriteLine($\"Inventory as of {asOf.ToString(\"yyyy-MM-dd\", CultureInfo.InvariantCulture)}\");\nforeach (Device device in inventory)\n{\n    if (asOf < device.PurchaseDate)\n    {\n        Console.WriteLine($\"{device} | purchase after report date\");\n        continue;\n    }\n\n    Console.WriteLine($\"{device} | {device.GetAgeInYears(asOf)} full year(s)\");\n}\n\nreturn 0;\r\n",
-  "sourceExcerpt": "\r\nDevice[] inventory =\r\n[\r\n    new(\"Lab Laptop\", \"192.0.2.10\", \"Room A\", new DateOnly(2023, 11, 17)),\r\n    new(\"Lab Router\", \"192.0.2.1\", \"Rack 1\", new DateOnly(2020, 2, 29)),\r\n    new(\"Front Desk Printer\", \"192.0.2.20\", \"Front Desk\", new DateOnly(2022, 11, 16))\r\n];\r\n\r\nConsole.WriteLine($\"Inventory as of {asOf.ToString(\"yyyy-MM-dd\", CultureInfo.InvariantCulture)}\");\r\nforeach (Device device in inventory)\r\n{\r\n    if (asOf < device.PurchaseDate)\r\n    {\r\n        Console.WriteLine($\"{device} | purchase after report date\");\r\n        continue;",
-  "sourceStartLine": 11,
-  "sourceEndLine": 25,
-  "inputLines": [],
-  "buildCommand": "dotnet build -c Release",
-  "buildExitCode": 0,
-  "buildOutput": [
-    "  Determining projects to restore...",
-    "  All projects are up-to-date for restore.",
-    "  Day10.ClassesAndObjects -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-10-classes-and-objects\\bin\\Release\\net10.0\\Day10.ClassesAndObjects.dll",
-    "",
-    "Build succeeded.",
-    "    0 Warning(s)",
-    "    0 Error(s)",
-    "",
-    "Time Elapsed 00:00:01.43"
-  ],
-  "buildStandardError": "",
-  "runCommand": "dotnet run -c Release --no-build",
-  "runExitCode": 0,
-  "runOutput": [
-    "Inventory as of 2026-11-16",
-    "Lab Laptop (192.0.2.10) in Room A | 2 full year(s)",
-    "Lab Router (192.0.2.1) in Rack 1 | 6 full year(s)",
-    "Front Desk Printer (192.0.2.20) in Front Desk | 4 full year(s)"
-  ],
-  "runStandardError": ""
+    "day":  10,
+    "recordedAt":  "2026-11-16T11:51:44.9363389+08:00",
+    "project":  "phase-1-csharp\\day-10-classes-and-objects",
+    "sdk":  "10.0.402",
+    "source":  "using System.Globalization;\n\nDateOnly asOf = DateOnly.FromDateTime(DateTime.Today);\nif (args.Length \u003e 1 ||\n    (args.Length == 1 \u0026\u0026 !DateOnly.TryParseExact(args[0], \"yyyy-MM-dd\", CultureInfo.InvariantCulture,\n        DateTimeStyles.None, out asOf)))\n{\n    Console.Error.WriteLine(\"Provide one date in yyyy-MM-dd format.\");\n    return 1;\n}\n\nDevice[] inventory =\n[\n    new(\"Lab Laptop\", \"192.0.2.10\", \"Room A\", new DateOnly(2023, 11, 17)),\n    new(\"Lab Router\", \"192.0.2.1\", \"Rack 1\", new DateOnly(2020, 2, 29)),\n    new(\"Front Desk Printer\", \"192.0.2.20\", \"Front Desk\", new DateOnly(2022, 11, 16))\n];\n\nConsole.WriteLine($\"Inventory as of {asOf.ToString(\"yyyy-MM-dd\", CultureInfo.InvariantCulture)}\");\nforeach (Device device in inventory)\n{\n    if (asOf \u003c device.PurchaseDate)\n    {\n        Console.WriteLine($\"{device} | purchase after report date\");\n        continue;\n    }\n\n    Console.WriteLine($\"{device} | {device.GetAgeInYears(asOf)} full year(s)\");\n}\n\nreturn 0;\r\n",
+    "sourceExcerpt":  "\r\nDevice[] inventory =\r\n[\r\n    new(\"Lab Laptop\", \"192.0.2.10\", \"Room A\", new DateOnly(2023, 11, 17)),\r\n    new(\"Lab Router\", \"192.0.2.1\", \"Rack 1\", new DateOnly(2020, 2, 29)),\r\n    new(\"Front Desk Printer\", \"192.0.2.20\", \"Front Desk\", new DateOnly(2022, 11, 16))\r\n];\r\n\r\nConsole.WriteLine($\"Inventory as of {asOf.ToString(\"yyyy-MM-dd\", CultureInfo.InvariantCulture)}\");\r\nforeach (Device device in inventory)\r\n{\r\n    if (asOf \u003c device.PurchaseDate)\r\n    {\r\n        Console.WriteLine($\"{device} | purchase after report date\");\r\n        continue;",
+    "sourceStartLine":  11,
+    "sourceEndLine":  25,
+    "inputLines":  [
+
+                   ],
+    "buildCommand":  "dotnet build -c Release",
+    "buildExitCode":  0,
+    "buildOutput":  [
+                        "  Determining projects to restore...",
+                        "  All projects are up-to-date for restore.",
+                        "  Day10.ClassesAndObjects -\u003e C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-10-classes-and-objects\\bin\\Release\\net10.0\\Day10.ClassesAndObjects.dll",
+                        "",
+                        "Build succeeded.",
+                        "    0 Warning(s)",
+                        "    0 Error(s)",
+                        "",
+                        "Time Elapsed 00:00:00.93"
+                    ],
+    "buildStandardError":  "",
+    "runCommand":  "dotnet run -c Release --no-build",
+    "runExitCode":  0,
+    "runOutput":  [
+                      "Inventory as of 2026-11-16",
+                      "Lab Laptop (192.0.2.10) in Room A | 2 full year(s)",
+                      "Lab Router (192.0.2.1) in Rack 1 | 6 full year(s)",
+                      "Front Desk Printer (192.0.2.20) in Front Desk | 4 full year(s)"
+                  ],
+    "runStandardError":  ""
 }

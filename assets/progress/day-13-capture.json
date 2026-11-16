@@ -1,36 +1,36 @@
 {
-  "day": 13,
-  "recordedAt": "2026-11-16T11:47:31.1924622+08:00",
-  "project": "phase-1-csharp\\day-13-interfaces",
-  "sdk": "10.0.402",
-  "source": "Console.WriteLine(\"Choose a notifier (console, file, telegram):\");\nINotifier? notifier = Console.ReadLine()?.Trim().ToLowerInvariant() switch\n{\n    \"console\" => new ConsoleNotifier(),\n    \"file\" => new FileNotifier(Path.Combine(Path.GetTempPath(), \"dotnet-90-days\")),\n    \"telegram\" => new TelegramNotifierFake(),\n    _ => null\n};\n\nif (notifier is null)\n{\n    Console.Error.WriteLine(\"Choose console, file, or telegram.\");\n    return 1;\n}\n\nConsole.WriteLine(\"Enter a message:\");\nstring? message = Console.ReadLine()?.Trim();\nif (string.IsNullOrEmpty(message))\n{\n    Console.Error.WriteLine(\"Enter a nonempty message.\");\n    return 1;\n}\n\ntry\n{\n    notifier.Notify(message);\n}\ncatch (IOException)\n{\n    Console.Error.WriteLine(\"Could not write the notification log.\");\n    return 1;\n}\ncatch (UnauthorizedAccessException)\n{\n    Console.Error.WriteLine(\"Could not write the notification log.\");\n    return 1;\n}\n\nreturn 0;\r\n",
-  "sourceExcerpt": "Console.WriteLine(\"Choose a notifier (console, file, telegram):\");\r\nINotifier? notifier = Console.ReadLine()?.Trim().ToLowerInvariant() switch\r\n{\r\n    \"console\" => new ConsoleNotifier(),\r\n    \"file\" => new FileNotifier(Path.Combine(Path.GetTempPath(), \"dotnet-90-days\")),\r\n    \"telegram\" => new TelegramNotifierFake(),\r\n    _ => null\r\n};\r\n\r\nif (notifier is null)\r\n{\r\n    Console.Error.WriteLine(\"Choose console, file, or telegram.\");\r\n    return 1;\r\n}",
-  "sourceStartLine": 1,
-  "sourceEndLine": 14,
-  "inputLines": [
-    "telegram",
-    "Inventory review at 10:00."
-  ],
-  "buildCommand": "dotnet build -c Release",
-  "buildExitCode": 0,
-  "buildOutput": [
-    "  Determining projects to restore...",
-    "  All projects are up-to-date for restore.",
-    "  Day13.Interfaces -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-13-interfaces\\bin\\Release\\net10.0\\Day13.Interfaces.dll",
-    "",
-    "Build succeeded.",
-    "    0 Warning(s)",
-    "    0 Error(s)",
-    "",
-    "Time Elapsed 00:00:01.45"
-  ],
-  "buildStandardError": "",
-  "runCommand": "@('telegram', 'Inventory review at 10:00.') | dotnet run -c Release --no-build",
-  "runExitCode": 0,
-  "runOutput": [
-    "Choose a notifier (console, file, telegram):",
-    "Enter a message:",
-    "Telegram (simulated): Inventory review at 10:00."
-  ],
-  "runStandardError": ""
+    "day":  13,
+    "recordedAt":  "2026-11-16T11:51:50.8890936+08:00",
+    "project":  "phase-1-csharp\\day-13-interfaces",
+    "sdk":  "10.0.402",
+    "source":  "Console.WriteLine(\"Choose a notifier (console, file, telegram):\");\nINotifier? notifier = Console.ReadLine()?.Trim().ToLowerInvariant() switch\n{\n    \"console\" =\u003e new ConsoleNotifier(),\n    \"file\" =\u003e new FileNotifier(Path.Combine(Path.GetTempPath(), \"dotnet-90-days\")),\n    \"telegram\" =\u003e new TelegramNotifierFake(),\n    _ =\u003e null\n};\n\nif (notifier is null)\n{\n    Console.Error.WriteLine(\"Choose console, file, or telegram.\");\n    return 1;\n}\n\nConsole.WriteLine(\"Enter a message:\");\nstring? message = Console.ReadLine()?.Trim();\nif (string.IsNullOrEmpty(message))\n{\n    Console.Error.WriteLine(\"Enter a nonempty message.\");\n    return 1;\n}\n\ntry\n{\n    notifier.Notify(message);\n}\ncatch (IOException)\n{\n    Console.Error.WriteLine(\"Could not write the notification log.\");\n    return 1;\n}\ncatch (UnauthorizedAccessException)\n{\n    Console.Error.WriteLine(\"Could not write the notification log.\");\n    return 1;\n}\n\nreturn 0;\r\n",
+    "sourceExcerpt":  "Console.WriteLine(\"Choose a notifier (console, file, telegram):\");\r\nINotifier? notifier = Console.ReadLine()?.Trim().ToLowerInvariant() switch\r\n{\r\n    \"console\" =\u003e new ConsoleNotifier(),\r\n    \"file\" =\u003e new FileNotifier(Path.Combine(Path.GetTempPath(), \"dotnet-90-days\")),\r\n    \"telegram\" =\u003e new TelegramNotifierFake(),\r\n    _ =\u003e null\r\n};\r\n\r\nif (notifier is null)\r\n{\r\n    Console.Error.WriteLine(\"Choose console, file, or telegram.\");\r\n    return 1;\r\n}",
+    "sourceStartLine":  1,
+    "sourceEndLine":  14,
+    "inputLines":  [
+                       "telegram",
+                       "Inventory review at 10:00."
+                   ],
+    "buildCommand":  "dotnet build -c Release",
+    "buildExitCode":  0,
+    "buildOutput":  [
+                        "  Determining projects to restore...",
+                        "  All projects are up-to-date for restore.",
+                        "  Day13.Interfaces -\u003e C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-13-interfaces\\bin\\Release\\net10.0\\Day13.Interfaces.dll",
+                        "",
+                        "Build succeeded.",
+                        "    0 Warning(s)",
+                        "    0 Error(s)",
+                        "",
+                        "Time Elapsed 00:00:00.95"
+                    ],
+    "buildStandardError":  "",
+    "runCommand":  "@(\u0027telegram\u0027, \u0027Inventory review at 10:00.\u0027) | dotnet run -c Release --no-build",
+    "runExitCode":  0,
+    "runOutput":  [
+                      "Choose a notifier (console, file, telegram):",
+                      "Enter a message:",
+                      "Telegram (simulated): Inventory review at 10:00."
+                  ],
+    "runStandardError":  ""
 }

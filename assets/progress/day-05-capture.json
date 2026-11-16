@@ -1,6 +1,6 @@
 {
     "day":  5,
-    "recordedAt":  "2026-11-16T07:55:11.6727391+08:00",
+    "recordedAt":  "2026-11-16T11:51:39.3421690+08:00",
     "project":  "phase-1-csharp/day-05-loops",
     "sdk":  "10.0.402",
     "source":  "const int AttemptLimit = 7;\r\nstring? targetText = Environment.GetEnvironmentVariable(\"GUESS_TARGET\");\r\nint? fixedTarget = null;\r\nif (targetText is not null)\r\n{\r\n    if (!int.TryParse(targetText, out int value) || value is \u003c 1 or \u003e 100)\r\n    {\r\n        Console.Error.WriteLine(\"GUESS_TARGET must be a whole number from 1 to 100.\");\r\n        return 1;\r\n    }\r\n\r\n    fixedTarget = value;\r\n}\r\n\r\ndo\r\n{\r\n    int target = fixedTarget ?? Random.Shared.Next(1, 101);\r\n    bool guessed = false;\r\n    int remaining = AttemptLimit;\r\n\r\n    while (remaining \u003e 0)\r\n    {\r\n        Console.WriteLine(\"Guess (1-100):\");\r\n        string? input = Console.ReadLine();\r\n        if (input is null)\r\n        {\r\n            return 0;\r\n        }\r\n\r\n        if (!int.TryParse(input, out int guess) || guess is \u003c 1 or \u003e 100)\r\n        {\r\n            Console.WriteLine(\"Enter a whole number from 1 to 100.\");\r\n            continue;\r\n        }\r\n\r\n        remaining--;\r\n        if (guess == target)\r\n        {\r\n            Console.WriteLine($\"Correct. Attempts remaining: {remaining}.\");\r\n            guessed = true;\r\n            break;\r\n        }\r\n\r\n        string hint = guess \u003c target ? \"Higher.\" : \"Lower.\";\r\n        Console.WriteLine($\"{hint} Attempts remaining: {remaining}\");\r\n    }\r\n\r\n    if (!guessed)\r\n    {\r\n        Console.WriteLine($\"Out of attempts. The number was {target}.\");\r\n    }\r\n} while (PlayAgain());\r\n\r\nreturn 0;\r\n\r\nstatic bool PlayAgain()\r\n{\r\n    while (true)\r\n    {\r\n        Console.WriteLine(\"Play again (y/n)?\");\r\n        string? answer = Console.ReadLine()?.Trim().ToLowerInvariant();\r\n        switch (answer)\r\n        {\r\n            case \"y\":\r\n                return true;\r\n            case \"n\":\r\n            case null:\r\n                return false;\r\n            default:\r\n                Console.WriteLine(\"Enter y or n.\");\r\n                break;\r\n        }\r\n    }\r\n}\r\n",
@@ -21,7 +21,7 @@
                         "    0 Warning(s)",
                         "    0 Error(s)",
                         "",
-                        "Time Elapsed 00:00:00.67"
+                        "Time Elapsed 00:00:01.00"
                     ],
     "buildStandardError":  "",
     "runCommand":  "@(\u002750\u0027) | dotnet run -c Release --no-build",

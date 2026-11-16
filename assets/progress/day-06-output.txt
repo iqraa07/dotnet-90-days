@@ -7,7 +7,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.66
+Time Elapsed 00:00:00.96
 
 > @('1', 'Edge router', '2', '3', '1', '2', '0') | dotnet run -c Release --no-build
 1 add | 2 view | 3 delete | 0 exit

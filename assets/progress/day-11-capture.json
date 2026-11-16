@@ -1,37 +1,39 @@
 {
-  "day": 11,
-  "recordedAt": "2026-11-16T07:54:10.8195572+08:00",
-  "project": "phase-1-csharp\\day-11-encapsulation-and-records",
-  "sdk": "10.0.402",
-  "source": "Ticket ticket = new(101, \"  Replace a damaged cable  \");\nTicketSnapshot initial = ticket.CreateSnapshot();\nConsole.WriteLine($\"Ticket {initial.Id}: {initial.Subject}\");\nConsole.WriteLine($\"Initial status: {initial.Status}\");\n\nticket.Start();\nConsole.WriteLine($\"After Start: {ticket.Status}\");\nticket.Close();\nConsole.WriteLine($\"After Close: {ticket.Status}\");\n\ntry\n{\n    ticket.Reopen();\n}\ncatch (InvalidOperationException exception)\n{\n    Console.WriteLine(exception.Message);\n}\n\nConsole.WriteLine($\"Current status: {ticket.Status}\");\nConsole.WriteLine($\"Saved snapshot: {initial.Status}\");\r\n",
-  "sourceExcerpt": "Ticket ticket = new(101, \"  Replace a damaged cable  \");\r\nTicketSnapshot initial = ticket.CreateSnapshot();\r\nConsole.WriteLine($\"Ticket {initial.Id}: {initial.Subject}\");\r\nConsole.WriteLine($\"Initial status: {initial.Status}\");\r\n\r\nticket.Start();\r\nConsole.WriteLine($\"After Start: {ticket.Status}\");\r\nticket.Close();\r\nConsole.WriteLine($\"After Close: {ticket.Status}\");\r\n\r\ntry\r\n{\r\n    ticket.Reopen();\r\n}\r\ncatch (InvalidOperationException exception)\r\n{\r\n    Console.WriteLine(exception.Message);\r\n}",
-  "sourceStartLine": 1,
-  "sourceEndLine": 18,
-  "inputLines": [],
-  "buildCommand": "dotnet build -c Release",
-  "buildExitCode": 0,
-  "buildOutput": [
-    "  Determining projects to restore...",
-    "  Restored C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-11-encapsulation-and-records\\Day11.EncapsulationAndRecords.csproj (in 66 ms).",
-    "  Day11.EncapsulationAndRecords -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-11-encapsulation-and-records\\bin\\Release\\net10.0\\Day11.EncapsulationAndRecords.dll",
-    "",
-    "Build succeeded.",
-    "    0 Warning(s)",
-    "    0 Error(s)",
-    "",
-    "Time Elapsed 00:00:01.05"
-  ],
-  "buildStandardError": "",
-  "runCommand": "dotnet run -c Release --no-build",
-  "runExitCode": 0,
-  "runOutput": [
-    "Ticket 101: Replace a damaged cable",
-    "Initial status: Open",
-    "After Start: InProgress",
-    "After Close: Closed",
-    "A closed ticket cannot be reopened.",
-    "Current status: Closed",
-    "Saved snapshot: Open"
-  ],
-  "runStandardError": ""
+    "day":  11,
+    "recordedAt":  "2026-11-16T11:51:50.8411422+08:00",
+    "project":  "phase-1-csharp\\day-11-encapsulation-and-records",
+    "sdk":  "10.0.402",
+    "source":  "Ticket ticket = new(101, \"  Replace a damaged cable  \");\nTicketSnapshot initial = ticket.CreateSnapshot();\nConsole.WriteLine($\"Ticket {initial.Id}: {initial.Subject}\");\nConsole.WriteLine($\"Initial status: {initial.Status}\");\n\nticket.Start();\nConsole.WriteLine($\"After Start: {ticket.Status}\");\nticket.Close();\nConsole.WriteLine($\"After Close: {ticket.Status}\");\n\ntry\n{\n    ticket.Reopen();\n}\ncatch (InvalidOperationException exception)\n{\n    Console.WriteLine(exception.Message);\n}\n\nConsole.WriteLine($\"Current status: {ticket.Status}\");\nConsole.WriteLine($\"Saved snapshot: {initial.Status}\");\r\n",
+    "sourceExcerpt":  "ticket.Close();\r\nConsole.WriteLine($\"After Close: {ticket.Status}\");\r\n\r\ntry\r\n{\r\n    ticket.Reopen();\r\n}\r\ncatch (InvalidOperationException exception)\r\n{\r\n    Console.WriteLine(exception.Message);\r\n}",
+    "sourceStartLine":  8,
+    "sourceEndLine":  18,
+    "inputLines":  [
+
+                   ],
+    "buildCommand":  "dotnet build -c Release",
+    "buildExitCode":  0,
+    "buildOutput":  [
+                        "  Determining projects to restore...",
+                        "  All projects are up-to-date for restore.",
+                        "  Day11.EncapsulationAndRecords -\u003e C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-11-encapsulation-and-records\\bin\\Release\\net10.0\\Day11.EncapsulationAndRecords.dll",
+                        "",
+                        "Build succeeded.",
+                        "    0 Warning(s)",
+                        "    0 Error(s)",
+                        "",
+                        "Time Elapsed 00:00:00.91"
+                    ],
+    "buildStandardError":  "",
+    "runCommand":  "dotnet run -c Release --no-build",
+    "runExitCode":  0,
+    "runOutput":  [
+                      "Ticket 101: Replace a damaged cable",
+                      "Initial status: Open",
+                      "After Start: InProgress",
+                      "After Close: Closed",
+                      "A closed ticket cannot be reopened.",
+                      "Current status: Closed",
+                      "Saved snapshot: Open"
+                  ],
+    "runStandardError":  ""
 }
