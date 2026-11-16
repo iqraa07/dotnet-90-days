@@ -1,0 +1,94 @@
+Day 13 verification
+Sample captured: 2026-11-16T07:54:10.8680293+08:00
+SDK: 10.0.402
+Release build: 0 warnings, 0 errors.
+Project: phase-1-csharp/day-13-interfaces
+
+Published sample (exit 0)
+Arguments: []
+Standard input: "telegram\nInventory review at 10:00.\n"
+Standard output:
+Choose a notifier (console, file, telegram):
+Enter a message:
+Telegram (simulated): Inventory review at 10:00.
+Standard error:
+<empty>
+
+Console with whitespace and mixed case (exit 0)
+Arguments: []
+Standard input: "  CoNsOLe  \n  Check inventory.  \n"
+Standard output:
+Choose a notifier (console, file, telegram):
+Enter a message:
+Console: Check inventory.
+Standard error:
+<empty>
+
+Invalid choice (exit 1)
+Arguments: []
+Standard input: "email\n"
+Standard output:
+Choose a notifier (console, file, telegram):
+Standard error:
+Choose console, file, or telegram.
+
+EOF at choice (exit 1)
+Arguments: []
+Standard input: ""
+Standard output:
+Choose a notifier (console, file, telegram):
+Standard error:
+Choose console, file, or telegram.
+
+Blank message (exit 1)
+Arguments: []
+Standard input: "console\n   \n"
+Standard output:
+Choose a notifier (console, file, telegram):
+Enter a message:
+Standard error:
+Enter a nonempty message.
+
+EOF at message (exit 1)
+Arguments: []
+Standard input: "telegram\n"
+Standard output:
+Choose a notifier (console, file, telegram):
+Enter a message:
+Standard error:
+Enter a nonempty message.
+
+File create (exit 0)
+Arguments: []
+Standard input: "file\nFirst message\n"
+Standard output:
+Choose a notifier (console, file, telegram):
+Enter a message:
+File: Message appended to day-13-notifications.log.
+Standard error:
+<empty>
+
+File append (exit 0)
+Arguments: []
+Standard input: "file\nSecond message\n"
+Standard output:
+Choose a notifier (console, file, telegram):
+Enter a message:
+File: Message appended to day-13-notifications.log.
+Standard error:
+<empty>
+
+Actual log after two writes:
+First message
+Second message
+
+Directory path blocked by existing file (exit 1)
+Arguments: []
+Standard input: "file\nNo log\n"
+Standard output:
+Choose a notifier (console, file, telegram):
+Enter a message:
+Standard error:
+Could not write the notification log.
+
+9 checks passed.

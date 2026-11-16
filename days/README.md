@@ -2,7 +2,7 @@
 
 Each day has a directory for its learning focus and navigation. Source code stays in the phase directories so the helper commands and shared projects remain consistent.
 
-Days 01–12 are implemented and verified. Personal reflections are pending. Days 13–90 are planned.
+Days 01–13 are implemented and verified. Personal reflections are pending. Days 14–90 are planned.
 
 [Learning map](../README.md#learning-map) · [Daily progress](../README.md#daily-progress) · [Roadmap](../ROADMAP.md)
 
@@ -20,7 +20,7 @@ Days 01–12 are implemented and verified. Personal reflections are pending. Day
 | [Day 10](day-10/README.md) | Classes and Objects | 1 | Complete |
 | [Day 11](day-11/README.md) | Encapsulation and Records | 1 | Complete |
 | [Day 12](day-12/README.md) | Inheritance and Polymorphism | 1 | Complete |
-| [Day 13](day-13/README.md) | Interfaces | 1 | Planned |
+| [Day 13](day-13/README.md) | Interfaces | 1 | Complete |
 | [Day 14](day-14/README.md) | Checkpoint 2: IT Asset Inventory Console | 1 | Planned |
 | [Day 15](day-15/README.md) | Dictionary, HashSet, Queue, Stack | 1 | Planned |
 | [Day 16](day-16/README.md) | Enums, Structs and Nullable | 1 | Planned |
