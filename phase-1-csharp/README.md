@@ -22,16 +22,17 @@ Each day uses a small, self-contained console project in `day-NN-topic/`.
 | [Day 16: Enums, Structs and Nullable](day-16-enums-structs-and-nullable) | Verified | Pending |
 | [Day 17: LINQ Part 1](day-17-linq-part-1) | Verified | Pending |
 | [Day 18: LINQ Part 2](day-18-linq-part-2) | Verified | Pending |
+| [Day 19: File I/O and CSV](day-19-file-i-o-and-csv) | Verified | Pending |
 
-Days 19–30 remain planned in the [day catalog](../days/README.md).
+Days 20–30 remain planned in the [day catalog](../days/README.md).
 
 Run the latest exercise from the repository root.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-18-linq-part-2
+dotnet run --project .\phase-1-csharp\day-19-file-i-o-and-csv
 ```
 
-See the [Day 18 guide](day-18-linq-part-2/README.md) for examples.
+See the [Day 19 guide](day-19-file-i-o-and-csv/README.md) for examples.
 
 Phase 1 projects inherit `UseAppHost=false` from [Directory.Build.props](Directory.Build.props) and run through the .NET runtime. See [directory-level build configuration](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=visualstudio) for how this shared configuration is applied.
 

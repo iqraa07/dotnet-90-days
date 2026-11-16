@@ -1,0 +1,13 @@
+$ dotnet run --project phase-1-csharp/day-19-file-i-o-and-csv -c Release --no-build -- <assets.csv> <temporary report>
+  ID  Name             Location
+   1  Laptop           Makassar
+Skipped row 3: expected a positive ID, name, and location.
+   3  Printer          Gowa
+Skipped row 5: expected a positive ID, name, and location.
+Skipped row 6: expected a positive ID, name, and location.
+   5  Monitor          Maros
+Imported 3; skipped 3.
+PASS: The saved report matched the console output.
+PASS: Missing CSV reported a file error and returned exit 1.
+PASS: An invalid header was rejected with exit 1.
+PASS: An identical input/report path was rejected and the source CSV was preserved.

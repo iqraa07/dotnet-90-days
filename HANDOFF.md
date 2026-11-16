@@ -2,11 +2,11 @@
 
 **Updated:** 2026-11-16
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 18/90 exercises verified
-**Next exercise:** Day 19, File I/O and CSV
-**Personal reflections:** Days 01–18 pending
+**Implementation progress:** 19/90 exercises verified
+**Next exercise:** Day 20, JSON with System.Text.Json
+**Personal reflections:** Days 01–19 pending
 
-Day 18 covers LINQ Part 2. The [daily overview](days/day-18/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+Day 19 covers File I/O and CSV. The [daily overview](days/day-19/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
 
 Complete each requested day in the same repository. Include the verified project, concise English documentation, output images in landscape and portrait, progress updates, and a daily commit. Use PAIR or MENTOR when requested. Leave the owner's personal reflections pending until they supply their notes.
 

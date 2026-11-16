@@ -1,0 +1,38 @@
+{
+  "day": 19,
+  "recordedAt": "2026-11-16T07:55:40.2584764+08:00",
+  "project": "phase-1-csharp/day-19-file-i-o-and-csv",
+  "sdk": "10.0.402",
+  "source": "string inputPath = args.Length > 0 ? args[0] : Path.Combine(AppContext.BaseDirectory, \"assets.csv\");\nstring? reportPath = args.Length > 1 ? args[1] : null;\n\ntry\n{\n    string[] lines = File.ReadAllLines(inputPath);\n    if (lines.Length == 0 || lines[0] != \"Id,Name,Location\")\n    {\n        Console.Error.WriteLine(\"Expected the CSV header Id,Name,Location.\");\n        return 1;\n    }\n\n    var report = new List<string> { $\"{\"ID\",4}  {\"Name\",-16} Location\" };\n    int skipped = 0;\n\n    for (int index = 1; index < lines.Length; index++)\n    {\n        string[] fields = lines[index].Split(',', StringSplitOptions.TrimEntries);\n        if (fields.Length != 3 || !int.TryParse(fields[0], out int id) || id <= 0\n            || fields[1].Length == 0 || fields[2].Length == 0)\n        {\n            report.Add($\"Skipped row {index + 1}: expected a positive ID, name, and location.\");\n            skipped++;\n            continue;\n        }\n\n        report.Add($\"{id,4}  {fields[1],-16} {fields[2]}\");\n    }\n\n    report.Add($\"Imported {lines.Length - 1 - skipped}; skipped {skipped}.\");\n    foreach (string line in report)\n    {\n        Console.WriteLine(line);\n    }\n\n    if (reportPath is not null)\n    {\n        string fullReportPath = Path.GetFullPath(reportPath);\n        if (Path.GetFullPath(inputPath).Equals(fullReportPath, StringComparison.OrdinalIgnoreCase))\n        {\n            Console.Error.WriteLine(\"The report must use a different path from the CSV.\");\n            return 1;\n        }\n\n        Directory.CreateDirectory(Path.GetDirectoryName(fullReportPath)!);\n        File.WriteAllText(fullReportPath, string.Join(Environment.NewLine, report) + Environment.NewLine);\n    }\n\n    return 0;\n}\ncatch (Exception exception) when (exception is IOException or UnauthorizedAccessException)\n{\n    Console.Error.WriteLine($\"File error: {exception.Message}\");\n    return 1;\n}\n",
+  "sourceExcerpt": "        string[] fields = lines[index].Split(',', StringSplitOptions.TrimEntries);\r\n        if (fields.Length != 3 || !int.TryParse(fields[0], out int id) || id <= 0\r\n            || fields[1].Length == 0 || fields[2].Length == 0)\r\n        {\r\n            report.Add($\"Skipped row {index + 1}: expected a positive ID, name, and location.\");\r\n            skipped++;\r\n            continue;\r\n        }",
+  "sourceStartLine": 18,
+  "sourceEndLine": 25,
+  "inputLines": [],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  Restored C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-19-file-i-o-and-csv\\FileIoAndCsv.csproj (in 73 ms).",
+    "  FileIoAndCsv -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-19-file-i-o-and-csv\\bin\\Release\\net10.0\\FileIoAndCsv.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:00.83"
+  ],
+  "buildStandardError": "",
+  "runCommand": "dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "  ID  Name             Location",
+    "   1  Laptop           Makassar",
+    "Skipped row 3: expected a positive ID, name, and location.",
+    "   3  Printer          Gowa",
+    "Skipped row 5: expected a positive ID, name, and location.",
+    "Skipped row 6: expected a positive ID, name, and location.",
+    "   5  Monitor          Maros",
+    "Imported 3; skipped 3."
+  ],
+  "runStandardError": ""
+}
