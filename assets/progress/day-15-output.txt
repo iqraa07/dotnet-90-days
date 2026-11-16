@@ -1,0 +1,20 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day15.DictionaryHashSetQueueStack -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-15-dictionary-hashset-queue-stack\bin\Release\net10.0\Day15.DictionaryHashSetQueueStack.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.84
+
+> @('add|1|Network|Wi-Fi drops', 'add|2|Network|VPN offline', 'counts', 'next', 'history', 'quit') | dotnet run -c Release --no-build
+Commands: add | next | counts | history | quit
+Queued 1: Wi-Fi drops.
+Queued 2: VPN offline.
+Waiting by category:
+Network: 2
+Resolved 1: Wi-Fi drops.
+Resolved, newest first:
+1: Wi-Fi drops

@@ -2,11 +2,11 @@
 
 **Updated:** 2026-11-16
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 14/90 exercises verified
-**Next exercise:** Day 15, Dictionary, HashSet, Queue, Stack
-**Personal reflections:** Days 01–14 pending
+**Implementation progress:** 15/90 exercises verified
+**Next exercise:** Day 16, Enums, Structs and Nullable
+**Personal reflections:** Days 01–15 pending
 
-Day 14 covers Checkpoint 2: IT Asset Inventory Console. The [daily overview](days/day-14/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+Day 15 covers Dictionary, HashSet, Queue, Stack. The [daily overview](days/day-15/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
 
 Complete each requested day in the same repository. Include the verified project, concise English documentation, output images in landscape and portrait, progress updates, and a daily commit. Use PAIR or MENTOR when requested. Leave the owner's personal reflections pending until they supply their notes.
 

@@ -1,0 +1,45 @@
+{
+  "day": 15,
+  "recordedAt": "2026-11-16T07:54:48.1801068+08:00",
+  "project": "phase-1-csharp\\day-15-dictionary-hashset-queue-stack",
+  "sdk": "10.0.402",
+  "source": "using System.Globalization;\n\nvar waiting = new Queue<Ticket>();\nvar usedIds = new HashSet<int>();\nvar resolved = new Stack<Ticket>();\nConsole.WriteLine(\"Commands: add | next | counts | history | quit\");\n\nwhile (Console.ReadLine() is string line)\n{\n    string[] parts = line.Split('|', StringSplitOptions.TrimEntries);\n    switch (parts[0].ToLowerInvariant())\n    {\n        case \"add\" when parts.Length == 4 && parts[2].Length > 0 && parts[3].Length > 0 &&\n            int.TryParse(parts[1], NumberStyles.None, CultureInfo.InvariantCulture, out int id) && id > 0:\n            if (usedIds.Add(id))\n            {\n                waiting.Enqueue(new Ticket(id, parts[2], parts[3]));\n                Console.WriteLine($\"Queued {id}: {parts[3]}.\");\n            }\n            else\n            {\n                Console.WriteLine($\"Ticket {id} already exists.\");\n            }\n            break;\n        case \"next\" when parts.Length == 1:\n            if (waiting.TryDequeue(out Ticket? ticket))\n            {\n                resolved.Push(ticket);\n                Console.WriteLine($\"Resolved {ticket.Id}: {ticket.Title}.\");\n            }\n            else\n            {\n                Console.WriteLine(\"The queue is empty.\");\n            }\n            break;\n        case \"counts\" when parts.Length == 1:\n            var counts = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);\n            foreach (Ticket queued in waiting)\n                counts[queued.Category] = counts.GetValueOrDefault(queued.Category) + 1;\n\n            Console.WriteLine(\"Waiting by category:\");\n            if (counts.Count == 0)\n                Console.WriteLine(\"The queue is empty.\");\n            foreach (var (category, count) in counts.OrderBy(pair => pair.Key, StringComparer.OrdinalIgnoreCase))\n                Console.WriteLine($\"{category}: {count}\");\n            break;\n        case \"history\" when parts.Length == 1:\n            Console.WriteLine(\"Resolved, newest first:\");\n            if (resolved.Count == 0)\n                Console.WriteLine(\"No resolved tickets.\");\n            foreach (Ticket completed in resolved)\n                Console.WriteLine($\"{completed.Id}: {completed.Title}\");\n            break;\n        case \"quit\" when parts.Length == 1:\n            return;\n        default:\n            Console.WriteLine(\"Invalid command or value.\");\n            break;\n    }\n}\n\nrecord Ticket(int Id, string Category, string Title);\n",
+  "sourceExcerpt": "        case \"counts\" when parts.Length == 1:\r\n            var counts = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);\r\n            foreach (Ticket queued in waiting)\r\n                counts[queued.Category] = counts.GetValueOrDefault(queued.Category) + 1;\r\n\r\n            Console.WriteLine(\"Waiting by category:\");\r\n            if (counts.Count == 0)",
+  "sourceStartLine": 36,
+  "sourceEndLine": 42,
+  "inputLines": [
+    "add|1|Network|Wi-Fi drops",
+    "add|2|Network|VPN offline",
+    "counts",
+    "next",
+    "history",
+    "quit"
+  ],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  Day15.DictionaryHashSetQueueStack -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-15-dictionary-hashset-queue-stack\\bin\\Release\\net10.0\\Day15.DictionaryHashSetQueueStack.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:00.84"
+  ],
+  "buildStandardError": "",
+  "runCommand": "@('add|1|Network|Wi-Fi drops', 'add|2|Network|VPN offline', 'counts', 'next', 'history', 'quit') | dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Commands: add | next | counts | history | quit",
+    "Queued 1: Wi-Fi drops.",
+    "Queued 2: VPN offline.",
+    "Waiting by category:",
+    "Network: 2",
+    "Resolved 1: Wi-Fi drops.",
+    "Resolved, newest first:",
+    "1: Wi-Fi drops"
+  ],
+  "runStandardError": ""
+}
