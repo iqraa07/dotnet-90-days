@@ -1,0 +1,39 @@
+{
+  "day": 22,
+  "recordedAt": "2026-11-16T11:48:42.9217540+08:00",
+  "project": "phase-1-csharp/day-22-advanced-exceptions",
+  "sdk": "10.0.402",
+  "source": "using System.Net;\n\nvar ticket = new Ticket(\"Printer is offline\");\nConsole.WriteLine(\"Commands: start | close | device | ticket | quit\");\n\nwhile (Console.ReadLine() is string line)\n{\n    string[] parts = line.Split('|', StringSplitOptions.TrimEntries);\n\n    try\n    {\n        switch (parts[0].ToLowerInvariant())\n        {\n            case \"start\" when parts.Length == 1:\n                ticket.TransitionTo(TicketStatus.InProgress);\n                Console.WriteLine($\"Ticket status: {ticket.Status}\");\n                break;\n            case \"close\" when parts.Length == 1:\n                ticket.TransitionTo(TicketStatus.Closed);\n                Console.WriteLine($\"Ticket status: {ticket.Status}\");\n                break;\n            case \"device\" when parts.Length == 3:\n                var device = new Device(parts[1], parts[2]);\n                Console.WriteLine($\"Device: {device.Name} ({device.IpAddress})\");\n                break;\n            case \"ticket\" when parts.Length == 2:\n                ticket = new Ticket(parts[1]);\n                Console.WriteLine($\"Ticket: {ticket.Subject} ({ticket.Status})\");\n                break;\n            case \"quit\" when parts.Length == 1:\n                return;\n            default:\n                Console.WriteLine(\"Use device | name | IP or ticket | subject.\");\n                break;\n        }\n    }\n    catch (InvalidTicketStateException exception)\n        when (exception.Current == TicketStatus.Open && exception.Requested == TicketStatus.Closed)\n    {\n        Console.WriteLine(\"Start the ticket before closing it.\");\n    }\n    catch (InvalidTicketStateException exception)\n    {\n        Console.WriteLine(exception.Message);\n    }\n    catch (ArgumentException exception)\n    {\n        Console.WriteLine(exception.Message);\n    }\n}\n\nenum TicketStatus { Open, InProgress, Closed }\n\nsealed class InvalidTicketStateException(TicketStatus current, TicketStatus requested)\n    : InvalidOperationException($\"Cannot move a ticket from {current} to {requested}.\")\n{\n    public TicketStatus Current { get; } = current;\n    public TicketStatus Requested { get; } = requested;\n}\n\nsealed class Ticket\n{\n    public Ticket(string subject)\n    {\n        ArgumentNullException.ThrowIfNull(subject);\n        if (string.IsNullOrWhiteSpace(subject))\n        {\n            throw new ArgumentException(\"Enter a ticket subject.\", nameof(subject));\n        }\n\n        Subject = subject.Trim();\n    }\n\n    public string Subject { get; }\n    public TicketStatus Status { get; private set; } = TicketStatus.Open;\n\n    public void TransitionTo(TicketStatus next)\n    {\n        bool allowed = (Status, next) is\n            (TicketStatus.Open, TicketStatus.InProgress) or (TicketStatus.InProgress, TicketStatus.Closed);\n\n        if (!allowed)\n        {\n            throw new InvalidTicketStateException(Status, next);\n        }\n\n        Status = next;\n    }\n}\n\nsealed class Device\n{\n    public Device(string name, string ipAddress)\n    {\n        ArgumentNullException.ThrowIfNull(name);\n        ArgumentNullException.ThrowIfNull(ipAddress);\n        if (string.IsNullOrWhiteSpace(name))\n        {\n            throw new ArgumentException(\"Enter a device name.\", nameof(name));\n        }\n\n        if (!IPAddress.TryParse(ipAddress, out IPAddress? address))\n        {\n            throw new ArgumentException(\"Enter a valid IP address.\", nameof(ipAddress));\n        }\n\n        Name = name.Trim();\n        IpAddress = address;\n    }\n\n    public string Name { get; }\n    public IPAddress IpAddress { get; }\n}\n",
+  "sourceExcerpt": "        bool allowed = (Status, next) is\r\n            (TicketStatus.Open, TicketStatus.InProgress) or (TicketStatus.InProgress, TicketStatus.Closed);\r\n\r\n        if (!allowed)\r\n        {\r\n            throw new InvalidTicketStateException(Status, next);\r\n        }\r\n\r\n        Status = next;",
+  "sourceStartLine": 79,
+  "sourceEndLine": 87,
+  "inputLines": [
+    "close",
+    "start",
+    "close",
+    "quit"
+  ],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  AdvancedExceptions -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-22-advanced-exceptions\\bin\\Release\\net10.0\\AdvancedExceptions.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:01.60"
+  ],
+  "buildStandardError": "",
+  "runCommand": "@('close', 'start', 'close', 'quit') | dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Commands: start | close | device | ticket | quit",
+    "Start the ticket before closing it.",
+    "Ticket status: InProgress",
+    "Ticket status: Closed"
+  ],
+  "runStandardError": ""
+}

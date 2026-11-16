@@ -1,0 +1,16 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  AdvancedExceptions -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-22-advanced-exceptions\bin\Release\net10.0\AdvancedExceptions.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.60
+
+> @('close', 'start', 'close', 'quit') | dotnet run -c Release --no-build
+Commands: start | close | device | ticket | quit
+Start the ticket before closing it.
+Ticket status: InProgress
+Ticket status: Closed

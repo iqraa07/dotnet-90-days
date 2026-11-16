@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-21/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-22/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 21 / 90 exercises (23%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 22 / 90 exercises (24%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 21
+## Run Day 22
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-21-checkpoint-3-inventory-with-json-and -c Release
+dotnet run --project .\phase-1-csharp\day-22-advanced-exceptions -c Release
 .\day status
 ```
 
-See the [Day 21 guide](days/day-21/README.md) for sample inputs, CLI checks, and output images.
+See the [Day 22 guide](days/day-22/README.md) for sample inputs, CLI checks, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 21 source and output](assets/progress/day-21-terminal.png)
+![Day 22 source and output](assets/progress/day-22-terminal.png)
 
 ## Daily progress
 
@@ -81,7 +81,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 19 | File I/O and CSV | 1 | ✅ | 2026-11-16 | [journal](journal/day-19-file-i-o-and-csv.md) |
 | 20 | JSON with System.Text.Json | 1 | ✅ | 2026-11-16 | [journal](journal/day-20-json-with-system-text-json.md) |
 | 21 | Checkpoint 3: Inventory with JSON and Reports | 1 | ✅ | 2026-11-16 | [journal](journal/day-21-checkpoint-3-inventory-with-json-and.md) |
-| 22 | Advanced Exceptions | 1 | ⬜ | - | - |
+| 22 | Advanced Exceptions | 1 | ✅ | 2026-11-16 | [journal](journal/day-22-advanced-exceptions.md) |
 | 23 | Generics | 1 | ⬜ | - | - |
 | 24 | Delegates, Lambdas and Events | 1 | ⬜ | - | - |
 | 25 | Async, Await and HttpClient | 1 | ⬜ | - | - |

@@ -1,0 +1,18 @@
+$ close, start, start, close, start, close, quit
+Commands: start | close | device | ticket | quit
+Start the ticket before closing it.
+Ticket status: InProgress
+Cannot move a ticket from InProgress to InProgress.
+Ticket status: Closed
+Cannot move a ticket from Closed to InProgress.
+Cannot move a ticket from Closed to Closed.
+PASS: The filter gave guidance for Open -> Closed, allowed legal transitions, and kept the state after rejections.
+$ ticket |, device | | 192.0.2.10, device | Router | invalid, device | Router | 192.0.2.10, ticket | Router offline, close, quit
+Commands: start | close | device | ticket | quit
+Enter a ticket subject. (Parameter 'subject')
+Enter a device name. (Parameter 'name')
+Enter a valid IP address. (Parameter 'ipAddress')
+Device: Router (192.0.2.10)
+Ticket: Router offline (Open)
+Start the ticket before closing it.
+PASS: Ticket and device guards reported invalid fields while the input loop kept accepting commands.

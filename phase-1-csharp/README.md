@@ -25,16 +25,17 @@ Each day uses a small, self-contained console project in `day-NN-topic/`.
 | [Day 19: File I/O and CSV](day-19-file-i-o-and-csv) | Verified | Pending |
 | [Day 20: JSON with System.Text.Json](day-20-json-with-system-text-json) | Verified | Pending |
 | [Day 21: Checkpoint 3: Inventory with JSON and Reports](day-21-checkpoint-3-inventory-with-json-and) | Verified | Pending |
+| [Day 22: Advanced Exceptions](day-22-advanced-exceptions) | Verified | Pending |
 
-Days 22–30 remain planned in the [day catalog](../days/README.md).
+Days 23–30 remain planned in the [day catalog](../days/README.md).
 
 Run the latest exercise from the repository root.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-21-checkpoint-3-inventory-with-json-and
+dotnet run --project .\phase-1-csharp\day-22-advanced-exceptions
 ```
 
-See the [Day 21 guide](day-21-checkpoint-3-inventory-with-json-and/README.md) for examples.
+See the [Day 22 guide](day-22-advanced-exceptions/README.md) for examples.
 
 Phase 1 projects inherit `UseAppHost=false` from [Directory.Build.props](Directory.Build.props) and run through the .NET runtime. See [directory-level build configuration](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=visualstudio) for how this shared configuration is applied.
 
