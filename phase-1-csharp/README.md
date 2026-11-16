@@ -17,16 +17,17 @@ Each day uses a small, self-contained console project in `day-NN-topic/`.
 | [Day 11: Encapsulation and Records](day-11-encapsulation-and-records) | Verified | Pending |
 | [Day 12: Inheritance and Polymorphism](day-12-inheritance-and-polymorphism) | Verified | Pending |
 | [Day 13: Interfaces](day-13-interfaces) | Verified | Pending |
+| [Day 14: Checkpoint 2: IT Asset Inventory Console](day-14-checkpoint-2-it-asset-inventory-console) | Verified | Pending |
 
-Days 14–30 remain planned in the [day catalog](../days/README.md).
+Days 15–30 remain planned in the [day catalog](../days/README.md).
 
 Run the latest exercise from the repository root.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-13-interfaces
+dotnet run --project .\phase-1-csharp\day-14-checkpoint-2-it-asset-inventory-console
 ```
 
-See the [Day 13 guide](day-13-interfaces/README.md) for examples.
+See the [Day 14 guide](day-14-checkpoint-2-it-asset-inventory-console/README.md) for examples.
 
 Phase 1 projects inherit `UseAppHost=false` from [Directory.Build.props](Directory.Build.props) and run through the .NET runtime. See [directory-level build configuration](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=visualstudio) for how this shared configuration is applied.
 

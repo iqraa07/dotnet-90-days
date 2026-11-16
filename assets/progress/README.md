@@ -17,6 +17,7 @@ Build and execution records for implemented exercises. The [daily progress table
 | [Day 11](../../days/day-11/README.md) | Release build and CLI checks passed | [Landscape](day-11-terminal.png), [portrait](day-11-social.png) | [Output](day-11-output.txt), [capture data](day-11-capture.json), [checks](day-11-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
 | [Day 12](../../days/day-12/README.md) | Release build and CLI checks passed | [Landscape](day-12-terminal.png), [portrait](day-12-social.png) | [Output](day-12-output.txt), [capture data](day-12-capture.json), [checks](day-12-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
 | [Day 13](../../days/day-13/README.md) | Release build and CLI checks passed | [Landscape](day-13-terminal.png), [portrait](day-13-social.png) | [Output](day-13-output.txt), [capture data](day-13-capture.json), [checks](day-13-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
+| [Day 14](../../days/day-14/README.md) | Release build and CLI checks passed | [Landscape](day-14-terminal.png), [portrait](day-14-social.png) | [Output](day-14-output.txt), [capture data](day-14-capture.json), [checks](day-14-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
 
 ## Day 01: Hello World
 

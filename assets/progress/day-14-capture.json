@@ -1,0 +1,41 @@
+{
+  "day": 14,
+  "recordedAt": "2026-11-16T07:54:48.1612379+08:00",
+  "project": "phase-1-csharp\\day-14-checkpoint-2-it-asset-inventory-console",
+  "sdk": "10.0.402",
+  "source": "using System.Globalization;\n\nvar inventory = new AssetInventory();\nConsole.WriteLine(\"Commands: add | list | search | older | quit\");\n\nwhile (Console.ReadLine() is string line)\n{\n    string[] parts = line.Split('|', StringSplitOptions.TrimEntries);\n    string command = parts[0].ToLowerInvariant();\n\n    switch (command)\n    {\n        case \"add\" when parts.Length == 4 &&\n            parts[1].Length > 0 && parts[2].Length > 0 &&\n            TryReadDate(parts[3], out DateOnly purchaseDate):\n            var asset = new Asset(parts[1], parts[2], purchaseDate);\n            inventory.Add(asset);\n            Console.WriteLine($\"Added {asset.Name}.\");\n            break;\n        case \"list\" when parts.Length == 1:\n            PrintAssets(inventory.Assets);\n            break;\n        case \"search\" when parts.Length == 3 && parts[2].Length > 0:\n            if (parts[1].Equals(\"name\", StringComparison.OrdinalIgnoreCase))\n                PrintAssets(inventory.FindByName(parts[2]));\n            else if (parts[1].Equals(\"location\", StringComparison.OrdinalIgnoreCase))\n                PrintAssets(inventory.FindByLocation(parts[2]));\n            else\n                Console.WriteLine(\"Search by name or location.\");\n            break;\n        case \"older\" when parts.Length == 2 &&\n            TryReadDate(parts[1], out DateOnly asOf) && asOf.Year > 4:\n            PrintAssets(inventory.OlderThanFourYears(asOf));\n            break;\n        case \"quit\" when parts.Length == 1:\n            return;\n        default:\n            Console.WriteLine(\"Invalid command or value. Dates use YYYY-MM-DD.\");\n            break;\n    }\n}\n\nstatic bool TryReadDate(string value, out DateOnly date) =>\n    DateOnly.TryParseExact(value, \"yyyy-MM-dd\", CultureInfo.InvariantCulture, DateTimeStyles.None, out date);\n\nstatic void PrintAssets(IEnumerable<Asset> assets)\n{\n    bool found = false;\n    foreach (Asset asset in assets)\n    {\n        Console.WriteLine($\"{asset.Name} | {asset.Location} | {asset.PurchaseDate.ToString(\"yyyy-MM-dd\", CultureInfo.InvariantCulture)}\");\n        found = true;\n    }\n\n    if (!found)\n        Console.WriteLine(\"No assets.\");\n}\n\nrecord Asset(string Name, string Location, DateOnly PurchaseDate);\n\nclass AssetInventory\n{\n    private readonly List<Asset> _assets = [];\n\n    public IReadOnlyList<Asset> Assets => _assets.AsReadOnly();\n\n    public void Add(Asset asset) => _assets.Add(asset);\n\n    public IEnumerable<Asset> FindByName(string search) =>\n        _assets.Where(asset => asset.Name.Contains(search, StringComparison.OrdinalIgnoreCase));\n\n    public IEnumerable<Asset> FindByLocation(string search) =>\n        _assets.Where(asset => asset.Location.Contains(search, StringComparison.OrdinalIgnoreCase));\n\n    public IEnumerable<Asset> OlderThanFourYears(DateOnly asOf) =>\n        _assets.Where(asset => asset.PurchaseDate < asOf.AddYears(-4));\n}\n",
+  "sourceExcerpt": "    public IEnumerable<Asset> FindByName(string search) =>\r\n        _assets.Where(asset => asset.Name.Contains(search, StringComparison.OrdinalIgnoreCase));\r\n\r\n    public IEnumerable<Asset> FindByLocation(string search) =>\r\n        _assets.Where(asset => asset.Location.Contains(search, StringComparison.OrdinalIgnoreCase));\r\n\r\n    public IEnumerable<Asset> OlderThanFourYears(DateOnly asOf) =>\r\n        _assets.Where(asset => asset.PurchaseDate < asOf.AddYears(-4));",
+  "sourceStartLine": 69,
+  "sourceEndLine": 76,
+  "inputLines": [
+    "add|Notebook|Makassar|2020-03-01",
+    "add|Dock|Jakarta|2022-11-16",
+    "search|name|book",
+    "older|2026-11-16",
+    "quit"
+  ],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  Day14.ITAssetInventoryConsole -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-14-checkpoint-2-it-asset-inventory-console\\bin\\Release\\net10.0\\Day14.ITAssetInventoryConsole.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:00.85"
+  ],
+  "buildStandardError": "",
+  "runCommand": "@('add|Notebook|Makassar|2020-03-01', 'add|Dock|Jakarta|2022-11-16', 'search|name|book', 'older|2026-11-16', 'quit') | dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Commands: add | list | search | older | quit",
+    "Added Notebook.",
+    "Added Dock.",
+    "Notebook | Makassar | 2020-03-01",
+    "Notebook | Makassar | 2020-03-01"
+  ],
+  "runStandardError": ""
+}

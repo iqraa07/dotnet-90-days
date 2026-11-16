@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-13/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-14/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 13 / 90 exercises (14%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 14 / 90 exercises (15%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 13
+## Run Day 14
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-13-interfaces -c Release
+dotnet run --project .\phase-1-csharp\day-14-checkpoint-2-it-asset-inventory-console -c Release
 .\day status
 ```
 
-See the [Day 13 guide](days/day-13/README.md) for sample inputs, CLI checks, and output images.
+See the [Day 14 guide](days/day-14/README.md) for sample inputs, CLI checks, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 13 source and output](assets/progress/day-13-terminal.png)
+![Day 14 source and output](assets/progress/day-14-terminal.png)
 
 ## Daily progress
 
@@ -73,7 +73,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 11 | Encapsulation and Records | 1 | ✅ | 2026-11-16 | [journal](journal/day-11-encapsulation-and-records.md) |
 | 12 | Inheritance and Polymorphism | 1 | ✅ | 2026-11-16 | [journal](journal/day-12-inheritance-and-polymorphism.md) |
 | 13 | Interfaces | 1 | ✅ | 2026-11-16 | [journal](journal/day-13-interfaces.md) |
-| 14 | Checkpoint 2: IT Asset Inventory Console | 1 | ⬜ | - | - |
+| 14 | Checkpoint 2: IT Asset Inventory Console | 1 | ✅ | 2026-11-16 | [journal](journal/day-14-checkpoint-2-it-asset-inventory-console.md) |
 | 15 | Dictionary, HashSet, Queue, Stack | 1 | ⬜ | - | - |
 | 16 | Enums, Structs and Nullable | 1 | ⬜ | - | - |
 | 17 | LINQ Part 1 | 1 | ⬜ | - | - |

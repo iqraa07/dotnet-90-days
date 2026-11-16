@@ -1,0 +1,17 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day14.ITAssetInventoryConsole -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-14-checkpoint-2-it-asset-inventory-console\bin\Release\net10.0\Day14.ITAssetInventoryConsole.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.85
+
+> @('add|Notebook|Makassar|2020-03-01', 'add|Dock|Jakarta|2022-11-16', 'search|name|book', 'older|2026-11-16', 'quit') | dotnet run -c Release --no-build
+Commands: add | list | search | older | quit
+Added Notebook.
+Added Dock.
+Notebook | Makassar | 2020-03-01
+Notebook | Makassar | 2020-03-01

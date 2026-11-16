@@ -1,0 +1,73 @@
+Run from the exercise project directory.
+
+$ dotnet build -c Release --nologo
+  Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-14-checkpoint-2-it-asset-inventory-console\Day14.ITAssetInventoryConsole.csproj (in 82 ms).
+  Day14.ITAssetInventoryConsole -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-14-checkpoint-2-it-asset-inventory-console\bin\Release\net10.0\Day14.ITAssetInventoryConsole.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.37
+
+Inventory operations
+$ dotnet bin/Release/net10.0/Day14.ITAssetInventoryConsole.dll
+Input:
+add|Notebook|Makassar|2020-03-01
+add|Dock|Jakarta|2022-11-16
+list
+search|location|JAK
+quit
+Output:
+Commands: add | list | search | older | quit
+Added Notebook.
+Added Dock.
+Notebook | Makassar | 2020-03-01
+Dock | Jakarta | 2022-11-16
+Dock | Jakarta | 2022-11-16
+Exit code: 0
+
+Four-year boundary
+$ dotnet bin/Release/net10.0/Day14.ITAssetInventoryConsole.dll
+Input:
+add|Older|Makassar|2022-11-15
+add|Exactly Four|Jakarta|2022-11-16
+add|Newer|Surabaya|2022-11-17
+older|2026-11-16
+quit
+Output:
+Commands: add | list | search | older | quit
+Added Older.
+Added Exactly Four.
+Added Newer.
+Older | Makassar | 2022-11-15
+Exit code: 0
+
+Case-insensitive name search
+$ dotnet bin/Release/net10.0/Day14.ITAssetInventoryConsole.dll
+Input:
+add|Notebook|Makassar|2020-03-01
+search|name|BOOK
+quit
+Output:
+Commands: add | list | search | older | quit
+Added Notebook.
+Notebook | Makassar | 2020-03-01
+Exit code: 0
+
+Bad date and empty results
+$ dotnet bin/Release/net10.0/Day14.ITAssetInventoryConsole.dll
+Input:
+add|Laptop|Makassar|2022-02-29
+list
+search|name|printer
+quit
+Output:
+Commands: add | list | search | older | quit
+Invalid command or value. Dates use YYYY-MM-DD.
+No assets.
+No assets.
+Exit code: 0
+
+Passed 4 checks.
