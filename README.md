@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-17/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-18/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 17 / 90 exercises (18%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 18 / 90 exercises (20%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 17
+## Run Day 18
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-17-linq-part-1 -c Release
+dotnet run --project .\phase-1-csharp\day-18-linq-part-2 -c Release
 .\day status
 ```
 
-See the [Day 17 guide](days/day-17/README.md) for sample inputs, CLI checks, and output images.
+See the [Day 18 guide](days/day-18/README.md) for sample inputs, CLI checks, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 17 source and output](assets/progress/day-17-terminal.png)
+![Day 18 source and output](assets/progress/day-18-terminal.png)
 
 ## Daily progress
 
@@ -77,7 +77,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 15 | Dictionary, HashSet, Queue, Stack | 1 | ✅ | 2026-11-16 | [journal](journal/day-15-dictionary-hashset-queue-stack.md) |
 | 16 | Enums, Structs and Nullable | 1 | ✅ | 2026-11-16 | [journal](journal/day-16-enums-structs-and-nullable.md) |
 | 17 | LINQ Part 1 | 1 | ✅ | 2026-11-16 | [journal](journal/day-17-linq-part-1.md) |
-| 18 | LINQ Part 2 | 1 | ⬜ | - | - |
+| 18 | LINQ Part 2 | 1 | ✅ | 2026-11-16 | [journal](journal/day-18-linq-part-2.md) |
 | 19 | File I/O and CSV | 1 | ⬜ | - | - |
 | 20 | JSON with System.Text.Json | 1 | ⬜ | - | - |
 | 21 | Checkpoint 3: Inventory with JSON and Reports | 1 | ⬜ | - | - |

@@ -1,0 +1,34 @@
+Run from the exercise project directory.
+
+$ dotnet build -c Release --nologo
+  Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-18-linq-part-2\Day18.LINQPart2.csproj (in 103 ms).
+  Day18.LINQPart2 -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-18-linq-part-2\bin\Release\net10.0\Day18.LINQPart2.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.38
+
+Eighth-ticket report and priority averages
+$ dotnet bin/Release/net10.0/Day18.LINQPart2.dll
+Input:
+(none)
+Output:
+Tickets by category:
+Accounts: 2
+Hardware: 3
+Network: 3
+Tickets by status:
+Open: 3
+Resolved: 5
+Resolved hours total: 50
+Longest resolution: 20 hours
+Average resolution by priority:
+Urgent: 3.0 hours (target 4 hours)
+Normal: 12.0 hours (target 12 hours)
+Low: 20.0 hours (target 24 hours)
+Exit code: 0
+
+Passed 1 checks.
