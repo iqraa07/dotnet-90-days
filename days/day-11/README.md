@@ -1,9 +1,21 @@
 # Day 11: Encapsulation and Records
 
-**Implementation:** Planned.
+Use ticket methods to control status changes and keep an earlier record snapshot. The implementation is verified and the personal reflection is pending.
 
-## Focus
+![Day 11 source excerpt and sample output](../../assets/progress/day-11-terminal.png)
 
-access modifiers (`public`, `private`, `protected`, `internal`), validation in property setters, `record`, `init`, and immutability. Optional: the C# 14 `field` keyword.
+[Portrait image](../../assets/progress/day-11-social.png) · [Run transcript](../../assets/progress/day-11-output.txt) · [Checks](../../assets/progress/day-11-checks.txt)
 
-[Full outline](../../ROADMAP.md#day-11--encapsulation-and-records) · [Daily progress](../../README.md#daily-progress) · [Day catalog](../README.md)
+## Run the example
+
+Run this PowerShell command from the repository root.
+
+```powershell
+dotnet run --project .\phase-1-csharp\day-11-encapsulation-and-records -c Release
+```
+
+The ticket moves from `Open` to `InProgress` to `Closed`. Reopening raises `InvalidOperationException`, and the saved snapshot still shows `Open`.
+
+[Exercise documentation](../../phase-1-csharp/day-11-encapsulation-and-records/README.md) · [Journal](../../journal/day-11-encapsulation-and-records.md) · [Captured run](../../assets/progress/day-11-capture.json)
+
+[Roadmap](../../ROADMAP.md#day-11--encapsulation-and-records) · [Day catalog](../README.md)

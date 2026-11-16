@@ -2,11 +2,11 @@
 
 **Updated:** 2026-11-16
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 10/90 exercises verified
-**Next exercise:** Day 11, Encapsulation and Records
-**Personal reflections:** Days 01–10 pending
+**Implementation progress:** 11/90 exercises verified
+**Next exercise:** Day 12, Inheritance and Polymorphism
+**Personal reflections:** Days 01–11 pending
 
-Day 10 covers Classes and Objects. The [daily overview](days/day-10/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+Day 11 covers Encapsulation and Records. The [daily overview](days/day-11/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
 
 Complete each requested day in the same repository. Include the verified project, concise English documentation, output images in landscape and portrait, progress updates, and a daily commit. Use PAIR or MENTOR when requested. Leave the owner's personal reflections pending until they supply their notes.
 

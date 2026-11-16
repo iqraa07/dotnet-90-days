@@ -1,0 +1,32 @@
+Day 11 verification
+Sample captured: 2026-11-16T07:54:10.8195572+08:00
+SDK: 10.0.402
+Release build: 0 warnings, 0 errors.
+Project: phase-1-csharp/day-11-encapsulation-and-records
+
+Published sample (exit 0)
+Arguments: []
+Standard input: ""
+Standard output:
+Ticket 101: Replace a damaged cable
+Initial status: Open
+After Start: InProgress
+After Close: Closed
+A closed ticket cannot be reopened.
+Current status: Closed
+Saved snapshot: Open
+Standard error:
+<empty>
+
+Isolated Ticket class checks (exit 0)
+Arguments: []
+Standard input: ""
+Standard output:
+Open and in-progress transitions passed.
+Rejected blank subject and preserved previous value.
+A closed ticket cannot be reopened.
+Closed status and original record both preserved.
+Standard error:
+<empty>
+
+2 checks passed.

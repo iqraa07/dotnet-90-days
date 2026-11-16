@@ -1,0 +1,19 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-11-encapsulation-and-records\Day11.EncapsulationAndRecords.csproj (in 66 ms).
+  Day11.EncapsulationAndRecords -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-11-encapsulation-and-records\bin\Release\net10.0\Day11.EncapsulationAndRecords.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.05
+
+> dotnet run -c Release --no-build
+Ticket 101: Replace a damaged cable
+Initial status: Open
+After Start: InProgress
+After Close: Closed
+A closed ticket cannot be reopened.
+Current status: Closed
+Saved snapshot: Open
