@@ -2,7 +2,7 @@
 
 Each day has a directory for its learning focus and navigation. Source code stays in the phase directories so the helper commands and shared projects remain consistent.
 
-Days 01–03 are implemented and verified. Personal reflections are pending. Days 04–90 are planned.
+Days 01–04 are implemented and verified. Personal reflections are pending. Days 05–90 are planned.
 
 [Learning map](../README.md#learning-map) · [Daily progress](../README.md#daily-progress) · [Roadmap](../ROADMAP.md)
 
@@ -11,7 +11,7 @@ Days 01–03 are implemented and verified. Personal reflections are pending. Day
 | [Day 01](day-01/README.md) | Setup .NET 10 and Hello World | 1 | Complete |
 | [Day 02](day-02/README.md) | Variables and Data Types | 1 | Complete |
 | [Day 03](day-03/README.md) | Operators and Strings | 1 | Complete |
-| [Day 04](day-04/README.md) | Conditionals and Switch | 1 | Planned |
+| [Day 04](day-04/README.md) | Conditionals and Switch | 1 | Complete |
 | [Day 05](day-05/README.md) | Loops | 1 | Planned |
 | [Day 06](day-06/README.md) | Arrays and List | 1 | Planned |
 | [Day 07](day-07/README.md) | Checkpoint 1: To-Do Console App | 1 | Planned |

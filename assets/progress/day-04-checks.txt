@@ -1,0 +1,82 @@
+Day 04 | Conditionals and Switch
+
+> dotnet build -c Release
+Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-04-conditionals-and-switch\Day04.ConditionalsAndSwitch.csproj (in 60 ms).
+  Day04.ConditionalsAndSwitch -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-04-conditionals-and-switch\bin\Release\net10.0\Day04.ConditionalsAndSwitch.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.82
+
+
+PASS | Critical incident
+Arguments: []
+Input lines: ["high", "high"]
+Exit: 0
+stdout:
+Impact (low, medium, high):
+Urgency (low, medium, high):
+Priority: P1
+Resolution target: 4 hours
+stderr:
+
+
+PASS | High and medium
+Arguments: []
+Input lines: ["medium", " HIGH "]
+Exit: 0
+stdout:
+Impact (low, medium, high):
+Urgency (low, medium, high):
+Priority: P2
+Resolution target: 8 hours
+stderr:
+
+
+PASS | Mixed low and high
+Arguments: []
+Input lines: ["low", "high"]
+Exit: 0
+stdout:
+Impact (low, medium, high):
+Urgency (low, medium, high):
+Priority: P3
+Resolution target: 24 hours
+stderr:
+
+
+PASS | Lowest priority
+Arguments: []
+Input lines: ["low", "low"]
+Exit: 0
+stdout:
+Impact (low, medium, high):
+Urgency (low, medium, high):
+Priority: P4
+Resolution target: 48 hours
+stderr:
+
+
+PASS | Invalid impact
+Arguments: []
+Input lines: ["urgent"]
+Exit: 1
+stdout:
+Impact (low, medium, high):
+stderr:
+Unknown impact. Enter low, medium, or high.
+
+PASS | Missing urgency
+Arguments: []
+Input lines: ["medium"]
+Exit: 1
+stdout:
+Impact (low, medium, high):
+Urgency (low, medium, high):
+stderr:
+Unknown urgency. Enter low, medium, or high.
+
+6 / 6 checks passed.
