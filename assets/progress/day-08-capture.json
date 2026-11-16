@@ -1,0 +1,34 @@
+{
+    "day":  8,
+    "recordedAt":  "2026-11-16T11:45:59.7892954+08:00",
+    "project":  "phase-1-csharp/day-08-methods",
+    "sdk":  "10.0.402",
+    "source":  "switch (args.FirstOrDefault()?.ToLowerInvariant() ?? \"subnet\")\r\n{\r\n    case \"subnet\":\r\n        Console.WriteLine(\"IPv4 prefix (0-32):\");\r\n        if (!int.TryParse(Console.ReadLine(), out int prefix) || prefix is \u003c 0 or \u003e 32)\r\n        {\r\n            Console.Error.WriteLine(\"Enter a prefix from 0 to 32.\");\r\n            return 1;\r\n        }\r\n        Console.WriteLine($\"Usable hosts: {CalculateSubnet(prefix)}\");\r\n        break;\r\n    case \"temperature\":\r\n        (double fahrenheit, double kelvin) = Temperature.ConvertTemperature(25.5);\r\n        Console.WriteLine(FormattableString.Invariant($\"Fahrenheit: {fahrenheit:F2}\"));\r\n        Console.WriteLine(FormattableString.Invariant($\"Kelvin: {kelvin:F2}\"));\r\n        break;\r\n    case \"receipt\":\r\n        (decimal subtotal, decimal total) = CalculateReceipt(3, 45_000m);\r\n        Console.WriteLine(FormattableString.Invariant($\"Subtotal: {subtotal:F2}\"));\r\n        Console.WriteLine(FormattableString.Invariant($\"Total: {total:F2}\"));\r\n        break;\r\n    default:\r\n        Console.Error.WriteLine(\"Use subnet, temperature, or receipt.\");\r\n        return 1;\r\n}\r\n\r\nreturn 0;\r\n\r\nstatic long CalculateSubnet(int prefix) =\u003e Math.Max(0L, (1L \u003c\u003c (32 - prefix)) - 2);\r\n\r\nstatic (decimal Subtotal, decimal Total) CalculateReceipt(\r\n    int quantity, decimal unitPrice, decimal discountRate = 0.10m)\r\n{\r\n    decimal subtotal = quantity * unitPrice;\r\n    decimal discount = subtotal \u003e 100_000m ? decimal.Round(subtotal * discountRate, 2, MidpointRounding.AwayFromZero) : 0m;\r\n    return (subtotal, subtotal - discount);\r\n}\r\n\r\nstatic class Temperature\r\n{\r\n    public static (double Fahrenheit, double Kelvin) ConvertTemperature(double celsius) =\u003e\r\n        ConvertTemperature(celsius, inputIsFahrenheit: false);\r\n\r\n    public static (double Fahrenheit, double Kelvin) ConvertTemperature(double value, bool inputIsFahrenheit)\r\n    {\r\n        double celsius = inputIsFahrenheit ? (value - 32) * 5 / 9 : value;\r\n        return (celsius * 9 / 5 + 32, celsius + 273.15);\r\n    }\r\n}\r\n",
+    "sourceExcerpt":  "static long CalculateSubnet(int prefix) =\u003e Math.Max(0L, (1L \u003c\u003c (32 - prefix)) - 2);\r\n\r\nstatic (decimal Subtotal, decimal Total) CalculateReceipt(\r\n    int quantity, decimal unitPrice, decimal discountRate = 0.10m)\r\n{\r\n    decimal subtotal = quantity * unitPrice;\r\n    decimal discount = subtotal \u003e 100_000m ? decimal.Round(subtotal * discountRate, 2, MidpointRounding.AwayFromZero) : 0m;\r\n    return (subtotal, subtotal - discount);",
+    "sourceStartLine":  29,
+    "sourceEndLine":  36,
+    "inputLines":  [
+                       "24"
+                   ],
+    "buildCommand":  "dotnet build -c Release",
+    "buildExitCode":  0,
+    "buildOutput":  [
+                        "  Determining projects to restore...",
+                        "  All projects are up-to-date for restore.",
+                        "  Day08.Methods -\u003e C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-08-methods\\bin\\Release\\net10.0\\Day08.Methods.dll",
+                        "",
+                        "Build succeeded.",
+                        "    0 Warning(s)",
+                        "    0 Error(s)",
+                        "",
+                        "Time Elapsed 00:00:01.37"
+                    ],
+    "buildStandardError":  "",
+    "runCommand":  "@(\u002724\u0027) | dotnet run -c Release --no-build",
+    "runExitCode":  0,
+    "runOutput":  [
+                      "IPv4 prefix (0-32):",
+                      "Usable hosts: 254"
+                  ],
+    "runStandardError":  ""
+}

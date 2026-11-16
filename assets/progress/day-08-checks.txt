@@ -1,0 +1,112 @@
+Day 08 | Methods
+
+> dotnet build -c Release
+Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day08.Methods -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-08-methods\bin\Release\net10.0\Day08.Methods.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.91
+
+
+PASS | Sample subnet
+Arguments: []
+Input lines: ["24"]
+Exit: 0
+stdout:
+IPv4 prefix (0-32):
+Usable hosts: 254
+stderr:
+
+
+PASS | Full IPv4 range
+Arguments: []
+Input lines: ["0"]
+Exit: 0
+stdout:
+IPv4 prefix (0-32):
+Usable hosts: 4294967294
+stderr:
+
+
+PASS | Small subnet
+Arguments: []
+Input lines: ["30"]
+Exit: 0
+stdout:
+IPv4 prefix (0-32):
+Usable hosts: 2
+stderr:
+
+
+PASS | Reserved endpoints
+Arguments: []
+Input lines: ["31"]
+Exit: 0
+stdout:
+IPv4 prefix (0-32):
+Usable hosts: 0
+stderr:
+
+
+PASS | Single address
+Arguments: []
+Input lines: ["32"]
+Exit: 0
+stdout:
+IPv4 prefix (0-32):
+Usable hosts: 0
+stderr:
+
+
+PASS | Invalid prefix
+Arguments: []
+Input lines: ["33"]
+Exit: 1
+stdout:
+IPv4 prefix (0-32):
+stderr:
+Enter a prefix from 0 to 32.
+
+PASS | EOF
+Arguments: []
+Input lines: []
+Exit: 1
+stdout:
+IPv4 prefix (0-32):
+stderr:
+Enter a prefix from 0 to 32.
+
+PASS | Temperature methods
+Arguments: ["temperature"]
+Input lines: []
+Exit: 0
+stdout:
+Fahrenheit: 77.90
+Kelvin: 298.65
+stderr:
+
+
+PASS | Receipt methods
+Arguments: ["receipt"]
+Input lines: []
+Exit: 0
+stdout:
+Subtotal: 135000.00
+Total: 121500.00
+stderr:
+
+
+PASS | Unknown command
+Arguments: ["unknown"]
+Input lines: []
+Exit: 1
+stdout:
+
+stderr:
+Use subnet, temperature, or receipt.
+
+10 / 10 checks passed.

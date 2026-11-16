@@ -1,0 +1,14 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day08.Methods -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-08-methods\bin\Release\net10.0\Day08.Methods.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.37
+
+> @('24') | dotnet run -c Release --no-build
+IPv4 prefix (0-32):
+Usable hosts: 254
