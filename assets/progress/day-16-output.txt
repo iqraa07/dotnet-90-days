@@ -1,0 +1,16 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day16.EnumsStructsAndNullable -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-16-enums-structs-and-nullable\bin\Release\net10.0\Day16.EnumsStructsAndNullable.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.84
+
+> @('1', '2', '999', 'quit') | dotnet run -c Release --no-build
+Enter a ticket ID, or quit.
+#1 Wi-Fi disconnects | Open | High | Nina
+#2 Replace keyboard | Resolved | Low | Unassigned
+Ticket 999 was not found.

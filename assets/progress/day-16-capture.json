@@ -1,0 +1,39 @@
+{
+  "day": 16,
+  "recordedAt": "2026-11-16T07:54:48.2423921+08:00",
+  "project": "phase-1-csharp\\day-16-enums-structs-and-nullable",
+  "sdk": "10.0.402",
+  "source": "using System.Globalization;\n\nvar desk = new Helpdesk(\n[\n    new Ticket(new TicketKey(1), \"Wi-Fi disconnects\", TicketStatus.Open, Priority.High, \"Nina\"),\n    new Ticket(new TicketKey(2), \"Replace keyboard\", TicketStatus.Resolved, Priority.Low, null),\n    new Ticket(new TicketKey(3), \"Install VPN\", TicketStatus.InProgress, Priority.Medium, \"Arif\")\n]);\n\nConsole.WriteLine(\"Enter a ticket ID, or quit.\");\nwhile (Console.ReadLine() is string line)\n{\n    string input = line.Trim();\n    if (input.Equals(\"quit\", StringComparison.OrdinalIgnoreCase))\n        return;\n\n    if (!int.TryParse(input, NumberStyles.None, CultureInfo.InvariantCulture, out int id) || id <= 0)\n    {\n        Console.WriteLine(\"Enter a positive ticket ID.\");\n        continue;\n    }\n\n    Ticket? ticket = desk.FindTicket(id);\n    if (ticket is null)\n    {\n        Console.WriteLine($\"Ticket {id} was not found.\");\n        continue;\n    }\n\n    string assignee = ticket.Assignee?.Trim() ?? \"Unassigned\";\n    Console.WriteLine($\"#{ticket.Key.Value} {ticket.Title} | {ticket.Status} | {ticket.Priority} | {assignee}\");\n}\n\nenum TicketStatus { Open, InProgress, Resolved }\nenum Priority { Low, Medium, High }\n\nreadonly record struct TicketKey(int Value);\n\nsealed record Ticket(TicketKey Key, string Title, TicketStatus Status, Priority Priority, string? Assignee);\n\nsealed class Helpdesk(IReadOnlyList<Ticket> tickets)\n{\n    public Ticket? FindTicket(int id) => tickets.FirstOrDefault(ticket => ticket.Key.Value == id);\n}\n",
+  "sourceExcerpt": "    Ticket? ticket = desk.FindTicket(id);\r\n    if (ticket is null)\r\n    {\r\n        Console.WriteLine($\"Ticket {id} was not found.\");\r\n        continue;\r\n    }\r\n\r\n    string assignee = ticket.Assignee?.Trim() ?? \"Unassigned\";",
+  "sourceStartLine": 23,
+  "sourceEndLine": 30,
+  "inputLines": [
+    "1",
+    "2",
+    "999",
+    "quit"
+  ],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  Day16.EnumsStructsAndNullable -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-16-enums-structs-and-nullable\\bin\\Release\\net10.0\\Day16.EnumsStructsAndNullable.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:00.84"
+  ],
+  "buildStandardError": "",
+  "runCommand": "@('1', '2', '999', 'quit') | dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Enter a ticket ID, or quit.",
+    "#1 Wi-Fi disconnects | Open | High | Nina",
+    "#2 Replace keyboard | Resolved | Low | Unassigned",
+    "Ticket 999 was not found."
+  ],
+  "runStandardError": ""
+}

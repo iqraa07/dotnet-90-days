@@ -1,0 +1,60 @@
+Run from the exercise project directory.
+
+$ dotnet build -c Release --nologo
+  Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-16-enums-structs-and-nullable\Day16.EnumsStructsAndNullable.csproj (in 110 ms).
+  Day16.EnumsStructsAndNullable -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-16-enums-structs-and-nullable\bin\Release\net10.0\Day16.EnumsStructsAndNullable.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.27
+
+Assigned and unassigned
+$ dotnet bin/Release/net10.0/Day16.EnumsStructsAndNullable.dll
+Input:
+1
+2
+quit
+Output:
+Enter a ticket ID, or quit.
+#1 Wi-Fi disconnects | Open | High | Nina
+#2 Replace keyboard | Resolved | Low | Unassigned
+Exit code: 0
+
+Unknown ID and valid retry
+$ dotnet bin/Release/net10.0/Day16.EnumsStructsAndNullable.dll
+Input:
+999
+3
+quit
+Output:
+Enter a ticket ID, or quit.
+Ticket 999 was not found.
+#3 Install VPN | InProgress | Medium | Arif
+Exit code: 0
+
+Nonpositive and nonnumeric values
+$ dotnet bin/Release/net10.0/Day16.EnumsStructsAndNullable.dll
+Input:
+0
+-1
+abc
+quit
+Output:
+Enter a ticket ID, or quit.
+Enter a positive ticket ID.
+Enter a positive ticket ID.
+Enter a positive ticket ID.
+Exit code: 0
+
+EOF
+$ dotnet bin/Release/net10.0/Day16.EnumsStructsAndNullable.dll
+Input:
+(none)
+Output:
+Enter a ticket ID, or quit.
+Exit code: 0
+
+Passed 4 checks.
