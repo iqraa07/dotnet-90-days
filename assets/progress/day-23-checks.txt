@@ -1,0 +1,13 @@
+$ dotnet run --project phase-1-csharp/day-23-generics -c Release --no-build
+Duplicate ID accepted: False
+Asset 2: Printer
+Assets in Makassar: Laptop, Switch
+Removed asset 2: True
+Removed asset 2 again: False
+Asset 2 after removal: missing
+Remaining assets: Laptop, Switch
+Tickets: Printer jam
+PASS: Duplicate ID rejected and the original record remained.
+PASS: Find returned only the assets in Makassar.
+PASS: Remove returned true once; the removed item was absent from lookup and listing.
+PASS: A second repository stored the ticket independently.

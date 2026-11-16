@@ -2,11 +2,13 @@
 
 **Updated:** 2026-11-16
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 22/90 exercises verified
-**Next exercise:** Day 23, Generics
-**Personal reflections:** Days 01–22 pending
+**Implementation progress:** 23/90 exercises verified
+**Next exercise:** Day 24, Delegates, Lambdas and Events
+**Personal reflections:** Days 01–23 pending
 
-Day 22 covers Advanced Exceptions. The [daily overview](days/day-22/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+Day 23 covers Generics. The [daily overview](days/day-23/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+
+The 16 November catch-up target covered Day 23, counting one exercise per date from 25 October. The tracker records actual verification dates. Checkpoint reflections for Weeks 1–3 remain open.
 
 Complete each requested day in the same repository. Include the verified project, concise English documentation, output images in landscape and portrait, progress updates, and a daily commit. Use PAIR or MENTOR when requested. Leave the owner's personal reflections pending until they supply their notes.
 

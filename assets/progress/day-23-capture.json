@@ -1,0 +1,38 @@
+{
+  "day": 23,
+  "recordedAt": "2026-11-16T11:49:46.3209580+08:00",
+  "project": "phase-1-csharp/day-23-generics",
+  "sdk": "10.0.402",
+  "source": "var assets = new InMemoryRepository<Asset>();\nassets.Add(new Asset(1, \"Laptop\", \"Makassar\"));\nassets.Add(new Asset(2, \"Printer\", \"Gowa\"));\nassets.Add(new Asset(3, \"Switch\", \"Makassar\"));\nConsole.WriteLine($\"Duplicate ID accepted: {assets.Add(new Asset(2, \"Router\", \"Gowa\"))}\");\nConsole.WriteLine($\"Asset 2: {assets.GetById(2)?.Name ?? \"missing\"}\");\n\nConsole.Write(\"Assets in Makassar: \");\nPrintNames(assets.Find(asset => asset.Location == \"Makassar\"));\nConsole.WriteLine($\"Removed asset 2: {assets.Remove(2)}\");\nConsole.WriteLine($\"Removed asset 2 again: {assets.Remove(2)}\");\nConsole.WriteLine($\"Asset 2 after removal: {assets.GetById(2)?.Name ?? \"missing\"}\");\nConsole.Write(\"Remaining assets: \");\nPrintNames(assets.GetAll());\n\nvar tickets = new InMemoryRepository<Ticket>();\ntickets.Add(new Ticket(1, \"Printer jam\"));\nConsole.Write(\"Tickets: \");\nPrintNames(tickets.GetAll());\n\nstatic void PrintNames<T>(IEnumerable<T> items) where T : IEntity =>\n    Console.WriteLine(string.Join(\", \", items.Select(item => item.Name)));\n\ninterface IEntity\n{\n    int Id { get; }\n    string Name { get; }\n}\n\nsealed record Asset(int Id, string Name, string Location) : IEntity;\nsealed record Ticket(int Id, string Name) : IEntity;\n\nsealed class InMemoryRepository<T> where T : class, IEntity\n{\n    private readonly Dictionary<int, T> _items = [];\n\n    public bool Add(T item)\n    {\n        ArgumentNullException.ThrowIfNull(item);\n        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(item.Id);\n        return _items.TryAdd(item.Id, item);\n    }\n\n    public T? GetById(int id) => _items.GetValueOrDefault(id);\n\n    public IReadOnlyList<T> GetAll() => _items.Values.OrderBy(item => item.Id).ToArray();\n\n    public bool Remove(int id) => _items.Remove(id);\n\n    public IReadOnlyList<T> Find(Func<T, bool> predicate)\n    {\n        ArgumentNullException.ThrowIfNull(predicate);\n        return _items.Values.Where(predicate).OrderBy(item => item.Id).ToArray();\n    }\n}\n",
+  "sourceExcerpt": "    public IReadOnlyList<T> GetAll() => _items.Values.OrderBy(item => item.Id).ToArray();\r\n\r\n    public bool Remove(int id) => _items.Remove(id);\r\n\r\n    public IReadOnlyList<T> Find(Func<T, bool> predicate)\r\n    {\r\n        ArgumentNullException.ThrowIfNull(predicate);\r\n        return _items.Values.Where(predicate).OrderBy(item => item.Id).ToArray();\r\n    }",
+  "sourceStartLine": 46,
+  "sourceEndLine": 54,
+  "inputLines": [],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  Generics -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-23-generics\\bin\\Release\\net10.0\\Generics.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:01.07"
+  ],
+  "buildStandardError": "",
+  "runCommand": "dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Duplicate ID accepted: False",
+    "Asset 2: Printer",
+    "Assets in Makassar: Laptop, Switch",
+    "Removed asset 2: True",
+    "Removed asset 2 again: False",
+    "Asset 2 after removal: missing",
+    "Remaining assets: Laptop, Switch",
+    "Tickets: Printer jam"
+  ],
+  "runStandardError": ""
+}
