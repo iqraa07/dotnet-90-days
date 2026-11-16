@@ -1,0 +1,12 @@
+[
+  {
+    "asset_id": 1,
+    "name": "Laptop",
+    "quantity": 1
+  },
+  {
+    "asset_id": 2,
+    "name": "Network switch",
+    "quantity": 2
+  }
+]

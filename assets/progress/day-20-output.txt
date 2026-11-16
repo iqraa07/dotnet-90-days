@@ -1,0 +1,16 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  InventoryJson -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-20-json-with-system-text-json\bin\Release\net10.0\InventoryJson.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.69
+
+> @('5') | dotnet run -c Release --no-build
+Enter laptop quantity (blank keeps the stored value):
+Saved inventory.json and inventory.backup.json.
+1 | Laptop | Quantity: 5
+2 | Network switch | Quantity: 2

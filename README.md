@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-19/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-20/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 19 / 90 exercises (21%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 20 / 90 exercises (22%) · **Current:** - · **Last update:** 2026-11-16
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 19
+## Run Day 20
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-19-file-i-o-and-csv -c Release
+dotnet run --project .\phase-1-csharp\day-20-json-with-system-text-json -c Release
 .\day status
 ```
 
-See the [Day 19 guide](days/day-19/README.md) for sample inputs, CLI checks, and output images.
+See the [Day 20 guide](days/day-20/README.md) for sample inputs, CLI checks, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 19 source and output](assets/progress/day-19-terminal.png)
+![Day 20 source and output](assets/progress/day-20-terminal.png)
 
 ## Daily progress
 
@@ -79,7 +79,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 17 | LINQ Part 1 | 1 | ✅ | 2026-11-16 | [journal](journal/day-17-linq-part-1.md) |
 | 18 | LINQ Part 2 | 1 | ✅ | 2026-11-16 | [journal](journal/day-18-linq-part-2.md) |
 | 19 | File I/O and CSV | 1 | ✅ | 2026-11-16 | [journal](journal/day-19-file-i-o-and-csv.md) |
-| 20 | JSON with System.Text.Json | 1 | ⬜ | - | - |
+| 20 | JSON with System.Text.Json | 1 | ✅ | 2026-11-16 | [journal](journal/day-20-json-with-system-text-json.md) |
 | 21 | Checkpoint 3: Inventory with JSON and Reports | 1 | ⬜ | - | - |
 | 22 | Advanced Exceptions | 1 | ⬜ | - | - |
 | 23 | Generics | 1 | ⬜ | - | - |

@@ -1,0 +1,9 @@
+$ '5' | dotnet run --project phase-1-csharp/day-20-json-with-system-text-json -c Release --no-build -- <temporary storage>
+Enter laptop quantity (blank keeps the stored value):
+Saved inventory.json and inventory.backup.json.
+1 | Laptop | Quantity: 5
+2 | Network switch | Quantity: 2
+PASS: The first save created a matching backup using asset_id, name, and quantity.
+PASS: A second save stored quantity 8 and preserved the prior quantity 5 in the backup.
+PASS: A negative quantity returned exit 1 and kept both file hashes.
+PASS: Invalid JSON returned exit 1 and kept both file hashes.
