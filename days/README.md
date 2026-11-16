@@ -2,7 +2,7 @@
 
 Each day has a directory for its learning focus and navigation. Source code stays in the phase directories so the helper commands and shared projects remain consistent.
 
-Days 01–20 are implemented and verified. Personal reflections are pending. Days 21–90 are planned.
+Days 01–21 are implemented and verified. Personal reflections are pending. Days 22–90 are planned.
 
 [Learning map](../README.md#learning-map) · [Daily progress](../README.md#daily-progress) · [Roadmap](../ROADMAP.md)
 
@@ -28,7 +28,7 @@ Days 01–20 are implemented and verified. Personal reflections are pending. Day
 | [Day 18](day-18/README.md) | LINQ Part 2 | 1 | Complete |
 | [Day 19](day-19/README.md) | File I/O and CSV | 1 | Complete |
 | [Day 20](day-20/README.md) | JSON with System.Text.Json | 1 | Complete |
-| [Day 21](day-21/README.md) | Checkpoint 3: Inventory with JSON and Reports | 1 | Planned |
+| [Day 21](day-21/README.md) | Checkpoint 3: Inventory with JSON and Reports | 1 | Complete |
 | [Day 22](day-22/README.md) | Advanced Exceptions | 1 | Planned |
 | [Day 23](day-23/README.md) | Generics | 1 | Planned |
 | [Day 24](day-24/README.md) | Delegates, Lambdas and Events | 1 | Planned |

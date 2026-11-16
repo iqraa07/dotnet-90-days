@@ -1,0 +1,41 @@
+{
+  "day": 21,
+  "recordedAt": "2026-11-16T11:47:26.9427757+08:00",
+  "project": "phase-1-csharp/day-21-checkpoint-3-inventory-with-json-and",
+  "sdk": "10.0.402",
+  "source": "using System.Globalization;\nusing System.Text.Json;\n\nstring samplePath = Path.Combine(AppContext.BaseDirectory, \"assets.sample.json\");\nstring storagePath = args.Length > 0\n    ? Path.GetFullPath(args[0])\n    : Path.Combine(AppContext.BaseDirectory, \"data\", \"inventory.json\");\nvar store = new AssetJsonStore(storagePath);\n\ntry\n{\n    var inventory = new AssetInventory(store.Load(samplePath));\n    Console.WriteLine(\"Commands: add | list | search | older | reports | quit\");\n\n    while (Console.ReadLine() is string line)\n    {\n        string[] parts = line.Split('|', StringSplitOptions.TrimEntries);\n        switch (parts[0].ToLowerInvariant())\n        {\n            case \"add\" when parts.Length == 4 && parts[1].Length > 0 && parts[2].Length > 0\n                && TryReadDate(parts[3], out DateOnly purchaseDate):\n                var asset = new Asset(parts[1], parts[2], purchaseDate);\n                inventory.Add(asset);\n                store.Save(inventory.Assets);\n                Console.WriteLine($\"Added {asset.Name}; inventory saved.\");\n                break;\n            case \"list\" when parts.Length == 1:\n                PrintAssets(inventory.Assets);\n                break;\n            case \"search\" when parts.Length == 3 && parts[2].Length > 0:\n                if (parts[1].Equals(\"name\", StringComparison.OrdinalIgnoreCase))\n                {\n                    PrintAssets(inventory.FindByName(parts[2]));\n                }\n                else if (parts[1].Equals(\"location\", StringComparison.OrdinalIgnoreCase))\n                {\n                    PrintAssets(inventory.FindByLocation(parts[2]));\n                }\n                else\n                {\n                    Console.WriteLine(\"Search by name or location.\");\n                }\n                break;\n            case \"older\" when parts.Length == 2 && TryReadDate(parts[1], out DateOnly asOf) && asOf.Year > 4:\n                PrintAssets(inventory.OlderThanFourYears(asOf));\n                break;\n            case \"reports\" when parts.Length == 1:\n                Console.WriteLine(\"Reports: reports | location, reports | total\");\n                break;\n            case \"reports\" when parts.Length == 2 && parts[1].Equals(\"location\", StringComparison.OrdinalIgnoreCase):\n                PrintLocationReport(inventory.Assets);\n                break;\n            case \"reports\" when parts.Length == 2 && parts[1].Equals(\"total\", StringComparison.OrdinalIgnoreCase):\n                Console.WriteLine($\"Total assets: {inventory.Assets.Count}\");\n                break;\n            case \"quit\" when parts.Length == 1:\n                return 0;\n            default:\n                Console.WriteLine(\"Invalid command or value. Dates use YYYY-MM-DD.\");\n                break;\n        }\n    }\n\n    return 0;\n}\ncatch (Exception exception) when (exception is IOException or UnauthorizedAccessException or JsonException)\n{\n    Console.Error.WriteLine($\"Inventory error: {exception.Message}\");\n    return 1;\n}\n\nstatic bool TryReadDate(string value, out DateOnly date) =>\n    DateOnly.TryParseExact(value, \"yyyy-MM-dd\", CultureInfo.InvariantCulture, DateTimeStyles.None, out date);\n\nstatic void PrintAssets(IEnumerable<Asset> assets)\n{\n    bool found = false;\n    foreach (Asset asset in assets)\n    {\n        Console.WriteLine($\"{asset.Name} | {asset.Location} | {asset.PurchaseDate.ToString(\"yyyy-MM-dd\", CultureInfo.InvariantCulture)}\");\n        found = true;\n    }\n\n    if (!found)\n    {\n        Console.WriteLine(\"No assets.\");\n    }\n}\n\nstatic void PrintLocationReport(IReadOnlyCollection<Asset> assets)\n{\n    var groups = assets.GroupBy(asset => asset.Location, StringComparer.OrdinalIgnoreCase)\n        .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase);\n\n    Console.WriteLine(\"Assets by location\");\n    foreach (var group in groups)\n    {\n        Console.WriteLine($\"{group.Key}: {group.Count()}\");\n    }\n\n    if (assets.Count == 0)\n    {\n        Console.WriteLine(\"No assets.\");\n    }\n}\n",
+  "sourceExcerpt": "    var groups = assets.GroupBy(asset => asset.Location, StringComparer.OrdinalIgnoreCase)\r\n        .OrderBy(group => group.Key, StringComparer.OrdinalIgnoreCase);\r\n\r\n    Console.WriteLine(\"Assets by location\");\r\n    foreach (var group in groups)\r\n    {\r\n        Console.WriteLine($\"{group.Key}: {group.Count()}\");\r\n    }",
+  "sourceStartLine": 92,
+  "sourceEndLine": 99,
+  "inputLines": [
+    "reports",
+    "reports | location",
+    "reports | total",
+    "quit"
+  ],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  InventoryReports -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-21-checkpoint-3-inventory-with-json-and\\bin\\Release\\net10.0\\InventoryReports.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:03.19"
+  ],
+  "buildStandardError": "",
+  "runCommand": "@('reports', 'reports | location', 'reports | total', 'quit') | dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Commands: add | list | search | older | reports | quit",
+    "Reports: reports | location, reports | total",
+    "Assets by location",
+    "Gowa: 1",
+    "Makassar: 2",
+    "Total assets: 3"
+  ],
+  "runStandardError": ""
+}

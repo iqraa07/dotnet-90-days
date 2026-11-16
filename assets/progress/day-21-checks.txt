@@ -1,0 +1,13 @@
+$ reports, reports | location, reports | total, quit (fresh storage)
+Commands: add | list | search | older | reports | quit
+Reports: reports | location, reports | total
+Assets by location
+Gowa: 1
+Makassar: 2
+Total assets: 3
+PASS: Grouped Makassar and makassar and reported three assets in total.
+PASS: Saved a new asset to isolated storage and preserved the sample file.
+PASS: A new process reloaded the asset, matched case-insensitive searches, applied the four-year filter, and reported Gowa: 2.
+PASS: An invalid purchase date did not change the saved file.
+PASS: An empty inventory printed No assets.
+PASS: Invalid JSON returned exit 1 and preserved the file.

@@ -1,0 +1,18 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  InventoryReports -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-21-checkpoint-3-inventory-with-json-and\bin\Release\net10.0\InventoryReports.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.19
+
+> @('reports', 'reports | location', 'reports | total', 'quit') | dotnet run -c Release --no-build
+Commands: add | list | search | older | reports | quit
+Reports: reports | location, reports | total
+Assets by location
+Gowa: 1
+Makassar: 2
+Total assets: 3

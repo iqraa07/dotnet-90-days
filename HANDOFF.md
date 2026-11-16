@@ -2,11 +2,11 @@
 
 **Updated:** 2026-11-16
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 20/90 exercises verified
-**Next exercise:** Day 21, Checkpoint 3: Inventory with JSON and Reports
-**Personal reflections:** Days 01–20 pending
+**Implementation progress:** 21/90 exercises verified
+**Next exercise:** Day 22, Advanced Exceptions
+**Personal reflections:** Days 01–21 pending
 
-Day 20 covers JSON with System.Text.Json. The [daily overview](days/day-20/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+Day 21 covers Checkpoint 3: Inventory with JSON and Reports. The [daily overview](days/day-21/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
 
 Complete each requested day in the same repository. Include the verified project, concise English documentation, output images in landscape and portrait, progress updates, and a daily commit. Use PAIR or MENTOR when requested. Leave the owner's personal reflections pending until they supply their notes.
 
