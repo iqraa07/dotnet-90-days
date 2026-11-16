@@ -1,0 +1,30 @@
+Day 12 verification
+Sample captured: 2026-11-16T07:54:10.8174269+08:00
+SDK: 10.0.402
+Release build: 0 warnings, 0 errors.
+Project: phase-1-csharp/day-12-inheritance-and-polymorphism
+
+Published sample (exit 0)
+Arguments: []
+Standard input: ""
+Standard output:
+Lab Laptop (Room A): Schedule a battery replacement.
+Lab Router (Rack 1): Review available firmware updates.
+Front Desk Printer (Front Desk): Replace the toner cartridge.
+Standard error:
+<empty>
+
+Maintenance thresholds through the base type (exit 0)
+Arguments: []
+Standard input: ""
+Standard output:
+Schedule a battery replacement.
+Battery health is within range.
+Firmware review is up to date.
+Review available firmware updates.
+Replace the toner cartridge.
+Toner level is within range.
+Standard error:
+<empty>
+
+2 checks passed.

@@ -1,0 +1,15 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  Restored C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-12-inheritance-and-polymorphism\Day12.InheritanceAndPolymorphism.csproj (in 81 ms).
+  Day12.InheritanceAndPolymorphism -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-12-inheritance-and-polymorphism\bin\Release\net10.0\Day12.InheritanceAndPolymorphism.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.05
+
+> dotnet run -c Release --no-build
+Lab Laptop (Room A): Schedule a battery replacement.
+Lab Router (Rack 1): Review available firmware updates.
+Front Desk Printer (Front Desk): Replace the toner cartridge.
