@@ -2,11 +2,11 @@
 
 **Updated:** 2026-11-16
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 16/90 exercises verified
-**Next exercise:** Day 17, LINQ Part 1
-**Personal reflections:** Days 01–16 pending
+**Implementation progress:** 17/90 exercises verified
+**Next exercise:** Day 18, LINQ Part 2
+**Personal reflections:** Days 01–17 pending
 
-Day 16 covers Enums, Structs and Nullable. The [daily overview](days/day-16/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+Day 17 covers LINQ Part 1. The [daily overview](days/day-17/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
 
 Complete each requested day in the same repository. Include the verified project, concise English documentation, output images in landscape and portrait, progress updates, and a daily commit. Use PAIR or MENTOR when requested. Leave the owner's personal reflections pending until they supply their notes.
 

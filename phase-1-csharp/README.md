@@ -20,16 +20,17 @@ Each day uses a small, self-contained console project in `day-NN-topic/`.
 | [Day 14: Checkpoint 2: IT Asset Inventory Console](day-14-checkpoint-2-it-asset-inventory-console) | Verified | Pending |
 | [Day 15: Dictionary, HashSet, Queue, Stack](day-15-dictionary-hashset-queue-stack) | Verified | Pending |
 | [Day 16: Enums, Structs and Nullable](day-16-enums-structs-and-nullable) | Verified | Pending |
+| [Day 17: LINQ Part 1](day-17-linq-part-1) | Verified | Pending |
 
-Days 17–30 remain planned in the [day catalog](../days/README.md).
+Days 18–30 remain planned in the [day catalog](../days/README.md).
 
 Run the latest exercise from the repository root.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-16-enums-structs-and-nullable
+dotnet run --project .\phase-1-csharp\day-17-linq-part-1
 ```
 
-See the [Day 16 guide](day-16-enums-structs-and-nullable/README.md) for examples.
+See the [Day 17 guide](day-17-linq-part-1/README.md) for examples.
 
 Phase 1 projects inherit `UseAppHost=false` from [Directory.Build.props](Directory.Build.props) and run through the .NET runtime. See [directory-level build configuration](https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?view=visualstudio) for how this shared configuration is applied.
 

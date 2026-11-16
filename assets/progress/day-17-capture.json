@@ -1,0 +1,37 @@
+{
+  "day": 17,
+  "recordedAt": "2026-11-16T07:54:48.1885792+08:00",
+  "project": "phase-1-csharp\\day-17-linq-part-1",
+  "sdk": "10.0.402",
+  "source": "using System.Globalization;\n\nstring[] types = [\"Laptop\", \"Monitor\", \"Router\"];\nstring[] locations = [\"Makassar\", \"Jakarta\", \"Surabaya\"];\nList<Asset> assets = Enumerable.Range(1, 30)\n    .Select(id => new Asset(id, types[(id - 1) % 3], locations[(id - 1) / 3 % 3],\n        new DateOnly(2017 + (id - 1) % 8, (id - 1) % 12 + 1, 1)))\n    .ToList();\n\nvar earlyMakassarLaptops = assets\n    .Where(asset => asset.Type == \"Laptop\" && asset.Location == \"Makassar\" && asset.Purchased.Year < 2022)\n    .OrderBy(asset => asset.Purchased)\n    .Select(asset => $\"{Label(asset)} ({asset.Purchased.ToString(\"yyyy-MM-dd\", CultureInfo.InvariantCulture)})\");\n\nvar firstJakartaRouter = assets.FirstOrDefault(asset => asset.Location == \"Jakarta\" && asset.Type == \"Router\");\nvar countsByType = types.Select(type => $\"{type}={assets.Count(asset => asset.Type == type)}\");\nvar secondPage = assets.OrderBy(asset => asset.Id).Skip(5).Take(5).Select(Label);\n\nConsole.WriteLine($\"Sample assets: {assets.Count}\");\nConsole.WriteLine($\"1. Makassar laptops before 2022: {string.Join(\", \", earlyMakassarLaptops)}\");\nConsole.WriteLine($\"2. First Jakarta router: {(firstJakartaRouter is null ? \"None\" : Label(firstJakartaRouter))}\");\nConsole.WriteLine($\"3. Counts by type: {string.Join(\", \", countsByType)}\");\nConsole.WriteLine($\"4. Any pre-2020 router: {assets.Any(asset => asset.Type == \"Router\" && asset.Purchased.Year < 2020)}\");\nConsole.WriteLine($\"   All IDs positive: {assets.All(asset => asset.Id > 0)}\");\nConsole.WriteLine($\"5. Second page: {string.Join(\", \", secondPage)}\");\n\nstatic string Label(Asset asset) => $\"A{asset.Id:D2}\";\n\nrecord Asset(int Id, string Type, string Location, DateOnly Purchased);\n",
+  "sourceExcerpt": "var earlyMakassarLaptops = assets\r\n    .Where(asset => asset.Type == \"Laptop\" && asset.Location == \"Makassar\" && asset.Purchased.Year < 2022)\r\n    .OrderBy(asset => asset.Purchased)\r\n    .Select(asset => $\"{Label(asset)} ({asset.Purchased.ToString(\"yyyy-MM-dd\", CultureInfo.InvariantCulture)})\");\r\n\r\nvar firstJakartaRouter = assets.FirstOrDefault(asset => asset.Location == \"Jakarta\" && asset.Type == \"Router\");\r\nvar countsByType = types.Select(type => $\"{type}={assets.Count(asset => asset.Type == type)}\");\r\nvar secondPage = assets.OrderBy(asset => asset.Id).Skip(5).Take(5).Select(Label);",
+  "sourceStartLine": 10,
+  "sourceEndLine": 17,
+  "inputLines": [],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  Day17.LINQPart1 -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-17-linq-part-1\\bin\\Release\\net10.0\\Day17.LINQPart1.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:00.85"
+  ],
+  "buildStandardError": "",
+  "runCommand": "dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Sample assets: 30",
+    "1. Makassar laptops before 2022: A01 (2017-01-01), A10 (2018-10-01), A19 (2019-07-01), A28 (2020-04-01)",
+    "2. First Jakarta router: A06",
+    "3. Counts by type: Laptop=10, Monitor=10, Router=10",
+    "4. Any pre-2020 router: True",
+    "   All IDs positive: True",
+    "5. Second page: A06, A07, A08, A09, A10"
+  ],
+  "runStandardError": ""
+}
