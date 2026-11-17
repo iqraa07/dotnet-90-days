@@ -27,6 +27,7 @@ Build and execution records for implemented exercises. The [daily progress table
 | [Day 21](../../days/day-21/README.md) | Release build and CLI checks passed | [Landscape](day-21-terminal.png), [portrait](day-21-social.png) | [Output](day-21-output.txt), [capture data](day-21-capture.json), [checks](day-21-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
 | [Day 22](../../days/day-22/README.md) | Release build and CLI checks passed | [Landscape](day-22-terminal.png), [portrait](day-22-social.png) | [Output](day-22-output.txt), [capture data](day-22-capture.json), [checks](day-22-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
 | [Day 23](../../days/day-23/README.md) | Release build and CLI checks passed | [Landscape](day-23-terminal.png), [portrait](day-23-social.png) | [Output](day-23-output.txt), [capture data](day-23-capture.json), [checks](day-23-checks.txt) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
+| [Day 24](../../days/day-24/README.md) | Release build; 13 verification groups passed | [Landscape](day-24-terminal.png), [portrait](day-24-social.png) | [Output](day-24-output.txt), [capture data](day-24-capture.json), [checks](day-24-checks.txt), [closure log](day-24-log.jsonl) | [Build history](https://github.com/iqraa07/dotnet-90-days/actions/workflows/build.yml) |
 
 ## Day 01: Hello World
 
@@ -51,6 +52,12 @@ The Release build passed with 0 warnings and 0 errors. The example run converted
 ![Day 03 discount logic and receipt output](day-03-terminal.png)
 
 Three notebooks at Rp45.000,00 each produced a subtotal of Rp135.000,00, a discount of Rp13.500,00, and a total of Rp121.500,00. [Read the CLI checks](day-03-checks.txt).
+
+## Day 24: Delegates, Lambdas and Events
+
+![Day 24 event subscriptions and output](day-24-terminal.png)
+
+The sample created a ticket, notified the console subscriber, and appended its closure to the JSONL file. The open-ticket count changed from 1 to 0. All 13 [verification groups](day-24-checks.txt) passed, including repeated closure, append across processes, and blocked log writes. [Read the recorded log entry](day-24-log.jsonl).
 
 ## Adding evidence for another day
 

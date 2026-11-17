@@ -6,10 +6,10 @@ A 90-day .NET study plan covering C# fundamentals, Web API development, and a He
 
 [Muhammad Iqra Nur Fajar](https://github.com/iqraa07)
 
-[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-23/README.md) · [Journals](journal) · [Setup](START-HERE.md)
+[Day 01-90 catalog](days/README.md) · [Learning map](#learning-map) · [Progress evidence](assets/progress/README.md) · [Latest exercise](days/day-24/README.md) · [Journals](journal) · [Setup](START-HERE.md)
 
 <!-- progress:start -->
-**Implementation:** 23 / 90 exercises (25%) · **Current:** - · **Last update:** 2026-11-16
+**Implementation:** 24 / 90 exercises (26%) · **Current:** - · **Last update:** 2026-11-17
 <!-- progress:end -->
 
 ## Learning map
@@ -32,22 +32,22 @@ flowchart LR
 
 C# 14 · .NET 10 (LTS) · ASP.NET Core · Entity Framework Core · SQL Server · xUnit · Blazor · Docker · GitHub Actions
 
-## Run Day 23
+## Run Day 24
 
 From the repository root with the .NET 10 SDK installed.
 
 ```powershell
-dotnet run --project .\phase-1-csharp\day-23-generics -c Release
+dotnet run --project .\phase-1-csharp\day-24-delegates-lambdas-and-events -c Release
 .\day status
 ```
 
-See the [Day 23 guide](days/day-23/README.md) for sample inputs, CLI checks, and output images.
+Create and close helpdesk tickets with event subscribers for notifications and file logging. See the [Day 24 guide](days/day-24/README.md) for commands, the JSONL log, and output images.
 
 ## Progress evidence
 
 The [evidence index](assets/progress/README.md) links to output images, captured runs, and the build workflow.
 
-![Day 23 source and output](assets/progress/day-23-terminal.png)
+![Day 24 event subscriptions and output](assets/progress/day-24-terminal.png)
 
 ## Daily progress
 
@@ -83,7 +83,7 @@ A checkmark records completed implementation and verification. Personal reflecti
 | 21 | Checkpoint 3: Inventory with JSON and Reports | 1 | ✅ | 2026-11-16 | [journal](journal/day-21-checkpoint-3-inventory-with-json-and.md) |
 | 22 | Advanced Exceptions | 1 | ✅ | 2026-11-16 | [journal](journal/day-22-advanced-exceptions.md) |
 | 23 | Generics | 1 | ✅ | 2026-11-16 | [journal](journal/day-23-generics.md) |
-| 24 | Delegates, Lambdas and Events | 1 | ⬜ | - | - |
+| 24 | Delegates, Lambdas and Events | 1 | ✅ | 2026-11-17 | [journal](journal/day-24-delegates-lambdas-and-events.md) |
 | 25 | Async, Await and HttpClient | 1 | ⬜ | - | - |
 | 26 | Mini Tool: Network Checker | 1 | ⬜ | - | - |
 | 27 | Unit Testing with xUnit | 1 | ⬜ | - | - |

@@ -1,0 +1,18 @@
+> dotnet build -c Release
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Day24.DelegatesLambdasAndEvents -> C:\Users\loq2i\Documents\dotnet-90-days\phase-1-csharp\day-24-delegates-lambdas-and-events\bin\Release\net10.0\Day24.DelegatesLambdasAndEvents.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.79
+
+> @('new | Replace keyboard', 'open', 'close | 1', 'open', 'quit') | dotnet run -c Release --no-build
+Commands: new | subject, close | id, open, quit
+Notification: Created #1 Replace keyboard
+Open tickets: 1
+#1 Replace keyboard
+Logged closure: #1 Replace keyboard
+Open tickets: 0

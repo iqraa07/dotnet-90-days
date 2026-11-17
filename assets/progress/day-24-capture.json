@@ -1,0 +1,42 @@
+{
+  "day": 24,
+  "recordedAt": "2026-11-17T10:01:20.2296248+08:00",
+  "project": "phase-1-csharp/day-24-delegates-lambdas-and-events",
+  "sdk": "10.0.402",
+  "source": "using System.Globalization;\r\n\r\nif (args.Length > 1)\r\n{\r\n    Console.Error.WriteLine(\"Pass at most one closure-log path.\");\r\n    return 1;\r\n}\r\n\r\nstring logPath;\r\ntry\r\n{\r\n    logPath = Path.GetFullPath(args.FirstOrDefault()\r\n        ?? Path.Combine(AppContext.BaseDirectory, \"data\", \"ticket-events.jsonl\"));\r\n}\r\ncatch (Exception exception) when (exception is ArgumentException or NotSupportedException or PathTooLongException)\r\n{\r\n    Console.Error.WriteLine($\"Invalid log path: {exception.Message}\");\r\n    return 1;\r\n}\r\n\r\nvar desk = new TicketDesk();\r\nvar closureLog = new ClosureLog(logPath);\r\nFunc<TicketSnapshot, string> describe = ticket => $\"#{ticket.Id} {ticket.Subject}\";\r\nAction<string> notify = message => Console.WriteLine($\"Notification: {message}\");\r\nPredicate<TicketSnapshot> isOpen = ticket => !ticket.IsClosed;\r\n\r\ndesk.TicketCreated += (_, change) => notify($\"Created {describe(change.Ticket)}\");\r\ndesk.TicketClosed += (_, change) =>\r\n{\r\n    closureLog.Append(change.Ticket);\r\n    Console.WriteLine($\"Logged closure: {describe(change.Ticket)}\");\r\n};\r\n\r\nConsole.WriteLine(\"Commands: new | subject, close | id, open, quit\");\r\nwhile (Console.ReadLine() is string line)\r\n{\r\n    string[] parts = line.Split('|', 2, StringSplitOptions.TrimEntries);\r\n    switch (parts[0].ToLowerInvariant())\r\n    {\r\n        case \"new\" when parts.Length == 2 && parts[1].Length > 0:\r\n            desk.Create(parts[1]);\r\n            break;\r\n\r\n        case \"close\" when parts.Length == 2\r\n            && int.TryParse(parts[1], NumberStyles.None, CultureInfo.InvariantCulture, out int id) && id > 0:\r\n            try\r\n            {\r\n                desk.Close(id);\r\n            }\r\n            catch (Exception exception) when (exception is KeyNotFoundException or InvalidOperationException)\r\n            {\r\n                Console.WriteLine(exception.Message);\r\n            }\r\n            catch (Exception exception) when (exception is IOException or UnauthorizedAccessException)\r\n            {\r\n                Console.Error.WriteLine($\"Ticket #{id} is closed. Log write failed: {exception.Message}\");\r\n                return 1;\r\n            }\r\n            break;\r\n\r\n        case \"open\" when parts.Length == 1:\r\n            IReadOnlyList<TicketSnapshot> openTickets = desk.Find(isOpen);\r\n            Console.WriteLine($\"Open tickets: {openTickets.Count}\");\r\n            foreach (TicketSnapshot ticket in openTickets)\r\n            {\r\n                Console.WriteLine(describe(ticket));\r\n            }\r\n            break;\r\n\r\n        case \"quit\" when parts.Length == 1:\r\n            return 0;\r\n\r\n        default:\r\n            Console.WriteLine(\"Invalid command. Use new | subject, close | id, open, or quit.\");\r\n            break;\r\n    }\r\n}\r\n\r\nreturn 0;\r\n",
+  "sourceExcerpt": "Func<TicketSnapshot, string> describe = ticket => $\"#{ticket.Id} {ticket.Subject}\";\r\nAction<string> notify = message => Console.WriteLine($\"Notification: {message}\");\r\nPredicate<TicketSnapshot> isOpen = ticket => !ticket.IsClosed;\r\n\r\ndesk.TicketCreated += (_, change) => notify($\"Created {describe(change.Ticket)}\");\r\ndesk.TicketClosed += (_, change) =>\r\n{\r\n    closureLog.Append(change.Ticket);\r\n    Console.WriteLine($\"Logged closure: {describe(change.Ticket)}\");\r\n};",
+  "sourceStartLine": 23,
+  "sourceEndLine": 32,
+  "inputLines": [
+    "new | Replace keyboard",
+    "open",
+    "close | 1",
+    "open",
+    "quit"
+  ],
+  "buildCommand": "dotnet build -c Release",
+  "buildExitCode": 0,
+  "buildOutput": [
+    "  Determining projects to restore...",
+    "  All projects are up-to-date for restore.",
+    "  Day24.DelegatesLambdasAndEvents -> C:\\Users\\loq2i\\Documents\\dotnet-90-days\\phase-1-csharp\\day-24-delegates-lambdas-and-events\\bin\\Release\\net10.0\\Day24.DelegatesLambdasAndEvents.dll",
+    "",
+    "Build succeeded.",
+    "    0 Warning(s)",
+    "    0 Error(s)",
+    "",
+    "Time Elapsed 00:00:00.79"
+  ],
+  "buildStandardError": "",
+  "runCommand": "@('new | Replace keyboard', 'open', 'close | 1', 'open', 'quit') | dotnet run -c Release --no-build",
+  "runExitCode": 0,
+  "runOutput": [
+    "Commands: new | subject, close | id, open, quit",
+    "Notification: Created #1 Replace keyboard",
+    "Open tickets: 1",
+    "#1 Replace keyboard",
+    "Logged closure: #1 Replace keyboard",
+    "Open tickets: 0"
+  ],
+  "runStandardError": ""
+}

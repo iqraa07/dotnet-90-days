@@ -1,0 +1,181 @@
+Day 24 delegates, lambdas, and events verification
+Captured UTC: 2026-11-17T02:02:09.090947+00:00
+SDK: 10.0.402
+Build: dotnet build -c Release --no-restore -nologo -v minimal
+Build exit code: 0; 0 warnings and 0 errors.
+Program: dotnet Day24.DelegatesLambdasAndEvents.dll [log-path]
+Each CLI case runs in an isolated working directory.
+Ticket IDs start at 1 for each process. Closure logs append across runs.
+Fixture paths in error messages are shortened for readability.
+Result: 13/13 verification groups passed.
+
+Case: Create, list, close, repeat close, and list again
+Arguments: ["closures.jsonl"]
+stdin: "new | Replace keyboard\nopen\nclose | 1\nclose | 1\nopen\nquit\n"
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+Notification: Created #1 Replace keyboard
+Open tickets: 1
+#1 Replace keyboard
+Logged closure: #1 Replace keyboard
+Ticket #1 is already closed.
+Open tickets: 0
+stderr:
+<empty>
+Actual log entries:
+[{"ticketId": 1, "subject": "Replace keyboard", "closedAt": "2026-11-17T02:02:06.6522607+00:00"}]
+
+Case: Created event does not write a closure entry
+Arguments: ["closures.jsonl"]
+stdin: "new | Replace cable\nquit\n"
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+Notification: Created #1 Replace cable
+stderr:
+<empty>
+Closure log exists: False
+
+Case: Multiple tickets, case-insensitive commands, trimming, and JSON escaping
+Arguments: ["nested/closures.jsonl"]
+stdin: "  NeW  |  Fix \"USB\" cable \\ inventory  \nnew | Router\nClOsE | 2\nopen\nCLOSE | 1\nquit\n"
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+Notification: Created #1 Fix "USB" cable \ inventory
+Notification: Created #2 Router
+Logged closure: #2 Router
+Open tickets: 1
+#1 Fix "USB" cable \ inventory
+Logged closure: #1 Fix "USB" cable \ inventory
+stderr:
+<empty>
+Actual log entries:
+[{"ticketId": 2, "subject": "Router", "closedAt": "2026-11-17T02:02:06.7613014+00:00"}, {"ticketId": 1, "subject": "Fix \"USB\" cable \\ inventory", "closedAt": "2026-11-17T02:02:06.7931687+00:00"}]
+
+Case: Invalid commands recover and leave the next creation at ID 1
+Arguments: ["closures.jsonl"]
+stdin: "\n \nnew\nnew | \nclose\nclose |\nclose | 0\nclose | -1\nclose | +1\nclose | 1.0\nclose | 2147483648\nopen | 1\nquit | now\nrename | 1\nclose | 1 | 2\nnew | Valid\nclose | 99\nclose | 1\nquit\n"
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Invalid command. Use new | subject, close | id, open, or quit.
+Notification: Created #1 Valid
+Ticket #99 was not found.
+Logged closure: #1 Valid
+stderr:
+<empty>
+Actual log entries:
+[{"ticketId": 1, "subject": "Valid", "closedAt": "2026-11-17T02:02:06.8377989+00:00"}]
+Invalid commands rejected: 15
+
+Case: EOF before a command
+Arguments: ["closures.jsonl"]
+stdin: ""
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+stderr:
+<empty>
+
+Case: EOF after an incomplete command
+Arguments: ["closures.jsonl"]
+stdin: "new |"
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+Invalid command. Use new | subject, close | id, open, or quit.
+stderr:
+<empty>
+
+Case: Default-path run exits at EOF
+Arguments: []
+stdin: ""
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+stderr:
+<empty>
+
+Case: Append closure across process runs: First run
+Arguments: ["closures.jsonl"]
+stdin: "new | First run\nclose | 1\nquit\n"
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+Notification: Created #1 First run
+Logged closure: #1 First run
+stderr:
+<empty>
+
+Case: Append closure across process runs: Second run
+Arguments: ["closures.jsonl"]
+stdin: "new | Second run\nclose | 1\nquit\n"
+Exit code: 0
+stdout:
+Commands: new | subject, close | id, open, quit
+Notification: Created #1 Second run
+Logged closure: #1 Second run
+stderr:
+<empty>
+Actual log entries:
+[{"ticketId": 1, "subject": "First run", "closedAt": "2026-11-17T02:02:07.0141985+00:00"}, {"ticketId": 1, "subject": "Second run", "closedAt": "2026-11-17T02:02:07.086775+00:00"}]
+
+Case: Closure log path is an existing directory
+Arguments: ["closures.jsonl"]
+stdin: "new | Disk test\nclose | 1\nopen\n"
+Exit code: 1
+stdout:
+Commands: new | subject, close | id, open, quit
+Notification: Created #1 Disk test
+stderr:
+Ticket #1 is closed. Log write failed: Access to the path '<fixture>\blocked-qdqrlbf8\closures.jsonl' is denied.
+
+Case: Closure log parent path is an existing file
+Arguments: ["parent/closures.jsonl"]
+stdin: "new | Parent path\nclose | 1\n"
+Exit code: 1
+stdout:
+Commands: new | subject, close | id, open, quit
+Notification: Created #1 Parent path
+stderr:
+Ticket #1 is closed. Log write failed: Cannot create '<fixture>\blocked-parent-js8nhdmp\parent' because a file or directory with the same name already exists.
+
+Case: Reject two log-path arguments
+Arguments: ["one.jsonl", "two.jsonl"]
+stdin: ""
+Exit code: 1
+stdout:
+<empty>
+stderr:
+Pass at most one closure-log path.
+
+Case: Isolated model and delegate checks
+Arguments: []
+stdin: ""
+Exit code: 0
+stdout:
+Created/closed event sender, payload, and counts passed.
+Func, Action, Predicate, and saved snapshots passed.
+Duplicate close and invalid model operations passed.
+Events without subscribers passed.
+Closed state after a throwing event handler passed.
+stderr:
+<empty>
+
+Source, project, and shared build inputs were unchanged during verification.

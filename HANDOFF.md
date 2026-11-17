@@ -1,12 +1,14 @@
 # Session handoff
 
-**Updated:** 2026-11-16
+**Updated:** 2026-11-17
 **Repository:** https://github.com/iqraa07/dotnet-90-days
-**Implementation progress:** 23/90 exercises verified
-**Next exercise:** Day 24, Delegates, Lambdas and Events
-**Personal reflections:** Days 01–23 pending
+**Implementation progress:** 24/90 exercises verified
+**Next exercise:** Day 25, Async, Await and HttpClient
+**Personal reflections:** Days 01–24 pending
 
-Day 23 covers Generics. The [daily overview](days/day-23/README.md) links the verified exercise, journal, exported images, and CLI checks. All published runs are indexed in [progress evidence](assets/progress/README.md).
+Day 24 covers Delegates, Lambdas and Events. The Release build passed with 0 warnings and 0 errors, and all 13 verification groups passed. The [daily overview](days/day-24/README.md) links the source, journal, output images, checks, and an actual closure-log entry. All published runs are indexed in [progress evidence](assets/progress/README.md).
+
+Day 24 creates in-memory tickets, sends creation notifications, and appends closure events to a JSONL file. Its synchronous event updates ticket state before invoking subscribers. A failed log write reports the closed state and exits with code 1. Ticket IDs restart per process; closure-log entries append across runs.
 
 The 16 November catch-up target covered Day 23, counting one exercise per date from 25 October. The tracker records actual verification dates. Checkpoint reflections for Weeks 1–3 remain open.
 

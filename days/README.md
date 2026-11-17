@@ -2,7 +2,7 @@
 
 Each day has a directory for its learning focus and navigation. Source code stays in the phase directories so the helper commands and shared projects remain consistent.
 
-Days 01–23 are implemented and verified. Personal reflections are pending. Days 24–90 are planned.
+Days 01–24 are implemented and verified. Personal reflections are pending. Days 25–90 are planned.
 
 [Learning map](../README.md#learning-map) · [Daily progress](../README.md#daily-progress) · [Roadmap](../ROADMAP.md)
 
@@ -31,7 +31,7 @@ Days 01–23 are implemented and verified. Personal reflections are pending. Day
 | [Day 21](day-21/README.md) | Checkpoint 3: Inventory with JSON and Reports | 1 | Complete |
 | [Day 22](day-22/README.md) | Advanced Exceptions | 1 | Complete |
 | [Day 23](day-23/README.md) | Generics | 1 | Complete |
-| [Day 24](day-24/README.md) | Delegates, Lambdas and Events | 1 | Planned |
+| [Day 24](day-24/README.md) | Delegates, Lambdas and Events | 1 | Complete |
 | [Day 25](day-25/README.md) | Async, Await and HttpClient | 1 | Planned |
 | [Day 26](day-26/README.md) | Mini Tool: Network Checker | 1 | Planned |
 | [Day 27](day-27/README.md) | Unit Testing with xUnit | 1 | Planned |
